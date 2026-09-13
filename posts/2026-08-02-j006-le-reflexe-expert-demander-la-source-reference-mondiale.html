@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="SYLTRA Consulting">
+<meta name="description" content="Méthode complète pour transformer une réponse d’intelligence artificielle en information vérifiable, traçable et exploitable dans la recherche, la santé, la finance, l’industrie et la décision publique.">
+
+<title>Le réflexe expert : demander la source, pas seulement la réponse – SYLTRA Consulting</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9080f0b6d81bdf8015e035bfde39d928.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Le réflexe expert : demander la source, pas seulement la réponse – SYLTRA Consulting">
+<meta property="og:description" content="Méthode complète pour transformer une réponse d’intelligence artificielle en information vérifiable, traçable et exploitable dans la recherche, la santé, la finance, l’industrie et la décision publique.">
+<meta property="og:image" content="https://blog.syltra-consulting.com/assets/img/posts/j006.svg">
+<meta property="og:site_name" content="SYLTRA Consulting">
+<meta name="twitter:title" content="Le réflexe expert : demander la source, pas seulement la réponse – SYLTRA Consulting">
+<meta name="twitter:description" content="Méthode complète pour transformer une réponse d’intelligence artificielle en information vérifiable, traçable et exploitable dans la recherche, la santé, la finance, l’industrie et la décision publique.">
+<meta name="twitter:image" content="https://blog.syltra-consulting.com/assets/img/posts/j006.svg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo light-content">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SYLTRA Consulting</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-domaines" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Domaines</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-domaines">    
+        <li>
+    <a class="dropdown-item" href="../domaines/sante.html">
+ <span class="dropdown-text">Santé &amp; biostatistique</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/recherche.html">
+ <span class="dropdown-text">Recherche</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/banque-finance.html">
+ <span class="dropdown-text">Banque, finance &amp; assurance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/industrie.html">
+ <span class="dropdown-text">Industrie &amp; ingénierie</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/enseignement.html">
+ <span class="dropdown-text">Enseignement &amp; formation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/gouvernance.html">
+ <span class="dropdown-text">Gouvernance &amp; sécurité</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../calendrier.html"> 
+<span class="menu-text">Calendrier</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../a-propos.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/LucienSyTraore"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/syltra-consulting/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Dans cet article</h2>
+   
+  <ul>
+  <li><a href="#lidée-essentielle" id="toc-lidée-essentielle" class="nav-link active" data-scroll-target="#lidée-essentielle"><span class="header-section-number">1</span> L’idée essentielle</a></li>
+  <li><a href="#pourquoi-une-réponse-convaincante-peut-être-fausse" id="toc-pourquoi-une-réponse-convaincante-peut-être-fausse" class="nav-link" data-scroll-target="#pourquoi-une-réponse-convaincante-peut-être-fausse"><span class="header-section-number">2</span> Pourquoi une réponse convaincante peut être fausse</a></li>
+  <li><a href="#la-source-nest-pas-un-simple-lien" id="toc-la-source-nest-pas-un-simple-lien" class="nav-link" data-scroll-target="#la-source-nest-pas-un-simple-lien"><span class="header-section-number">3</span> La source n’est pas un simple lien</a>
+  <ul>
+  <li><a href="#lidentité-de-la-source" id="toc-lidentité-de-la-source" class="nav-link" data-scroll-target="#lidentité-de-la-source"><span class="header-section-number">3.1</span> L’identité de la source</a></li>
+  <li><a href="#la-nature-de-la-source" id="toc-la-nature-de-la-source" class="nav-link" data-scroll-target="#la-nature-de-la-source"><span class="header-section-number">3.2</span> La nature de la source</a></li>
+  <li><a href="#la-date-et-la-version" id="toc-la-date-et-la-version" class="nav-link" data-scroll-target="#la-date-et-la-version"><span class="header-section-number">3.3</span> La date et la version</a></li>
+  <li><a href="#le-périmètre" id="toc-le-périmètre" class="nav-link" data-scroll-target="#le-périmètre"><span class="header-section-number">3.4</span> Le périmètre</a></li>
+  <li><a href="#la-granularité-de-la-preuve" id="toc-la-granularité-de-la-preuve" class="nav-link" data-scroll-target="#la-granularité-de-la-preuve"><span class="header-section-number">3.5</span> La granularité de la preuve</a></li>
+  <li><a href="#lindépendance" id="toc-lindépendance" class="nav-link" data-scroll-target="#lindépendance"><span class="header-section-number">3.6</span> L’indépendance</a></li>
+  </ul></li>
+  <li><a href="#de-la-réponse-à-laffirmation-vérifiable" id="toc-de-la-réponse-à-laffirmation-vérifiable" class="nav-link" data-scroll-target="#de-la-réponse-à-laffirmation-vérifiable"><span class="header-section-number">4</span> De la réponse à l’affirmation vérifiable</a></li>
+  <li><a href="#une-hiérarchie-opérationnelle-des-sources" id="toc-une-hiérarchie-opérationnelle-des-sources" class="nav-link" data-scroll-target="#une-hiérarchie-opérationnelle-des-sources"><span class="header-section-number">5</span> Une hiérarchie opérationnelle des sources</a></li>
+  <li><a href="#la-matrice-de-preuve-loutil-central" id="toc-la-matrice-de-preuve-loutil-central" class="nav-link" data-scroll-target="#la-matrice-de-preuve-loutil-central"><span class="header-section-number">6</span> La matrice de preuve : l’outil central</a></li>
+  <li><a href="#le-protocole-syltra-en-neuf-étapes" id="toc-le-protocole-syltra-en-neuf-étapes" class="nav-link" data-scroll-target="#le-protocole-syltra-en-neuf-étapes"><span class="header-section-number">7</span> Le protocole SYLTRA en neuf étapes</a>
+  <ul>
+  <li><a href="#étape-1-définir-lusage-réel-de-la-réponse" id="toc-étape-1-définir-lusage-réel-de-la-réponse" class="nav-link" data-scroll-target="#étape-1-définir-lusage-réel-de-la-réponse"><span class="header-section-number">7.1</span> Étape 1 — Définir l’usage réel de la réponse</a></li>
+  <li><a href="#étape-2-classer-le-niveau-de-risque" id="toc-étape-2-classer-le-niveau-de-risque" class="nav-link" data-scroll-target="#étape-2-classer-le-niveau-de-risque"><span class="header-section-number">7.2</span> Étape 2 — Classer le niveau de risque</a></li>
+  <li><a href="#étape-3-décomposer-la-réponse" id="toc-étape-3-décomposer-la-réponse" class="nav-link" data-scroll-target="#étape-3-décomposer-la-réponse"><span class="header-section-number">7.3</span> Étape 3 — Décomposer la réponse</a></li>
+  <li><a href="#étape-4-exiger-une-attribution-précise" id="toc-étape-4-exiger-une-attribution-précise" class="nav-link" data-scroll-target="#étape-4-exiger-une-attribution-précise"><span class="header-section-number">7.4</span> Étape 4 — Exiger une attribution précise</a></li>
+  <li><a href="#étape-5-vérifier-lexistence-et-lintégrité" id="toc-étape-5-vérifier-lexistence-et-lintégrité" class="nav-link" data-scroll-target="#étape-5-vérifier-lexistence-et-lintégrité"><span class="header-section-number">7.5</span> Étape 5 — Vérifier l’existence et l’intégrité</a></li>
+  <li><a href="#étape-6-contrôler-ladéquation-méthodologique" id="toc-étape-6-contrôler-ladéquation-méthodologique" class="nav-link" data-scroll-target="#étape-6-contrôler-ladéquation-méthodologique"><span class="header-section-number">7.6</span> Étape 6 — Contrôler l’adéquation méthodologique</a></li>
+  <li><a href="#étape-7-recalculer-ce-qui-peut-lêtre" id="toc-étape-7-recalculer-ce-qui-peut-lêtre" class="nav-link" data-scroll-target="#étape-7-recalculer-ce-qui-peut-lêtre"><span class="header-section-number">7.7</span> Étape 7 — Recalculer ce qui peut l’être</a></li>
+  <li><a href="#étape-8-documenter-les-divergences" id="toc-étape-8-documenter-les-divergences" class="nav-link" data-scroll-target="#étape-8-documenter-les-divergences"><span class="header-section-number">7.8</span> Étape 8 — Documenter les divergences</a></li>
+  <li><a href="#étape-9-décider-avec-un-seuil-dacceptation" id="toc-étape-9-décider-avec-un-seuil-dacceptation" class="nav-link" data-scroll-target="#étape-9-décider-avec-un-seuil-dacceptation"><span class="header-section-number">7.9</span> Étape 9 — Décider avec un seuil d’acceptation</a></li>
+  </ul></li>
+  <li><a href="#le-test-scope-pour-évaluer-une-source" id="toc-le-test-scope-pour-évaluer-une-source" class="nav-link" data-scroll-target="#le-test-scope-pour-évaluer-une-source"><span class="header-section-number">8</span> Le test SCOPE pour évaluer une source</a>
+  <ul>
+  <li><a href="#s-solidité" id="toc-s-solidité" class="nav-link" data-scroll-target="#s-solidité"><span class="header-section-number">8.1</span> S — Solidité</a></li>
+  <li><a href="#c-contexte" id="toc-c-contexte" class="nav-link" data-scroll-target="#c-contexte"><span class="header-section-number">8.2</span> C — Contexte</a></li>
+  <li><a href="#o-origine" id="toc-o-origine" class="nav-link" data-scroll-target="#o-origine"><span class="header-section-number">8.3</span> O — Origine</a></li>
+  <li><a href="#p-précision" id="toc-p-précision" class="nav-link" data-scroll-target="#p-précision"><span class="header-section-number">8.4</span> P — Précision</a></li>
+  <li><a href="#e-état-actuel" id="toc-e-état-actuel" class="nav-link" data-scroll-target="#e-état-actuel"><span class="header-section-number">8.5</span> E — État actuel</a></li>
+  </ul></li>
+  <li><a href="#vérifier-les-citations-scientifiques" id="toc-vérifier-les-citations-scientifiques" class="nav-link" data-scroll-target="#vérifier-les-citations-scientifiques"><span class="header-section-number">9</span> Vérifier les citations scientifiques</a>
+  <ul>
+  <li><a href="#contrôle-didentité" id="toc-contrôle-didentité" class="nav-link" data-scroll-target="#contrôle-didentité"><span class="header-section-number">9.1</span> Contrôle d’identité</a></li>
+  <li><a href="#contrôle-de-fidélité" id="toc-contrôle-de-fidélité" class="nav-link" data-scroll-target="#contrôle-de-fidélité"><span class="header-section-number">9.2</span> Contrôle de fidélité</a></li>
+  <li><a href="#contrôle-de-qualité" id="toc-contrôle-de-qualité" class="nav-link" data-scroll-target="#contrôle-de-qualité"><span class="header-section-number">9.3</span> Contrôle de qualité</a></li>
+  <li><a href="#contrôle-de-synthèse" id="toc-contrôle-de-synthèse" class="nav-link" data-scroll-target="#contrôle-de-synthèse"><span class="header-section-number">9.4</span> Contrôle de synthèse</a></li>
+  </ul></li>
+  <li><a href="#vérifier-une-réponse-chiffrée" id="toc-vérifier-une-réponse-chiffrée" class="nav-link" data-scroll-target="#vérifier-une-réponse-chiffrée"><span class="header-section-number">10</span> Vérifier une réponse chiffrée</a></li>
+  <li><a href="#vérifier-une-recommandation" id="toc-vérifier-une-recommandation" class="nav-link" data-scroll-target="#vérifier-une-recommandation"><span class="header-section-number">11</span> Vérifier une recommandation</a></li>
+  <li><a href="#cas-dusage-santé-et-biostatistique" id="toc-cas-dusage-santé-et-biostatistique" class="nav-link" data-scroll-target="#cas-dusage-santé-et-biostatistique"><span class="header-section-number">12</span> Cas d’usage : santé et biostatistique</a>
+  <ul>
+  <li><a href="#exemple-de-contrôle" id="toc-exemple-de-contrôle" class="nav-link" data-scroll-target="#exemple-de-contrôle"><span class="header-section-number">12.1</span> Exemple de contrôle</a></li>
+  <li><a href="#exigences-minimales" id="toc-exigences-minimales" class="nav-link" data-scroll-target="#exigences-minimales"><span class="header-section-number">12.2</span> Exigences minimales</a></li>
+  </ul></li>
+  <li><a href="#cas-dusage-recherche-scientifique" id="toc-cas-dusage-recherche-scientifique" class="nav-link" data-scroll-target="#cas-dusage-recherche-scientifique"><span class="header-section-number">13</span> Cas d’usage : recherche scientifique</a>
+  <ul>
+  <li><a href="#méthode-recommandée" id="toc-méthode-recommandée" class="nav-link" data-scroll-target="#méthode-recommandée"><span class="header-section-number">13.1</span> Méthode recommandée</a></li>
+  </ul></li>
+  <li><a href="#cas-dusage-banque-finance-et-assurance" id="toc-cas-dusage-banque-finance-et-assurance" class="nav-link" data-scroll-target="#cas-dusage-banque-finance-et-assurance"><span class="header-section-number">14</span> Cas d’usage : banque, finance et assurance</a>
+  <ul>
+  <li><a href="#points-de-contrôle" id="toc-points-de-contrôle" class="nav-link" data-scroll-target="#points-de-contrôle"><span class="header-section-number">14.1</span> Points de contrôle</a></li>
+  </ul></li>
+  <li><a href="#cas-dusage-industrie-et-ingénierie" id="toc-cas-dusage-industrie-et-ingénierie" class="nav-link" data-scroll-target="#cas-dusage-industrie-et-ingénierie"><span class="header-section-number">15</span> Cas d’usage : industrie et ingénierie</a>
+  <ul>
+  <li><a href="#chaîne-de-validation" id="toc-chaîne-de-validation" class="nav-link" data-scroll-target="#chaîne-de-validation"><span class="header-section-number">15.1</span> Chaîne de validation</a></li>
+  </ul></li>
+  <li><a href="#cas-dusage-droit-conformité-et-administration" id="toc-cas-dusage-droit-conformité-et-administration" class="nav-link" data-scroll-target="#cas-dusage-droit-conformité-et-administration"><span class="header-section-number">16</span> Cas d’usage : droit, conformité et administration</a></li>
+  <li><a href="#cas-dusage-enseignement-et-formation" id="toc-cas-dusage-enseignement-et-formation" class="nav-link" data-scroll-target="#cas-dusage-enseignement-et-formation"><span class="header-section-number">17</span> Cas d’usage : enseignement et formation</a></li>
+  <li><a href="#les-fausses-bonnes-pratiques" id="toc-les-fausses-bonnes-pratiques" class="nav-link" data-scroll-target="#les-fausses-bonnes-pratiques"><span class="header-section-number">18</span> Les fausses bonnes pratiques</a>
+  <ul>
+  <li><a href="#lia-a-donné-trois-références-donc-la-réponse-est-fiable" id="toc-lia-a-donné-trois-références-donc-la-réponse-est-fiable" class="nav-link" data-scroll-target="#lia-a-donné-trois-références-donc-la-réponse-est-fiable"><span class="header-section-number">18.1</span> « L’IA a donné trois références, donc la réponse est fiable »</a></li>
+  <li><a href="#la-réponse-est-confirmée-par-plusieurs-sites" id="toc-la-réponse-est-confirmée-par-plusieurs-sites" class="nav-link" data-scroll-target="#la-réponse-est-confirmée-par-plusieurs-sites"><span class="header-section-number">18.2</span> « La réponse est confirmée par plusieurs sites »</a></li>
+  <li><a href="#le-modèle-a-accès-à-internet" id="toc-le-modèle-a-accès-à-internet" class="nav-link" data-scroll-target="#le-modèle-a-accès-à-internet"><span class="header-section-number">18.3</span> « Le modèle a accès à Internet »</a></li>
+  <li><a href="#le-texte-est-prudent-donc-il-est-correct" id="toc-le-texte-est-prudent-donc-il-est-correct" class="nav-link" data-scroll-target="#le-texte-est-prudent-donc-il-est-correct"><span class="header-section-number">18.4</span> « Le texte est prudent, donc il est correct »</a></li>
+  <li><a href="#le-code-sexécute-donc-lanalyse-est-valide" id="toc-le-code-sexécute-donc-lanalyse-est-valide" class="nav-link" data-scroll-target="#le-code-sexécute-donc-lanalyse-est-valide"><span class="header-section-number">18.5</span> « Le code s’exécute, donc l’analyse est valide »</a></li>
+  <li><a href="#un-expert-a-relu-rapidement" id="toc-un-expert-a-relu-rapidement" class="nav-link" data-scroll-target="#un-expert-a-relu-rapidement"><span class="header-section-number">18.6</span> « Un expert a relu rapidement »</a></li>
+  </ul></li>
+  <li><a href="#concevoir-de-meilleurs-prompts-de-vérification" id="toc-concevoir-de-meilleurs-prompts-de-vérification" class="nav-link" data-scroll-target="#concevoir-de-meilleurs-prompts-de-vérification"><span class="header-section-number">19</span> Concevoir de meilleurs prompts de vérification</a>
+  <ul>
+  <li><a href="#prompt-pour-une-réponse-sourcée" id="toc-prompt-pour-une-réponse-sourcée" class="nav-link" data-scroll-target="#prompt-pour-une-réponse-sourcée"><span class="header-section-number">19.1</span> Prompt pour une réponse sourcée</a></li>
+  <li><a href="#prompt-pour-auditer-une-réponse-existante" id="toc-prompt-pour-auditer-une-réponse-existante" class="nav-link" data-scroll-target="#prompt-pour-auditer-une-réponse-existante"><span class="header-section-number">19.2</span> Prompt pour auditer une réponse existante</a></li>
+  <li><a href="#prompt-pour-comparer-des-sources" id="toc-prompt-pour-comparer-des-sources" class="nav-link" data-scroll-target="#prompt-pour-comparer-des-sources"><span class="header-section-number">19.3</span> Prompt pour comparer des sources</a></li>
+  <li><a href="#prompt-pour-la-recherche-scientifique" id="toc-prompt-pour-la-recherche-scientifique" class="nav-link" data-scroll-target="#prompt-pour-la-recherche-scientifique"><span class="header-section-number">19.4</span> Prompt pour la recherche scientifique</a></li>
+  <li><a href="#prompt-pour-la-conformité" id="toc-prompt-pour-la-conformité" class="nav-link" data-scroll-target="#prompt-pour-la-conformité"><span class="header-section-number">19.5</span> Prompt pour la conformité</a></li>
+  </ul></li>
+  <li><a href="#construire-une-réponse-réellement-traçable" id="toc-construire-une-réponse-réellement-traçable" class="nav-link" data-scroll-target="#construire-une-réponse-réellement-traçable"><span class="header-section-number">20</span> Construire une réponse réellement traçable</a></li>
+  <li><a href="#la-traçabilité-technique" id="toc-la-traçabilité-technique" class="nav-link" data-scroll-target="#la-traçabilité-technique"><span class="header-section-number">21</span> La traçabilité technique</a></li>
+  <li><a href="#mesurer-la-qualité-des-réponses-sourcées" id="toc-mesurer-la-qualité-des-réponses-sourcées" class="nav-link" data-scroll-target="#mesurer-la-qualité-des-réponses-sourcées"><span class="header-section-number">22</span> Mesurer la qualité des réponses sourcées</a>
+  <ul>
+  <li><a href="#taux-de-couverture-des-affirmations" id="toc-taux-de-couverture-des-affirmations" class="nav-link" data-scroll-target="#taux-de-couverture-des-affirmations"><span class="header-section-number">22.1</span> Taux de couverture des affirmations</a></li>
+  <li><a href="#taux-de-fidélité" id="toc-taux-de-fidélité" class="nav-link" data-scroll-target="#taux-de-fidélité"><span class="header-section-number">22.2</span> Taux de fidélité</a></li>
+  <li><a href="#taux-de-sources-primaires" id="toc-taux-de-sources-primaires" class="nav-link" data-scroll-target="#taux-de-sources-primaires"><span class="header-section-number">22.3</span> Taux de sources primaires</a></li>
+  <li><a href="#taux-dobsolescence" id="toc-taux-dobsolescence" class="nav-link" data-scroll-target="#taux-dobsolescence"><span class="header-section-number">22.4</span> Taux d’obsolescence</a></li>
+  <li><a href="#taux-de-correction-humaine" id="toc-taux-de-correction-humaine" class="nav-link" data-scroll-target="#taux-de-correction-humaine"><span class="header-section-number">22.5</span> Taux de correction humaine</a></li>
+  <li><a href="#délai-de-validation" id="toc-délai-de-validation" class="nav-link" data-scroll-target="#délai-de-validation"><span class="header-section-number">22.6</span> Délai de validation</a></li>
+  </ul></li>
+  <li><a href="#mettre-en-place-une-gouvernance-organisationnelle" id="toc-mettre-en-place-une-gouvernance-organisationnelle" class="nav-link" data-scroll-target="#mettre-en-place-une-gouvernance-organisationnelle"><span class="header-section-number">23</span> Mettre en place une gouvernance organisationnelle</a>
+  <ul>
+  <li><a href="#rôles-recommandés" id="toc-rôles-recommandés" class="nav-link" data-scroll-target="#rôles-recommandés"><span class="header-section-number">23.1</span> Rôles recommandés</a></li>
+  <li><a href="#politique-minimale" id="toc-politique-minimale" class="nav-link" data-scroll-target="#politique-minimale"><span class="header-section-number">23.2</span> Politique minimale</a></li>
+  </ul></li>
+  <li><a href="#que-faire-lorsquaucune-source-solide-nexiste" id="toc-que-faire-lorsquaucune-source-solide-nexiste" class="nav-link" data-scroll-target="#que-faire-lorsquaucune-source-solide-nexiste"><span class="header-section-number">24</span> Que faire lorsqu’aucune source solide n’existe ?</a></li>
+  <li><a href="#exemple-complet-daudit" id="toc-exemple-complet-daudit" class="nav-link" data-scroll-target="#exemple-complet-daudit"><span class="header-section-number">25</span> Exemple complet d’audit</a>
+  <ul>
+  <li><a href="#réponse-initiale" id="toc-réponse-initiale" class="nav-link" data-scroll-target="#réponse-initiale"><span class="header-section-number">25.1</span> Réponse initiale</a></li>
+  <li><a href="#décomposition" id="toc-décomposition" class="nav-link" data-scroll-target="#décomposition"><span class="header-section-number">25.2</span> Décomposition</a></li>
+  <li><a href="#audit" id="toc-audit" class="nav-link" data-scroll-target="#audit"><span class="header-section-number">25.3</span> Audit</a></li>
+  <li><a href="#version-corrigée" id="toc-version-corrigée" class="nav-link" data-scroll-target="#version-corrigée"><span class="header-section-number">25.4</span> Version corrigée</a></li>
+  </ul></li>
+  <li><a href="#checklist-avant-publication-ou-décision" id="toc-checklist-avant-publication-ou-décision" class="nav-link" data-scroll-target="#checklist-avant-publication-ou-décision"><span class="header-section-number">26</span> Checklist avant publication ou décision</a>
+  <ul>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources"><span class="header-section-number">26.1</span> Sources</a></li>
+  <li><a href="#méthode" id="toc-méthode" class="nav-link" data-scroll-target="#méthode"><span class="header-section-number">26.2</span> Méthode</a></li>
+  <li><a href="#gouvernance" id="toc-gouvernance" class="nav-link" data-scroll-target="#gouvernance"><span class="header-section-number">26.3</span> Gouvernance</a></li>
+  </ul></li>
+  <li><a href="#les-dix-questions-du-lecteur-expert" id="toc-les-dix-questions-du-lecteur-expert" class="nav-link" data-scroll-target="#les-dix-questions-du-lecteur-expert"><span class="header-section-number">27</span> Les dix questions du lecteur expert</a></li>
+  <li><a href="#ce-que-lexpertise-change-réellement" id="toc-ce-que-lexpertise-change-réellement" class="nav-link" data-scroll-target="#ce-que-lexpertise-change-réellement"><span class="header-section-number">28</span> Ce que l’expertise change réellement</a></li>
+  <li><a href="#à-retenir" id="toc-à-retenir" class="nav-link" data-scroll-target="#à-retenir"><span class="header-section-number">29</span> À retenir</a></li>
+  <li><a href="#besoin-dun-accompagnement" id="toc-besoin-dun-accompagnement" class="nav-link" data-scroll-target="#besoin-dun-accompagnement"><span class="header-section-number">30</span> Besoin d’un accompagnement ?</a></li>
+  <li><a href="#références-essentielles" id="toc-références-essentielles" class="nav-link" data-scroll-target="#références-essentielles"><span class="header-section-number">31</span> Références essentielles</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Le réflexe expert : demander la source, pas seulement la réponse</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Intelligence artificielle</div>
+    <div class="quarto-category">Esprit critique</div>
+    <div class="quarto-category">Recherche</div>
+    <div class="quarto-category">Gouvernance des données</div>
+    <div class="quarto-category">Méthodologie</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Méthode complète pour transformer une réponse d’intelligence artificielle en information vérifiable, traçable et exploitable dans la recherche, la santé, la finance, l’industrie et la décision publique.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>SYLTRA Consulting </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2 août 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modifié</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2 août 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="article-kicker">
+<p><strong>Publication 6 · Niveau intermédiaire à expert · Thème : fiabilité, preuve et gouvernance des usages de l’IA</strong></p>
+</div>
+<section id="lidée-essentielle" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="lidée-essentielle"><span class="header-section-number">1</span> L’idée essentielle</h2>
+<p>Une réponse produite par une intelligence artificielle n’est pas une preuve. C’est une proposition linguistique qu’il faut relier à des documents, à des données, à une méthode et à un contexte d’utilisation avant de pouvoir lui accorder une valeur professionnelle. Le réflexe expert consiste donc à ne jamais s’arrêter à la fluidité d’une réponse : il faut demander <strong>d’où vient chaque affirmation importante, à quelle date elle était vraie, dans quel périmètre elle s’applique et comment elle peut être vérifiée indépendamment</strong>.</p>
+<p>Cette exigence ne traduit pas une défiance systématique envers l’IA. Elle définit au contraire les conditions d’un usage mature. Une IA générative peut accélérer la recherche documentaire, structurer une analyse, proposer une synthèse, comparer des options, reformuler une hypothèse ou préparer un plan de travail. Mais elle ne doit pas devenir une couche opaque entre le professionnel et la réalité. Plus une réponse influence une décision scientifique, clinique, financière, juridique, industrielle ou pédagogique, plus sa chaîne de preuve doit être explicite.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Principe directeur">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Principe directeur
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La bonne question n’est pas seulement : <strong>« La réponse semble-t-elle correcte ? »</strong> La question professionnelle est : <strong>« Quels éléments vérifiables rendent cette réponse suffisamment fiable pour l’usage prévu ? »</strong></p>
+</div>
+</div>
+</section>
+<section id="pourquoi-une-réponse-convaincante-peut-être-fausse" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="pourquoi-une-réponse-convaincante-peut-être-fausse"><span class="header-section-number">2</span> Pourquoi une réponse convaincante peut être fausse</h2>
+<p>Les grands modèles de langage produisent du texte en estimant, à chaque étape, la suite la plus plausible compte tenu du contexte reçu. Cette capacité explique leur fluidité, leur souplesse et leur aptitude à produire des réponses structurées. Elle explique également une limite fondamentale : la plausibilité linguistique n’est pas équivalente à la vérité factuelle.</p>
+<p>Un système peut ainsi :</p>
+<ul>
+<li>présenter une information exacte mais dépassée ;</li>
+<li>mélanger deux sources compatibles en apparence mais portant sur des populations différentes ;</li>
+<li>inventer une référence bibliographique au format crédible ;</li>
+<li>attribuer à un article une conclusion qu’il ne contient pas ;</li>
+<li>généraliser un résultat obtenu dans un contexte étroit ;</li>
+<li>produire un calcul cohérent à partir d’hypothèses erronées ;</li>
+<li>ignorer une exception réglementaire ou méthodologique ;</li>
+<li>transformer une hypothèse discutée en fait établi ;</li>
+<li>répondre avec assurance alors que les données disponibles sont insuffisantes.</li>
+</ul>
+<p>La littérature récente sur les hallucinations des grands modèles de langage décrit précisément ce type de contenu plausible mais non fondé. Les travaux de synthèse distinguent notamment les erreurs factuelles, les contradictions avec les sources fournies, les citations non fidèles et les réponses qui dépassent les connaissances réellement accessibles au système. Les approches de génération augmentée par recherche, ou <em>Retrieval-Augmented Generation</em> (RAG), améliorent souvent la traçabilité en reliant le modèle à des documents externes, mais elles ne suppriment pas automatiquement les erreurs : un mauvais document peut être récupéré, un passage peut être mal interprété ou une affirmation peut être insuffisamment soutenue.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>Le NIST considère d’ailleurs la « confabulation » comme un risque spécifique des systèmes d’IA générative et recommande de l’intégrer à une démarche structurée de gouvernance, de mesure et de maîtrise des risques.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+</section>
+<section id="la-source-nest-pas-un-simple-lien" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="la-source-nest-pas-un-simple-lien"><span class="header-section-number">3</span> La source n’est pas un simple lien</h2>
+<p>Dans un usage superficiel, « demander la source » signifie souvent obtenir une URL. Dans un usage expert, une source est un objet beaucoup plus riche. Elle doit être examinée selon plusieurs dimensions complémentaires.</p>
+<section id="lidentité-de-la-source" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="lidentité-de-la-source"><span class="header-section-number">3.1</span> L’identité de la source</h3>
+<p>Il faut identifier l’auteur, l’organisation, l’éditeur, la revue, l’autorité réglementaire ou le producteur de données. Une page anonyme, une publication institutionnelle et un article scientifique évalué par les pairs ne présentent pas le même niveau de responsabilité éditoriale.</p>
+</section>
+<section id="la-nature-de-la-source" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="la-nature-de-la-source"><span class="header-section-number">3.2</span> La nature de la source</h3>
+<p>Une source peut être :</p>
+<ul>
+<li>un texte réglementaire ;</li>
+<li>une recommandation officielle ;</li>
+<li>une revue systématique ;</li>
+<li>un essai contrôlé ;</li>
+<li>une étude observationnelle ;</li>
+<li>une base de données ;</li>
+<li>une documentation technique ;</li>
+<li>un rapport d’audit ;</li>
+<li>une norme ;</li>
+<li>une page de vulgarisation ;</li>
+<li>une opinion d’expert ;</li>
+<li>un billet de blog ;</li>
+<li>un message sur un réseau social.</li>
+</ul>
+<p>La nature du document détermine le type de conclusion qu’il peut raisonnablement soutenir.</p>
+</section>
+<section id="la-date-et-la-version" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="la-date-et-la-version"><span class="header-section-number">3.3</span> La date et la version</h3>
+<p>Une information exacte en 2023 peut être fausse en 2026. Les réglementations, recommandations, logiciels, tarifs, seuils, nomenclatures et responsabilités institutionnelles évoluent. Il faut donc conserver la date de publication, la date de consultation et, lorsque cela existe, le numéro de version.</p>
+</section>
+<section id="le-périmètre" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="le-périmètre"><span class="header-section-number">3.4</span> Le périmètre</h3>
+<p>Une étude réalisée sur des adultes hospitalisés dans un pays ne permet pas nécessairement de conclure pour des enfants suivis en ville dans un autre système de soins. De même, une documentation relative à une version précise d’une bibliothèque informatique ne peut pas être appliquée sans vérification à une version ultérieure.</p>
+</section>
+<section id="la-granularité-de-la-preuve" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="la-granularité-de-la-preuve"><span class="header-section-number">3.5</span> La granularité de la preuve</h3>
+<p>Une source peut être globalement pertinente sans soutenir la phrase exacte produite par l’IA. Le contrôle doit descendre au niveau du passage, du tableau, de la figure, de la formule ou de la section réglementaire qui justifie l’affirmation.</p>
+</section>
+<section id="lindépendance" class="level3" data-number="3.6">
+<h3 data-number="3.6" class="anchored" data-anchor-id="lindépendance"><span class="header-section-number">3.6</span> L’indépendance</h3>
+<p>Dix pages qui recopient le même communiqué ne constituent pas dix preuves indépendantes. L’expert cherche la source primaire, puis des confirmations réellement distinctes lorsque l’enjeu le justifie.</p>
+</section>
+</section>
+<section id="de-la-réponse-à-laffirmation-vérifiable" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="de-la-réponse-à-laffirmation-vérifiable"><span class="header-section-number">4</span> De la réponse à l’affirmation vérifiable</h2>
+<p>Une réponse longue contient souvent plusieurs types d’énoncés. Les vérifier en bloc est inefficace. Il faut d’abord la décomposer en <strong>affirmations atomiques</strong>, c’est-à-dire en unités suffisamment précises pour être vraies, fausses, incertaines ou hors périmètre.</p>
+<p>Prenons l’énoncé suivant :</p>
+<blockquote class="blockquote">
+<p>« Cette méthode est recommandée en santé, réduit le risque d’erreur et respecte les exigences européennes. »</p>
+</blockquote>
+<p>Il contient au moins trois affirmations différentes :</p>
+<ol type="1">
+<li>la méthode est recommandée dans un domaine de santé donné ;</li>
+<li>son utilisation réduit un risque d’erreur défini ;</li>
+<li>son emploi est compatible avec des exigences européennes identifiées.</li>
+</ol>
+<p>Chacune exige une source distincte et un critère de vérification différent. Une recommandation professionnelle peut soutenir la première. Une étude comparative ou un audit peut soutenir la deuxième. Un texte juridique, une norme ou une analyse de conformité peut être nécessaire pour la troisième.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Technique pratique">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Technique pratique
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Lorsqu’une phrase contient les mots <strong>et</strong>, <strong>donc</strong>, <strong>toujours</strong>, <strong>jamais</strong>, <strong>prouvé</strong>, <strong>conforme</strong>, <strong>recommandé</strong>, <strong>sans risque</strong> ou <strong>meilleur</strong>, elle doit presque toujours être divisée en plusieurs affirmations vérifiables.</p>
+</div>
+</div>
+</section>
+<section id="une-hiérarchie-opérationnelle-des-sources" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="une-hiérarchie-opérationnelle-des-sources"><span class="header-section-number">5</span> Une hiérarchie opérationnelle des sources</h2>
+<p>Il n’existe pas de hiérarchie universelle valable pour tous les domaines. Le meilleur document dépend de la question. Un texte légal est supérieur à un article de blog pour connaître une obligation juridique ; une étude expérimentale est plus utile qu’un règlement pour estimer l’effet d’un traitement ; la documentation officielle d’un logiciel est souvent prioritaire pour connaître une fonction ou un paramètre.</p>
+<p>On peut néanmoins utiliser la grille suivante.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Niveau</th>
+<th>Type de source</th>
+<th>Utilisation privilégiée</th>
+<th>Limite principale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>Texte officiel, norme, base primaire, protocole, documentation de référence</td>
+<td>Obligations, définitions, paramètres, données originales</td>
+<td>Peut nécessiter une expertise d’interprétation</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>Revue systématique, méta-analyse, recommandation méthodologique robuste</td>
+<td>État global des connaissances</td>
+<td>Dépend de la qualité des études incluses</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>Étude primaire, rapport technique détaillé, benchmark reproductible</td>
+<td>Résultat spécifique, performance, mécanisme</td>
+<td>Généralisation souvent limitée</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>Synthèse institutionnelle, manuel universitaire, documentation pédagogique</td>
+<td>Compréhension et cadrage</td>
+<td>Peut simplifier ou dater</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>Presse spécialisée, blog expert, conférence, réseau professionnel</td>
+<td>Veille, exemples, signaux émergents</td>
+<td>Validation variable</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>Forum, commentaire, contenu anonyme ou non traçable</td>
+<td>Piste à investiguer</td>
+<td>Ne doit pas soutenir seul une décision importante</td>
+</tr>
+</tbody>
+</table>
+<p>Cette grille ne doit pas devenir mécanique. Une étude primaire récente peut corriger une recommandation ancienne. Une norme peut être volontaire tandis qu’une règle locale est obligatoire. Un manuel peut être excellent pour expliquer une méthode, mais insuffisant pour établir qu’elle est imposée dans une juridiction donnée.</p>
+</section>
+<section id="la-matrice-de-preuve-loutil-central" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="la-matrice-de-preuve-loutil-central"><span class="header-section-number">6</span> La matrice de preuve : l’outil central</h2>
+<p>La matrice de preuve transforme une réponse narrative en dossier vérifiable. Elle peut être tenue dans un tableur, une base de données, un document partagé ou un outil de gestion de connaissances.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Affirmation</th>
+<th style="text-align: right;">Importance</th>
+<th>Source attendue</th>
+<th>Source trouvée</th>
+<th>Passage exact</th>
+<th>Statut</th>
+<th>Décision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A1</td>
+<td>Définition du concept</td>
+<td style="text-align: right;">Moyenne</td>
+<td>Source officielle ou manuel</td>
+<td>Document X</td>
+<td>Section 2.1</td>
+<td>Confirmée</td>
+<td>Conserver</td>
+</tr>
+<tr class="even">
+<td>A2</td>
+<td>Valeur numérique annoncée</td>
+<td style="text-align: right;">Élevée</td>
+<td>Donnée primaire</td>
+<td>Rapport Y</td>
+<td>Tableau 4</td>
+<td>Partielle</td>
+<td>Reformuler</td>
+</tr>
+<tr class="odd">
+<td>A3</td>
+<td>Obligation réglementaire</td>
+<td style="text-align: right;">Critique</td>
+<td>Texte juridique en vigueur</td>
+<td>Article Z</td>
+<td>Article 14</td>
+<td>Confirmée</td>
+<td>Conserver avec date</td>
+</tr>
+<tr class="even">
+<td>A4</td>
+<td>Supériorité d’une méthode</td>
+<td style="text-align: right;">Élevée</td>
+<td>Étude comparative</td>
+<td>Aucune preuve robuste</td>
+<td>—</td>
+<td>Non confirmée</td>
+<td>Supprimer</td>
+</tr>
+</tbody>
+</table>
+<p>La colonne <strong>Importance</strong> permet de concentrer l’effort. Une faute sur la couleur d’un logo n’a pas le même impact qu’une erreur sur une contre-indication médicale, un seuil financier ou une obligation légale.</p>
+<p>La colonne <strong>Passage exact</strong> évite le piège du « document pertinent ». Un document de 200 pages peut être pertinent sans contenir la preuve recherchée. Il faut conserver la page, le paragraphe, le tableau, la figure, l’article de loi ou l’identifiant de donnée.</p>
+<p>La colonne <strong>Décision</strong> impose une action : conserver, nuancer, recalculer, compléter, supprimer ou soumettre à un expert.</p>
+</section>
+<section id="le-protocole-syltra-en-neuf-étapes" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="le-protocole-syltra-en-neuf-étapes"><span class="header-section-number">7</span> Le protocole SYLTRA en neuf étapes</h2>
+<section id="étape-1-définir-lusage-réel-de-la-réponse" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="étape-1-définir-lusage-réel-de-la-réponse"><span class="header-section-number">7.1</span> Étape 1 — Définir l’usage réel de la réponse</h3>
+<p>La vérification dépend du but. Une réponse utilisée pour lancer une discussion interne ne requiert pas le même niveau de contrôle qu’une recommandation clinique, un rapport réglementaire ou une décision d’investissement.</p>
+<p>Il faut préciser :</p>
+<ul>
+<li>qui utilisera le résultat ;</li>
+<li>quelle décision pourrait en découler ;</li>
+<li>quelles conséquences produirait une erreur ;</li>
+<li>quelle échéance s’applique ;</li>
+<li>quel niveau de preuve est attendu ;</li>
+<li>quelles données sont autorisées ;</li>
+<li>quelle personne assume la validation finale.</li>
+</ul>
+</section>
+<section id="étape-2-classer-le-niveau-de-risque" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="étape-2-classer-le-niveau-de-risque"><span class="header-section-number">7.2</span> Étape 2 — Classer le niveau de risque</h3>
+<p>Une classification simple peut être utilisée :</p>
+<ul>
+<li><strong>Risque faible</strong> : idéation, reformulation, plan préliminaire, apprentissage sans décision directe ;</li>
+<li><strong>Risque modéré</strong> : note interne, comparaison d’options, support pédagogique, première analyse ;</li>
+<li><strong>Risque élevé</strong> : décision sur une personne, résultat scientifique, sécurité, santé, finance, droit, production industrielle ;</li>
+<li><strong>Risque critique</strong> : décision irréversible, atteinte potentielle aux droits fondamentaux, danger physique, diagnostic, traitement, sanction ou engagement financier majeur.</li>
+</ul>
+<p>Plus le risque augmente, plus la chaîne de validation doit inclure des sources primaires, une revue humaine qualifiée, une traçabilité des versions et, si nécessaire, une validation indépendante.</p>
+</section>
+<section id="étape-3-décomposer-la-réponse" class="level3" data-number="7.3">
+<h3 data-number="7.3" class="anchored" data-anchor-id="étape-3-décomposer-la-réponse"><span class="header-section-number">7.3</span> Étape 3 — Décomposer la réponse</h3>
+<p>Il faut distinguer :</p>
+<ul>
+<li>les faits ;</li>
+<li>les chiffres ;</li>
+<li>les définitions ;</li>
+<li>les interprétations ;</li>
+<li>les recommandations ;</li>
+<li>les prédictions ;</li>
+<li>les hypothèses ;</li>
+<li>les jugements de valeur ;</li>
+<li>les éléments réglementaires ;</li>
+<li>les citations.</li>
+</ul>
+<p>Cette décomposition révèle souvent que l’IA a mêlé des niveaux de certitude différents dans une même formulation.</p>
+</section>
+<section id="étape-4-exiger-une-attribution-précise" class="level3" data-number="7.4">
+<h3 data-number="7.4" class="anchored" data-anchor-id="étape-4-exiger-une-attribution-précise"><span class="header-section-number">7.4</span> Étape 4 — Exiger une attribution précise</h3>
+<p>Une consigne utile est :</p>
+<blockquote class="blockquote">
+<p>Pour chaque affirmation importante, indique la source primaire, la date, le passage qui la soutient, le niveau d’incertitude et les limites d’application. Lorsque tu ne disposes pas d’une source vérifiable, indique explicitement « non vérifié ».</p>
+</blockquote>
+<p>Cette consigne améliore la forme du résultat, mais ne constitue pas une validation. Le modèle peut encore produire une référence inexistante ou mal attribuée. Chaque source doit être ouverte et contrôlée.</p>
+</section>
+<section id="étape-5-vérifier-lexistence-et-lintégrité" class="level3" data-number="7.5">
+<h3 data-number="7.5" class="anchored" data-anchor-id="étape-5-vérifier-lexistence-et-lintégrité"><span class="header-section-number">7.5</span> Étape 5 — Vérifier l’existence et l’intégrité</h3>
+<p>Le contrôle minimal comprend :</p>
+<ol type="1">
+<li>vérifier que le document existe ;</li>
+<li>vérifier que les auteurs, le titre, l’année et l’identifiant sont corrects ;</li>
+<li>ouvrir la version complète ;</li>
+<li>retrouver le passage annoncé ;</li>
+<li>examiner le contexte avant et après ce passage ;</li>
+<li>vérifier si le document a été corrigé, rétracté ou remplacé ;</li>
+<li>confirmer que la conclusion de l’IA ne dépasse pas celle des auteurs.</li>
+</ol>
+</section>
+<section id="étape-6-contrôler-ladéquation-méthodologique" class="level3" data-number="7.6">
+<h3 data-number="7.6" class="anchored" data-anchor-id="étape-6-contrôler-ladéquation-méthodologique"><span class="header-section-number">7.6</span> Étape 6 — Contrôler l’adéquation méthodologique</h3>
+<p>Pour une étude scientifique, il faut examiner au minimum :</p>
+<ul>
+<li>la question de recherche ;</li>
+<li>le plan d’étude ;</li>
+<li>la population ;</li>
+<li>la taille d’échantillon ;</li>
+<li>les critères d’inclusion ;</li>
+<li>la définition des variables ;</li>
+<li>les biais possibles ;</li>
+<li>les méthodes statistiques ;</li>
+<li>la gestion des données manquantes ;</li>
+<li>les analyses de sensibilité ;</li>
+<li>les intervalles d’incertitude ;</li>
+<li>les conflits d’intérêts ;</li>
+<li>la reproductibilité.</li>
+</ul>
+<p>Une valeur de <em>p</em> isolée, une précision de modèle ou une corrélation ne suffit pas à établir la robustesse d’une conclusion.</p>
+</section>
+<section id="étape-7-recalculer-ce-qui-peut-lêtre" class="level3" data-number="7.7">
+<h3 data-number="7.7" class="anchored" data-anchor-id="étape-7-recalculer-ce-qui-peut-lêtre"><span class="header-section-number">7.7</span> Étape 7 — Recalculer ce qui peut l’être</h3>
+<p>Les calculs produits par une IA doivent être reproduits avec un outil déterministe lorsque l’enjeu est réel. Cela concerne notamment :</p>
+<ul>
+<li>les pourcentages ;</li>
+<li>les conversions ;</li>
+<li>les agrégations ;</li>
+<li>les intervalles de confiance ;</li>
+<li>les tests statistiques ;</li>
+<li>les projections financières ;</li>
+<li>les indicateurs de performance ;</li>
+<li>les transformations de données.</li>
+</ul>
+<p>L’IA peut proposer le raisonnement ou le code, mais le résultat doit être exécuté, testé et comparé à des cas connus.</p>
+</section>
+<section id="étape-8-documenter-les-divergences" class="level3" data-number="7.8">
+<h3 data-number="7.8" class="anchored" data-anchor-id="étape-8-documenter-les-divergences"><span class="header-section-number">7.8</span> Étape 8 — Documenter les divergences</h3>
+<p>Lorsqu’une source contredit la réponse, il ne faut pas simplement corriger silencieusement. Il faut conserver :</p>
+<ul>
+<li>l’affirmation initiale ;</li>
+<li>la source de contradiction ;</li>
+<li>la cause probable ;</li>
+<li>la correction retenue ;</li>
+<li>l’identité du validateur ;</li>
+<li>la date de validation.</li>
+</ul>
+<p>Cette documentation transforme une erreur ponctuelle en apprentissage organisationnel.</p>
+</section>
+<section id="étape-9-décider-avec-un-seuil-dacceptation" class="level3" data-number="7.9">
+<h3 data-number="7.9" class="anchored" data-anchor-id="étape-9-décider-avec-un-seuil-dacceptation"><span class="header-section-number">7.9</span> Étape 9 — Décider avec un seuil d’acceptation</h3>
+<p>Une réponse ne doit pas être déclarée « validée » sans critères. On peut exiger, par exemple :</p>
+<ul>
+<li>100 % des affirmations critiques reliées à une source primaire ;</li>
+<li>aucun chiffre important sans unité, période et dénominateur ;</li>
+<li>aucune citation bibliographique non ouverte ;</li>
+<li>aucune recommandation sans périmètre d’application ;</li>
+<li>validation humaine explicite ;</li>
+<li>conservation de la version finale et des sources.</li>
+</ul>
+</section>
+</section>
+<section id="le-test-scope-pour-évaluer-une-source" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="le-test-scope-pour-évaluer-une-source"><span class="header-section-number">8</span> Le test SCOPE pour évaluer une source</h2>
+<p>SYLTRA propose un test mémorisable en cinq dimensions : <strong>SCOPE</strong>.</p>
+<section id="s-solidité" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="s-solidité"><span class="header-section-number">8.1</span> S — Solidité</h3>
+<p>La source repose-t-elle sur une méthode suffisamment robuste pour la conclusion avancée ?</p>
+</section>
+<section id="c-contexte" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="c-contexte"><span class="header-section-number">8.2</span> C — Contexte</h3>
+<p>La population, la juridiction, la période, la technologie et les conditions d’application correspondent-elles à la situation étudiée ?</p>
+</section>
+<section id="o-origine" class="level3" data-number="8.3">
+<h3 data-number="8.3" class="anchored" data-anchor-id="o-origine"><span class="header-section-number">8.3</span> O — Origine</h3>
+<p>La source est-elle primaire, identifiable, indépendante et accessible ?</p>
+</section>
+<section id="p-précision" class="level3" data-number="8.4">
+<h3 data-number="8.4" class="anchored" data-anchor-id="p-précision"><span class="header-section-number">8.4</span> P — Précision</h3>
+<p>Le passage soutient-il exactement l’affirmation, avec les mêmes unités, définitions et limites ?</p>
+</section>
+<section id="e-état-actuel" class="level3" data-number="8.5">
+<h3 data-number="8.5" class="anchored" data-anchor-id="e-état-actuel"><span class="header-section-number">8.5</span> E — État actuel</h3>
+<p>La version est-elle toujours en vigueur ? Existe-t-il une mise à jour, une correction, une rétractation ou une évolution réglementaire ?</p>
+<p>Une notation de 0 à 2 par dimension permet d’obtenir un score indicatif sur 10 :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Score</th>
+<th>Interprétation</th>
+<th>Usage recommandé</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">9–10</td>
+<td>Preuve très solide</td>
+<td>Peut soutenir une affirmation importante, sous réserve du contexte</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">7–8</td>
+<td>Source robuste avec limites</td>
+<td>Utilisable avec explicitation des réserves</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5–6</td>
+<td>Source informative</td>
+<td>À compléter avant décision</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3–4</td>
+<td>Source faible</td>
+<td>Piste de recherche uniquement</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0–2</td>
+<td>Source non fiable ou hors sujet</td>
+<td>Ne pas utiliser comme preuve</td>
+</tr>
+</tbody>
+</table>
+<p>Le score ne remplace jamais le jugement expert. Il sert à rendre la discussion plus explicite et reproductible.</p>
+</section>
+</section>
+<section id="vérifier-les-citations-scientifiques" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="vérifier-les-citations-scientifiques"><span class="header-section-number">9</span> Vérifier les citations scientifiques</h2>
+<p>Les références bibliographiques générées par l’IA exigent une vigilance particulière. Une citation peut contenir un auteur réel, un titre plausible et une revue existante tout en étant entièrement inventée.</p>
+<section id="contrôle-didentité" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="contrôle-didentité"><span class="header-section-number">9.1</span> Contrôle d’identité</h3>
+<p>Vérifier :</p>
+<ul>
+<li>le DOI ;</li>
+<li>l’identifiant PubMed, arXiv, HAL ou autre ;</li>
+<li>le titre exact ;</li>
+<li>la liste des auteurs ;</li>
+<li>la revue ;</li>
+<li>l’année ;</li>
+<li>le volume et les pages ;</li>
+<li>le statut de publication.</li>
+</ul>
+</section>
+<section id="contrôle-de-fidélité" class="level3" data-number="9.2">
+<h3 data-number="9.2" class="anchored" data-anchor-id="contrôle-de-fidélité"><span class="header-section-number">9.2</span> Contrôle de fidélité</h3>
+<p>Une référence existante ne garantit pas une attribution fidèle. Il faut répondre à quatre questions :</p>
+<ol type="1">
+<li>le document traite-t-il réellement du sujet ?</li>
+<li>la population et la méthode correspondent-elles ?</li>
+<li>le résultat cité est-il présent ?</li>
+<li>les auteurs concluent-ils réellement ce que l’IA affirme ?</li>
+</ol>
+</section>
+<section id="contrôle-de-qualité" class="level3" data-number="9.3">
+<h3 data-number="9.3" class="anchored" data-anchor-id="contrôle-de-qualité"><span class="header-section-number">9.3</span> Contrôle de qualité</h3>
+<p>Pour les décisions importantes, rechercher :</p>
+<ul>
+<li>la revue par les pairs ;</li>
+<li>le protocole préenregistré ;</li>
+<li>la disponibilité des données ou du code ;</li>
+<li>les corrections éditoriales ;</li>
+<li>les rétractations ;</li>
+<li>les commentaires méthodologiques ;</li>
+<li>les conflits d’intérêts.</li>
+</ul>
+</section>
+<section id="contrôle-de-synthèse" class="level3" data-number="9.4">
+<h3 data-number="9.4" class="anchored" data-anchor-id="contrôle-de-synthèse"><span class="header-section-number">9.4</span> Contrôle de synthèse</h3>
+<p>Une étude isolée ne doit pas être présentée comme consensus. Il faut rechercher les revues systématiques, recommandations, réplications et résultats contradictoires.</p>
+</section>
+</section>
+<section id="vérifier-une-réponse-chiffrée" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="vérifier-une-réponse-chiffrée"><span class="header-section-number">10</span> Vérifier une réponse chiffrée</h2>
+<p>Les chiffres donnent une impression d’objectivité, mais ils peuvent être trompeurs lorsqu’ils sont privés de contexte.</p>
+<p>Pour chaque valeur, demander :</p>
+<ul>
+<li>quelle est l’unité ?</li>
+<li>quelle est la période ?</li>
+<li>quel est le dénominateur ?</li>
+<li>s’agit-il d’une moyenne, médiane, proportion, taux ou risque ?</li>
+<li>la valeur est-elle brute ou ajustée ?</li>
+<li>existe-t-il un intervalle d’incertitude ?</li>
+<li>la population est-elle complète ?</li>
+<li>la comparaison est-elle absolue ou relative ?</li>
+<li>les données ont-elles été révisées ?</li>
+</ul>
+<p>Exemple : « le risque baisse de 50 % » peut signifier un passage de 2 % à 1 %, soit une baisse absolue de 1 point. L’effet relatif semble spectaculaire, mais la décision dépend souvent de l’effet absolu, du nombre de personnes concernées et des effets indésirables.</p>
+</section>
+<section id="vérifier-une-recommandation" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="vérifier-une-recommandation"><span class="header-section-number">11</span> Vérifier une recommandation</h2>
+<p>Une recommandation n’est pas un fait. Elle combine des preuves, des valeurs, des contraintes et une appréciation du risque.</p>
+<p>Il faut donc distinguer :</p>
+<ul>
+<li>ce que montrent les données ;</li>
+<li>le niveau de certitude ;</li>
+<li>les bénéfices attendus ;</li>
+<li>les risques ;</li>
+<li>les alternatives ;</li>
+<li>les coûts ;</li>
+<li>les contraintes opérationnelles ;</li>
+<li>les préférences des personnes concernées ;</li>
+<li>la responsabilité du décideur.</li>
+</ul>
+<p>Une IA peut aider à structurer ces éléments, mais elle ne doit pas masquer les arbitrages humains.</p>
+</section>
+<section id="cas-dusage-santé-et-biostatistique" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="cas-dusage-santé-et-biostatistique"><span class="header-section-number">12</span> Cas d’usage : santé et biostatistique</h2>
+<p>Dans le domaine de la santé, la source doit être reliée au niveau de preuve et au contexte clinique. Une réponse concernant un traitement, un diagnostic ou un pronostic peut avoir des conséquences directes sur une personne.</p>
+<section id="exemple-de-contrôle" class="level3" data-number="12.1">
+<h3 data-number="12.1" class="anchored" data-anchor-id="exemple-de-contrôle"><span class="header-section-number">12.1</span> Exemple de contrôle</h3>
+<p>Supposons qu’une IA affirme :</p>
+<blockquote class="blockquote">
+<p>« Le test non paramétrique est préférable dès que la normalité est rejetée. »</p>
+</blockquote>
+<p>Cette règle est trop simpliste. La décision dépend notamment du plan d’étude, de l’appariement, de la distribution des différences, de la taille d’échantillon, de la robustesse de la méthode paramétrique, du type de variable et de la question scientifique. L’expert doit donc demander :</p>
+<ul>
+<li>de quel test parle-t-on ?</li>
+<li>pour quelles données ?</li>
+<li>quelle hypothèse est testée ?</li>
+<li>quelle propriété de distribution est pertinente ?</li>
+<li>quelle littérature méthodologique soutient la règle ?</li>
+<li>quelles conséquences entraîne le changement de test ?</li>
+</ul>
+</section>
+<section id="exigences-minimales" class="level3" data-number="12.2">
+<h3 data-number="12.2" class="anchored" data-anchor-id="exigences-minimales"><span class="header-section-number">12.2</span> Exigences minimales</h3>
+<p>Dans un rapport biostatistique assisté par IA, il faut conserver :</p>
+<ul>
+<li>le protocole ;</li>
+<li>le plan d’analyse statistique ;</li>
+<li>les versions des logiciels ;</li>
+<li>les données d’entrée ;</li>
+<li>le code exécuté ;</li>
+<li>les sorties ;</li>
+<li>les décisions méthodologiques ;</li>
+<li>les écarts au plan ;</li>
+<li>la validation du statisticien.</li>
+</ul>
+<p>L’IA peut faciliter la rédaction, mais les résultats doivent provenir d’analyses reproductibles.</p>
+</section>
+</section>
+<section id="cas-dusage-recherche-scientifique" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="cas-dusage-recherche-scientifique"><span class="header-section-number">13</span> Cas d’usage : recherche scientifique</h2>
+<p>Dans la recherche, le principal risque est de confondre accélération documentaire et production de connaissance. L’IA peut proposer une carte du domaine, mais elle ne remplace ni la lecture critique ni la construction d’une stratégie bibliographique.</p>
+<section id="méthode-recommandée" class="level3" data-number="13.1">
+<h3 data-number="13.1" class="anchored" data-anchor-id="méthode-recommandée"><span class="header-section-number">13.1</span> Méthode recommandée</h3>
+<ol type="1">
+<li>formuler une question structurée ;</li>
+<li>définir les concepts et synonymes ;</li>
+<li>interroger plusieurs bases adaptées ;</li>
+<li>conserver la stratégie de recherche ;</li>
+<li>filtrer selon des critères explicites ;</li>
+<li>lire les textes complets ;</li>
+<li>extraire les données dans une grille ;</li>
+<li>évaluer la qualité ;</li>
+<li>synthétiser les convergences et divergences ;</li>
+<li>citer les sources primaires.</li>
+</ol>
+<p>L’IA peut aider à générer des synonymes, résumer un article fourni, proposer une table d’extraction ou identifier des contradictions. Elle ne doit pas inventer les étapes non réalisées.</p>
+<p>L’UNESCO recommande une approche centrée sur l’humain pour l’usage de l’IA générative dans l’éducation et la recherche, avec une attention particulière à la validation des outils, à la protection des données et au développement des capacités critiques.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+</section>
+</section>
+<section id="cas-dusage-banque-finance-et-assurance" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="cas-dusage-banque-finance-et-assurance"><span class="header-section-number">14</span> Cas d’usage : banque, finance et assurance</h2>
+<p>Une réponse financière peut devenir rapidement obsolète. Les taux, prix, règles prudentielles, conditions contractuelles et données de marché évoluent.</p>
+<section id="points-de-contrôle" class="level3" data-number="14.1">
+<h3 data-number="14.1" class="anchored" data-anchor-id="points-de-contrôle"><span class="header-section-number">14.1</span> Points de contrôle</h3>
+<ul>
+<li>horodatage de la donnée ;</li>
+<li>source de marché ;</li>
+<li>devise ;</li>
+<li>convention de calcul ;</li>
+<li>fréquence de mise à jour ;</li>
+<li>frais et fiscalité ;</li>
+<li>scénario central et scénarios extrêmes ;</li>
+<li>hypothèses de volatilité ;</li>
+<li>risque de liquidité ;</li>
+<li>conflits d’intérêts ;</li>
+<li>caractère indicatif ou contractuel.</li>
+</ul>
+<p>Une projection doit être présentée comme un scénario, pas comme une certitude. Toute recommandation individuelle exige une compréhension de la situation de la personne, de son horizon, de sa tolérance au risque et des règles applicables.</p>
+</section>
+</section>
+<section id="cas-dusage-industrie-et-ingénierie" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="cas-dusage-industrie-et-ingénierie"><span class="header-section-number">15</span> Cas d’usage : industrie et ingénierie</h2>
+<p>Dans l’industrie, une source documentaire ne suffit pas toujours. Une recommandation doit être confrontée aux conditions physiques : équipements, capteurs, tolérances, maintenance, environnement, qualité des données et sécurité.</p>
+<section id="chaîne-de-validation" class="level3" data-number="15.1">
+<h3 data-number="15.1" class="anchored" data-anchor-id="chaîne-de-validation"><span class="header-section-number">15.1</span> Chaîne de validation</h3>
+<ol type="1">
+<li>documentation constructeur ;</li>
+<li>historique de maintenance ;</li>
+<li>données de capteurs ;</li>
+<li>expertise terrain ;</li>
+<li>modèle physique ou statistique ;</li>
+<li>essai contrôlé ;</li>
+<li>analyse des risques ;</li>
+<li>validation avant déploiement.</li>
+</ol>
+<p>Une IA peut proposer une cause de panne plausible. La décision exige cependant une inspection, des mesures et une procédure de sécurité.</p>
+</section>
+</section>
+<section id="cas-dusage-droit-conformité-et-administration" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="cas-dusage-droit-conformité-et-administration"><span class="header-section-number">16</span> Cas d’usage : droit, conformité et administration</h2>
+<p>Une réponse juridique doit être reliée au texte en vigueur, à la juridiction et à la date. Les résumés secondaires peuvent aider à comprendre, mais ils ne remplacent pas la version officielle.</p>
+<p>Le règlement européen sur l’intelligence artificielle, adopté en 2024, poursuit un objectif d’IA centrée sur l’humain et digne de confiance, tout en organisant des obligations différenciées selon les catégories de systèmes et les risques. Son calendrier d’application est progressif et certaines dispositions deviennent applicables à des dates différentes. Toute analyse de conformité doit donc préciser la version du texte et la date d’examen.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<p>Pour une question réglementaire, la réponse doit inclure :</p>
+<ul>
+<li>le texte applicable ;</li>
+<li>l’article concerné ;</li>
+<li>la version ;</li>
+<li>la date d’entrée en vigueur ;</li>
+<li>les exceptions ;</li>
+<li>le territoire ;</li>
+<li>le statut de l’interprétation ;</li>
+<li>le besoin éventuel d’un juriste.</li>
+</ul>
+</section>
+<section id="cas-dusage-enseignement-et-formation" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="cas-dusage-enseignement-et-formation"><span class="header-section-number">17</span> Cas d’usage : enseignement et formation</h2>
+<p>Dans l’enseignement, demander la source transforme l’IA en outil de développement de l’esprit critique. L’objectif n’est pas seulement d’obtenir une réponse, mais de comprendre comment une connaissance est construite.</p>
+<p>Une activité pédagogique peut demander aux apprenants de :</p>
+<ul>
+<li>comparer une réponse IA à trois sources ;</li>
+<li>identifier les affirmations non soutenues ;</li>
+<li>classer les sources ;</li>
+<li>corriger les généralisations ;</li>
+<li>reconstruire une bibliographie ;</li>
+<li>expliquer les incertitudes ;</li>
+<li>proposer une meilleure question.</li>
+</ul>
+<p>Cette pratique évite que l’IA devienne un raccourci cognitif permanent.</p>
+</section>
+<section id="les-fausses-bonnes-pratiques" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="les-fausses-bonnes-pratiques"><span class="header-section-number">18</span> Les fausses bonnes pratiques</h2>
+<section id="lia-a-donné-trois-références-donc-la-réponse-est-fiable" class="level3" data-number="18.1">
+<h3 data-number="18.1" class="anchored" data-anchor-id="lia-a-donné-trois-références-donc-la-réponse-est-fiable"><span class="header-section-number">18.1</span> « L’IA a donné trois références, donc la réponse est fiable »</h3>
+<p>Non. Les références doivent exister, être pertinentes et soutenir précisément les affirmations.</p>
+</section>
+<section id="la-réponse-est-confirmée-par-plusieurs-sites" class="level3" data-number="18.2">
+<h3 data-number="18.2" class="anchored" data-anchor-id="la-réponse-est-confirmée-par-plusieurs-sites"><span class="header-section-number">18.2</span> « La réponse est confirmée par plusieurs sites »</h3>
+<p>Plusieurs sites peuvent reprendre la même erreur. Il faut rechercher l’origine et l’indépendance.</p>
+</section>
+<section id="le-modèle-a-accès-à-internet" class="level3" data-number="18.3">
+<h3 data-number="18.3" class="anchored" data-anchor-id="le-modèle-a-accès-à-internet"><span class="header-section-number">18.3</span> « Le modèle a accès à Internet »</h3>
+<p>L’accès à Internet ne garantit ni la qualité de la recherche, ni la sélection de la bonne version, ni la fidélité de l’interprétation.</p>
+</section>
+<section id="le-texte-est-prudent-donc-il-est-correct" class="level3" data-number="18.4">
+<h3 data-number="18.4" class="anchored" data-anchor-id="le-texte-est-prudent-donc-il-est-correct"><span class="header-section-number">18.4</span> « Le texte est prudent, donc il est correct »</h3>
+<p>Une formulation prudente peut masquer une source inexistante. Le ton ne remplace pas la preuve.</p>
+</section>
+<section id="le-code-sexécute-donc-lanalyse-est-valide" class="level3" data-number="18.5">
+<h3 data-number="18.5" class="anchored" data-anchor-id="le-code-sexécute-donc-lanalyse-est-valide"><span class="header-section-number">18.5</span> « Le code s’exécute, donc l’analyse est valide »</h3>
+<p>Un code peut s’exécuter avec de mauvaises données, une mauvaise population, une fuite d’information, un biais ou une méthode inadaptée.</p>
+</section>
+<section id="un-expert-a-relu-rapidement" class="level3" data-number="18.6">
+<h3 data-number="18.6" class="anchored" data-anchor-id="un-expert-a-relu-rapidement"><span class="header-section-number">18.6</span> « Un expert a relu rapidement »</h3>
+<p>Une relecture non structurée peut manquer les erreurs. L’expert doit disposer des sources, des critères et du temps nécessaires.</p>
+</section>
+</section>
+<section id="concevoir-de-meilleurs-prompts-de-vérification" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="concevoir-de-meilleurs-prompts-de-vérification"><span class="header-section-number">19</span> Concevoir de meilleurs prompts de vérification</h2>
+<section id="prompt-pour-une-réponse-sourcée" class="level3" data-number="19.1">
+<h3 data-number="19.1" class="anchored" data-anchor-id="prompt-pour-une-réponse-sourcée"><span class="header-section-number">19.1</span> Prompt pour une réponse sourcée</h3>
+<blockquote class="blockquote">
+<p>Réponds uniquement à partir de sources identifiables. Pour chaque affirmation importante, fournis : la source primaire, la date, le passage ou la section pertinente, le niveau de confiance et les limites. N’invente aucune référence. Lorsque l’information n’est pas vérifiable, écris « information non vérifiée ».</p>
+</blockquote>
+</section>
+<section id="prompt-pour-auditer-une-réponse-existante" class="level3" data-number="19.2">
+<h3 data-number="19.2" class="anchored" data-anchor-id="prompt-pour-auditer-une-réponse-existante"><span class="header-section-number">19.2</span> Prompt pour auditer une réponse existante</h3>
+<blockquote class="blockquote">
+<p>Décompose le texte en affirmations atomiques. Classe chaque affirmation comme fait, chiffre, interprétation, recommandation ou hypothèse. Pour chacune, indique la preuve nécessaire, les risques d’erreur et les vérifications à réaliser. Ne conclus pas à la validité sans source ouverte.</p>
+</blockquote>
+</section>
+<section id="prompt-pour-comparer-des-sources" class="level3" data-number="19.3">
+<h3 data-number="19.3" class="anchored" data-anchor-id="prompt-pour-comparer-des-sources"><span class="header-section-number">19.3</span> Prompt pour comparer des sources</h3>
+<blockquote class="blockquote">
+<p>Compare les documents selon leur date, population, méthode, définition des variables, résultats, limites et conflits d’intérêts. Distingue les convergences, divergences et éléments non comparables. Ne fusionne pas des résultats obtenus dans des contextes incompatibles.</p>
+</blockquote>
+</section>
+<section id="prompt-pour-la-recherche-scientifique" class="level3" data-number="19.4">
+<h3 data-number="19.4" class="anchored" data-anchor-id="prompt-pour-la-recherche-scientifique"><span class="header-section-number">19.4</span> Prompt pour la recherche scientifique</h3>
+<blockquote class="blockquote">
+<p>Propose une stratégie de recherche reproductible avec concepts, synonymes, opérateurs booléens, bases adaptées, critères d’inclusion et d’exclusion. Sépare clairement les références réellement identifiées des pistes bibliographiques à vérifier.</p>
+</blockquote>
+</section>
+<section id="prompt-pour-la-conformité" class="level3" data-number="19.5">
+<h3 data-number="19.5" class="anchored" data-anchor-id="prompt-pour-la-conformité"><span class="header-section-number">19.5</span> Prompt pour la conformité</h3>
+<blockquote class="blockquote">
+<p>Identifie le texte officiel applicable, sa juridiction, sa date, son statut et les articles concernés. Sépare les obligations explicites, les interprétations et les bonnes pratiques non obligatoires. Signale toute incertitude nécessitant un avis juridique.</p>
+</blockquote>
+</section>
+</section>
+<section id="construire-une-réponse-réellement-traçable" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="construire-une-réponse-réellement-traçable"><span class="header-section-number">20</span> Construire une réponse réellement traçable</h2>
+<p>Une réponse traçable peut être organisée en six blocs :</p>
+<ol type="1">
+<li><strong>Question et périmètre</strong> : ce qui est étudié et ce qui ne l’est pas ;</li>
+<li><strong>Réponse synthétique</strong> : conclusion proportionnée aux preuves ;</li>
+<li><strong>Éléments de preuve</strong> : sources reliées aux affirmations ;</li>
+<li><strong>Méthode</strong> : recherche, sélection, calcul ou analyse ;</li>
+<li><strong>Limites</strong> : incertitudes, données manquantes, généralisation ;</li>
+<li><strong>Validation</strong> : personne, date, version et décision.</li>
+</ol>
+<p>Cette structure facilite l’audit et la mise à jour.</p>
+</section>
+<section id="la-traçabilité-technique" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="la-traçabilité-technique"><span class="header-section-number">21</span> La traçabilité technique</h2>
+<p>Pour un usage organisationnel, il est utile de conserver :</p>
+<ul>
+<li>l’outil et le modèle utilisés ;</li>
+<li>la date et l’heure ;</li>
+<li>le prompt ;</li>
+<li>les documents fournis ;</li>
+<li>les paramètres pertinents ;</li>
+<li>la réponse brute ;</li>
+<li>les corrections humaines ;</li>
+<li>la version approuvée ;</li>
+<li>les sources consultées ;</li>
+<li>la durée de validité estimée.</li>
+</ul>
+<p>Il faut néanmoins respecter la protection des données et éviter de conserver inutilement des informations sensibles.</p>
+</section>
+<section id="mesurer-la-qualité-des-réponses-sourcées" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="mesurer-la-qualité-des-réponses-sourcées"><span class="header-section-number">22</span> Mesurer la qualité des réponses sourcées</h2>
+<p>Une organisation peut suivre des indicateurs simples.</p>
+<section id="taux-de-couverture-des-affirmations" class="level3" data-number="22.1">
+<h3 data-number="22.1" class="anchored" data-anchor-id="taux-de-couverture-des-affirmations"><span class="header-section-number">22.1</span> Taux de couverture des affirmations</h3>
+<p>Proportion des affirmations importantes reliées à au moins une preuve adéquate.</p>
+</section>
+<section id="taux-de-fidélité" class="level3" data-number="22.2">
+<h3 data-number="22.2" class="anchored" data-anchor-id="taux-de-fidélité"><span class="header-section-number">22.2</span> Taux de fidélité</h3>
+<p>Proportion des affirmations pour lesquelles la source soutient effectivement la formulation.</p>
+</section>
+<section id="taux-de-sources-primaires" class="level3" data-number="22.3">
+<h3 data-number="22.3" class="anchored" data-anchor-id="taux-de-sources-primaires"><span class="header-section-number">22.3</span> Taux de sources primaires</h3>
+<p>Proportion de preuves issues de documents originaux plutôt que de résumés secondaires.</p>
+</section>
+<section id="taux-dobsolescence" class="level3" data-number="22.4">
+<h3 data-number="22.4" class="anchored" data-anchor-id="taux-dobsolescence"><span class="header-section-number">22.4</span> Taux d’obsolescence</h3>
+<p>Proportion de sources qui ne correspondent plus à la version ou à la période pertinente.</p>
+</section>
+<section id="taux-de-correction-humaine" class="level3" data-number="22.5">
+<h3 data-number="22.5" class="anchored" data-anchor-id="taux-de-correction-humaine"><span class="header-section-number">22.5</span> Taux de correction humaine</h3>
+<p>Part des affirmations modifiées après vérification. Un taux élevé peut signaler un mauvais cadrage ou une confiance excessive dans la génération initiale.</p>
+</section>
+<section id="délai-de-validation" class="level3" data-number="22.6">
+<h3 data-number="22.6" class="anchored" data-anchor-id="délai-de-validation"><span class="header-section-number">22.6</span> Délai de validation</h3>
+<p>Temps nécessaire pour transformer une réponse brute en contenu professionnellement exploitable.</p>
+<p>L’objectif n’est pas de maximiser artificiellement tous les indicateurs. Il est de trouver un niveau de contrôle proportionné au risque.</p>
+</section>
+</section>
+<section id="mettre-en-place-une-gouvernance-organisationnelle" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="mettre-en-place-une-gouvernance-organisationnelle"><span class="header-section-number">23</span> Mettre en place une gouvernance organisationnelle</h2>
+<p>Le NIST structure la gestion des risques liés à l’IA autour de fonctions de gouvernance, de cartographie, de mesure et de maîtrise. Cette logique est particulièrement adaptée à la vérification des réponses génératives : l’organisation doit définir les responsabilités, comprendre le contexte, mesurer la fiabilité et traiter les risques identifiés.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<section id="rôles-recommandés" class="level3" data-number="23.1">
+<h3 data-number="23.1" class="anchored" data-anchor-id="rôles-recommandés"><span class="header-section-number">23.1</span> Rôles recommandés</h3>
+<ul>
+<li><strong>Producteur</strong> : formule la demande et produit la première version ;</li>
+<li><strong>Vérificateur</strong> : contrôle les sources et les calculs ;</li>
+<li><strong>Expert métier</strong> : valide l’interprétation ;</li>
+<li><strong>Responsable des données</strong> : vérifie les droits d’usage et la confidentialité ;</li>
+<li><strong>Décideur</strong> : assume l’utilisation finale ;</li>
+<li><strong>Auditeur</strong> : examine le dispositif et les incidents.</li>
+</ul>
+<p>Dans une petite structure, une même personne peut cumuler plusieurs rôles, mais les responsabilités doivent rester explicites.</p>
+</section>
+<section id="politique-minimale" class="level3" data-number="23.2">
+<h3 data-number="23.2" class="anchored" data-anchor-id="politique-minimale"><span class="header-section-number">23.2</span> Politique minimale</h3>
+<p>Une politique interne devrait préciser :</p>
+<ul>
+<li>les usages autorisés ;</li>
+<li>les données interdites ;</li>
+<li>les niveaux de risque ;</li>
+<li>les exigences de source ;</li>
+<li>les validations obligatoires ;</li>
+<li>la conservation des traces ;</li>
+<li>la gestion des incidents ;</li>
+<li>la fréquence de révision.</li>
+</ul>
+</section>
+</section>
+<section id="que-faire-lorsquaucune-source-solide-nexiste" class="level2" data-number="24">
+<h2 data-number="24" class="anchored" data-anchor-id="que-faire-lorsquaucune-source-solide-nexiste"><span class="header-section-number">24</span> Que faire lorsqu’aucune source solide n’existe ?</h2>
+<p>L’absence de preuve ne signifie pas automatiquement que l’affirmation est fausse. Elle signifie que son statut doit être correctement présenté.</p>
+<p>On peut distinguer :</p>
+<ul>
+<li><strong>fait établi</strong> ;</li>
+<li><strong>résultat probable</strong> ;</li>
+<li><strong>hypothèse plausible</strong> ;</li>
+<li><strong>avis d’expert</strong> ;</li>
+<li><strong>scénario</strong> ;</li>
+<li><strong>information non vérifiée</strong> ;</li>
+<li><strong>question ouverte</strong>.</li>
+</ul>
+<p>Cette taxonomie protège contre la transformation d’une intuition en certitude.</p>
+</section>
+<section id="exemple-complet-daudit" class="level2" data-number="25">
+<h2 data-number="25" class="anchored" data-anchor-id="exemple-complet-daudit"><span class="header-section-number">25</span> Exemple complet d’audit</h2>
+<section id="réponse-initiale" class="level3" data-number="25.1">
+<h3 data-number="25.1" class="anchored" data-anchor-id="réponse-initiale"><span class="header-section-number">25.1</span> Réponse initiale</h3>
+<blockquote class="blockquote">
+<p>« L’utilisation d’un assistant IA pour résumer les rapports réduit de moitié le temps de travail, améliore la qualité des décisions et garantit la conformité au règlement européen. »</p>
+</blockquote>
+</section>
+<section id="décomposition" class="level3" data-number="25.2">
+<h3 data-number="25.2" class="anchored" data-anchor-id="décomposition"><span class="header-section-number">25.2</span> Décomposition</h3>
+<ul>
+<li>A1 : un assistant IA peut résumer des rapports ;</li>
+<li>A2 : il réduit le temps de travail de 50 % ;</li>
+<li>A3 : il améliore la qualité des décisions ;</li>
+<li>A4 : il garantit la conformité réglementaire.</li>
+</ul>
+</section>
+<section id="audit" class="level3" data-number="25.3">
+<h3 data-number="25.3" class="anchored" data-anchor-id="audit"><span class="header-section-number">25.3</span> Audit</h3>
+<p><strong>A1</strong> est une capacité fonctionnelle plausible, à tester sur les documents et la langue concernés.</p>
+<p><strong>A2</strong> exige une mesure comparative dans un contexte défini. Le chiffre de 50 % ne doit pas être conservé sans étude ou mesure interne.</p>
+<p><strong>A3</strong> nécessite une définition de la qualité et un protocole d’évaluation. Une synthèse plus rapide peut aussi propager des omissions.</p>
+<p><strong>A4</strong> est excessif. Un outil ne garantit pas à lui seul la conformité. Celle-ci dépend du cas d’usage, des données, des obligations, de la gouvernance et des contrôles.</p>
+</section>
+<section id="version-corrigée" class="level3" data-number="25.4">
+<h3 data-number="25.4" class="anchored" data-anchor-id="version-corrigée"><span class="header-section-number">25.4</span> Version corrigée</h3>
+<blockquote class="blockquote">
+<p>« Un assistant IA peut accélérer la préparation de synthèses, sous réserve d’une évaluation sur les documents réels. Les gains de temps et les effets sur la qualité doivent être mesurés localement. La conformité réglementaire ne peut être conclue qu’après analyse du cas d’usage, des données, des responsabilités et des contrôles applicables. »</p>
+</blockquote>
+<p>La version corrigée paraît moins spectaculaire, mais elle est beaucoup plus utile pour décider.</p>
+</section>
+</section>
+<section id="checklist-avant-publication-ou-décision" class="level2" data-number="26">
+<h2 data-number="26" class="anchored" data-anchor-id="checklist-avant-publication-ou-décision"><span class="header-section-number">26</span> Checklist avant publication ou décision</h2>
+<section id="sources" class="level3" data-number="26.1">
+<h3 data-number="26.1" class="anchored" data-anchor-id="sources"><span class="header-section-number">26.1</span> Sources</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Chaque affirmation critique possède une source identifiable.</label></li>
+<li><label><input type="checkbox">Les sources primaires ont été privilégiées.</label></li>
+<li><label><input type="checkbox">Les documents ont été ouverts et lus.</label></li>
+<li><label><input type="checkbox">Les passages exacts ont été retrouvés.</label></li>
+<li><label><input type="checkbox">Les dates et versions ont été vérifiées.</label></li>
+<li><label><input type="checkbox">Les éventuelles corrections ou rétractations ont été recherchées.</label></li>
+</ul>
+</section>
+<section id="méthode" class="level3" data-number="26.2">
+<h3 data-number="26.2" class="anchored" data-anchor-id="méthode"><span class="header-section-number">26.2</span> Méthode</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Le périmètre est explicite.</label></li>
+<li><label><input type="checkbox">Les populations et définitions sont comparables.</label></li>
+<li><label><input type="checkbox">Les calculs ont été reproduits.</label></li>
+<li><label><input type="checkbox">Les incertitudes sont présentées.</label></li>
+<li><label><input type="checkbox">Les limites sont visibles.</label></li>
+<li><label><input type="checkbox">Les contradictions ne sont pas masquées.</label></li>
+</ul>
+</section>
+<section id="gouvernance" class="level3" data-number="26.3">
+<h3 data-number="26.3" class="anchored" data-anchor-id="gouvernance"><span class="header-section-number">26.3</span> Gouvernance</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Les données utilisées sont autorisées.</label></li>
+<li><label><input type="checkbox">Un responsable de validation est identifié.</label></li>
+<li><label><input type="checkbox">La version finale est conservée.</label></li>
+<li><label><input type="checkbox">La durée de validité est connue.</label></li>
+<li><label><input type="checkbox">Le niveau de contrôle est proportionné au risque.</label></li>
+</ul>
+</section>
+</section>
+<section id="les-dix-questions-du-lecteur-expert" class="level2" data-number="27">
+<h2 data-number="27" class="anchored" data-anchor-id="les-dix-questions-du-lecteur-expert"><span class="header-section-number">27</span> Les dix questions du lecteur expert</h2>
+<p>Avant d’accepter une réponse, posez systématiquement les questions suivantes :</p>
+<ol type="1">
+<li>Quelle est l’affirmation exacte ?</li>
+<li>Quelle source primaire la soutient ?</li>
+<li>Où se trouve le passage pertinent ?</li>
+<li>À quelle date cette information était-elle vraie ?</li>
+<li>Dans quel contexte s’applique-t-elle ?</li>
+<li>Quel est le niveau d’incertitude ?</li>
+<li>Existe-t-il des résultats contradictoires ?</li>
+<li>Le calcul est-il reproductible ?</li>
+<li>Quelles conséquences aurait une erreur ?</li>
+<li>Qui valide la décision finale ?</li>
+</ol>
+</section>
+<section id="ce-que-lexpertise-change-réellement" class="level2" data-number="28">
+<h2 data-number="28" class="anchored" data-anchor-id="ce-que-lexpertise-change-réellement"><span class="header-section-number">28</span> Ce que l’expertise change réellement</h2>
+<p>L’expert n’est pas celui qui connaît toutes les réponses. C’est celui qui sait différencier :</p>
+<ul>
+<li>une réponse d’une preuve ;</li>
+<li>une citation d’une attribution fidèle ;</li>
+<li>une corrélation d’une causalité ;</li>
+<li>une performance de laboratoire d’une performance réelle ;</li>
+<li>une recommandation d’une obligation ;</li>
+<li>une donnée actuelle d’une donnée obsolète ;</li>
+<li>une hypothèse d’un résultat ;</li>
+<li>une information utile d’une information suffisamment fiable pour décider.</li>
+</ul>
+<p>Cette distinction est décisive dans un environnement où les systèmes génératifs peuvent produire rapidement des contenus très convaincants.</p>
+</section>
+<section id="à-retenir" class="level2" data-number="29">
+<h2 data-number="29" class="anchored" data-anchor-id="à-retenir"><span class="header-section-number">29</span> À retenir</h2>
+<p>Demander la source n’est que le début. Le réflexe expert comprend cinq mouvements : <strong>décomposer, attribuer, ouvrir, comparer et décider</strong>.</p>
+<ul>
+<li><strong>Décomposer</strong> la réponse en affirmations vérifiables ;</li>
+<li><strong>Attribuer</strong> chaque affirmation à une source précise ;</li>
+<li><strong>Ouvrir</strong> le document et contrôler le passage ;</li>
+<li><strong>Comparer</strong> la source au contexte, à la méthode et aux preuves contradictoires ;</li>
+<li><strong>Décider</strong> selon un seuil de qualité proportionné au risque.</li>
+</ul>
+<p>L’IA devient alors un instrument de travail puissant, non parce qu’elle serait infaillible, mais parce qu’elle est intégrée à une méthode où les preuves, les responsabilités et les limites restent visibles.</p>
+<div class="discussion-box">
+<p><strong>Question à la communauté :</strong> dans votre domaine, quelle affirmation produite par une IA devrait toujours être accompagnée d’une source primaire et d’une validation humaine ?</p>
+</div>
+</section>
+<section id="besoin-dun-accompagnement" class="level2" data-number="30">
+<h2 data-number="30" class="anchored" data-anchor-id="besoin-dun-accompagnement"><span class="header-section-number">30</span> Besoin d’un accompagnement ?</h2>
+<p>SYLTRA Consulting accompagne les entreprises, laboratoires, administrations et établissements de formation dans la mise en place d’usages fiables de l’intelligence artificielle : gouvernance, méthodes de vérification, Data Science, biostatistique, automatisation, formation et valorisation scientifique.</p>
+<p><a href="../contact.html" class="btn btn-primary">Nous contacter</a></p>
+<div class="post-tags">
+<p>#IntelligenceArtificielle #EspritCritique #Recherche #DataScience #GouvernanceIA #Fiabilité #SYLTRAConsulting</p>
+</div>
+</section>
+<section id="références-essentielles" class="level2" data-number="31">
+<h2 data-number="31" class="anchored" data-anchor-id="références-essentielles"><span class="header-section-number">31</span> Références essentielles</h2>
+<ol type="1">
+<li>Autio, C., Schwartz, R., Dunietz, J., Jain, S., Stanley, M., Tabassi, E., Hall, P. &amp; Roberts, K. (2024). <em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile</em>. NIST AI 600-1. <a href="https://doi.org/10.6028/NIST.AI.600-1" class="uri">https://doi.org/10.6028/NIST.AI.600-1</a></li>
+<li>National Institute of Standards and Technology. (2023). <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em>. <a href="https://doi.org/10.6028/NIST.AI.100-1" class="uri">https://doi.org/10.6028/NIST.AI.100-1</a></li>
+<li>Miao, F. &amp; Holmes, W. (2023). <em>Guidance for Generative AI in Education and Research</em>. UNESCO. <a href="https://unesdoc.unesco.org/ark:/48223/pf0000386693" class="uri">https://unesdoc.unesco.org/ark:/48223/pf0000386693</a></li>
+<li>Parlement européen et Conseil de l’Union européenne. (2024). <em>Règlement (UE) 2024/1689 établissant des règles harmonisées concernant l’intelligence artificielle</em>. Journal officiel de l’Union européenne, 12 juillet 2024. <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" class="uri">https://eur-lex.europa.eu/eli/reg/2024/1689/oj</a></li>
+<li>Gao, Y., Xiong, Y., Gao, X., et al.&nbsp;(2023). <em>Retrieval-Augmented Generation for Large Language Models: A Survey</em>. arXiv:2312.10997. <a href="https://arxiv.org/abs/2312.10997" class="uri">https://arxiv.org/abs/2312.10997</a></li>
+<li>Huang, L., Yu, W., Ma, W., et al.&nbsp;(2023). <em>A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions</em>. arXiv:2311.05232. <a href="https://arxiv.org/abs/2311.05232" class="uri">https://arxiv.org/abs/2311.05232</a></li>
+<li>Tonmoy, S. M. T. I., Zaman, S. M. M., Jain, V., et al.&nbsp;(2024). <em>A Comprehensive Survey of Hallucination Mitigation Techniques in Large Language Models</em>. arXiv:2401.01313. <a href="https://arxiv.org/abs/2401.01313" class="uri">https://arxiv.org/abs/2401.01313</a></li>
+</ol>
+
+
+</section>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notes de bas de page</h2>
+
+<ol>
+<li id="fn1"><p>Gao et al.&nbsp;décrivent les architectures RAG, leurs bénéfices pour l’actualisation et la traçabilité, ainsi que leurs limites en matière de récupération, de génération et d’évaluation.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Huang et al.&nbsp;proposent une taxonomie des hallucinations et discutent les méthodes de détection et d’atténuation, y compris les limites des systèmes enrichis par recherche.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>NIST, <em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile</em>, NIST AI 600-1, 2024.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>UNESCO, <em>Guidance for Generative AI in Education and Research</em>, 2023.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Règlement (UE) 2024/1689 du Parlement européen et du Conseil du 13 juin 2024. Le calendrier d’application doit être vérifié selon la disposition concernée.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>NIST, <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0)</em>, 2023.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('a[href^="http"]').forEach(a=>{if(!a.href.includes(location.hostname)){a.rel="noopener noreferrer";a.target="_blank";}});});</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.syltra-consulting\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026–2027 SYLTRA Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>IA utile • Data Science • Biostatistique • Recherche</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

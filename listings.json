@@ -1,0 +1,80 @@
+[
+  {
+    "listing": "/domaines/gouvernance.html",
+    "items": []
+  },
+  {
+    "listing": "/domaines/recherche.html",
+    "items": []
+  },
+  {
+    "listing": "/domaines/banque-finance.html",
+    "items": []
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/2026-09-13-j048-tracer-les-outils-utilises-dans-un-projet.html",
+      "/posts/2026-09-12-j047-former-les-equipes-a-ne-pas-tout-coller-dans-un.html",
+      "/posts/2026-09-11-j046-mettre-en-place-une-regle-simple-public-interne.html",
+      "/posts/2026-09-10-j045-utiliser-lia-locale-quand-le-risque-lexige.html",
+      "/posts/2026-09-09-j044-identifier-ce-qui-peut-quitter-lorganisation.html",
+      "/posts/2026-09-08-j043-anonymiser-nest-pas-simplement-supprimer-un-nom.html",
+      "/posts/2026-09-07-j042-avant-de-copier-un-pdf-dans-un-outil-ia.html",
+      "/posts/2026-09-06-j041-la-donnee-sensible-commence-plus-tot-quon-ne-le.html",
+      "/posts/2026-09-05-j040-pourquoi-un-bon-prompt-ressemble-a-un-cahier-des.html",
+      "/posts/2026-09-04-j039-creer-une-bibliotheque-de-prompts-dequipe.html",
+      "/posts/2026-09-03-j038-forcer-lia-a-expliciter-ses-incertitudes.html",
+      "/posts/2026-09-02-j037-demander-une-reponse-graduee-par-niveau.html",
+      "/posts/2026-09-01-j036-la-methode-contexte-tache-contraintes-format.html",
+      "/posts/2026-08-31-j035-le-prompt-en-deux-temps-produire-puis-critiquer.html",
+      "/posts/2026-08-30-j034-la-consigne-qui-interdit-les-inventions.html",
+      "/posts/2026-08-29-j033-le-prompt-expert-donner-un-role-une-methode-et.html",
+      "/posts/2026-08-28-j032-le-prompt-intermediaire-donner-un-contexte.html",
+      "/posts/2026-08-27-j031-le-prompt-debutant-demander-clairement.html",
+      "/posts/2026-08-26-j030-taire.html",
+      "/posts/2026-08-25-j029-taire.html",
+      "/posts/2026-08-24-j028-taire.html",
+      "/posts/2026-08-23-j027-taire.html",
+      "/posts/2026-08-22-j026-taire.html",
+      "/posts/2026-08-21-j025-taire.html",
+      "/posts/2026-08-20-j024-taire.html",
+      "/posts/2026-08-19-j023-taire.html",
+      "/posts/2026-08-18-j022-taire.html",
+      "/posts/2026-08-17-j021-taire.html",
+      "/posts/2026-08-16-j020-utiliser-lia-comme-second-lecteur-critique.html",
+      "/posts/2026-08-15-j019-faire-emerger-les-angles-morts-dun-projet.html",
+      "/posts/2026-08-14-j018-reformuler-sans-denaturer.html",
+      "/posts/2026-08-13-j017-construire-une-bibliographie-de-depart.html",
+      "/posts/2026-08-12-j016-preparer-un-plan-de-chapitre-ou-darticle.html",
+      "/posts/2026-08-11-j015-comparer-deux-documents-de-recherche.html",
+      "/posts/2026-08-10-j014-analyser-un-pdf-technique-avec-prudence.html",
+      "/posts/2026-08-09-j013-creer-une-fiche-de-lecture-utile-pour-un-doctorant.html",
+      "/posts/2026-08-08-j012-resumer-un-article-sans-perdre-la-question.html",
+      "/posts/2026-08-07-j011-preparer-un-cours-sans-standardiser-sa-pensee.html",
+      "/posts/2026-08-06-j010-la-difference-entre-gagner-du-temps-et-perdre-le-controle.html",
+      "/posts/2026-08-05-j009-transformer-une-tache-floue-en-consigne-exploitable.html",
+      "/posts/2026-08-04-j008-passer-de-lessai-curieux-a-lusage-professionnel.html",
+      "/posts/2026-08-03-j007-ce-que-lia-sait-bien-faire-et-ce-quelle-simule.html",
+      "/posts/2026-08-02-j006-le-reflexe-expert-demander-la-source-reference-mondiale.html",
+      "/posts/2026-08-01-j005-les-trois-usages-immediats-pour-un-enseignant-chercheur.html",
+      "/posts/2026-07-31-j004-ia-machine-learning-deep-learning-savoir-les-distinguer-sans-jargon.html",
+      "/posts/2026-07-30-j003-pourquoi-chatgpt-nest-quune-porte-dentree.html",
+      "/posts/2026-07-29-j002-la-bonne-question-vient-avant-le-bon-outil_REFERENCE.html",
+      "/posts/2026-07-29-j002-la-bonne-question-vient-avant-le-bon-outil.html",
+      "/posts/2026-07-28-j001-lia-nest-pas-magique-elle-amplifie-la-methode_enrichi.html"
+    ]
+  },
+  {
+    "listing": "/domaines/enseignement.html",
+    "items": []
+  },
+  {
+    "listing": "/domaines/sante.html",
+    "items": []
+  },
+  {
+    "listing": "/domaines/industrie.html",
+    "items": []
+  }
+]

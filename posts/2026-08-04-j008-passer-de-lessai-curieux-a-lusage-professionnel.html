@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="SYLTRA Consulting">
+<meta name="description" content="Méthode complète pour transformer une expérimentation ponctuelle en usage d’intelligence artificielle fiable, mesurable, sécurisé, gouverné et durable dans une organisation.">
+
+<title>Passer de l’essai curieux à l’usage professionnel de l’IA – SYLTRA Consulting</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9080f0b6d81bdf8015e035bfde39d928.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Passer de l’essai curieux à l’usage professionnel de l’IA – SYLTRA Consulting">
+<meta property="og:description" content="Méthode complète pour transformer une expérimentation ponctuelle en usage d’intelligence artificielle fiable, mesurable, sécurisé, gouverné et durable dans une organisation.">
+<meta property="og:image" content="https://blog.syltra-consulting.com/assets/img/posts/j008.svg">
+<meta property="og:site_name" content="SYLTRA Consulting">
+<meta name="twitter:title" content="Passer de l’essai curieux à l’usage professionnel de l’IA – SYLTRA Consulting">
+<meta name="twitter:description" content="Méthode complète pour transformer une expérimentation ponctuelle en usage d’intelligence artificielle fiable, mesurable, sécurisé, gouverné et durable dans une organisation.">
+<meta name="twitter:image" content="https://blog.syltra-consulting.com/assets/img/posts/j008.svg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo light-content">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SYLTRA Consulting</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-domaines" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Domaines</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-domaines">    
+        <li>
+    <a class="dropdown-item" href="../domaines/sante.html">
+ <span class="dropdown-text">Santé &amp; biostatistique</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/recherche.html">
+ <span class="dropdown-text">Recherche</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/banque-finance.html">
+ <span class="dropdown-text">Banque, finance &amp; assurance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/industrie.html">
+ <span class="dropdown-text">Industrie &amp; ingénierie</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/enseignement.html">
+ <span class="dropdown-text">Enseignement &amp; formation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/gouvernance.html">
+ <span class="dropdown-text">Gouvernance &amp; sécurité</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../calendrier.html"> 
+<span class="menu-text">Calendrier</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../a-propos.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/LucienSyTraore"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/syltra-consulting/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Dans cet article</h2>
+   
+  <ul>
+  <li><a href="#lidée-essentielle" id="toc-lidée-essentielle" class="nav-link active" data-scroll-target="#lidée-essentielle">L’idée essentielle</a></li>
+  <li><a href="#pourquoi-la-plupart-des-essais-ne-deviennent-jamais-des-usages-durables" id="toc-pourquoi-la-plupart-des-essais-ne-deviennent-jamais-des-usages-durables" class="nav-link" data-scroll-target="#pourquoi-la-plupart-des-essais-ne-deviennent-jamais-des-usages-durables">Pourquoi la plupart des essais ne deviennent jamais des usages durables</a>
+  <ul class="collapse">
+  <li><a href="#le-problème-nest-pas-précisément-défini" id="toc-le-problème-nest-pas-précisément-défini" class="nav-link" data-scroll-target="#le-problème-nest-pas-précisément-défini">Le problème n’est pas précisément défini</a></li>
+  <li><a href="#la-démonstration-évite-les-cas-difficiles" id="toc-la-démonstration-évite-les-cas-difficiles" class="nav-link" data-scroll-target="#la-démonstration-évite-les-cas-difficiles">La démonstration évite les cas difficiles</a></li>
+  <li><a href="#la-validation-humaine-est-supposée-gratuite" id="toc-la-validation-humaine-est-supposée-gratuite" class="nav-link" data-scroll-target="#la-validation-humaine-est-supposée-gratuite">La validation humaine est supposée gratuite</a></li>
+  <li><a href="#lintégration-est-sous-estimée" id="toc-lintégration-est-sous-estimée" class="nav-link" data-scroll-target="#lintégration-est-sous-estimée">L’intégration est sous-estimée</a></li>
+  <li><a href="#le-changement-organisationnel-est-absent" id="toc-le-changement-organisationnel-est-absent" class="nav-link" data-scroll-target="#le-changement-organisationnel-est-absent">Le changement organisationnel est absent</a></li>
+  </ul></li>
+  <li><a href="#les-cinq-niveaux-de-maturité-dun-usage-ia" id="toc-les-cinq-niveaux-de-maturité-dun-usage-ia" class="nav-link" data-scroll-target="#les-cinq-niveaux-de-maturité-dun-usage-ia">Les cinq niveaux de maturité d’un usage IA</a>
+  <ul class="collapse">
+  <li><a href="#niveau-0-curiosité-individuelle" id="toc-niveau-0-curiosité-individuelle" class="nav-link" data-scroll-target="#niveau-0-curiosité-individuelle">Niveau 0 — Curiosité individuelle</a></li>
+  <li><a href="#niveau-1-prototype-encadré" id="toc-niveau-1-prototype-encadré" class="nav-link" data-scroll-target="#niveau-1-prototype-encadré">Niveau 1 — Prototype encadré</a></li>
+  <li><a href="#niveau-2-pilote-opérationnel" id="toc-niveau-2-pilote-opérationnel" class="nav-link" data-scroll-target="#niveau-2-pilote-opérationnel">Niveau 2 — Pilote opérationnel</a></li>
+  <li><a href="#niveau-3-service-maîtrisé" id="toc-niveau-3-service-maîtrisé" class="nav-link" data-scroll-target="#niveau-3-service-maîtrisé">Niveau 3 — Service maîtrisé</a></li>
+  <li><a href="#niveau-4-capacité-organisationnelle" id="toc-niveau-4-capacité-organisationnelle" class="nav-link" data-scroll-target="#niveau-4-capacité-organisationnelle">Niveau 4 — Capacité organisationnelle</a></li>
+  </ul></li>
+  <li><a href="#commencer-par-le-travail-pas-par-le-modèle" id="toc-commencer-par-le-travail-pas-par-le-modèle" class="nav-link" data-scroll-target="#commencer-par-le-travail-pas-par-le-modèle">Commencer par le travail, pas par le modèle</a></li>
+  <li><a href="#sélectionner-un-bon-cas-dusage" id="toc-sélectionner-un-bon-cas-dusage" class="nav-link" data-scroll-target="#sélectionner-un-bon-cas-dusage">Sélectionner un bon cas d’usage</a>
+  <ul class="collapse">
+  <li><a href="#valeur" id="toc-valeur" class="nav-link" data-scroll-target="#valeur">Valeur</a></li>
+  <li><a href="#faisabilité" id="toc-faisabilité" class="nav-link" data-scroll-target="#faisabilité">Faisabilité</a></li>
+  <li><a href="#risque" id="toc-risque" class="nav-link" data-scroll-target="#risque">Risque</a></li>
+  <li><a href="#adoption" id="toc-adoption" class="nav-link" data-scroll-target="#adoption">Adoption</a></li>
+  </ul></li>
+  <li><a href="#construire-une-fiche-de-cadrage" id="toc-construire-une-fiche-de-cadrage" class="nav-link" data-scroll-target="#construire-une-fiche-de-cadrage">Construire une fiche de cadrage</a>
+  <ul class="collapse">
+  <li><a href="#exemple-de-formulation-correcte" id="toc-exemple-de-formulation-correcte" class="nav-link" data-scroll-target="#exemple-de-formulation-correcte">Exemple de formulation correcte</a></li>
+  <li><a href="#exemple-trop-vague" id="toc-exemple-trop-vague" class="nav-link" data-scroll-target="#exemple-trop-vague">Exemple trop vague</a></li>
+  </ul></li>
+  <li><a href="#définir-larchitecture-fonctionnelle" id="toc-définir-larchitecture-fonctionnelle" class="nav-link" data-scroll-target="#définir-larchitecture-fonctionnelle">Définir l’architecture fonctionnelle</a>
+  <ul class="collapse">
+  <li><a href="#les-sources" id="toc-les-sources" class="nav-link" data-scroll-target="#les-sources">Les sources</a></li>
+  <li><a href="#la-préparation-des-données" id="toc-la-préparation-des-données" class="nav-link" data-scroll-target="#la-préparation-des-données">La préparation des données</a></li>
+  <li><a href="#le-moteur-dia" id="toc-le-moteur-dia" class="nav-link" data-scroll-target="#le-moteur-dia">Le moteur d’IA</a></li>
+  <li><a href="#lorchestration" id="toc-lorchestration" class="nav-link" data-scroll-target="#lorchestration">L’orchestration</a></li>
+  <li><a href="#linterface" id="toc-linterface" class="nav-link" data-scroll-target="#linterface">L’interface</a></li>
+  <li><a href="#la-validation" id="toc-la-validation" class="nav-link" data-scroll-target="#la-validation">La validation</a></li>
+  <li><a href="#la-traçabilité" id="toc-la-traçabilité" class="nav-link" data-scroll-target="#la-traçabilité">La traçabilité</a></li>
+  </ul></li>
+  <li><a href="#concevoir-les-données-comme-un-produit" id="toc-concevoir-les-données-comme-un-produit" class="nav-link" data-scroll-target="#concevoir-les-données-comme-un-produit">Concevoir les données comme un produit</a>
+  <ul class="collapse">
+  <li><a href="#dictionnaire-de-données" id="toc-dictionnaire-de-données" class="nav-link" data-scroll-target="#dictionnaire-de-données">Dictionnaire de données</a></li>
+  <li><a href="#qualité" id="toc-qualité" class="nav-link" data-scroll-target="#qualité">Qualité</a></li>
+  <li><a href="#provenance" id="toc-provenance" class="nav-link" data-scroll-target="#provenance">Provenance</a></li>
+  <li><a href="#minimisation" id="toc-minimisation" class="nav-link" data-scroll-target="#minimisation">Minimisation</a></li>
+  <li><a href="#cycle-de-vie" id="toc-cycle-de-vie" class="nav-link" data-scroll-target="#cycle-de-vie">Cycle de vie</a></li>
+  </ul></li>
+  <li><a href="#choisir-entre-règle-modèle-classique-et-ia-générative" id="toc-choisir-entre-règle-modèle-classique-et-ia-générative" class="nav-link" data-scroll-target="#choisir-entre-règle-modèle-classique-et-ia-générative">Choisir entre règle, modèle classique et IA générative</a>
+  <ul class="collapse">
+  <li><a href="#utiliser-une-règle-lorsque" id="toc-utiliser-une-règle-lorsque" class="nav-link" data-scroll-target="#utiliser-une-règle-lorsque">Utiliser une règle lorsque</a></li>
+  <li><a href="#utiliser-un-modèle-statistique-ou-de-machine-learning-lorsque" id="toc-utiliser-un-modèle-statistique-ou-de-machine-learning-lorsque" class="nav-link" data-scroll-target="#utiliser-un-modèle-statistique-ou-de-machine-learning-lorsque">Utiliser un modèle statistique ou de machine learning lorsque</a></li>
+  <li><a href="#utiliser-une-ia-générative-lorsque" id="toc-utiliser-une-ia-générative-lorsque" class="nav-link" data-scroll-target="#utiliser-une-ia-générative-lorsque">Utiliser une IA générative lorsque</a></li>
+  <li><a href="#combiner-les-approches" id="toc-combiner-les-approches" class="nav-link" data-scroll-target="#combiner-les-approches">Combiner les approches</a></li>
+  </ul></li>
+  <li><a href="#concevoir-un-prototype-qui-apprend-réellement" id="toc-concevoir-un-prototype-qui-apprend-réellement" class="nav-link" data-scroll-target="#concevoir-un-prototype-qui-apprend-réellement">Concevoir un prototype qui apprend réellement</a>
+  <ul class="collapse">
+  <li><a href="#hypothèses-à-tester" id="toc-hypothèses-à-tester" class="nav-link" data-scroll-target="#hypothèses-à-tester">Hypothèses à tester</a></li>
+  <li><a href="#échantillon" id="toc-échantillon" class="nav-link" data-scroll-target="#échantillon">Échantillon</a></li>
+  <li><a href="#baseline" id="toc-baseline" class="nav-link" data-scroll-target="#baseline">Baseline</a></li>
+  <li><a href="#journal-dapprentissage" id="toc-journal-dapprentissage" class="nav-link" data-scroll-target="#journal-dapprentissage">Journal d’apprentissage</a></li>
+  </ul></li>
+  <li><a href="#mesurer-autre-chose-que-la-précision" id="toc-mesurer-autre-chose-que-la-précision" class="nav-link" data-scroll-target="#mesurer-autre-chose-que-la-précision">Mesurer autre chose que la précision</a>
+  <ul class="collapse">
+  <li><a href="#qualité-1" id="toc-qualité-1" class="nav-link" data-scroll-target="#qualité-1">Qualité</a></li>
+  <li><a href="#productivité" id="toc-productivité" class="nav-link" data-scroll-target="#productivité">Productivité</a></li>
+  <li><a href="#robustesse" id="toc-robustesse" class="nav-link" data-scroll-target="#robustesse">Robustesse</a></li>
+  <li><a href="#sécurité" id="toc-sécurité" class="nav-link" data-scroll-target="#sécurité">Sécurité</a></li>
+  <li><a href="#équité" id="toc-équité" class="nav-link" data-scroll-target="#équité">Équité</a></li>
+  <li><a href="#expérience-utilisateur" id="toc-expérience-utilisateur" class="nav-link" data-scroll-target="#expérience-utilisateur">Expérience utilisateur</a></li>
+  <li><a href="#maintenabilité" id="toc-maintenabilité" class="nav-link" data-scroll-target="#maintenabilité">Maintenabilité</a></li>
+  </ul></li>
+  <li><a href="#un-tableau-de-bord-minimal" id="toc-un-tableau-de-bord-minimal" class="nav-link" data-scroll-target="#un-tableau-de-bord-minimal">Un tableau de bord minimal</a></li>
+  <li><a href="#concevoir-la-validation-humaine" id="toc-concevoir-la-validation-humaine" class="nav-link" data-scroll-target="#concevoir-la-validation-humaine">Concevoir la validation humaine</a>
+  <ul class="collapse">
+  <li><a href="#validation-exhaustive" id="toc-validation-exhaustive" class="nav-link" data-scroll-target="#validation-exhaustive">Validation exhaustive</a></li>
+  <li><a href="#validation-par-échantillonnage" id="toc-validation-par-échantillonnage" class="nav-link" data-scroll-target="#validation-par-échantillonnage">Validation par échantillonnage</a></li>
+  <li><a href="#validation-par-exception" id="toc-validation-par-exception" class="nav-link" data-scroll-target="#validation-par-exception">Validation par exception</a></li>
+  <li><a href="#double-lecture" id="toc-double-lecture" class="nav-link" data-scroll-target="#double-lecture">Double lecture</a></li>
+  <li><a href="#principes-dinterface" id="toc-principes-dinterface" class="nav-link" data-scroll-target="#principes-dinterface">Principes d’interface</a></li>
+  </ul></li>
+  <li><a href="#sécurité-des-systèmes-génératifs" id="toc-sécurité-des-systèmes-génératifs" class="nav-link" data-scroll-target="#sécurité-des-systèmes-génératifs">Sécurité des systèmes génératifs</a>
+  <ul class="collapse">
+  <li><a href="#injection-dinstructions" id="toc-injection-dinstructions" class="nav-link" data-scroll-target="#injection-dinstructions">Injection d’instructions</a></li>
+  <li><a href="#exfiltration" id="toc-exfiltration" class="nav-link" data-scroll-target="#exfiltration">Exfiltration</a></li>
+  <li><a href="#actions-excessives" id="toc-actions-excessives" class="nav-link" data-scroll-target="#actions-excessives">Actions excessives</a></li>
+  <li><a href="#dépendances" id="toc-dépendances" class="nav-link" data-scroll-target="#dépendances">Dépendances</a></li>
+  <li><a href="#journaux" id="toc-journaux" class="nav-link" data-scroll-target="#journaux">Journaux</a></li>
+  </ul></li>
+  <li><a href="#confidentialité-et-protection-des-données" id="toc-confidentialité-et-protection-des-données" class="nav-link" data-scroll-target="#confidentialité-et-protection-des-données">Confidentialité et protection des données</a>
+  <ul class="collapse">
+  <li><a href="#questions-indispensables" id="toc-questions-indispensables" class="nav-link" data-scroll-target="#questions-indispensables">Questions indispensables</a></li>
+  </ul></li>
+  <li><a href="#gouvernance-légère-mais-réelle" id="toc-gouvernance-légère-mais-réelle" class="nav-link" data-scroll-target="#gouvernance-légère-mais-réelle">Gouvernance légère mais réelle</a>
+  <ul class="collapse">
+  <li><a href="#comité-ou-fonction-de-gouvernance" id="toc-comité-ou-fonction-de-gouvernance" class="nav-link" data-scroll-target="#comité-ou-fonction-de-gouvernance">Comité ou fonction de gouvernance</a></li>
+  <li><a href="#propriétaire-du-cas-dusage" id="toc-propriétaire-du-cas-dusage" class="nav-link" data-scroll-target="#propriétaire-du-cas-dusage">Propriétaire du cas d’usage</a></li>
+  <li><a href="#responsable-technique" id="toc-responsable-technique" class="nav-link" data-scroll-target="#responsable-technique">Responsable technique</a></li>
+  <li><a href="#expert-métier" id="toc-expert-métier" class="nav-link" data-scroll-target="#expert-métier">Expert métier</a></li>
+  <li><a href="#utilisateur" id="toc-utilisateur" class="nav-link" data-scroll-target="#utilisateur">Utilisateur</a></li>
+  <li><a href="#audit-ou-contrôle-indépendant" id="toc-audit-ou-contrôle-indépendant" class="nav-link" data-scroll-target="#audit-ou-contrôle-indépendant">Audit ou contrôle indépendant</a></li>
+  </ul></li>
+  <li><a href="#construire-le-business-case" id="toc-construire-le-business-case" class="nav-link" data-scroll-target="#construire-le-business-case">Construire le business case</a>
+  <ul class="collapse">
+  <li><a href="#coûts-directs" id="toc-coûts-directs" class="nav-link" data-scroll-target="#coûts-directs">Coûts directs</a></li>
+  <li><a href="#coûts-indirects" id="toc-coûts-indirects" class="nav-link" data-scroll-target="#coûts-indirects">Coûts indirects</a></li>
+  <li><a href="#bénéfices" id="toc-bénéfices" class="nav-link" data-scroll-target="#bénéfices">Bénéfices</a></li>
+  <li><a href="#formule-simple" id="toc-formule-simple" class="nav-link" data-scroll-target="#formule-simple">Formule simple</a></li>
+  </ul></li>
+  <li><a href="#organiser-le-pilote" id="toc-organiser-le-pilote" class="nav-link" data-scroll-target="#organiser-le-pilote">Organiser le pilote</a>
+  <ul class="collapse">
+  <li><a href="#avant-le-pilote" id="toc-avant-le-pilote" class="nav-link" data-scroll-target="#avant-le-pilote">Avant le pilote</a></li>
+  <li><a href="#pendant-le-pilote" id="toc-pendant-le-pilote" class="nav-link" data-scroll-target="#pendant-le-pilote">Pendant le pilote</a></li>
+  <li><a href="#après-le-pilote" id="toc-après-le-pilote" class="nav-link" data-scroll-target="#après-le-pilote">Après le pilote</a></li>
+  </ul></li>
+  <li><a href="#former-les-utilisateurs" id="toc-former-les-utilisateurs" class="nav-link" data-scroll-target="#former-les-utilisateurs">Former les utilisateurs</a></li>
+  <li><a href="#conduire-le-changement" id="toc-conduire-le-changement" class="nav-link" data-scroll-target="#conduire-le-changement">Conduire le changement</a>
+  <ul class="collapse">
+  <li><a href="#expliquer-le-pourquoi" id="toc-expliquer-le-pourquoi" class="nav-link" data-scroll-target="#expliquer-le-pourquoi">Expliquer le pourquoi</a></li>
+  <li><a href="#reconnaître-les-craintes" id="toc-reconnaître-les-craintes" class="nav-link" data-scroll-target="#reconnaître-les-craintes">Reconnaître les craintes</a></li>
+  <li><a href="#définir-les-nouveaux-rôles" id="toc-définir-les-nouveaux-rôles" class="nav-link" data-scroll-target="#définir-les-nouveaux-rôles">Définir les nouveaux rôles</a></li>
+  <li><a href="#valoriser-le-retour-terrain" id="toc-valoriser-le-retour-terrain" class="nav-link" data-scroll-target="#valoriser-le-retour-terrain">Valoriser le retour terrain</a></li>
+  <li><a href="#préserver-les-compétences" id="toc-préserver-les-compétences" class="nav-link" data-scroll-target="#préserver-les-compétences">Préserver les compétences</a></li>
+  </ul></li>
+  <li><a href="#déploiement-progressif-et-réversibilité" id="toc-déploiement-progressif-et-réversibilité" class="nav-link" data-scroll-target="#déploiement-progressif-et-réversibilité">Déploiement progressif et réversibilité</a></li>
+  <li><a href="#surveiller-la-dérive" id="toc-surveiller-la-dérive" class="nav-link" data-scroll-target="#surveiller-la-dérive">Surveiller la dérive</a>
+  <ul class="collapse">
+  <li><a href="#dérive-des-données" id="toc-dérive-des-données" class="nav-link" data-scroll-target="#dérive-des-données">Dérive des données</a></li>
+  <li><a href="#dérive-du-concept" id="toc-dérive-du-concept" class="nav-link" data-scroll-target="#dérive-du-concept">Dérive du concept</a></li>
+  <li><a href="#dérive-dusage" id="toc-dérive-dusage" class="nav-link" data-scroll-target="#dérive-dusage">Dérive d’usage</a></li>
+  <li><a href="#dérive-du-fournisseur" id="toc-dérive-du-fournisseur" class="nav-link" data-scroll-target="#dérive-du-fournisseur">Dérive du fournisseur</a></li>
+  <li><a href="#dérive-organisationnelle" id="toc-dérive-organisationnelle" class="nav-link" data-scroll-target="#dérive-organisationnelle">Dérive organisationnelle</a></li>
+  </ul></li>
+  <li><a href="#gérer-les-incidents" id="toc-gérer-les-incidents" class="nav-link" data-scroll-target="#gérer-les-incidents">Gérer les incidents</a>
+  <ul class="collapse">
+  <li><a href="#procédure-minimale" id="toc-procédure-minimale" class="nav-link" data-scroll-target="#procédure-minimale">Procédure minimale</a></li>
+  </ul></li>
+  <li><a href="#cas-pratique-synthèse-de-comptes-rendus-qualité" id="toc-cas-pratique-synthèse-de-comptes-rendus-qualité" class="nav-link" data-scroll-target="#cas-pratique-synthèse-de-comptes-rendus-qualité">Cas pratique : synthèse de comptes rendus qualité</a>
+  <ul class="collapse">
+  <li><a href="#situation-initiale" id="toc-situation-initiale" class="nav-link" data-scroll-target="#situation-initiale">Situation initiale</a></li>
+  <li><a href="#mauvaise-approche" id="toc-mauvaise-approche" class="nav-link" data-scroll-target="#mauvaise-approche">Mauvaise approche</a></li>
+  <li><a href="#approche-professionnelle" id="toc-approche-professionnelle" class="nav-link" data-scroll-target="#approche-professionnelle">Approche professionnelle</a></li>
+  <li><a href="#indicateurs" id="toc-indicateurs" class="nav-link" data-scroll-target="#indicateurs">Indicateurs</a></li>
+  </ul></li>
+  <li><a href="#cas-pratique-assistance-à-lanalyse-statistique" id="toc-cas-pratique-assistance-à-lanalyse-statistique" class="nav-link" data-scroll-target="#cas-pratique-assistance-à-lanalyse-statistique">Cas pratique : assistance à l’analyse statistique</a>
+  <ul class="collapse">
+  <li><a href="#situation-initiale-1" id="toc-situation-initiale-1" class="nav-link" data-scroll-target="#situation-initiale-1">Situation initiale</a></li>
+  <li><a href="#risques" id="toc-risques" class="nav-link" data-scroll-target="#risques">Risques</a></li>
+  <li><a href="#contrôles" id="toc-contrôles" class="nav-link" data-scroll-target="#contrôles">Contrôles</a></li>
+  <li><a href="#critère-de-succès" id="toc-critère-de-succès" class="nav-link" data-scroll-target="#critère-de-succès">Critère de succès</a></li>
+  </ul></li>
+  <li><a href="#cas-pratique-maintenance-industrielle" id="toc-cas-pratique-maintenance-industrielle" class="nav-link" data-scroll-target="#cas-pratique-maintenance-industrielle">Cas pratique : maintenance industrielle</a>
+  <ul class="collapse">
+  <li><a href="#situation-initiale-2" id="toc-situation-initiale-2" class="nav-link" data-scroll-target="#situation-initiale-2">Situation initiale</a></li>
+  <li><a href="#architecture-prudente" id="toc-architecture-prudente" class="nav-link" data-scroll-target="#architecture-prudente">Architecture prudente</a></li>
+  <li><a href="#point-critique" id="toc-point-critique" class="nav-link" data-scroll-target="#point-critique">Point critique</a></li>
+  </ul></li>
+  <li><a href="#cas-pratique-service-client-financier" id="toc-cas-pratique-service-client-financier" class="nav-link" data-scroll-target="#cas-pratique-service-client-financier">Cas pratique : service client financier</a>
+  <ul class="collapse">
+  <li><a href="#situation-initiale-3" id="toc-situation-initiale-3" class="nav-link" data-scroll-target="#situation-initiale-3">Situation initiale</a></li>
+  <li><a href="#périmètre-adapté" id="toc-périmètre-adapté" class="nav-link" data-scroll-target="#périmètre-adapté">Périmètre adapté</a></li>
+  <li><a href="#contrôles-1" id="toc-contrôles-1" class="nav-link" data-scroll-target="#contrôles-1">Contrôles</a></li>
+  </ul></li>
+  <li><a href="#les-anti-modèles-à-éviter" id="toc-les-anti-modèles-à-éviter" class="nav-link" data-scroll-target="#les-anti-modèles-à-éviter">Les anti-modèles à éviter</a>
+  <ul class="collapse">
+  <li><a href="#le-chatbot-universel" id="toc-le-chatbot-universel" class="nav-link" data-scroll-target="#le-chatbot-universel">Le chatbot universel</a></li>
+  <li><a href="#le-pilote-permanent" id="toc-le-pilote-permanent" class="nav-link" data-scroll-target="#le-pilote-permanent">Le pilote permanent</a></li>
+  <li><a href="#la-validation-symbolique" id="toc-la-validation-symbolique" class="nav-link" data-scroll-target="#la-validation-symbolique">La validation symbolique</a></li>
+  <li><a href="#la-métrique-unique" id="toc-la-métrique-unique" class="nav-link" data-scroll-target="#la-métrique-unique">La métrique unique</a></li>
+  <li><a href="#le-fournisseur-comme-stratégie" id="toc-le-fournisseur-comme-stratégie" class="nav-link" data-scroll-target="#le-fournisseur-comme-stratégie">Le fournisseur comme stratégie</a></li>
+  <li><a href="#lautomatisation-dun-mauvais-processus" id="toc-lautomatisation-dun-mauvais-processus" class="nav-link" data-scroll-target="#lautomatisation-dun-mauvais-processus">L’automatisation d’un mauvais processus</a></li>
+  </ul></li>
+  <li><a href="#feuille-de-route-sur-quatre-vingt-dix-jours" id="toc-feuille-de-route-sur-quatre-vingt-dix-jours" class="nav-link" data-scroll-target="#feuille-de-route-sur-quatre-vingt-dix-jours">Feuille de route sur quatre-vingt-dix jours</a>
+  <ul class="collapse">
+  <li><a href="#jours-1-à-15-cadrage" id="toc-jours-1-à-15-cadrage" class="nav-link" data-scroll-target="#jours-1-à-15-cadrage">Jours 1 à 15 — Cadrage</a></li>
+  <li><a href="#jours-16-à-35-prototype" id="toc-jours-16-à-35-prototype" class="nav-link" data-scroll-target="#jours-16-à-35-prototype">Jours 16 à 35 — Prototype</a></li>
+  <li><a href="#jours-36-à-60-pilote" id="toc-jours-36-à-60-pilote" class="nav-link" data-scroll-target="#jours-36-à-60-pilote">Jours 36 à 60 — Pilote</a></li>
+  <li><a href="#jours-61-à-75-revue" id="toc-jours-61-à-75-revue" class="nav-link" data-scroll-target="#jours-61-à-75-revue">Jours 61 à 75 — Revue</a></li>
+  <li><a href="#jours-76-à-90-déploiement-contrôlé" id="toc-jours-76-à-90-déploiement-contrôlé" class="nav-link" data-scroll-target="#jours-76-à-90-déploiement-contrôlé">Jours 76 à 90 — Déploiement contrôlé</a></li>
+  </ul></li>
+  <li><a href="#checklist-de-passage-en-production" id="toc-checklist-de-passage-en-production" class="nav-link" data-scroll-target="#checklist-de-passage-en-production">Checklist de passage en production</a>
+  <ul class="collapse">
+  <li><a href="#besoin-et-valeur" id="toc-besoin-et-valeur" class="nav-link" data-scroll-target="#besoin-et-valeur">Besoin et valeur</a></li>
+  <li><a href="#données" id="toc-données" class="nav-link" data-scroll-target="#données">Données</a></li>
+  <li><a href="#performance" id="toc-performance" class="nav-link" data-scroll-target="#performance">Performance</a></li>
+  <li><a href="#risque-et-sécurité" id="toc-risque-et-sécurité" class="nav-link" data-scroll-target="#risque-et-sécurité">Risque et sécurité</a></li>
+  <li><a href="#organisation" id="toc-organisation" class="nav-link" data-scroll-target="#organisation">Organisation</a></li>
+  <li><a href="#surveillance" id="toc-surveillance" class="nav-link" data-scroll-target="#surveillance">Surveillance</a></li>
+  </ul></li>
+  <li><a href="#ce-quil-faut-retenir" id="toc-ce-quil-faut-retenir" class="nav-link" data-scroll-target="#ce-quil-faut-retenir">Ce qu’il faut retenir</a></li>
+  <li><a href="#références-et-ressources-essentielles" id="toc-références-et-ressources-essentielles" class="nav-link" data-scroll-target="#références-et-ressources-essentielles">Références et ressources essentielles</a></li>
+  <li><a href="#besoin-dun-accompagnement" id="toc-besoin-dun-accompagnement" class="nav-link" data-scroll-target="#besoin-dun-accompagnement">Besoin d’un accompagnement ?</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Passer de l’essai curieux à l’usage professionnel de l’IA</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Intelligence artificielle</div>
+    <div class="quarto-category">Transformation numérique</div>
+    <div class="quarto-category">Gouvernance</div>
+    <div class="quarto-category">Industrie &amp; ingénierie</div>
+    <div class="quarto-category">Santé &amp; biostatistique</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Méthode complète pour transformer une expérimentation ponctuelle en usage d’intelligence artificielle fiable, mesurable, sécurisé, gouverné et durable dans une organisation.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>SYLTRA Consulting </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">4 août 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modifié</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">4 août 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="article-kicker">
+<p><strong>Publication 8 · Niveau Fondations avancées · Thème Industrialiser un usage fiable de l’IA</strong></p>
+</div>
+<section id="lidée-essentielle" class="level2">
+<h2 class="anchored" data-anchor-id="lidée-essentielle">L’idée essentielle</h2>
+<p>Tester un outil d’intelligence artificielle pendant quelques minutes ne constitue pas une transformation professionnelle. Un usage devient professionnel lorsqu’il répond à un besoin réel, s’intègre dans un processus, respecte les données, produit une qualité mesurable, attribue clairement les responsabilités et continue de fonctionner lorsque le contexte change.</p>
+<p>La différence entre une démonstration séduisante et un service utile ne tient pas seulement au modèle choisi. Elle dépend surtout de la conception du travail autour du modèle : règles d’entrée, sources, rôles, validation, sécurité, mesure de performance, gestion des incidents et amélioration continue.</p>
+<p>Une organisation ne doit donc pas demander : <strong>« Quel outil d’IA devons-nous adopter ? »</strong> Elle doit commencer par : <strong>« Quel problème cherchons-nous à résoudre, pour qui, avec quelle valeur, quelles contraintes et quel niveau de risque ? »</strong></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Principe directeur">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Principe directeur
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>L’industrialisation de l’IA n’est pas le passage d’un petit modèle à un grand modèle. C’est le passage d’un résultat occasionnel à un processus maîtrisé.</p>
+</div>
+</div>
+</section>
+<section id="pourquoi-la-plupart-des-essais-ne-deviennent-jamais-des-usages-durables" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-la-plupart-des-essais-ne-deviennent-jamais-des-usages-durables">Pourquoi la plupart des essais ne deviennent jamais des usages durables</h2>
+<p>Les premiers essais sont souvent impressionnants parce qu’ils portent sur des cas simples, choisis par l’utilisateur et évalués de manière informelle. Un collaborateur demande un résumé, génère une présentation, reformule un courrier ou produit quelques lignes de code. Le résultat semble utile, mais rien ne prouve encore qu’il peut être reproduit par d’autres, sur des données réelles, dans les délais attendus et sans risque excessif.</p>
+<p>Plusieurs causes expliquent l’échec du passage à l’échelle.</p>
+<section id="le-problème-nest-pas-précisément-défini" class="level3">
+<h3 class="anchored" data-anchor-id="le-problème-nest-pas-précisément-défini">Le problème n’est pas précisément défini</h3>
+<p>Le projet commence par une technologie plutôt que par un irritant métier. On cherche ensuite un usage pour justifier l’outil. Cette inversion conduit à des prototypes sans propriétaire, sans budget durable et sans indicateur de valeur.</p>
+</section>
+<section id="la-démonstration-évite-les-cas-difficiles" class="level3">
+<h3 class="anchored" data-anchor-id="la-démonstration-évite-les-cas-difficiles">La démonstration évite les cas difficiles</h3>
+<p>Les essais utilisent des documents propres, des questions bien formulées et des exemples favorables. Les données réelles comportent des erreurs, doublons, valeurs manquantes, ambiguïtés, exceptions et changements de format. Le système qui semblait performant peut alors devenir instable.</p>
+</section>
+<section id="la-validation-humaine-est-supposée-gratuite" class="level3">
+<h3 class="anchored" data-anchor-id="la-validation-humaine-est-supposée-gratuite">La validation humaine est supposée gratuite</h3>
+<p>On affirme que l’expert vérifiera la réponse, mais on ne mesure ni le temps requis, ni la fatigue, ni le risque d’acceptation automatique. Une solution qui transfère tout le risque vers une relecture manuelle peut déplacer le travail au lieu de le réduire.</p>
+</section>
+<section id="lintégration-est-sous-estimée" class="level3">
+<h3 class="anchored" data-anchor-id="lintégration-est-sous-estimée">L’intégration est sous-estimée</h3>
+<p>Un assistant isolé ne connaît pas nécessairement les documents internes, les droits d’accès, les versions, les règles de conservation ou les outils de l’organisation. Le raccordement aux systèmes existants, la gestion des identités et la journalisation demandent souvent plus d’effort que le prototype lui-même.</p>
+</section>
+<section id="le-changement-organisationnel-est-absent" class="level3">
+<h3 class="anchored" data-anchor-id="le-changement-organisationnel-est-absent">Le changement organisationnel est absent</h3>
+<p>Une technologie modifie les rôles, les compétences, les contrôles et parfois les relations de pouvoir. Sans formation, communication et mécanisme de retour, les utilisateurs peuvent la contourner, la surutiliser ou la rejeter.</p>
+</section>
+</section>
+<section id="les-cinq-niveaux-de-maturité-dun-usage-ia" class="level2">
+<h2 class="anchored" data-anchor-id="les-cinq-niveaux-de-maturité-dun-usage-ia">Les cinq niveaux de maturité d’un usage IA</h2>
+<p>Une grille de maturité aide à situer un projet et à éviter de traiter un test comme un déploiement.</p>
+<section id="niveau-0-curiosité-individuelle" class="level3">
+<h3 class="anchored" data-anchor-id="niveau-0-curiosité-individuelle">Niveau 0 — Curiosité individuelle</h3>
+<p>Un utilisateur expérimente librement sur des données non sensibles. Il cherche à comprendre les possibilités de l’outil. Aucun résultat ne doit être utilisé comme base unique d’une décision professionnelle.</p>
+<p><strong>Objectif :</strong> apprendre rapidement.</p>
+<p><strong>Preuves attendues :</strong> exemples d’usage, limites observées, idées de tâches candidates.</p>
+</section>
+<section id="niveau-1-prototype-encadré" class="level3">
+<h3 class="anchored" data-anchor-id="niveau-1-prototype-encadré">Niveau 1 — Prototype encadré</h3>
+<p>Une équipe teste une tâche précise sur un petit ensemble de cas. Les données, les consignes et les sorties sont conservées. Un expert vérifie chaque résultat.</p>
+<p><strong>Objectif :</strong> déterminer si le cas d’usage mérite une étude plus rigoureuse.</p>
+<p><strong>Preuves attendues :</strong> première mesure de qualité, estimation de la charge, risques principaux.</p>
+</section>
+<section id="niveau-2-pilote-opérationnel" class="level3">
+<h3 class="anchored" data-anchor-id="niveau-2-pilote-opérationnel">Niveau 2 — Pilote opérationnel</h3>
+<p>Le système est testé dans un contexte réel avec un groupe limité d’utilisateurs. Le processus existant reste disponible. Les incidents, corrections et temps de traitement sont mesurés.</p>
+<p><strong>Objectif :</strong> valider la valeur et la faisabilité organisationnelle.</p>
+<p><strong>Preuves attendues :</strong> comparaison avant/après, retours utilisateurs, seuils d’acceptation, plan de contrôle.</p>
+</section>
+<section id="niveau-3-service-maîtrisé" class="level3">
+<h3 class="anchored" data-anchor-id="niveau-3-service-maîtrisé">Niveau 3 — Service maîtrisé</h3>
+<p>L’usage est intégré aux outils et procédures. Les accès, responsabilités, tests, journaux, sauvegardes et règles de validation sont définis. Une surveillance suit la performance et les risques.</p>
+<p><strong>Objectif :</strong> fournir un service répétable et auditable.</p>
+<p><strong>Preuves attendues :</strong> documentation, indicateurs, gestion des versions, support et gouvernance.</p>
+</section>
+<section id="niveau-4-capacité-organisationnelle" class="level3">
+<h3 class="anchored" data-anchor-id="niveau-4-capacité-organisationnelle">Niveau 4 — Capacité organisationnelle</h3>
+<p>L’organisation dispose d’un portefeuille de cas d’usage, d’une architecture partagée, d’un processus d’évaluation, de compétences internes et d’une gouvernance cohérente. Les enseignements d’un projet bénéficient aux autres.</p>
+<p><strong>Objectif :</strong> développer l’IA de manière stratégique et durable.</p>
+<p><strong>Preuves attendues :</strong> standards communs, arbitrage de portefeuille, réutilisation, suivi des bénéfices et risques à l’échelle de l’organisation.</p>
+</section>
+</section>
+<section id="commencer-par-le-travail-pas-par-le-modèle" class="level2">
+<h2 class="anchored" data-anchor-id="commencer-par-le-travail-pas-par-le-modèle">Commencer par le travail, pas par le modèle</h2>
+<p>Le point de départ est une cartographie du processus existant. Il faut observer le travail réellement effectué, y compris les contournements, tâches invisibles et dépendances informelles.</p>
+<p>Pour chaque étape, on peut documenter :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Questions à poser</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Déclencheur</td>
+<td>Qu’est-ce qui lance la tâche ?</td>
+</tr>
+<tr class="even">
+<td>Entrées</td>
+<td>Quels documents, données ou signaux sont utilisés ?</td>
+</tr>
+<tr class="odd">
+<td>Transformation</td>
+<td>Quelles opérations intellectuelles ou techniques sont réalisées ?</td>
+</tr>
+<tr class="even">
+<td>Décision</td>
+<td>Quel choix est effectué et par qui ?</td>
+</tr>
+<tr class="odd">
+<td>Sortie</td>
+<td>Quel livrable ou événement clôt l’étape ?</td>
+</tr>
+<tr class="even">
+<td>Contrôle</td>
+<td>Comment détecte-t-on une erreur ?</td>
+</tr>
+<tr class="odd">
+<td>Délai</td>
+<td>Quel temps est acceptable ?</td>
+</tr>
+<tr class="even">
+<td>Exceptions</td>
+<td>Quels cas sortent du fonctionnement normal ?</td>
+</tr>
+<tr class="odd">
+<td>Impact</td>
+<td>Que se passe-t-il si le résultat est faux ou tardif ?</td>
+</tr>
+</tbody>
+</table>
+<p>Cette analyse révèle où l’IA peut apporter de la valeur. Les meilleurs candidats ne sont pas toujours les tâches les plus visibles. Une préparation documentaire, un contrôle de cohérence ou une extraction structurée peut générer plus de bénéfices qu’une décision entièrement automatisée.</p>
+</section>
+<section id="sélectionner-un-bon-cas-dusage" class="level2">
+<h2 class="anchored" data-anchor-id="sélectionner-un-bon-cas-dusage">Sélectionner un bon cas d’usage</h2>
+<p>Un cas d’usage prioritaire combine quatre propriétés : valeur, faisabilité, maîtrise du risque et capacité d’adoption.</p>
+<section id="valeur" class="level3">
+<h3 class="anchored" data-anchor-id="valeur">Valeur</h3>
+<p>La valeur peut prendre plusieurs formes : réduction du délai, amélioration de la qualité, augmentation de la couverture, diminution des erreurs, meilleure accessibilité de l’information, personnalisation ou libération de temps expert.</p>
+<p>Il faut éviter les promesses vagues. « Gagner en productivité » doit être traduit en indicateurs observables : temps moyen de traitement, volume par semaine, taux de reprise, délai de réponse, nombre de dossiers en attente ou coût par unité.</p>
+</section>
+<section id="faisabilité" class="level3">
+<h3 class="anchored" data-anchor-id="faisabilité">Faisabilité</h3>
+<p>La faisabilité dépend de la disponibilité des données, de leur qualité, de la stabilité du processus, de l’accès aux systèmes et de l’existence d’une référence pour évaluer les résultats.</p>
+<p>Une tâche sans données de qualité ni vérité terrain peut être intéressante, mais elle nécessite d’abord un travail de structuration. L’IA ne corrige pas automatiquement un processus mal défini.</p>
+</section>
+<section id="risque" class="level3">
+<h3 class="anchored" data-anchor-id="risque">Risque</h3>
+<p>Le risque augmente lorsque la sortie influence la santé, la sécurité, les droits, les finances, la réputation ou la conformité. Il dépend aussi de la détectabilité d’une erreur et de la possibilité de revenir en arrière.</p>
+<p>Un cas à forte valeur et fort risque peut être poursuivi, mais avec des contrôles plus exigeants. Le niveau d’ambition technique ne doit jamais dépasser la capacité de gouvernance.</p>
+</section>
+<section id="adoption" class="level3">
+<h3 class="anchored" data-anchor-id="adoption">Adoption</h3>
+<p>Un système utile mais inutilisé ne crée aucune valeur. L’adoption dépend de l’ergonomie, de la confiance, de l’intégration, du temps gagné et de la compatibilité avec les responsabilités professionnelles.</p>
+<p>Il faut impliquer les utilisateurs dès la conception, sans confondre satisfaction et validation. Une interface agréable ne compense pas une mauvaise performance.</p>
+</section>
+</section>
+<section id="construire-une-fiche-de-cadrage" class="level2">
+<h2 class="anchored" data-anchor-id="construire-une-fiche-de-cadrage">Construire une fiche de cadrage</h2>
+<p>Avant le prototype, une fiche courte devrait préciser :</p>
+<ul>
+<li>le problème concret ;</li>
+<li>la population d’utilisateurs ;</li>
+<li>le processus actuel ;</li>
+<li>la tâche confiée à l’IA ;</li>
+<li>ce qui reste sous contrôle humain ;</li>
+<li>les données utilisées ;</li>
+<li>les risques principaux ;</li>
+<li>les métriques de succès ;</li>
+<li>les critères d’arrêt ;</li>
+<li>le propriétaire métier ;</li>
+<li>la date de réévaluation.</li>
+</ul>
+<section id="exemple-de-formulation-correcte" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-de-formulation-correcte">Exemple de formulation correcte</h3>
+<blockquote class="blockquote">
+<p>Réduire le temps nécessaire aux responsables qualité pour préparer le compte rendu hebdomadaire, en extrayant les actions, responsables, échéances et preuves à partir de rapports validés. Chaque élément doit contenir un lien vers sa source. La synthèse reste relue avant diffusion.</p>
+</blockquote>
+</section>
+<section id="exemple-trop-vague" class="level3">
+<h3 class="anchored" data-anchor-id="exemple-trop-vague">Exemple trop vague</h3>
+<blockquote class="blockquote">
+<p>Utiliser l’IA pour améliorer les comptes rendus.</p>
+</blockquote>
+<p>La première formulation permet de concevoir un test, mesurer un résultat et attribuer une responsabilité. La seconde ne définit ni la tâche, ni le périmètre, ni le risque.</p>
+</section>
+</section>
+<section id="définir-larchitecture-fonctionnelle" class="level2">
+<h2 class="anchored" data-anchor-id="définir-larchitecture-fonctionnelle">Définir l’architecture fonctionnelle</h2>
+<p>Un usage professionnel combine généralement plusieurs composants.</p>
+<section id="les-sources" class="level3">
+<h3 class="anchored" data-anchor-id="les-sources">Les sources</h3>
+<p>Documents, bases de données, formulaires, courriels, images, capteurs ou systèmes métier. Chaque source doit avoir un propriétaire, une qualité connue et une règle d’accès.</p>
+</section>
+<section id="la-préparation-des-données" class="level3">
+<h3 class="anchored" data-anchor-id="la-préparation-des-données">La préparation des données</h3>
+<p>Nettoyage, conversion, déduplication, segmentation, anonymisation, contrôle des formats et création de métadonnées. Cette couche détermine souvent la qualité finale plus fortement que le choix du modèle.</p>
+</section>
+<section id="le-moteur-dia" class="level3">
+<h3 class="anchored" data-anchor-id="le-moteur-dia">Le moteur d’IA</h3>
+<p>Modèle génératif, classifieur, modèle prédictif, système de recherche, moteur de règles ou combinaison de ces éléments. Le choix doit suivre la tâche, non la mode.</p>
+</section>
+<section id="lorchestration" class="level3">
+<h3 class="anchored" data-anchor-id="lorchestration">L’orchestration</h3>
+<p>Enchaînement des étapes, appels d’outils, récupération de documents, règles de contrôle, gestion des erreurs et reprise. Une orchestration explicite limite le comportement indéterminé.</p>
+</section>
+<section id="linterface" class="level3">
+<h3 class="anchored" data-anchor-id="linterface">L’interface</h3>
+<p>Formulaire, application, intégration bureautique, API ou tableau de bord. L’interface doit montrer les sources, l’incertitude, les avertissements et les actions possibles.</p>
+</section>
+<section id="la-validation" class="level3">
+<h3 class="anchored" data-anchor-id="la-validation">La validation</h3>
+<p>Contrôles automatiques et humains, règles d’escalade, approbation et possibilité de correction. Une validation crédible repose sur des preuves visibles.</p>
+</section>
+<section id="la-traçabilité" class="level3">
+<h3 class="anchored" data-anchor-id="la-traçabilité">La traçabilité</h3>
+<p>Version du modèle, date, entrée, sortie, sources, utilisateur, corrections et décision finale. La journalisation doit respecter la confidentialité et la durée de conservation.</p>
+</section>
+</section>
+<section id="concevoir-les-données-comme-un-produit" class="level2">
+<h2 class="anchored" data-anchor-id="concevoir-les-données-comme-un-produit">Concevoir les données comme un produit</h2>
+<p>Les données ne sont pas un simple carburant. Elles possèdent une définition, une provenance, une qualité, une fréquence de mise à jour et des utilisateurs.</p>
+<section id="dictionnaire-de-données" class="level3">
+<h3 class="anchored" data-anchor-id="dictionnaire-de-données">Dictionnaire de données</h3>
+<p>Chaque variable doit avoir un nom, une définition, un type, une unité, des valeurs autorisées, une source et un responsable. Les synonymes doivent être identifiés pour éviter les erreurs d’interprétation.</p>
+</section>
+<section id="qualité" class="level3">
+<h3 class="anchored" data-anchor-id="qualité">Qualité</h3>
+<p>Les contrôles peuvent couvrir :</p>
+<ul>
+<li>complétude ;</li>
+<li>validité des formats ;</li>
+<li>unicité ;</li>
+<li>cohérence entre champs ;</li>
+<li>fraîcheur ;</li>
+<li>stabilité des distributions ;</li>
+<li>conformité aux règles métier.</li>
+</ul>
+</section>
+<section id="provenance" class="level3">
+<h3 class="anchored" data-anchor-id="provenance">Provenance</h3>
+<p>Il faut pouvoir répondre à la question : d’où vient cette information ? La provenance relie une sortie aux documents, requêtes, transformations et versions qui l’ont produite.</p>
+</section>
+<section id="minimisation" class="level3">
+<h3 class="anchored" data-anchor-id="minimisation">Minimisation</h3>
+<p>Le système ne devrait recevoir que les données nécessaires. Réduire les données diminue le risque de fuite, simplifie la gouvernance et améliore parfois la pertinence.</p>
+</section>
+<section id="cycle-de-vie" class="level3">
+<h3 class="anchored" data-anchor-id="cycle-de-vie">Cycle de vie</h3>
+<p>Les règles de conservation, archivage, suppression et correction doivent être définies. Un document supprimé de la source ne doit pas rester indéfiniment dans un index ou un journal sans justification.</p>
+</section>
+</section>
+<section id="choisir-entre-règle-modèle-classique-et-ia-générative" class="level2">
+<h2 class="anchored" data-anchor-id="choisir-entre-règle-modèle-classique-et-ia-générative">Choisir entre règle, modèle classique et IA générative</h2>
+<p>Tous les problèmes ne nécessitent pas un modèle génératif.</p>
+<section id="utiliser-une-règle-lorsque" class="level3">
+<h3 class="anchored" data-anchor-id="utiliser-une-règle-lorsque">Utiliser une règle lorsque</h3>
+<ul>
+<li>la logique est stable et explicite ;</li>
+<li>les exceptions sont limitées ;</li>
+<li>l’explicabilité complète est requise ;</li>
+<li>une erreur est inacceptable ;</li>
+<li>le calcul peut être déterministe.</li>
+</ul>
+</section>
+<section id="utiliser-un-modèle-statistique-ou-de-machine-learning-lorsque" class="level3">
+<h3 class="anchored" data-anchor-id="utiliser-un-modèle-statistique-ou-de-machine-learning-lorsque">Utiliser un modèle statistique ou de machine learning lorsque</h3>
+<ul>
+<li>la cible est bien définie ;</li>
+<li>des données historiques représentatives sont disponibles ;</li>
+<li>la performance peut être mesurée ;</li>
+<li>la sortie est une prédiction, un score ou une classification.</li>
+</ul>
+</section>
+<section id="utiliser-une-ia-générative-lorsque" class="level3">
+<h3 class="anchored" data-anchor-id="utiliser-une-ia-générative-lorsque">Utiliser une IA générative lorsque</h3>
+<ul>
+<li>l’entrée ou la sortie est non structurée ;</li>
+<li>la tâche comporte rédaction, synthèse, extraction souple ou dialogue ;</li>
+<li>plusieurs formulations sont acceptables ;</li>
+<li>une validation peut contrôler le contenu produit.</li>
+</ul>
+</section>
+<section id="combiner-les-approches" class="level3">
+<h3 class="anchored" data-anchor-id="combiner-les-approches">Combiner les approches</h3>
+<p>Une architecture robuste peut utiliser une IA générative pour comprendre une demande, une base de recherche pour retrouver les sources, un moteur de règles pour appliquer des contraintes et un calcul déterministe pour produire les chiffres. La combinaison réduit la pression sur le modèle génératif.</p>
+</section>
+</section>
+<section id="concevoir-un-prototype-qui-apprend-réellement" class="level2">
+<h2 class="anchored" data-anchor-id="concevoir-un-prototype-qui-apprend-réellement">Concevoir un prototype qui apprend réellement</h2>
+<p>Le prototype ne doit pas chercher à impressionner, mais à réduire l’incertitude sur les hypothèses critiques.</p>
+<section id="hypothèses-à-tester" class="level3">
+<h3 class="anchored" data-anchor-id="hypothèses-à-tester">Hypothèses à tester</h3>
+<ul>
+<li>Les données nécessaires sont accessibles.</li>
+<li>La tâche peut être formulée de manière stable.</li>
+<li>La performance atteint un seuil utile.</li>
+<li>Les utilisateurs comprennent les limites.</li>
+<li>Le temps de vérification reste acceptable.</li>
+<li>L’intégration est techniquement possible.</li>
+<li>Le risque peut être contrôlé.</li>
+</ul>
+</section>
+<section id="échantillon" class="level3">
+<h3 class="anchored" data-anchor-id="échantillon">Échantillon</h3>
+<p>Le jeu de cas doit couvrir la diversité réelle : cas simples, cas fréquents, cas rares, données incomplètes, documents longs, contradictions, variations linguistiques et exemples négatifs où le système doit s’abstenir.</p>
+</section>
+<section id="baseline" class="level3">
+<h3 class="anchored" data-anchor-id="baseline">Baseline</h3>
+<p>Toute évaluation doit comparer l’IA à une référence : processus actuel, règle simple, recherche par mot-clé, modèle existant ou performance humaine. Sans baseline, une amélioration ne peut pas être démontrée.</p>
+</section>
+<section id="journal-dapprentissage" class="level3">
+<h3 class="anchored" data-anchor-id="journal-dapprentissage">Journal d’apprentissage</h3>
+<p>Chaque test doit enregistrer le cas, la sortie, l’évaluation, la cause probable de l’erreur et la correction tentée. Ce journal évite de répéter les mêmes expériences et construit la connaissance collective.</p>
+</section>
+</section>
+<section id="mesurer-autre-chose-que-la-précision" class="level2">
+<h2 class="anchored" data-anchor-id="mesurer-autre-chose-que-la-précision">Mesurer autre chose que la précision</h2>
+<p>Une solution professionnelle se juge sur plusieurs axes.</p>
+<section id="qualité-1" class="level3">
+<h3 class="anchored" data-anchor-id="qualité-1">Qualité</h3>
+<p>Exactitude, fidélité, complétude, cohérence, pertinence, taux de refus approprié et performance sur les cas critiques.</p>
+</section>
+<section id="productivité" class="level3">
+<h3 class="anchored" data-anchor-id="productivité">Productivité</h3>
+<p>Temps total, y compris préparation, contrôle, correction, escalade et maintenance. Le gain doit être mesuré sur le processus complet.</p>
+</section>
+<section id="robustesse" class="level3">
+<h3 class="anchored" data-anchor-id="robustesse">Robustesse</h3>
+<p>Stabilité face aux variations de formulation, longueur, langue, qualité des données, charge et changement de version.</p>
+</section>
+<section id="sécurité" class="level3">
+<h3 class="anchored" data-anchor-id="sécurité">Sécurité</h3>
+<p>Résistance aux entrées malveillantes, fuites, accès non autorisés, injection d’instructions et exfiltration de données.</p>
+</section>
+<section id="équité" class="level3">
+<h3 class="anchored" data-anchor-id="équité">Équité</h3>
+<p>Comparaison des erreurs et impacts entre sous-groupes pertinents, avec analyse juridique et métier.</p>
+</section>
+<section id="expérience-utilisateur" class="level3">
+<h3 class="anchored" data-anchor-id="expérience-utilisateur">Expérience utilisateur</h3>
+<p>Compréhension, confiance calibrée, facilité de correction, visibilité des preuves et charge cognitive.</p>
+</section>
+<section id="maintenabilité" class="level3">
+<h3 class="anchored" data-anchor-id="maintenabilité">Maintenabilité</h3>
+<p>Coût de mise à jour, dépendance au fournisseur, disponibilité des compétences, testabilité et capacité de retour arrière.</p>
+</section>
+</section>
+<section id="un-tableau-de-bord-minimal" class="level2">
+<h2 class="anchored" data-anchor-id="un-tableau-de-bord-minimal">Un tableau de bord minimal</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Indicateur</th>
+<th>Définition</th>
+<th>Fréquence</th>
+<th>Seuil d’alerte</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Taux de sorties acceptées sans correction</td>
+<td>Proportion validée telle quelle</td>
+<td>Hebdomadaire</td>
+<td>À définir après pilote</td>
+</tr>
+<tr class="even">
+<td>Taux de corrections majeures</td>
+<td>Sorties nécessitant une modification substantielle</td>
+<td>Hebdomadaire</td>
+<td>Hausse inhabituelle</td>
+</tr>
+<tr class="odd">
+<td>Temps médian de traitement</td>
+<td>Entrée à validation finale</td>
+<td>Hebdomadaire</td>
+<td>Dégradation vs baseline</td>
+</tr>
+<tr class="even">
+<td>Taux d’erreurs critiques</td>
+<td>Erreurs pouvant entraîner un impact grave</td>
+<td>Immédiat</td>
+<td>Tolérance très faible ou nulle</td>
+</tr>
+<tr class="odd">
+<td>Taux d’abstention</td>
+<td>Cas transmis à l’expert</td>
+<td>Mensuel</td>
+<td>Trop faible ou trop élevé</td>
+</tr>
+<tr class="even">
+<td>Incidents de confidentialité</td>
+<td>Exposition ou accès inapproprié</td>
+<td>Immédiat</td>
+<td>Toute occurrence</td>
+</tr>
+<tr class="odd">
+<td>Performance par sous-groupe</td>
+<td>Mesures selon catégories pertinentes</td>
+<td>Mensuel ou trimestriel</td>
+<td>Écart non justifié</td>
+</tr>
+<tr class="even">
+<td>Coût par dossier</td>
+<td>Infrastructure, licences et temps humain</td>
+<td>Mensuel</td>
+<td>Dépassement du business case</td>
+</tr>
+</tbody>
+</table>
+<p>Les seuils doivent être fixés avant le déploiement lorsque cela est possible. Les adapter après avoir vu les résultats peut introduire un biais favorable.</p>
+</section>
+<section id="concevoir-la-validation-humaine" class="level2">
+<h2 class="anchored" data-anchor-id="concevoir-la-validation-humaine">Concevoir la validation humaine</h2>
+<p>La validation humaine doit être proportionnée au risque et soutenue par l’interface.</p>
+<section id="validation-exhaustive" class="level3">
+<h3 class="anchored" data-anchor-id="validation-exhaustive">Validation exhaustive</h3>
+<p>Chaque sortie est revue. Adaptée au démarrage, aux domaines sensibles et aux tâches où l’erreur est difficile à détecter automatiquement.</p>
+</section>
+<section id="validation-par-échantillonnage" class="level3">
+<h3 class="anchored" data-anchor-id="validation-par-échantillonnage">Validation par échantillonnage</h3>
+<p>Une proportion des sorties est contrôlée, avec suréchantillonnage des cas à risque. Possible lorsque le système est stable et que des contrôles automatiques existent.</p>
+</section>
+<section id="validation-par-exception" class="level3">
+<h3 class="anchored" data-anchor-id="validation-par-exception">Validation par exception</h3>
+<p>Le système traite les cas courants et escalade ceux qui dépassent un seuil ou contiennent une anomalie. Cette approche exige une bonne détection des exceptions.</p>
+</section>
+<section id="double-lecture" class="level3">
+<h3 class="anchored" data-anchor-id="double-lecture">Double lecture</h3>
+<p>Deux personnes examinent indépendamment les cas critiques. Le désaccord devient une information utile sur l’ambiguïté de la tâche.</p>
+</section>
+<section id="principes-dinterface" class="level3">
+<h3 class="anchored" data-anchor-id="principes-dinterface">Principes d’interface</h3>
+<ul>
+<li>montrer les sources avant ou à côté de la conclusion ;</li>
+<li>permettre une correction simple ;</li>
+<li>distinguer proposition et décision ;</li>
+<li>afficher les données manquantes ;</li>
+<li>éviter les scores de confiance non calibrés ;</li>
+<li>conserver la justification de la modification humaine ;</li>
+<li>proposer une voie d’escalade claire.</li>
+</ul>
+</section>
+</section>
+<section id="sécurité-des-systèmes-génératifs" class="level2">
+<h2 class="anchored" data-anchor-id="sécurité-des-systèmes-génératifs">Sécurité des systèmes génératifs</h2>
+<p>Les usages connectés à des documents ou outils introduisent des risques spécifiques.</p>
+<section id="injection-dinstructions" class="level3">
+<h3 class="anchored" data-anchor-id="injection-dinstructions">Injection d’instructions</h3>
+<p>Un document peut contenir une instruction malveillante demandant au modèle d’ignorer les règles, révéler des informations ou exécuter une action. Le contenu externe doit être traité comme donnée, non comme autorité.</p>
+</section>
+<section id="exfiltration" class="level3">
+<h3 class="anchored" data-anchor-id="exfiltration">Exfiltration</h3>
+<p>Un attaquant peut tenter d’obtenir des secrets présents dans le contexte, les journaux ou les connecteurs. La prévention repose sur la segmentation des accès, la minimisation des données, le filtrage et la surveillance.</p>
+</section>
+<section id="actions-excessives" class="level3">
+<h3 class="anchored" data-anchor-id="actions-excessives">Actions excessives</h3>
+<p>Un agent capable d’envoyer un courriel, modifier une base ou lancer une opération peut provoquer un dommage si ses permissions sont trop larges. Le principe du moindre privilège s’applique : accès minimal, confirmation pour les actions sensibles et limites quantitatives.</p>
+</section>
+<section id="dépendances" class="level3">
+<h3 class="anchored" data-anchor-id="dépendances">Dépendances</h3>
+<p>Les bibliothèques, API, modèles et fournisseurs peuvent évoluer. Il faut gérer les versions, vérifier les mises à jour et prévoir un mode de continuité.</p>
+</section>
+<section id="journaux" class="level3">
+<h3 class="anchored" data-anchor-id="journaux">Journaux</h3>
+<p>Les logs sont indispensables pour l’audit, mais peuvent eux-mêmes contenir des données sensibles. Leur accès, chiffrement, durée de conservation et suppression doivent être maîtrisés.</p>
+</section>
+</section>
+<section id="confidentialité-et-protection-des-données" class="level2">
+<h2 class="anchored" data-anchor-id="confidentialité-et-protection-des-données">Confidentialité et protection des données</h2>
+<p>Avant de traiter des données personnelles, l’organisation doit clarifier la finalité, la base légale, les rôles des parties, les transferts, la conservation, les droits des personnes et les mesures de sécurité.</p>
+<p>Une analyse d’impact peut être nécessaire lorsque le traitement présente un risque élevé. Les équipes doivent associer le délégué à la protection des données suffisamment tôt, plutôt qu’après le prototype.</p>
+<section id="questions-indispensables" class="level3">
+<h3 class="anchored" data-anchor-id="questions-indispensables">Questions indispensables</h3>
+<ul>
+<li>Les données sont-elles nécessaires à la tâche ?</li>
+<li>Peut-on les pseudonymiser ou les agréger ?</li>
+<li>Le fournisseur réutilise-t-il les données ?</li>
+<li>Où sont-elles traitées et conservées ?</li>
+<li>Qui peut accéder aux conversations et journaux ?</li>
+<li>Comment une suppression est-elle propagée ?</li>
+<li>Quelle procédure s’applique en cas de violation ?</li>
+</ul>
+</section>
+</section>
+<section id="gouvernance-légère-mais-réelle" class="level2">
+<h2 class="anchored" data-anchor-id="gouvernance-légère-mais-réelle">Gouvernance légère mais réelle</h2>
+<p>Une gouvernance efficace distingue les décisions stratégiques, opérationnelles et techniques.</p>
+<section id="comité-ou-fonction-de-gouvernance" class="level3">
+<h3 class="anchored" data-anchor-id="comité-ou-fonction-de-gouvernance">Comité ou fonction de gouvernance</h3>
+<p>Il définit les principes, arbitre les cas sensibles, suit le portefeuille et examine les incidents majeurs. Il doit inclure métier, data, sécurité, juridique, qualité et utilisateurs lorsque pertinent.</p>
+</section>
+<section id="propriétaire-du-cas-dusage" class="level3">
+<h3 class="anchored" data-anchor-id="propriétaire-du-cas-dusage">Propriétaire du cas d’usage</h3>
+<p>Il est responsable de la valeur, du périmètre et du processus. Il décide si le service reste utile et acceptable.</p>
+</section>
+<section id="responsable-technique" class="level3">
+<h3 class="anchored" data-anchor-id="responsable-technique">Responsable technique</h3>
+<p>Il maîtrise l’architecture, les versions, tests, performances et dépendances.</p>
+</section>
+<section id="expert-métier" class="level3">
+<h3 class="anchored" data-anchor-id="expert-métier">Expert métier</h3>
+<p>Il définit les critères de validité, évalue les erreurs et supervise les cas complexes.</p>
+</section>
+<section id="utilisateur" class="level3">
+<h3 class="anchored" data-anchor-id="utilisateur">Utilisateur</h3>
+<p>Il applique les procédures, signale les anomalies et conserve son autonomie de jugement.</p>
+</section>
+<section id="audit-ou-contrôle-indépendant" class="level3">
+<h3 class="anchored" data-anchor-id="audit-ou-contrôle-indépendant">Audit ou contrôle indépendant</h3>
+<p>Il vérifie que les preuves correspondent aux affirmations et que les contrôles fonctionnent réellement.</p>
+</section>
+</section>
+<section id="construire-le-business-case" class="level2">
+<h2 class="anchored" data-anchor-id="construire-le-business-case">Construire le business case</h2>
+<p>Le coût total ne se limite pas à la licence du modèle.</p>
+<section id="coûts-directs" class="level3">
+<h3 class="anchored" data-anchor-id="coûts-directs">Coûts directs</h3>
+<ul>
+<li>appels API ou licences ;</li>
+<li>stockage et infrastructure ;</li>
+<li>développement et intégration ;</li>
+<li>sécurité et conformité ;</li>
+<li>annotation et évaluation ;</li>
+<li>support et formation.</li>
+</ul>
+</section>
+<section id="coûts-indirects" class="level3">
+<h3 class="anchored" data-anchor-id="coûts-indirects">Coûts indirects</h3>
+<ul>
+<li>temps de validation ;</li>
+<li>modification des procédures ;</li>
+<li>gestion des incidents ;</li>
+<li>dépendance au fournisseur ;</li>
+<li>baisse temporaire de productivité pendant l’apprentissage ;</li>
+<li>dette technique et documentaire.</li>
+</ul>
+</section>
+<section id="bénéfices" class="level3">
+<h3 class="anchored" data-anchor-id="bénéfices">Bénéfices</h3>
+<ul>
+<li>réduction du temps de cycle ;</li>
+<li>augmentation du volume traité ;</li>
+<li>amélioration de la qualité ;</li>
+<li>diminution des erreurs ;</li>
+<li>récupération de revenus ou réduction de pertes ;</li>
+<li>meilleure satisfaction ;</li>
+<li>accès plus rapide à la connaissance.</li>
+</ul>
+</section>
+<section id="formule-simple" class="level3">
+<h3 class="anchored" data-anchor-id="formule-simple">Formule simple</h3>
+<p>Le retour sur investissement doit comparer les bénéfices nets au coût complet sur une période réaliste. Les hypothèses doivent être explicites et testées dans plusieurs scénarios : prudent, central et favorable.</p>
+</section>
+</section>
+<section id="organiser-le-pilote" class="level2">
+<h2 class="anchored" data-anchor-id="organiser-le-pilote">Organiser le pilote</h2>
+<p>Un pilote bien conçu comporte un début, une fin et une décision attendue.</p>
+<section id="avant-le-pilote" class="level3">
+<h3 class="anchored" data-anchor-id="avant-le-pilote">Avant le pilote</h3>
+<ul>
+<li>fixer les objectifs ;</li>
+<li>sélectionner les utilisateurs ;</li>
+<li>définir la baseline ;</li>
+<li>préparer les données ;</li>
+<li>former les participants ;</li>
+<li>établir les règles d’usage ;</li>
+<li>prévoir l’assistance ;</li>
+<li>déterminer les critères d’arrêt.</li>
+</ul>
+</section>
+<section id="pendant-le-pilote" class="level3">
+<h3 class="anchored" data-anchor-id="pendant-le-pilote">Pendant le pilote</h3>
+<ul>
+<li>collecter les métriques ;</li>
+<li>observer les pratiques réelles ;</li>
+<li>documenter les erreurs ;</li>
+<li>surveiller les données sensibles ;</li>
+<li>maintenir un canal de retour ;</li>
+<li>limiter les changements non tracés.</li>
+</ul>
+</section>
+<section id="après-le-pilote" class="level3">
+<h3 class="anchored" data-anchor-id="après-le-pilote">Après le pilote</h3>
+<ul>
+<li>comparer aux objectifs ;</li>
+<li>analyser les écarts ;</li>
+<li>estimer les coûts de passage à l’échelle ;</li>
+<li>examiner les risques résiduels ;</li>
+<li>décider : arrêter, améliorer, prolonger ou déployer.</li>
+</ul>
+<p>Un pilote négatif peut être un succès s’il évite un investissement inadapté et produit un apprentissage réutilisable.</p>
+</section>
+</section>
+<section id="former-les-utilisateurs" class="level2">
+<h2 class="anchored" data-anchor-id="former-les-utilisateurs">Former les utilisateurs</h2>
+<p>Une formation professionnelle ne se limite pas à apprendre à écrire des prompts.</p>
+<p>Elle doit couvrir :</p>
+<ol type="1">
+<li>les capacités et limites du système ;</li>
+<li>les données autorisées et interdites ;</li>
+<li>les techniques de formulation ;</li>
+<li>les critères de vérification ;</li>
+<li>les erreurs fréquentes ;</li>
+<li>la procédure d’escalade ;</li>
+<li>les obligations de traçabilité ;</li>
+<li>les situations où ne pas utiliser l’IA.</li>
+</ol>
+<p>La formation doit s’appuyer sur les cas réels du métier. Des exercices de détection d’erreurs sont particulièrement efficaces pour calibrer la confiance.</p>
+</section>
+<section id="conduire-le-changement" class="level2">
+<h2 class="anchored" data-anchor-id="conduire-le-changement">Conduire le changement</h2>
+<p>L’adoption dépend de la manière dont l’organisation présente le projet.</p>
+<section id="expliquer-le-pourquoi" class="level3">
+<h3 class="anchored" data-anchor-id="expliquer-le-pourquoi">Expliquer le pourquoi</h3>
+<p>Les utilisateurs doivent comprendre le problème visé et les bénéfices attendus. Une injonction vague à « utiliser l’IA » produit des comportements dispersés.</p>
+</section>
+<section id="reconnaître-les-craintes" class="level3">
+<h3 class="anchored" data-anchor-id="reconnaître-les-craintes">Reconnaître les craintes</h3>
+<p>Les inquiétudes relatives à l’emploi, à la surveillance, à la déqualification ou à la responsabilité sont légitimes. Les ignorer réduit la confiance.</p>
+</section>
+<section id="définir-les-nouveaux-rôles" class="level3">
+<h3 class="anchored" data-anchor-id="définir-les-nouveaux-rôles">Définir les nouveaux rôles</h3>
+<p>L’automatisation modifie la répartition des tâches. Il faut préciser ce qui est délégué, ce qui est renforcé et ce qui reste interdit.</p>
+</section>
+<section id="valoriser-le-retour-terrain" class="level3">
+<h3 class="anchored" data-anchor-id="valoriser-le-retour-terrain">Valoriser le retour terrain</h3>
+<p>Les utilisateurs détectent des exceptions et détournements invisibles dans les tests. Leur feedback doit alimenter la conception, sans remplacer les mesures objectives.</p>
+</section>
+<section id="préserver-les-compétences" class="level3">
+<h3 class="anchored" data-anchor-id="préserver-les-compétences">Préserver les compétences</h3>
+<p>Une dépendance excessive peut faire perdre le savoir-faire nécessaire pour vérifier le système. Il faut maintenir des exercices, rotations ou contrôles indépendants.</p>
+</section>
+</section>
+<section id="déploiement-progressif-et-réversibilité" class="level2">
+<h2 class="anchored" data-anchor-id="déploiement-progressif-et-réversibilité">Déploiement progressif et réversibilité</h2>
+<p>Le déploiement peut suivre plusieurs paliers.</p>
+<ol type="1">
+<li><strong>Mode observation</strong> : le système produit une sortie non utilisée.</li>
+<li><strong>Mode recommandation</strong> : l’utilisateur consulte la proposition mais décide.</li>
+<li><strong>Mode préremplissage</strong> : le système prépare un livrable à valider.</li>
+<li><strong>Mode automatisation contrôlée</strong> : certaines actions à faible risque sont exécutées avec garde-fous.</li>
+<li><strong>Mode élargi</strong> : le périmètre augmente après preuve de stabilité.</li>
+</ol>
+<p>Chaque palier doit prévoir un retour au processus précédent. La réversibilité comprend la sauvegarde, la documentation, la capacité à désactiver le service et la conservation des compétences humaines.</p>
+</section>
+<section id="surveiller-la-dérive" class="level2">
+<h2 class="anchored" data-anchor-id="surveiller-la-dérive">Surveiller la dérive</h2>
+<p>Un système peut se dégrader sans modification apparente du code.</p>
+<section id="dérive-des-données" class="level3">
+<h3 class="anchored" data-anchor-id="dérive-des-données">Dérive des données</h3>
+<p>Les entrées changent : nouveaux formats, populations, produits, langues ou pratiques.</p>
+</section>
+<section id="dérive-du-concept" class="level3">
+<h3 class="anchored" data-anchor-id="dérive-du-concept">Dérive du concept</h3>
+<p>La relation entre les données et la cible évolue. Un modèle construit sur l’historique peut devenir moins pertinent.</p>
+</section>
+<section id="dérive-dusage" class="level3">
+<h3 class="anchored" data-anchor-id="dérive-dusage">Dérive d’usage</h3>
+<p>Les utilisateurs appliquent le système à des tâches non prévues. Un outil de synthèse devient progressivement un outil de décision.</p>
+</section>
+<section id="dérive-du-fournisseur" class="level3">
+<h3 class="anchored" data-anchor-id="dérive-du-fournisseur">Dérive du fournisseur</h3>
+<p>Le modèle ou l’API change. La qualité, la vitesse ou le comportement peuvent évoluer.</p>
+</section>
+<section id="dérive-organisationnelle" class="level3">
+<h3 class="anchored" data-anchor-id="dérive-organisationnelle">Dérive organisationnelle</h3>
+<p>Les procédures, équipes et responsabilités changent. Le contrôle humain prévu peut disparaître avec le temps.</p>
+<p>La surveillance doit inclure des métriques automatiques, des audits périodiques, une analyse des incidents et une revue du périmètre.</p>
+</section>
+</section>
+<section id="gérer-les-incidents" class="level2">
+<h2 class="anchored" data-anchor-id="gérer-les-incidents">Gérer les incidents</h2>
+<p>Un incident IA peut être une sortie erronée, une fuite, un biais, une indisponibilité, une action non autorisée ou un usage détourné.</p>
+<section id="procédure-minimale" class="level3">
+<h3 class="anchored" data-anchor-id="procédure-minimale">Procédure minimale</h3>
+<ol type="1">
+<li>détecter et enregistrer ;</li>
+<li>limiter l’impact ;</li>
+<li>suspendre la fonction si nécessaire ;</li>
+<li>préserver les preuves ;</li>
+<li>analyser la cause ;</li>
+<li>informer les parties concernées ;</li>
+<li>corriger le système et le processus ;</li>
+<li>vérifier l’efficacité de la correction ;</li>
+<li>partager l’apprentissage.</li>
+</ol>
+<p>L’analyse ne doit pas s’arrêter à « le modèle s’est trompé ». Il faut examiner les données, la consigne, l’interface, la validation, la formation et les objectifs organisationnels.</p>
+</section>
+</section>
+<section id="cas-pratique-synthèse-de-comptes-rendus-qualité" class="level2">
+<h2 class="anchored" data-anchor-id="cas-pratique-synthèse-de-comptes-rendus-qualité">Cas pratique : synthèse de comptes rendus qualité</h2>
+<section id="situation-initiale" class="level3">
+<h3 class="anchored" data-anchor-id="situation-initiale">Situation initiale</h3>
+<p>Une équipe reçoit chaque semaine des comptes rendus hétérogènes. Un responsable doit identifier les écarts, actions, propriétaires et échéances, puis construire une synthèse.</p>
+</section>
+<section id="mauvaise-approche" class="level3">
+<h3 class="anchored" data-anchor-id="mauvaise-approche">Mauvaise approche</h3>
+<p>Connecter immédiatement un chatbot aux documents et lui demander de « faire le rapport ». Cette approche ne définit ni le format, ni les sources, ni les omissions acceptables.</p>
+</section>
+<section id="approche-professionnelle" class="level3">
+<h3 class="anchored" data-anchor-id="approche-professionnelle">Approche professionnelle</h3>
+<ol type="1">
+<li>Créer un schéma de données : écart, gravité, action, responsable, échéance, statut, preuve, source.</li>
+<li>Nettoyer les documents et attribuer un identifiant stable.</li>
+<li>Exiger une citation pour chaque champ extrait.</li>
+<li>Signaler les informations absentes ou contradictoires.</li>
+<li>Appliquer des règles déterministes sur les dates et statuts.</li>
+<li>Faire valider les actions critiques.</li>
+<li>Comparer temps, erreurs et couverture au processus actuel.</li>
+<li>Surveiller les changements de modèles de compte rendu.</li>
+</ol>
+</section>
+<section id="indicateurs" class="level3">
+<h3 class="anchored" data-anchor-id="indicateurs">Indicateurs</h3>
+<ul>
+<li>taux de champs correctement extraits ;</li>
+<li>taux d’actions oubliées ;</li>
+<li>temps de validation ;</li>
+<li>nombre de contradictions détectées ;</li>
+<li>proportion de synthèses diffusées sans correction majeure.</li>
+</ul>
+</section>
+</section>
+<section id="cas-pratique-assistance-à-lanalyse-statistique" class="level2">
+<h2 class="anchored" data-anchor-id="cas-pratique-assistance-à-lanalyse-statistique">Cas pratique : assistance à l’analyse statistique</h2>
+<section id="situation-initiale-1" class="level3">
+<h3 class="anchored" data-anchor-id="situation-initiale-1">Situation initiale</h3>
+<p>Des analystes utilisent un assistant pour générer du code R ou Python à partir d’une demande en langage naturel.</p>
+</section>
+<section id="risques" class="level3">
+<h3 class="anchored" data-anchor-id="risques">Risques</h3>
+<p>Le code peut s’exécuter tout en appliquant une mauvaise méthode, gérer incorrectement les données manquantes, ignorer la structure répétée ou produire une interprétation excessive.</p>
+</section>
+<section id="contrôles" class="level3">
+<h3 class="anchored" data-anchor-id="contrôles">Contrôles</h3>
+<ul>
+<li>gabarits validés pour les analyses fréquentes ;</li>
+<li>jeux de données synthétiques avec résultats connus ;</li>
+<li>tests unitaires et reproductibilité ;</li>
+<li>revue méthodologique ;</li>
+<li>verrouillage des versions ;</li>
+<li>journal des modifications ;</li>
+<li>séparation entre code généré, résultats et conclusion scientifique.</li>
+</ul>
+</section>
+<section id="critère-de-succès" class="level3">
+<h3 class="anchored" data-anchor-id="critère-de-succès">Critère de succès</h3>
+<p>Le gain n’est pas seulement la vitesse d’écriture du code. Il faut mesurer le délai jusqu’à un résultat validé, le taux d’erreurs méthodologiques et la capacité d’un autre analyste à reproduire l’analyse.</p>
+</section>
+</section>
+<section id="cas-pratique-maintenance-industrielle" class="level2">
+<h2 class="anchored" data-anchor-id="cas-pratique-maintenance-industrielle">Cas pratique : maintenance industrielle</h2>
+<section id="situation-initiale-2" class="level3">
+<h3 class="anchored" data-anchor-id="situation-initiale-2">Situation initiale</h3>
+<p>Une équipe souhaite utiliser l’IA pour analyser les rapports d’incident et proposer des causes possibles.</p>
+</section>
+<section id="architecture-prudente" class="level3">
+<h3 class="anchored" data-anchor-id="architecture-prudente">Architecture prudente</h3>
+<ul>
+<li>moteur de recherche sur les procédures validées ;</li>
+<li>extraction des symptômes ;</li>
+<li>rapprochement avec l’historique ;</li>
+<li>proposition de plusieurs hypothèses ;</li>
+<li>règles de sécurité interdisant certaines actions ;</li>
+<li>validation par un technicien habilité ;</li>
+<li>enregistrement du diagnostic final et de la cause réelle.</li>
+</ul>
+</section>
+<section id="point-critique" class="level3">
+<h3 class="anchored" data-anchor-id="point-critique">Point critique</h3>
+<p>Le système ne doit pas masquer l’incertitude. Une hypothèse rare mais dangereuse doit rester visible même si elle n’est pas la plus probable.</p>
+</section>
+</section>
+<section id="cas-pratique-service-client-financier" class="level2">
+<h2 class="anchored" data-anchor-id="cas-pratique-service-client-financier">Cas pratique : service client financier</h2>
+<section id="situation-initiale-3" class="level3">
+<h3 class="anchored" data-anchor-id="situation-initiale-3">Situation initiale</h3>
+<p>Un établissement veut accélérer les réponses aux demandes courantes.</p>
+</section>
+<section id="périmètre-adapté" class="level3">
+<h3 class="anchored" data-anchor-id="périmètre-adapté">Périmètre adapté</h3>
+<p>L’IA peut retrouver la procédure, préparer une réponse et identifier les pièces manquantes. Les décisions sur l’éligibilité, le risque, la fraude ou les recours restent encadrées par des règles et des professionnels habilités.</p>
+</section>
+<section id="contrôles-1" class="level3">
+<h3 class="anchored" data-anchor-id="contrôles-1">Contrôles</h3>
+<ul>
+<li>base documentaire versionnée ;</li>
+<li>interdiction d’inventer une condition ;</li>
+<li>séparation entre information générale et conseil personnalisé ;</li>
+<li>journalisation ;</li>
+<li>validation des messages sensibles ;</li>
+<li>surveillance des disparités de traitement.</li>
+</ul>
+</section>
+</section>
+<section id="les-anti-modèles-à-éviter" class="level2">
+<h2 class="anchored" data-anchor-id="les-anti-modèles-à-éviter">Les anti-modèles à éviter</h2>
+<section id="le-chatbot-universel" class="level3">
+<h3 class="anchored" data-anchor-id="le-chatbot-universel">Le chatbot universel</h3>
+<p>Un seul assistant reçoit toutes les données et répond à toutes les questions. Le périmètre devient impossible à tester et les droits d’accès trop larges.</p>
+</section>
+<section id="le-pilote-permanent" class="level3">
+<h3 class="anchored" data-anchor-id="le-pilote-permanent">Le pilote permanent</h3>
+<p>Le projet reste indéfiniment en expérimentation, sans décision de déploiement ni arrêt. Les utilisateurs développent des dépendances informelles sans gouvernance.</p>
+</section>
+<section id="la-validation-symbolique" class="level3">
+<h3 class="anchored" data-anchor-id="la-validation-symbolique">La validation symbolique</h3>
+<p>Un humain approuve rapidement une sortie sans accès aux preuves. La responsabilité est humaine en apparence, mais le contrôle est inefficace.</p>
+</section>
+<section id="la-métrique-unique" class="level3">
+<h3 class="anchored" data-anchor-id="la-métrique-unique">La métrique unique</h3>
+<p>Le projet se félicite d’un taux moyen élevé en ignorant les erreurs critiques, la charge de correction et les sous-groupes.</p>
+</section>
+<section id="le-fournisseur-comme-stratégie" class="level3">
+<h3 class="anchored" data-anchor-id="le-fournisseur-comme-stratégie">Le fournisseur comme stratégie</h3>
+<p>L’organisation adopte une marque ou un modèle sans définir son architecture, ses données, sa capacité de remplacement et ses critères de sortie.</p>
+</section>
+<section id="lautomatisation-dun-mauvais-processus" class="level3">
+<h3 class="anchored" data-anchor-id="lautomatisation-dun-mauvais-processus">L’automatisation d’un mauvais processus</h3>
+<p>L’IA accélère une procédure inutile, redondante ou mal conçue. Avant d’automatiser, il faut simplifier.</p>
+</section>
+</section>
+<section id="feuille-de-route-sur-quatre-vingt-dix-jours" class="level2">
+<h2 class="anchored" data-anchor-id="feuille-de-route-sur-quatre-vingt-dix-jours">Feuille de route sur quatre-vingt-dix jours</h2>
+<section id="jours-1-à-15-cadrage" class="level3">
+<h3 class="anchored" data-anchor-id="jours-1-à-15-cadrage">Jours 1 à 15 — Cadrage</h3>
+<ul>
+<li>sélectionner un problème ;</li>
+<li>cartographier le processus ;</li>
+<li>identifier les parties prenantes ;</li>
+<li>définir valeur, risque et baseline ;</li>
+<li>vérifier les données et obligations.</li>
+</ul>
+</section>
+<section id="jours-16-à-35-prototype" class="level3">
+<h3 class="anchored" data-anchor-id="jours-16-à-35-prototype">Jours 16 à 35 — Prototype</h3>
+<ul>
+<li>préparer un échantillon représentatif ;</li>
+<li>construire une première architecture ;</li>
+<li>définir le format de sortie ;</li>
+<li>tester les cas critiques ;</li>
+<li>documenter les erreurs.</li>
+</ul>
+</section>
+<section id="jours-36-à-60-pilote" class="level3">
+<h3 class="anchored" data-anchor-id="jours-36-à-60-pilote">Jours 36 à 60 — Pilote</h3>
+<ul>
+<li>former un groupe limité ;</li>
+<li>instrumenter les métriques ;</li>
+<li>comparer au processus actuel ;</li>
+<li>recueillir les retours ;</li>
+<li>ajuster sans perdre la traçabilité.</li>
+</ul>
+</section>
+<section id="jours-61-à-75-revue" class="level3">
+<h3 class="anchored" data-anchor-id="jours-61-à-75-revue">Jours 61 à 75 — Revue</h3>
+<ul>
+<li>analyser qualité, coût, risque et adoption ;</li>
+<li>valider la sécurité ;</li>
+<li>fixer les seuils de production ;</li>
+<li>décider du périmètre ;</li>
+<li>préparer le support.</li>
+</ul>
+</section>
+<section id="jours-76-à-90-déploiement-contrôlé" class="level3">
+<h3 class="anchored" data-anchor-id="jours-76-à-90-déploiement-contrôlé">Jours 76 à 90 — Déploiement contrôlé</h3>
+<ul>
+<li>intégrer les accès ;</li>
+<li>activer la surveillance ;</li>
+<li>formaliser les responsabilités ;</li>
+<li>prévoir le retour arrière ;</li>
+<li>planifier la prochaine évaluation.</li>
+</ul>
+<p>Cette feuille de route est indicative. Un domaine réglementé ou critique nécessite souvent davantage de temps et de preuves.</p>
+</section>
+</section>
+<section id="checklist-de-passage-en-production" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-de-passage-en-production">Checklist de passage en production</h2>
+<section id="besoin-et-valeur" class="level3">
+<h3 class="anchored" data-anchor-id="besoin-et-valeur">Besoin et valeur</h3>
+<ul>
+<li>Le problème est-il documenté ?</li>
+<li>Une baseline existe-t-elle ?</li>
+<li>Les bénéfices sont-ils mesurables ?</li>
+<li>Le propriétaire métier est-il identifié ?</li>
+</ul>
+</section>
+<section id="données" class="level3">
+<h3 class="anchored" data-anchor-id="données">Données</h3>
+<ul>
+<li>Les sources sont-elles autorisées ?</li>
+<li>La qualité est-elle suffisante ?</li>
+<li>La provenance est-elle conservée ?</li>
+<li>La minimisation est-elle appliquée ?</li>
+</ul>
+</section>
+<section id="performance" class="level3">
+<h3 class="anchored" data-anchor-id="performance">Performance</h3>
+<ul>
+<li>Les cas réels et critiques ont-ils été testés ?</li>
+<li>Les seuils sont-ils atteints ?</li>
+<li>Les résultats par sous-groupe ont-ils été examinés ?</li>
+<li>La robustesse aux variations a-t-elle été mesurée ?</li>
+</ul>
+</section>
+<section id="risque-et-sécurité" class="level3">
+<h3 class="anchored" data-anchor-id="risque-et-sécurité">Risque et sécurité</h3>
+<ul>
+<li>Les scénarios d’abus ont-ils été testés ?</li>
+<li>Les permissions sont-elles minimales ?</li>
+<li>Une procédure d’incident existe-t-elle ?</li>
+<li>Le mode dégradé est-il défini ?</li>
+</ul>
+</section>
+<section id="organisation" class="level3">
+<h3 class="anchored" data-anchor-id="organisation">Organisation</h3>
+<ul>
+<li>Les utilisateurs sont-ils formés ?</li>
+<li>Les responsabilités sont-elles claires ?</li>
+<li>La validation humaine est-elle réellement possible ?</li>
+<li>Le support et la maintenance sont-ils financés ?</li>
+</ul>
+</section>
+<section id="surveillance" class="level3">
+<h3 class="anchored" data-anchor-id="surveillance">Surveillance</h3>
+<ul>
+<li>Les métriques sont-elles collectées ?</li>
+<li>Les versions sont-elles tracées ?</li>
+<li>Une date de réévaluation est-elle fixée ?</li>
+<li>Un mécanisme d’arrêt est-il disponible ?</li>
+</ul>
+</section>
+</section>
+<section id="ce-quil-faut-retenir" class="level2">
+<h2 class="anchored" data-anchor-id="ce-quil-faut-retenir">Ce qu’il faut retenir</h2>
+<p>Passer de l’essai curieux à l’usage professionnel signifie transformer une possibilité technique en capacité organisationnelle. Le modèle n’est qu’un composant. La valeur dépend du processus, des données, des contrôles, des utilisateurs et de la gouvernance.</p>
+<p>La démarche la plus solide commence petit, mais mesure sérieusement. Elle choisit un problème précis, compare à une baseline, teste les exceptions, rend les preuves visibles et déploie progressivement. Elle considère l’arrêt d’un mauvais projet comme une décision rationnelle, non comme un échec.</p>
+<p>Une organisation mature ne cherche pas à automatiser le maximum. Elle cherche à attribuer à chaque acteur — humain, règle, modèle ou outil — la partie du travail qu’il peut accomplir avec le meilleur niveau de qualité, de sécurité et de responsabilité.</p>
+<div class="discussion-box">
+<p><strong>Question à la communauté :</strong> quel obstacle empêche aujourd’hui votre expérimentation IA de devenir un usage réellement mesuré et gouverné ?</p>
+</div>
+</section>
+<section id="références-et-ressources-essentielles" class="level2">
+<h2 class="anchored" data-anchor-id="références-et-ressources-essentielles">Références et ressources essentielles</h2>
+<ol type="1">
+<li>National Institute of Standards and Technology. <em>Artificial Intelligence Risk Management Framework (AI RMF 1.0).</em> 2023. <a href="https://doi.org/10.6028/NIST.AI.100-1" class="uri">https://doi.org/10.6028/NIST.AI.100-1</a></li>
+<li>Autio C, Schwartz R, Dunietz J, et al.&nbsp;<em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile.</em> 2024. <a href="https://doi.org/10.6028/NIST.AI.600-1" class="uri">https://doi.org/10.6028/NIST.AI.600-1</a></li>
+<li>ISO/IEC. <em>ISO/IEC 42001:2023 — Information technology — Artificial intelligence — Management system.</em> <a href="https://www.iso.org/standard/81230.html" class="uri">https://www.iso.org/standard/81230.html</a></li>
+<li>ISO/IEC. <em>ISO/IEC 23894:2023 — Artificial intelligence — Guidance on risk management.</em> <a href="https://www.iso.org/standard/77304.html" class="uri">https://www.iso.org/standard/77304.html</a></li>
+<li>European Union. <em>Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence.</em> 2024. <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" class="uri">https://eur-lex.europa.eu/eli/reg/2024/1689/oj</a></li>
+<li>OWASP Foundation. <em>OWASP Top 10 for Large Language Model Applications.</em> <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" class="uri">https://owasp.org/www-project-top-10-for-large-language-model-applications/</a></li>
+<li>OECD. <em>OECD Framework for the Classification of AI Systems.</em> 2022. <a href="https://doi.org/10.1787/cb6d9eca-en" class="uri">https://doi.org/10.1787/cb6d9eca-en</a></li>
+<li>UNESCO. <em>Recommendation on the Ethics of Artificial Intelligence.</em> 2021. <a href="https://www.unesco.org/en/artificial-intelligence/recommendation-ethics" class="uri">https://www.unesco.org/en/artificial-intelligence/recommendation-ethics</a></li>
+<li>Google. <em>Rules of Machine Learning: Best Practices for ML Engineering.</em> <a href="https://developers.google.com/machine-learning/guides/rules-of-ml" class="uri">https://developers.google.com/machine-learning/guides/rules-of-ml</a></li>
+<li>Sculley D, Holt G, Golovin D, et al.&nbsp;<em>Hidden Technical Debt in Machine Learning Systems.</em> NeurIPS 2015. <a href="https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems" class="uri">https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems</a></li>
+<li>Amershi S, Begel A, Bird C, et al.&nbsp;<em>Software Engineering for Machine Learning: A Case Study.</em> ICSE 2019. <a href="https://doi.org/10.1109/ICSE-SEIP.2019.00042" class="uri">https://doi.org/10.1109/ICSE-SEIP.2019.00042</a></li>
+<li>Raji ID, Smart A, White RN, et al.&nbsp;<em>Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing.</em> FAccT 2020. <a href="https://doi.org/10.1145/3351095.3372873" class="uri">https://doi.org/10.1145/3351095.3372873</a></li>
+<li>Mitchell M, Wu S, Zaldivar A, et al.&nbsp;<em>Model Cards for Model Reporting.</em> FAccT 2019. <a href="https://doi.org/10.1145/3287560.3287596" class="uri">https://doi.org/10.1145/3287560.3287596</a></li>
+<li>Gebru T, Morgenstern J, Vecchione B, et al.&nbsp;<em>Datasheets for Datasets.</em> Communications of the ACM. 2021;64(12):86–92. <a href="https://doi.org/10.1145/3458723" class="uri">https://doi.org/10.1145/3458723</a></li>
+</ol>
+</section>
+<section id="besoin-dun-accompagnement" class="level2">
+<h2 class="anchored" data-anchor-id="besoin-dun-accompagnement">Besoin d’un accompagnement ?</h2>
+<p>SYLTRA Consulting accompagne les organisations dans le cadrage des cas d’usage, la préparation des données, la validation statistique, le développement de prototypes, l’évaluation des risques, la formation des équipes et le passage à une utilisation professionnelle de l’intelligence artificielle.</p>
+<p><a href="../contact.html" class="btn btn-primary">Nous contacter</a></p>
+<div class="post-tags">
+<p>#IntelligenceArtificielle #TransformationDigitale #GouvernanceIA #MLOps #DataScience #IAResponsable #ConduiteDuChangement #Automatisation #SYLTRAConsulting</p>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('a[href^="http"]').forEach(a=>{if(!a.href.includes(location.hostname)){a.rel="noopener noreferrer";a.target="_blank";}});});</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.syltra-consulting\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026–2027 SYLTRA Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>IA utile • Data Science • Biostatistique • Recherche</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

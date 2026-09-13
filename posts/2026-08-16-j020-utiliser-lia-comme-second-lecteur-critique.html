@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="SYLTRA Consulting">
+<meta name="description" content="Une méthode complète pour faire relire un rapport, une analyse, un protocole, un code ou une décision par une IA sans confondre fluidité rédactionnelle, critique pertinente et validation experte.">
+
+<title>Utiliser l’IA comme second lecteur critique : protocole rigoureux de relecture, vérification et amélioration – SYLTRA Consulting</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9080f0b6d81bdf8015e035bfde39d928.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Utiliser l’IA comme second lecteur critique : protocole rigoureux de relecture, vérification et amélioration – SYLTRA Consulting">
+<meta property="og:description" content="Une méthode complète pour faire relire un rapport, une analyse, un protocole, un code ou une décision par une IA sans confondre fluidité rédactionnelle, critique pertinente et validation experte.">
+<meta property="og:image" content="https://blog.syltra-consulting.com/assets/img/posts/j020.svg">
+<meta property="og:site_name" content="SYLTRA Consulting">
+<meta name="twitter:title" content="Utiliser l’IA comme second lecteur critique : protocole rigoureux de relecture, vérification et amélioration – SYLTRA Consulting">
+<meta name="twitter:description" content="Une méthode complète pour faire relire un rapport, une analyse, un protocole, un code ou une décision par une IA sans confondre fluidité rédactionnelle, critique pertinente et validation experte.">
+<meta name="twitter:image" content="https://blog.syltra-consulting.com/assets/img/posts/j020.svg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo light-content">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SYLTRA Consulting</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-domaines" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Domaines</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-domaines">    
+        <li>
+    <a class="dropdown-item" href="../domaines/sante.html">
+ <span class="dropdown-text">Santé &amp; biostatistique</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/recherche.html">
+ <span class="dropdown-text">Recherche</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/banque-finance.html">
+ <span class="dropdown-text">Banque, finance &amp; assurance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/industrie.html">
+ <span class="dropdown-text">Industrie &amp; ingénierie</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/enseignement.html">
+ <span class="dropdown-text">Enseignement &amp; formation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/gouvernance.html">
+ <span class="dropdown-text">Gouvernance &amp; sécurité</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../calendrier.html"> 
+<span class="menu-text">Calendrier</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../a-propos.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/LucienSyTraore"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/syltra-consulting/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Dans cet article</h2>
+   
+  <ul>
+  <li><a href="#lidée-essentielle" id="toc-lidée-essentielle" class="nav-link active" data-scroll-target="#lidée-essentielle">L’idée essentielle</a></li>
+  <li><a href="#relecture-critique-et-validation-trois-fonctions-différentes" id="toc-relecture-critique-et-validation-trois-fonctions-différentes" class="nav-link" data-scroll-target="#relecture-critique-et-validation-trois-fonctions-différentes">Relecture, critique et validation : trois fonctions différentes</a>
+  <ul class="collapse">
+  <li><a href="#la-relecture" id="toc-la-relecture" class="nav-link" data-scroll-target="#la-relecture">La relecture</a></li>
+  <li><a href="#la-critique" id="toc-la-critique" class="nav-link" data-scroll-target="#la-critique">La critique</a></li>
+  <li><a href="#la-validation" id="toc-la-validation" class="nav-link" data-scroll-target="#la-validation">La validation</a></li>
+  </ul></li>
+  <li><a href="#pourquoi-un-second-lecteur-humain-ne-suffit-il-pas-toujours" id="toc-pourquoi-un-second-lecteur-humain-ne-suffit-il-pas-toujours" class="nav-link" data-scroll-target="#pourquoi-un-second-lecteur-humain-ne-suffit-il-pas-toujours">Pourquoi un second lecteur humain ne suffit-il pas toujours ?</a></li>
+  <li><a href="#les-limites-cognitives-et-techniques-de-lia-critique" id="toc-les-limites-cognitives-et-techniques-de-lia-critique" class="nav-link" data-scroll-target="#les-limites-cognitives-et-techniques-de-lia-critique">Les limites cognitives et techniques de l’IA critique</a>
+  <ul class="collapse">
+  <li><a href="#lillusion-de-cohérence" id="toc-lillusion-de-cohérence" class="nav-link" data-scroll-target="#lillusion-de-cohérence">L’illusion de cohérence</a></li>
+  <li><a href="#le-biais-dancrage-sur-le-texte-fourni" id="toc-le-biais-dancrage-sur-le-texte-fourni" class="nav-link" data-scroll-target="#le-biais-dancrage-sur-le-texte-fourni">Le biais d’ancrage sur le texte fourni</a></li>
+  <li><a href="#lauto-correction-instable" id="toc-lauto-correction-instable" class="nav-link" data-scroll-target="#lauto-correction-instable">L’auto-correction instable</a></li>
+  <li><a href="#la-sensibilité-à-la-formulation" id="toc-la-sensibilité-à-la-formulation" class="nav-link" data-scroll-target="#la-sensibilité-à-la-formulation">La sensibilité à la formulation</a></li>
+  <li><a href="#la-connaissance-incomplète-du-domaine" id="toc-la-connaissance-incomplète-du-domaine" class="nav-link" data-scroll-target="#la-connaissance-incomplète-du-domaine">La connaissance incomplète du domaine</a></li>
+  </ul></li>
+  <li><a href="#le-protocole-syltra-en-huit-passes" id="toc-le-protocole-syltra-en-huit-passes" class="nav-link" data-scroll-target="#le-protocole-syltra-en-huit-passes">Le protocole SYLTRA en huit passes</a>
+  <ul class="collapse">
+  <li><a href="#passe-0-préparer-un-dossier-de-revue" id="toc-passe-0-préparer-un-dossier-de-revue" class="nav-link" data-scroll-target="#passe-0-préparer-un-dossier-de-revue">Passe 0 — Préparer un dossier de revue</a></li>
+  <li><a href="#passe-1-vérifier-la-structure-argumentative" id="toc-passe-1-vérifier-la-structure-argumentative" class="nav-link" data-scroll-target="#passe-1-vérifier-la-structure-argumentative">Passe 1 — Vérifier la structure argumentative</a></li>
+  <li><a href="#passe-2-tester-les-affirmations" id="toc-passe-2-tester-les-affirmations" class="nav-link" data-scroll-target="#passe-2-tester-les-affirmations">Passe 2 — Tester les affirmations</a></li>
+  <li><a href="#passe-3-rechercher-les-contradictions-internes" id="toc-passe-3-rechercher-les-contradictions-internes" class="nav-link" data-scroll-target="#passe-3-rechercher-les-contradictions-internes">Passe 3 — Rechercher les contradictions internes</a></li>
+  <li><a href="#passe-4-examiner-la-méthode" id="toc-passe-4-examiner-la-méthode" class="nav-link" data-scroll-target="#passe-4-examiner-la-méthode">Passe 4 — Examiner la méthode</a></li>
+  <li><a href="#passe-5-jouer-le-lecteur-contradicteur" id="toc-passe-5-jouer-le-lecteur-contradicteur" class="nav-link" data-scroll-target="#passe-5-jouer-le-lecteur-contradicteur">Passe 5 — Jouer le lecteur contradicteur</a></li>
+  <li><a href="#passe-6-vérifier-les-nombres-le-code-et-les-références" id="toc-passe-6-vérifier-les-nombres-le-code-et-les-références" class="nav-link" data-scroll-target="#passe-6-vérifier-les-nombres-le-code-et-les-références">Passe 6 — Vérifier les nombres, le code et les références</a></li>
+  <li><a href="#passe-7-réviser-avec-justification" id="toc-passe-7-réviser-avec-justification" class="nav-link" data-scroll-target="#passe-7-réviser-avec-justification">Passe 7 — Réviser avec justification</a></li>
+  <li><a href="#passe-8-effectuer-une-revue-finale-indépendante" id="toc-passe-8-effectuer-une-revue-finale-indépendante" class="nav-link" data-scroll-target="#passe-8-effectuer-une-revue-finale-indépendante">Passe 8 — Effectuer une revue finale indépendante</a></li>
+  </ul></li>
+  <li><a href="#concevoir-une-grille-de-critique-explicite" id="toc-concevoir-une-grille-de-critique-explicite" class="nav-link" data-scroll-target="#concevoir-une-grille-de-critique-explicite">Concevoir une grille de critique explicite</a>
+  <ul class="collapse">
+  <li><a href="#exactitude" id="toc-exactitude" class="nav-link" data-scroll-target="#exactitude">Exactitude</a></li>
+  <li><a href="#cohérence" id="toc-cohérence" class="nav-link" data-scroll-target="#cohérence">Cohérence</a></li>
+  <li><a href="#méthode" id="toc-méthode" class="nav-link" data-scroll-target="#méthode">Méthode</a></li>
+  <li><a href="#incertitude" id="toc-incertitude" class="nav-link" data-scroll-target="#incertitude">Incertitude</a></li>
+  <li><a href="#utilité" id="toc-utilité" class="nav-link" data-scroll-target="#utilité">Utilité</a></li>
+  <li><a href="#éthique-sécurité-et-conformité" id="toc-éthique-sécurité-et-conformité" class="nav-link" data-scroll-target="#éthique-sécurité-et-conformité">Éthique, sécurité et conformité</a></li>
+  </ul></li>
+  <li><a href="#adapter-la-relecture-au-type-de-livrable" id="toc-adapter-la-relecture-au-type-de-livrable" class="nav-link" data-scroll-target="#adapter-la-relecture-au-type-de-livrable">Adapter la relecture au type de livrable</a>
+  <ul class="collapse">
+  <li><a href="#rapport-statistique" id="toc-rapport-statistique" class="nav-link" data-scroll-target="#rapport-statistique">Rapport statistique</a></li>
+  <li><a href="#protocole-de-recherche" id="toc-protocole-de-recherche" class="nav-link" data-scroll-target="#protocole-de-recherche">Protocole de recherche</a></li>
+  <li><a href="#revue-de-littérature" id="toc-revue-de-littérature" class="nav-link" data-scroll-target="#revue-de-littérature">Revue de littérature</a></li>
+  <li><a href="#code-danalyse" id="toc-code-danalyse" class="nav-link" data-scroll-target="#code-danalyse">Code d’analyse</a></li>
+  <li><a href="#document-pédagogique" id="toc-document-pédagogique" class="nav-link" data-scroll-target="#document-pédagogique">Document pédagogique</a></li>
+  <li><a href="#note-de-décision" id="toc-note-de-décision" class="nav-link" data-scroll-target="#note-de-décision">Note de décision</a></li>
+  </ul></li>
+  <li><a href="#les-architectures-de-relecture-possibles" id="toc-les-architectures-de-relecture-possibles" class="nav-link" data-scroll-target="#les-architectures-de-relecture-possibles">Les architectures de relecture possibles</a>
+  <ul class="collapse">
+  <li><a href="#modèle-unique-plusieurs-passes" id="toc-modèle-unique-plusieurs-passes" class="nav-link" data-scroll-target="#modèle-unique-plusieurs-passes">Modèle unique, plusieurs passes</a></li>
+  <li><a href="#deux-modèles-ou-configurations-distinctes" id="toc-deux-modèles-ou-configurations-distinctes" class="nav-link" data-scroll-target="#deux-modèles-ou-configurations-distinctes">Deux modèles ou configurations distinctes</a></li>
+  <li><a href="#ia-outils-déterministes" id="toc-ia-outils-déterministes" class="nav-link" data-scroll-target="#ia-outils-déterministes">IA + outils déterministes</a></li>
+  <li><a href="#ia-revue-humaine-en-double-lecture" id="toc-ia-revue-humaine-en-double-lecture" class="nav-link" data-scroll-target="#ia-revue-humaine-en-double-lecture">IA + revue humaine en double lecture</a></li>
+  </ul></li>
+  <li><a href="#un-exemple-complet-relire-une-conclusion-de-rapport" id="toc-un-exemple-complet-relire-une-conclusion-de-rapport" class="nav-link" data-scroll-target="#un-exemple-complet-relire-une-conclusion-de-rapport">Un exemple complet : relire une conclusion de rapport</a>
+  <ul class="collapse">
+  <li><a href="#analyse-structurée" id="toc-analyse-structurée" class="nav-link" data-scroll-target="#analyse-structurée">Analyse structurée</a></li>
+  <li><a href="#version-révisée-possible" id="toc-version-révisée-possible" class="nav-link" data-scroll-target="#version-révisée-possible">Version révisée possible</a></li>
+  </ul></li>
+  <li><a href="#bibliothèque-de-prompts-spécialisés" id="toc-bibliothèque-de-prompts-spécialisés" class="nav-link" data-scroll-target="#bibliothèque-de-prompts-spécialisés">Bibliothèque de prompts spécialisés</a>
+  <ul class="collapse">
+  <li><a href="#critique-factuelle" id="toc-critique-factuelle" class="nav-link" data-scroll-target="#critique-factuelle">Critique factuelle</a></li>
+  <li><a href="#critique-méthodologique" id="toc-critique-méthodologique" class="nav-link" data-scroll-target="#critique-méthodologique">Critique méthodologique</a></li>
+  <li><a href="#critique-statistique" id="toc-critique-statistique" class="nav-link" data-scroll-target="#critique-statistique">Critique statistique</a></li>
+  <li><a href="#critique-de-sources" id="toc-critique-de-sources" class="nav-link" data-scroll-target="#critique-de-sources">Critique de sources</a></li>
+  <li><a href="#critique-pour-un-décideur" id="toc-critique-pour-un-décideur" class="nav-link" data-scroll-target="#critique-pour-un-décideur">Critique pour un décideur</a></li>
+  <li><a href="#contrôle-après-révision" id="toc-contrôle-après-révision" class="nav-link" data-scroll-target="#contrôle-après-révision">Contrôle après révision</a></li>
+  </ul></li>
+  <li><a href="#sécuriser-les-données-et-la-confidentialité" id="toc-sécuriser-les-données-et-la-confidentialité" class="nav-link" data-scroll-target="#sécuriser-les-données-et-la-confidentialité">Sécuriser les données et la confidentialité</a></li>
+  <li><a href="#évaluer-la-qualité-du-second-lecteur-ia" id="toc-évaluer-la-qualité-du-second-lecteur-ia" class="nav-link" data-scroll-target="#évaluer-la-qualité-du-second-lecteur-ia">Évaluer la qualité du second lecteur IA</a></li>
+  <li><a href="#gérer-les-désaccords-entre-lauteur-lia-et-le-relecteur" id="toc-gérer-les-désaccords-entre-lauteur-lia-et-le-relecteur" class="nav-link" data-scroll-target="#gérer-les-désaccords-entre-lauteur-lia-et-le-relecteur">Gérer les désaccords entre l’auteur, l’IA et le relecteur</a></li>
+  <li><a href="#mettre-en-place-un-workflow-déquipe" id="toc-mettre-en-place-un-workflow-déquipe" class="nav-link" data-scroll-target="#mettre-en-place-un-workflow-déquipe">Mettre en place un workflow d’équipe</a>
+  <ul class="collapse">
+  <li><a href="#rôles-minimaux" id="toc-rôles-minimaux" class="nav-link" data-scroll-target="#rôles-minimaux">Rôles minimaux</a></li>
+  <li><a href="#statuts-des-commentaires" id="toc-statuts-des-commentaires" class="nav-link" data-scroll-target="#statuts-des-commentaires">Statuts des commentaires</a></li>
+  <li><a href="#critères-de-sortie" id="toc-critères-de-sortie" class="nav-link" data-scroll-target="#critères-de-sortie">Critères de sortie</a></li>
+  </ul></li>
+  <li><a href="#erreurs-fréquentes-lors-de-la-relecture-par-ia" id="toc-erreurs-fréquentes-lors-de-la-relecture-par-ia" class="nav-link" data-scroll-target="#erreurs-fréquentes-lors-de-la-relecture-par-ia">Erreurs fréquentes lors de la relecture par IA</a>
+  <ul class="collapse">
+  <li><a href="#donner-trop-peu-de-contexte" id="toc-donner-trop-peu-de-contexte" class="nav-link" data-scroll-target="#donner-trop-peu-de-contexte">Donner trop peu de contexte</a></li>
+  <li><a href="#accepter-toutes-les-suggestions" id="toc-accepter-toutes-les-suggestions" class="nav-link" data-scroll-target="#accepter-toutes-les-suggestions">Accepter toutes les suggestions</a></li>
+  <li><a href="#demander-des-références-sans-les-vérifier" id="toc-demander-des-références-sans-les-vérifier" class="nav-link" data-scroll-target="#demander-des-références-sans-les-vérifier">Demander des références sans les vérifier</a></li>
+  <li><a href="#mélanger-critique-et-réécriture" id="toc-mélanger-critique-et-réécriture" class="nav-link" data-scroll-target="#mélanger-critique-et-réécriture">Mélanger critique et réécriture</a></li>
+  <li><a href="#confondre-consensus-de-modèles-et-vérité" id="toc-confondre-consensus-de-modèles-et-vérité" class="nav-link" data-scroll-target="#confondre-consensus-de-modèles-et-vérité">Confondre consensus de modèles et vérité</a></li>
+  <li><a href="#oublier-les-erreurs-introduites-par-la-correction" id="toc-oublier-les-erreurs-introduites-par-la-correction" class="nav-link" data-scroll-target="#oublier-les-erreurs-introduites-par-la-correction">Oublier les erreurs introduites par la correction</a></li>
+  </ul></li>
+  <li><a href="#checklist-prête-à-lemploi" id="toc-checklist-prête-à-lemploi" class="nav-link" data-scroll-target="#checklist-prête-à-lemploi">Checklist prête à l’emploi</a>
+  <ul class="collapse">
+  <li><a href="#avant-la-revue" id="toc-avant-la-revue" class="nav-link" data-scroll-target="#avant-la-revue">Avant la revue</a></li>
+  <li><a href="#pendant-la-revue" id="toc-pendant-la-revue" class="nav-link" data-scroll-target="#pendant-la-revue">Pendant la revue</a></li>
+  <li><a href="#avant-diffusion" id="toc-avant-diffusion" class="nav-link" data-scroll-target="#avant-diffusion">Avant diffusion</a></li>
+  </ul></li>
+  <li><a href="#références-et-ressources" id="toc-références-et-ressources" class="nav-link" data-scroll-target="#références-et-ressources">Références et ressources</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#besoin-dun-accompagnement" id="toc-besoin-dun-accompagnement" class="nav-link" data-scroll-target="#besoin-dun-accompagnement">Besoin d’un accompagnement ?</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Utiliser l’IA comme second lecteur critique : protocole rigoureux de relecture, vérification et amélioration</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Intelligence artificielle</div>
+    <div class="quarto-category">Santé &amp; biostatistique</div>
+    <div class="quarto-category">Recherche</div>
+    <div class="quarto-category">Enseignement &amp; formation</div>
+    <div class="quarto-category">Qualité &amp; audit</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Une méthode complète pour faire relire un rapport, une analyse, un protocole, un code ou une décision par une IA sans confondre fluidité rédactionnelle, critique pertinente et validation experte.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>SYLTRA Consulting </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">16 août 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modifié</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">16 août 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="article-kicker">
+<p><strong>Publication 20 · Niveau Intermédiaire à avancé · Thème Relecture critique, qualité et IA générative</strong></p>
+</div>
+<section id="lidée-essentielle" class="level2">
+<h2 class="anchored" data-anchor-id="lidée-essentielle">L’idée essentielle</h2>
+<p>Un second lecteur utile ne se contente pas de rendre un texte plus fluide. Il cherche les contradictions, les affirmations non étayées, les erreurs de raisonnement, les définitions instables, les résultats mal interprétés, les conclusions trop larges et les informations nécessaires à la reproduction du travail.</p>
+<p>Une IA générative peut jouer une partie de ce rôle avec rapidité. Elle peut appliquer une grille de lecture, comparer plusieurs sections, reformuler une objection, repérer une incohérence locale ou proposer un test supplémentaire. Mais elle peut également approuver un raisonnement faux, inventer une référence, manquer une erreur numérique et dégrader une réponse correcte lorsqu’on lui demande de « se corriger ». La littérature sur l’auto-critique des grands modèles montre que la critique est une capacité difficile et que la vérification externe fiable apporte souvent davantage que la simple réinterrogation du même modèle.</p>
+<blockquote class="blockquote">
+<p><strong>Principe directeur :</strong> l’IA est un lecteur supplémentaire, jamais la source unique de validation.</p>
+</blockquote>
+</section>
+<section id="relecture-critique-et-validation-trois-fonctions-différentes" class="level2">
+<h2 class="anchored" data-anchor-id="relecture-critique-et-validation-trois-fonctions-différentes">Relecture, critique et validation : trois fonctions différentes</h2>
+<p>Ces termes sont souvent confondus.</p>
+<section id="la-relecture" class="level3">
+<h3 class="anchored" data-anchor-id="la-relecture">La relecture</h3>
+<p>Elle porte sur la lisibilité, la grammaire, la cohérence terminologique, la structure et les transitions. Une IA est généralement performante pour signaler des phrases longues, des répétitions ou des ruptures de ton. Cette tâche reste néanmoins sensible au contexte : une simplification peut supprimer une nuance scientifique ou juridique indispensable.</p>
+</section>
+<section id="la-critique" class="level3">
+<h3 class="anchored" data-anchor-id="la-critique">La critique</h3>
+<p>Elle examine la solidité d’une affirmation. Elle demande : quelles preuves soutiennent cette conclusion ? Existe-t-il une autre explication ? Les hypothèses sont-elles explicites ? Le résultat répond-il vraiment à la question ? Une critique utile est localisée, argumentée et reliée à un critère.</p>
+</section>
+<section id="la-validation" class="level3">
+<h3 class="anchored" data-anchor-id="la-validation">La validation</h3>
+<p>Elle établit qu’un livrable satisfait des exigences définies. Elle peut nécessiter un calcul indépendant, une revue par un expert habilité, un test logiciel, une vérification documentaire, une analyse statistique ou une approbation réglementaire. Une IA conversationnelle ne peut pas se déclarer elle-même autorité de validation.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Distinction à conserver">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Distinction à conserver
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une phrase mieux écrite n’est pas nécessairement plus vraie. Une objection plausible n’est pas nécessairement pertinente. Une réponse convaincante n’est pas une preuve.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="pourquoi-un-second-lecteur-humain-ne-suffit-il-pas-toujours" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-un-second-lecteur-humain-ne-suffit-il-pas-toujours">Pourquoi un second lecteur humain ne suffit-il pas toujours ?</h2>
+<p>Le lecteur humain apporte une compréhension du contexte, une expérience du métier et une responsabilité. Il peut toutefois être limité par le temps, la fatigue, la proximité avec l’auteur ou une expertise trop spécialisée. L’IA peut compléter cette lecture en exécutant rapidement plusieurs passes ciblées.</p>
+<p>La bonne question n’est donc pas « l’IA peut-elle remplacer le relecteur ? », mais « quelles opérations de contrôle peuvent être préparées, standardisées ou approfondies grâce à elle, et lesquelles doivent rester indépendantes ? »</p>
+</section>
+<section id="les-limites-cognitives-et-techniques-de-lia-critique" class="level2">
+<h2 class="anchored" data-anchor-id="les-limites-cognitives-et-techniques-de-lia-critique">Les limites cognitives et techniques de l’IA critique</h2>
+<section id="lillusion-de-cohérence" class="level3">
+<h3 class="anchored" data-anchor-id="lillusion-de-cohérence">L’illusion de cohérence</h3>
+<p>Les modèles produisent du texte probable. Ils peuvent construire une justification cohérente après coup, même lorsque la prémisse est fausse. La présence d’un raisonnement détaillé ne garantit pas que les étapes correspondent à un calcul réel ou à une source existante.</p>
+</section>
+<section id="le-biais-dancrage-sur-le-texte-fourni" class="level3">
+<h3 class="anchored" data-anchor-id="le-biais-dancrage-sur-le-texte-fourni">Le biais d’ancrage sur le texte fourni</h3>
+<p>Lorsque le document affirme fortement une conclusion, le modèle peut adopter ce cadre et chercher à l’améliorer plutôt qu’à le contester. Pour réduire cet effet, il faut demander une lecture indépendante, masquer parfois la conclusion ou fournir explicitement des critères d’évaluation.</p>
+</section>
+<section id="lauto-correction-instable" class="level3">
+<h3 class="anchored" data-anchor-id="lauto-correction-instable">L’auto-correction instable</h3>
+<p>Demander au même modèle « es-tu sûr ? » peut conduire à une modification arbitraire. Des travaux empiriques ont observé des baisses de performance en auto-vérification sur certaines tâches de raisonnement et de planification, alors qu’un vérificateur externe exact améliore nettement les résultats. Cela justifie une architecture où l’IA formule des contrôles, mais où les éléments vérifiables sont confrontés à des outils, données et sources indépendants.</p>
+</section>
+<section id="la-sensibilité-à-la-formulation" class="level3">
+<h3 class="anchored" data-anchor-id="la-sensibilité-à-la-formulation">La sensibilité à la formulation</h3>
+<p>Une critique change selon le prompt, l’ordre des informations, la longueur du document et le contexte disponible. La reproductibilité exige donc de conserver la version du texte, la consigne, le modèle utilisé, les paramètres pertinents et la date.</p>
+</section>
+<section id="la-connaissance-incomplète-du-domaine" class="level3">
+<h3 class="anchored" data-anchor-id="la-connaissance-incomplète-du-domaine">La connaissance incomplète du domaine</h3>
+<p>Un modèle généraliste peut ignorer une convention métier, une version de norme ou une contrainte locale. Il peut appliquer une règle correcte dans un contexte inadapté. La revue doit intégrer des critères sectoriels fournis par l’organisation.</p>
+</section>
+</section>
+<section id="le-protocole-syltra-en-huit-passes" class="level2">
+<h2 class="anchored" data-anchor-id="le-protocole-syltra-en-huit-passes">Le protocole SYLTRA en huit passes</h2>
+<p>L’erreur la plus fréquente consiste à demander : « critique ce document ». Le résultat mélange alors style, faits, opinions et suggestions. Une relecture robuste sépare les objectifs.</p>
+<section id="passe-0-préparer-un-dossier-de-revue" class="level3">
+<h3 class="anchored" data-anchor-id="passe-0-préparer-un-dossier-de-revue">Passe 0 — Préparer un dossier de revue</h3>
+<p>Avant d’utiliser l’IA, réunissez :</p>
+<ul>
+<li>la version exacte du livrable ;</li>
+<li>son objectif et son public ;</li>
+<li>les critères d’acceptation ;</li>
+<li>les sources autorisées ;</li>
+<li>les définitions et conventions ;</li>
+<li>les éléments confidentiels à exclure ;</li>
+<li>les décisions qui nécessitent une validation humaine.</li>
+</ul>
+<p>Attribuez un identifiant à la version. Un commentaire sans version cible devient rapidement impossible à tracer.</p>
+</section>
+<section id="passe-1-vérifier-la-structure-argumentative" class="level3">
+<h3 class="anchored" data-anchor-id="passe-1-vérifier-la-structure-argumentative">Passe 1 — Vérifier la structure argumentative</h3>
+<p>Demandez à l’IA de reconstruire l’argument sans le réécrire : question, données, méthode, résultats, interprétation, recommandation. Cette cartographie révèle les sauts logiques.</p>
+<pre class="text"><code>Reconstruis l’argument du document sous la forme :
+question → éléments de preuve → méthode → résultat → interprétation → décision.
+Pour chaque flèche, indique si le lien est explicite, implicite ou absent.
+Ne propose aucune reformulation à ce stade.</code></pre>
+<p>Un rapport peut être techniquement exact mais ne pas relier le résultat à la décision. À l’inverse, une recommandation peut apparaître avant les éléments qui la justifient.</p>
+</section>
+<section id="passe-2-tester-les-affirmations" class="level3">
+<h3 class="anchored" data-anchor-id="passe-2-tester-les-affirmations">Passe 2 — Tester les affirmations</h3>
+<p>Créez un inventaire des affirmations vérifiables. Pour chacune, exigez un statut : soutenue par le document, nécessitant une source externe, calculable, opinion, hypothèse ou inconnue.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Affirmation</th>
+<th>Type</th>
+<th>Source ou calcul attendu</th>
+<th>Niveau de confiance</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Le taux a augmenté de 12 %</td>
+<td>Quantitative</td>
+<td>tableau source + formule</td>
+<td>à vérifier</td>
+<td>recalculer</td>
+</tr>
+<tr class="even">
+<td>La méthode est robuste</td>
+<td>Évaluative</td>
+<td>critères et tests</td>
+<td>insuffisant</td>
+<td>préciser</td>
+</tr>
+<tr class="odd">
+<td>Le traitement est conforme</td>
+<td>Juridique</td>
+<td>analyse qualifiée</td>
+<td>non établi</td>
+<td>revue juridique</td>
+</tr>
+</tbody>
+</table>
+<p>Cette passe réduit le risque de laisser une formulation générale se transformer en fait apparent.</p>
+</section>
+<section id="passe-3-rechercher-les-contradictions-internes" class="level3">
+<h3 class="anchored" data-anchor-id="passe-3-rechercher-les-contradictions-internes">Passe 3 — Rechercher les contradictions internes</h3>
+<p>Demandez une comparaison entre sections, tableaux, figures et annexes. Les contradictions fréquentes concernent les effectifs, les dates, les unités, les noms de variables, les critères d’inclusion, les seuils et le sens d’une comparaison.</p>
+<pre class="text"><code>Recherche uniquement les contradictions internes.
+Pour chaque contradiction, cite les deux passages concernés,
+explique pourquoi ils ne peuvent pas être vrais simultanément,
+et indique la donnée source nécessaire pour arbitrer.
+Ne choisis pas toi-même la version correcte.</code></pre>
+<p>Cette consigne est importante : le modèle ne doit pas résoudre une contradiction en inventant une préférence.</p>
+</section>
+<section id="passe-4-examiner-la-méthode" class="level3">
+<h3 class="anchored" data-anchor-id="passe-4-examiner-la-méthode">Passe 4 — Examiner la méthode</h3>
+<p>La grille dépend du domaine, mais certaines questions sont transversales :</p>
+<ul>
+<li>La méthode répond-elle à la question ?</li>
+<li>Les hypothèses nécessaires sont-elles décrites ?</li>
+<li>Les données sont-elles appropriées et suffisamment documentées ?</li>
+<li>Les comparaisons sont-elles équitables ?</li>
+<li>Les sources d’incertitude sont-elles quantifiées ?</li>
+<li>Les analyses de sensibilité sont-elles suffisantes ?</li>
+<li>La méthode peut-elle être reproduite ?</li>
+<li>Les limites modifient-elles la portée de la conclusion ?</li>
+</ul>
+<p>L’IA peut appliquer cette grille, mais l’évaluation finale doit être menée par une personne maîtrisant la méthode.</p>
+</section>
+<section id="passe-5-jouer-le-lecteur-contradicteur" class="level3">
+<h3 class="anchored" data-anchor-id="passe-5-jouer-le-lecteur-contradicteur">Passe 5 — Jouer le lecteur contradicteur</h3>
+<p>Demandez plusieurs objections indépendantes, chacune fondée sur un mécanisme différent. Une objection utile doit préciser ce qui pourrait être faux, pourquoi, et quelle preuve permettrait de trancher.</p>
+<pre class="text"><code>Formule cinq objections indépendantes contre la conclusion.
+Chaque objection doit appartenir à une catégorie différente :
+mesure, données, méthode, interprétation, mise en œuvre.
+Pour chacune, indique : mécanisme, conséquence, test discriminant.
+Écarte les objections purement rhétoriques.</code></pre>
+<p>Le but n’est pas de rendre tout douteux, mais de révéler les conditions de validité.</p>
+</section>
+<section id="passe-6-vérifier-les-nombres-le-code-et-les-références" class="level3">
+<h3 class="anchored" data-anchor-id="passe-6-vérifier-les-nombres-le-code-et-les-références">Passe 6 — Vérifier les nombres, le code et les références</h3>
+<p>Cette passe doit s’appuyer sur des outils indépendants.</p>
+<ul>
+<li>Recalculez les pourcentages et intervalles avec un tableur ou un script.</li>
+<li>Exécutez les tests sur les données sources.</li>
+<li>Vérifiez chaque DOI, auteur, date et titre dans la source primaire.</li>
+<li>Exécutez le code dans un environnement propre.</li>
+<li>Comparez les sorties attendues et observées.</li>
+</ul>
+<p>L’IA peut écrire un script de vérification, mais le script doit être exécuté et revu. Elle peut proposer une référence, mais celle-ci doit être ouverte et confirmée.</p>
+</section>
+<section id="passe-7-réviser-avec-justification" class="level3">
+<h3 class="anchored" data-anchor-id="passe-7-réviser-avec-justification">Passe 7 — Réviser avec justification</h3>
+<p>Ne demandez pas une réécriture globale après la critique. Exigez des modifications atomiques.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Identifiant</th>
+<th>Passage</th>
+<th>Problème</th>
+<th>Proposition</th>
+<th>Justification</th>
+<th>Statut</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C-014</td>
+<td>§ 3.2</td>
+<td>causalité excessive</td>
+<td>remplacer « entraîne » par « est associé à »</td>
+<td>étude observationnelle</td>
+<td>accepté</td>
+</tr>
+<tr class="even">
+<td>C-015</td>
+<td>tableau 2</td>
+<td>unité absente</td>
+<td>ajouter « mg/L »</td>
+<td>dictionnaire</td>
+<td>accepté</td>
+</tr>
+<tr class="odd">
+<td>C-016</td>
+<td>conclusion</td>
+<td>portée trop large</td>
+<td>limiter à la population étudiée</td>
+<td>échantillon spécifique</td>
+<td>accepté</td>
+</tr>
+</tbody>
+</table>
+<p>L’auteur ou le responsable accepte, refuse ou modifie chaque proposition. La décision reste visible.</p>
+</section>
+<section id="passe-8-effectuer-une-revue-finale-indépendante" class="level3">
+<h3 class="anchored" data-anchor-id="passe-8-effectuer-une-revue-finale-indépendante">Passe 8 — Effectuer une revue finale indépendante</h3>
+<p>Après modification, une personne ou un dispositif indépendant vérifie que :</p>
+<ol type="1">
+<li>les corrections approuvées ont été appliquées ;</li>
+<li>aucune nouvelle erreur n’a été introduite ;</li>
+<li>les points non résolus sont signalés ;</li>
+<li>la version finale satisfait les critères d’acceptation.</li>
+</ol>
+<p>L’indépendance peut être organisationnelle, méthodologique ou instrumentale. Pour un calcul, elle peut prendre la forme d’une seconde implémentation ; pour un rapport, d’un lecteur qui n’a pas participé à la rédaction ; pour une conformité, d’un avis qualifié.</p>
+</section>
+</section>
+<section id="concevoir-une-grille-de-critique-explicite" class="level2">
+<h2 class="anchored" data-anchor-id="concevoir-une-grille-de-critique-explicite">Concevoir une grille de critique explicite</h2>
+<p>Une bonne grille empêche l’IA de privilégier le style au détriment du fond. Voici un modèle adaptable.</p>
+<section id="exactitude" class="level3">
+<h3 class="anchored" data-anchor-id="exactitude">Exactitude</h3>
+<ul>
+<li>Les faits sont-ils vérifiables ?</li>
+<li>Les chiffres correspondent-ils aux sources ?</li>
+<li>Les unités, dates et dénominateurs sont-ils présents ?</li>
+<li>Les citations soutiennent-elles réellement la proposition ?</li>
+</ul>
+</section>
+<section id="cohérence" class="level3">
+<h3 class="anchored" data-anchor-id="cohérence">Cohérence</h3>
+<ul>
+<li>Les définitions restent-elles stables ?</li>
+<li>Les résultats du texte correspondent-ils aux tableaux et figures ?</li>
+<li>La conclusion respecte-t-elle les résultats ?</li>
+<li>Les recommandations sont-elles compatibles entre elles ?</li>
+</ul>
+</section>
+<section id="méthode" class="level3">
+<h3 class="anchored" data-anchor-id="méthode">Méthode</h3>
+<ul>
+<li>Le plan d’analyse est-il adapté ?</li>
+<li>Les hypothèses et exclusions sont-elles justifiées ?</li>
+<li>Les sources de biais sont-elles identifiées ?</li>
+<li>Les analyses de robustesse sont-elles prévues ?</li>
+</ul>
+</section>
+<section id="incertitude" class="level3">
+<h3 class="anchored" data-anchor-id="incertitude">Incertitude</h3>
+<ul>
+<li>La variabilité est-elle présentée ?</li>
+<li>Les limites sont-elles spécifiques ?</li>
+<li>Les résultats négatifs ou ambigus sont-ils conservés ?</li>
+<li>Les seuils sont-ils justifiés plutôt qu’arbitraires ?</li>
+</ul>
+</section>
+<section id="utilité" class="level3">
+<h3 class="anchored" data-anchor-id="utilité">Utilité</h3>
+<ul>
+<li>Le lecteur sait-il quelle décision prendre ?</li>
+<li>Les conditions d’application sont-elles explicites ?</li>
+<li>Les actions, responsables et échéances sont-ils définis ?</li>
+<li>Le document distingue-t-il recommandation et obligation ?</li>
+</ul>
+</section>
+<section id="éthique-sécurité-et-conformité" class="level3">
+<h3 class="anchored" data-anchor-id="éthique-sécurité-et-conformité">Éthique, sécurité et conformité</h3>
+<ul>
+<li>Les données sensibles sont-elles protégées ?</li>
+<li>Les personnes affectées peuvent-elles comprendre ou contester ?</li>
+<li>Les usages détournés ont-ils été considérés ?</li>
+<li>La supervision humaine est-elle réelle et documentée ?</li>
+</ul>
+</section>
+</section>
+<section id="adapter-la-relecture-au-type-de-livrable" class="level2">
+<h2 class="anchored" data-anchor-id="adapter-la-relecture-au-type-de-livrable">Adapter la relecture au type de livrable</h2>
+<section id="rapport-statistique" class="level3">
+<h3 class="anchored" data-anchor-id="rapport-statistique">Rapport statistique</h3>
+<p>Le second lecteur doit vérifier la population analysée, les données manquantes, le plan d’analyse, les hypothèses, les multiplicités, l’estimation de l’incertitude et l’adéquation entre résultat et conclusion.</p>
+<p><strong>Questions spécifiques :</strong></p>
+<ul>
+<li>Les effectifs analysés correspondent-ils au diagramme de flux ?</li>
+<li>Le dénominateur est-il identique dans le texte et les tableaux ?</li>
+<li>Les analyses exploratoires sont-elles distinguées des analyses confirmatoires ?</li>
+<li>Une absence de significativité est-elle interprétée à tort comme équivalence ?</li>
+<li>Les intervalles de confiance permettent-ils d’évaluer la précision ?</li>
+<li>Les variables postérieures à l’exposition ont-elles été utilisées de manière inappropriée ?</li>
+<li>La stratégie de données manquantes repose-t-elle sur des hypothèses explicites ?</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled" title="Piège statistique">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Avertissement</span>Piège statistique
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une valeur de <em>p</em> ne mesure ni la taille de l’effet, ni la probabilité que l’hypothèse soit vraie, ni l’importance pratique du résultat. Le second lecteur doit rechercher l’estimation, l’incertitude, le plan d’étude et les biais possibles.</p>
+</div>
+</div>
+</section>
+<section id="protocole-de-recherche" class="level3">
+<h3 class="anchored" data-anchor-id="protocole-de-recherche">Protocole de recherche</h3>
+<p>Vérifiez la question, la population, l’exposition ou intervention, le comparateur, les critères de jugement, le calendrier, la taille d’échantillon, les analyses, la gestion des écarts et la reproductibilité.</p>
+<p>L’IA peut repérer qu’un objectif secondaire n’a pas de méthode associée ou qu’un critère apparaît sous deux noms. Elle ne peut pas décider seule qu’une méthode est scientifiquement ou éthiquement suffisante.</p>
+</section>
+<section id="revue-de-littérature" class="level3">
+<h3 class="anchored" data-anchor-id="revue-de-littérature">Revue de littérature</h3>
+<p>Le contrôle doit porter sur la stratégie de recherche, la couverture des bases, les critères d’inclusion, le risque de biais, l’extraction et la synthèse. Une IA ne doit pas inventer les références manquantes. Chaque citation doit être vérifiée dans une base fiable ou sur le site de l’éditeur.</p>
+</section>
+<section id="code-danalyse" class="level3">
+<h3 class="anchored" data-anchor-id="code-danalyse">Code d’analyse</h3>
+<p>La critique du code comprend la correction, la reproductibilité, la sécurité, la lisibilité et l’adéquation statistique.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple minimal de vérification indépendante d'un pourcentage</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dataclasses <span class="im">import</span> dataclass</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">@dataclass</span>(frozen<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Proportion:</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    numerator: <span class="bu">int</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    denominator: <span class="bu">int</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> percent(<span class="va">self</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">self</span>.denominator <span class="op">&lt;=</span> <span class="dv">0</span>:</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Le dénominateur doit être strictement positif."</span>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="dv">0</span> <span class="op">&lt;=</span> <span class="va">self</span>.numerator <span class="op">&lt;=</span> <span class="va">self</span>.denominator:</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Le numérateur doit être compris entre 0 et le dénominateur."</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">100</span> <span class="op">*</span> <span class="va">self</span>.numerator <span class="op">/</span> <span class="va">self</span>.denominator</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> Proportion(numerator<span class="op">=</span><span class="dv">37</span>, denominator<span class="op">=</span><span class="dv">125</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>result<span class="sc">.</span>percent()<span class="sc">:.1f}</span><span class="ss"> %"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Le point important n’est pas la complexité du script, mais la présence de contrôles explicites et d’une exécution reproductible.</p>
+</section>
+<section id="document-pédagogique" class="level3">
+<h3 class="anchored" data-anchor-id="document-pédagogique">Document pédagogique</h3>
+<p>Évaluez l’exactitude, le niveau de prérequis, la progression, les exemples, les occasions de pratique et la qualité des évaluations. Une explication simple ne doit pas devenir fausse. Demandez à l’IA de signaler les simplifications qui nécessitent un avertissement.</p>
+</section>
+<section id="note-de-décision" class="level3">
+<h3 class="anchored" data-anchor-id="note-de-décision">Note de décision</h3>
+<p>Une note de décision doit séparer faits, hypothèses, options, critères, risques et recommandation. Le second lecteur vérifie que les alternatives ont été examinées de manière équitable et que la recommandation précise ses conditions de révision.</p>
+</section>
+</section>
+<section id="les-architectures-de-relecture-possibles" class="level2">
+<h2 class="anchored" data-anchor-id="les-architectures-de-relecture-possibles">Les architectures de relecture possibles</h2>
+<section id="modèle-unique-plusieurs-passes" class="level3">
+<h3 class="anchored" data-anchor-id="modèle-unique-plusieurs-passes">Modèle unique, plusieurs passes</h3>
+<p>C’est l’option la plus simple. Elle améliore la couverture, mais conserve des erreurs corrélées : le même modèle peut répéter ses hypothèses. Utilisez des critères distincts et imposez des sorties structurées.</p>
+</section>
+<section id="deux-modèles-ou-configurations-distinctes" class="level3">
+<h3 class="anchored" data-anchor-id="deux-modèles-ou-configurations-distinctes">Deux modèles ou configurations distinctes</h3>
+<p>Un modèle rédige, un autre critique. Cette séparation peut accroître la diversité, mais ne garantit pas l’indépendance si les deux partagent des données ou limites similaires. Comparez les désaccords plutôt que de faire voter mécaniquement.</p>
+</section>
+<section id="ia-outils-déterministes" class="level3">
+<h3 class="anchored" data-anchor-id="ia-outils-déterministes">IA + outils déterministes</h3>
+<p>C’est souvent l’architecture la plus robuste. L’IA identifie les éléments à contrôler ; un calculateur, un validateur de schéma, un test unitaire, une recherche documentaire ou une règle métier vérifie le point. Le résultat déterministe est ensuite interprété par l’expert.</p>
+</section>
+<section id="ia-revue-humaine-en-double-lecture" class="level3">
+<h3 class="anchored" data-anchor-id="ia-revue-humaine-en-double-lecture">IA + revue humaine en double lecture</h3>
+<p>Pour les livrables à fort impact, l’IA prépare une grille et signale des points ; deux personnes examinent indépendamment les éléments critiques, puis résolvent les divergences. Le niveau d’effort doit être proportionné au risque.</p>
+</section>
+</section>
+<section id="un-exemple-complet-relire-une-conclusion-de-rapport" class="level2">
+<h2 class="anchored" data-anchor-id="un-exemple-complet-relire-une-conclusion-de-rapport">Un exemple complet : relire une conclusion de rapport</h2>
+<p><strong>Texte initial :</strong></p>
+<blockquote class="blockquote">
+<p>Le nouveau processus améliore significativement la performance et doit être généralisé à l’ensemble des sites.</p>
+</blockquote>
+<section id="analyse-structurée" class="level3">
+<h3 class="anchored" data-anchor-id="analyse-structurée">Analyse structurée</h3>
+<ol type="1">
+<li><strong>« améliore »</strong> suppose une comparaison causale ; le plan permet-il cette conclusion ?</li>
+<li><strong>« significativement »</strong> est ambigu : statistiquement, pratiquement ou économiquement ?</li>
+<li><strong>« la performance »</strong> ne nomme pas l’indicateur ni sa taille d’effet.</li>
+<li><strong>« doit être généralisé »</strong> dépasse peut-être la population et la durée observées.</li>
+<li>Les coûts, effets indésirables et conditions de déploiement ne sont pas mentionnés.</li>
+</ol>
+</section>
+<section id="version-révisée-possible" class="level3">
+<h3 class="anchored" data-anchor-id="version-révisée-possible">Version révisée possible</h3>
+<blockquote class="blockquote">
+<p>Dans les trois sites pilotes, le délai médian a diminué de 18 minutes sur la période étudiée, avec un intervalle de confiance à 95 % de 9 à 27 minutes. Cette observation soutient une extension progressive, sous réserve de confirmer la stabilité de l’effet dans des sites de taille différente, de surveiller le taux d’erreurs et de vérifier que les ressources nécessaires sont disponibles.</p>
+</blockquote>
+<p>Cette version ne se contente pas d’être prudente. Elle précise l’indicateur, l’incertitude, la population, la décision et les conditions de suivi.</p>
+</section>
+</section>
+<section id="bibliothèque-de-prompts-spécialisés" class="level2">
+<h2 class="anchored" data-anchor-id="bibliothèque-de-prompts-spécialisés">Bibliothèque de prompts spécialisés</h2>
+<section id="critique-factuelle" class="level3">
+<h3 class="anchored" data-anchor-id="critique-factuelle">Critique factuelle</h3>
+<pre class="text"><code>Dresse la liste exhaustive des affirmations vérifiables.
+Pour chacune, indique la phrase exacte, le type de preuve nécessaire,
+la source présente dans le dossier et le statut : vérifiée, non vérifiée,
+contradictoire ou non testable avec les éléments fournis.
+N’ajoute aucun fait externe.</code></pre>
+</section>
+<section id="critique-méthodologique" class="level3">
+<h3 class="anchored" data-anchor-id="critique-méthodologique">Critique méthodologique</h3>
+<pre class="text"><code>Évalue la méthode uniquement à partir des critères suivants :
+adéquation à la question, hypothèses, biais, données manquantes,
+incertitude, analyses de sensibilité, reproductibilité et portée.
+Pour chaque faiblesse, indique son impact potentiel sur la conclusion
+et la vérification qui permettrait de la résoudre.</code></pre>
+</section>
+<section id="critique-statistique" class="level3">
+<h3 class="anchored" data-anchor-id="critique-statistique">Critique statistique</h3>
+<pre class="text"><code>Repère les interprétations incorrectes ou incomplètes des statistiques.
+Vérifie notamment : dénominateurs, unités, taille d’effet, intervalles,
+multiplicité, confusion association/causalité, non-significativité/équivalence,
+et cohérence entre méthode annoncée et résultat présenté.
+Ne recalcule rien sans données sources.</code></pre>
+</section>
+<section id="critique-de-sources" class="level3">
+<h3 class="anchored" data-anchor-id="critique-de-sources">Critique de sources</h3>
+<pre class="text"><code>Pour chaque référence, vérifie seulement sa cohérence bibliographique interne :
+auteurs, année, titre, revue, DOI ou URL fourni.
+Signale les éléments manquants ou suspects.
+Ne confirme pas l’existence d’une source sans consultation externe.</code></pre>
+</section>
+<section id="critique-pour-un-décideur" class="level3">
+<h3 class="anchored" data-anchor-id="critique-pour-un-décideur">Critique pour un décideur</h3>
+<pre class="text"><code>Lis le document du point de vue d’un décideur responsable.
+Identifie : décision attendue, bénéfices, risques, coûts, alternatives,
+incertitudes, conditions d’arrêt et informations manquantes.
+Termine par les cinq questions qui doivent recevoir une réponse avant décision.</code></pre>
+</section>
+<section id="contrôle-après-révision" class="level3">
+<h3 class="anchored" data-anchor-id="contrôle-après-révision">Contrôle après révision</h3>
+<pre class="text"><code>Compare la version initiale et la version révisée.
+Vérifie que chaque modification résout le problème identifié,
+qu’aucun chiffre, sens causal, niveau de certitude ou périmètre
+n’a été modifié sans justification. Liste uniquement les écarts matériels.</code></pre>
+</section>
+</section>
+<section id="sécuriser-les-données-et-la-confidentialité" class="level2">
+<h2 class="anchored" data-anchor-id="sécuriser-les-données-et-la-confidentialité">Sécuriser les données et la confidentialité</h2>
+<p>Avant de soumettre un document à un service d’IA, déterminez si les données sont autorisées. Retirez les identifiants directs, secrets commerciaux, informations de santé, données contractuelles et éléments de sécurité non nécessaires. La pseudonymisation n’est pas toujours suffisante si les combinaisons de variables permettent une réidentification.</p>
+<p>Établissez une politique précisant : outils autorisés, catégories de données, durée de conservation, localisation, contrôle d’accès, journalisation, utilisation éventuelle des données pour l’entraînement, procédure d’incident et personnes habilitées.</p>
+<p>Le principe de minimisation s’applique aussi au prompt : fournissez uniquement le contexte nécessaire à la tâche.</p>
+</section>
+<section id="évaluer-la-qualité-du-second-lecteur-ia" class="level2">
+<h2 class="anchored" data-anchor-id="évaluer-la-qualité-du-second-lecteur-ia">Évaluer la qualité du second lecteur IA</h2>
+<p>Ne supposez pas qu’un modèle est bon critique parce qu’il écrit bien. Construisez un jeu d’évaluation contenant des erreurs connues : contradiction d’effectifs, référence inexistante, causalité excessive, unité erronée, omission d’une limite, code non reproductible, conclusion hors périmètre.</p>
+<p>Mesurez au moins :</p>
+<ul>
+<li><strong>rappel des erreurs :</strong> proportion des erreurs connues détectées ;</li>
+<li><strong>précision des alertes :</strong> proportion des critiques réellement valides ;</li>
+<li><strong>gravité pondérée :</strong> capacité à détecter les erreurs importantes ;</li>
+<li><strong>stabilité :</strong> cohérence des résultats sur plusieurs exécutions ;</li>
+<li><strong>utilité :</strong> proportion des commentaires conduisant à une correction ;</li>
+<li><strong>temps économisé :</strong> réduction réelle du travail, correction comprise.</li>
+</ul>
+<p>Une métrique peut être définie pour pondérer les erreurs :</p>
+<p>[ Score = ]</p>
+<p>Les poids (w_i) doivent refléter l’impact métier, scientifique ou réglementaire. Un accent manquant et une conclusion causale injustifiée ne doivent pas compter de la même façon.</p>
+</section>
+<section id="gérer-les-désaccords-entre-lauteur-lia-et-le-relecteur" class="level2">
+<h2 class="anchored" data-anchor-id="gérer-les-désaccords-entre-lauteur-lia-et-le-relecteur">Gérer les désaccords entre l’auteur, l’IA et le relecteur</h2>
+<p>Un désaccord n’est pas résolu par la confiance ou l’éloquence. Utilisez une hiérarchie de preuve :</p>
+<ol type="1">
+<li>données sources et calcul reproductible ;</li>
+<li>texte réglementaire ou norme applicable ;</li>
+<li>protocole approuvé ;</li>
+<li>littérature primaire pertinente ;</li>
+<li>jugement d’expert documenté ;</li>
+<li>préférence éditoriale.</li>
+</ol>
+<p>Lorsque deux interprétations restent plausibles, formulez l’incertitude au lieu de forcer un consensus. La traçabilité du désaccord peut être plus utile qu’une décision artificiellement nette.</p>
+</section>
+<section id="mettre-en-place-un-workflow-déquipe" class="level2">
+<h2 class="anchored" data-anchor-id="mettre-en-place-un-workflow-déquipe">Mettre en place un workflow d’équipe</h2>
+<section id="rôles-minimaux" class="level3">
+<h3 class="anchored" data-anchor-id="rôles-minimaux">Rôles minimaux</h3>
+<ul>
+<li><strong>Auteur :</strong> produit le contenu et répond aux commentaires.</li>
+<li><strong>Relecteur méthodologique :</strong> évalue les méthodes et conclusions.</li>
+<li><strong>Vérificateur :</strong> contrôle chiffres, code et sources.</li>
+<li><strong>Approbateur :</strong> accepte le risque résiduel et autorise la diffusion.</li>
+<li><strong>Administrateur de l’outil :</strong> gère accès, configuration et journalisation.</li>
+</ul>
+<p>Une même personne peut cumuler certains rôles dans un petit projet, mais les contrôles critiques doivent conserver une indépendance suffisante.</p>
+</section>
+<section id="statuts-des-commentaires" class="level3">
+<h3 class="anchored" data-anchor-id="statuts-des-commentaires">Statuts des commentaires</h3>
+<p>Utilisez des statuts simples : ouvert, accepté, rejeté avec justification, à vérifier, bloquant, résolu. Chaque commentaire doit avoir un propriétaire et, si nécessaire, une échéance.</p>
+</section>
+<section id="critères-de-sortie" class="level3">
+<h3 class="anchored" data-anchor-id="critères-de-sortie">Critères de sortie</h3>
+<p>Un document peut être considéré comme prêt lorsque :</p>
+<ul>
+<li>les commentaires bloquants sont résolus ;</li>
+<li>les chiffres critiques ont été recalculés ;</li>
+<li>les références ont été vérifiées ;</li>
+<li>les limites sont explicites ;</li>
+<li>les décisions et responsabilités sont claires ;</li>
+<li>les éléments non résolus sont visibles ;</li>
+<li>la version finale est archivée avec son historique.</li>
+</ul>
+</section>
+</section>
+<section id="erreurs-fréquentes-lors-de-la-relecture-par-ia" class="level2">
+<h2 class="anchored" data-anchor-id="erreurs-fréquentes-lors-de-la-relecture-par-ia">Erreurs fréquentes lors de la relecture par IA</h2>
+<section id="donner-trop-peu-de-contexte" class="level3">
+<h3 class="anchored" data-anchor-id="donner-trop-peu-de-contexte">Donner trop peu de contexte</h3>
+<p>Sans objectif, public et critères, le modèle optimise la forme générale. Fournissez les contraintes, mais évitez les informations sensibles inutiles.</p>
+</section>
+<section id="accepter-toutes-les-suggestions" class="level3">
+<h3 class="anchored" data-anchor-id="accepter-toutes-les-suggestions">Accepter toutes les suggestions</h3>
+<p>Une correction stylistique peut modifier le niveau de certitude ou la définition d’un concept. Examinez chaque changement matériel.</p>
+</section>
+<section id="demander-des-références-sans-les-vérifier" class="level3">
+<h3 class="anchored" data-anchor-id="demander-des-références-sans-les-vérifier">Demander des références sans les vérifier</h3>
+<p>Les références plausibles mais inexistantes restent un risque majeur. Exigez des DOI ou URLs, puis consultez les sources primaires.</p>
+</section>
+<section id="mélanger-critique-et-réécriture" class="level3">
+<h3 class="anchored" data-anchor-id="mélanger-critique-et-réécriture">Mélanger critique et réécriture</h3>
+<p>Lorsque le modèle critique et réécrit simultanément, les problèmes disparaissent dans une nouvelle version difficile à auditer. Séparez diagnostic, décision et correction.</p>
+</section>
+<section id="confondre-consensus-de-modèles-et-vérité" class="level3">
+<h3 class="anchored" data-anchor-id="confondre-consensus-de-modèles-et-vérité">Confondre consensus de modèles et vérité</h3>
+<p>Plusieurs modèles peuvent partager la même erreur. Le consensus augmente la confiance uniquement si les sources et méthodes sont réellement indépendantes.</p>
+</section>
+<section id="oublier-les-erreurs-introduites-par-la-correction" class="level3">
+<h3 class="anchored" data-anchor-id="oublier-les-erreurs-introduites-par-la-correction">Oublier les erreurs introduites par la correction</h3>
+<p>Toute révision peut créer une incohérence. Une passe finale de comparaison est indispensable.</p>
+</section>
+</section>
+<section id="checklist-prête-à-lemploi" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-prête-à-lemploi">Checklist prête à l’emploi</h2>
+<section id="avant-la-revue" class="level3">
+<h3 class="anchored" data-anchor-id="avant-la-revue">Avant la revue</h3>
+<ul>
+<li>Le but du document et son public sont-ils définis ?</li>
+<li>La version est-elle identifiée ?</li>
+<li>Les critères d’acceptation sont-ils disponibles ?</li>
+<li>Les données peuvent-elles être soumises à l’outil choisi ?</li>
+<li>Les sources de vérité sont-elles listées ?</li>
+</ul>
+</section>
+<section id="pendant-la-revue" class="level3">
+<h3 class="anchored" data-anchor-id="pendant-la-revue">Pendant la revue</h3>
+<ul>
+<li>Les commentaires citent-ils un passage précis ?</li>
+<li>Chaque critique repose-t-elle sur un critère ?</li>
+<li>Les faits, inférences et opinions sont-ils distingués ?</li>
+<li>Les calculs et références sont-ils vérifiés indépendamment ?</li>
+<li>Les objections importantes conduisent-elles à un test ?</li>
+</ul>
+</section>
+<section id="avant-diffusion" class="level3">
+<h3 class="anchored" data-anchor-id="avant-diffusion">Avant diffusion</h3>
+<ul>
+<li>Les corrections sont-elles tracées ?</li>
+<li>Les conclusions respectent-elles le périmètre des données ?</li>
+<li>Les incertitudes et limites sont-elles visibles ?</li>
+<li>Les approbations requises sont-elles obtenues ?</li>
+<li>La version finale est-elle reproductible et archivée ?</li>
+</ul>
+</section>
+</section>
+<section id="références-et-ressources" class="level2">
+<h2 class="anchored" data-anchor-id="références-et-ressources">Références et ressources</h2>
+<ul>
+<li>NIST, <em>Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile</em>, NIST AI 600-1, 2024 : <a href="https://doi.org/10.6028/NIST.AI.600-1" class="uri">https://doi.org/10.6028/NIST.AI.600-1</a></li>
+<li>NIST, <em>AI Risk Management Framework 1.0</em>, 2023 : <a href="https://doi.org/10.6028/NIST.AI.100-1" class="uri">https://doi.org/10.6028/NIST.AI.100-1</a></li>
+<li>Stechly K., Valmeekam K., Kambhampati S., <em>On the Self-Verification Limitations of Large Language Models on Reasoning and Planning Tasks</em>, 2024 : <a href="https://arxiv.org/abs/2402.08115" class="uri">https://arxiv.org/abs/2402.08115</a></li>
+<li>Luo L. et al., <em>Critique Ability of Large Language Models</em>, 2023 : <a href="https://arxiv.org/abs/2310.04815" class="uri">https://arxiv.org/abs/2310.04815</a></li>
+<li>Union européenne, règlement (UE) 2024/1689 sur l’intelligence artificielle : <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" class="uri">https://eur-lex.europa.eu/eli/reg/2024/1689/oj</a></li>
+<li>Committee on Publication Ethics, ressources sur l’IA et l’intégrité des publications : <a href="https://publicationethics.org/" class="uri">https://publicationethics.org/</a></li>
+<li>EQUATOR Network, lignes directrices de reporting en recherche en santé : <a href="https://www.equator-network.org/" class="uri">https://www.equator-network.org/</a></li>
+<li>OWASP, <em>Top 10 for Large Language Model Applications</em> : <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" class="uri">https://owasp.org/www-project-top-10-for-large-language-model-applications/</a></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Comment lire ces références">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Comment lire ces références
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Les études sur les capacités de critique des modèles évaluent des tâches, modèles et protocoles précis. Elles ne démontrent ni une incapacité universelle ni une fiabilité générale. Elles soutiennent surtout la nécessité d’évaluer localement le dispositif et d’utiliser une vérification externe lorsque l’exactitude est importante.</p>
+</div>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Utiliser l’IA comme second lecteur critique est une pratique de qualité, pas un raccourci rédactionnel. Elle exige une séparation claire entre relecture, critique et validation ; des critères explicites ; plusieurs passes spécialisées ; une vérification indépendante des faits, calculs, codes et références ; ainsi qu’une traçabilité des décisions.</p>
+<p>Le meilleur usage de l’IA n’est pas de lui demander si un document est « bon ». Il consiste à lui confier des tâches limitées : reconstruire un argument, inventorier les affirmations, comparer des sections, générer des objections testables, préparer une grille et transformer des critiques en actions. L’expert conserve la responsabilité de déterminer ce qui est vrai, acceptable et pertinent.</p>
+<p>Une organisation qui applique ce protocole gagne plus qu’un texte mieux écrit. Elle construit une mémoire de ses contrôles, réduit les erreurs silencieuses, améliore la reproductibilité et rend ses décisions plus défendables.</p>
+<div class="discussion-box">
+<p><strong>Question à la communauté :</strong> dans vos rapports ou analyses, quelle erreur coûteuse un second lecteur indépendant devrait-il rechercher en priorité ?</p>
+</div>
+</section>
+<section id="besoin-dun-accompagnement" class="level2">
+<h2 class="anchored" data-anchor-id="besoin-dun-accompagnement">Besoin d’un accompagnement ?</h2>
+<p>SYLTRA Consulting accompagne les organisations dans la mise en place de workflows de relecture et de validation, l’analyse statistique, la biostatistique, la data science, l’automatisation documentaire, la gouvernance de l’IA et la formation des équipes.</p>
+<p><a href="../contact.html" class="btn btn-primary">Nous contacter</a></p>
+<div class="post-tags">
+<p>#SYLTRAConsulting #IntelligenceArtificielle #RelectureCritique #Qualite #Recherche #Biostatistique #GouvernanceIA #Reproductibilite</p>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('a[href^="http"]').forEach(a=>{if(!a.href.includes(location.hostname)){a.rel="noopener noreferrer";a.target="_blank";}});});</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.syltra-consulting\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026–2027 SYLTRA Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>IA utile • Data Science • Biostatistique • Recherche</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

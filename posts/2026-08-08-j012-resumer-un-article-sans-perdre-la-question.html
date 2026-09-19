@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="SYLTRA Consulting">
+<meta name="description" content="Une méthode de lecture, d’extraction et de synthèse qui préserve la question scientifique, le dessin d’étude, l’incertitude, les limites et la portée réelle des résultats.">
+
+<title>Résumer un article scientifique sans perdre la question de recherche – SYLTRA Consulting</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9080f0b6d81bdf8015e035bfde39d928.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Résumer un article scientifique sans perdre la question de recherche – SYLTRA Consulting">
+<meta property="og:description" content="Une méthode de lecture, d’extraction et de synthèse qui préserve la question scientifique, le dessin d’étude, l’incertitude, les limites et la portée réelle des résultats.">
+<meta property="og:image" content="https://blog.syltra-consulting.com/assets/img/posts/j012.svg">
+<meta property="og:site_name" content="SYLTRA Consulting">
+<meta name="twitter:title" content="Résumer un article scientifique sans perdre la question de recherche – SYLTRA Consulting">
+<meta name="twitter:description" content="Une méthode de lecture, d’extraction et de synthèse qui préserve la question scientifique, le dessin d’étude, l’incertitude, les limites et la portée réelle des résultats.">
+<meta name="twitter:image" content="https://blog.syltra-consulting.com/assets/img/posts/j012.svg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo light-content">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SYLTRA Consulting</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-domaines" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Domaines</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-domaines">    
+        <li>
+    <a class="dropdown-item" href="../domaines/sante.html">
+ <span class="dropdown-text">Santé &amp; biostatistique</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/recherche.html">
+ <span class="dropdown-text">Recherche</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/banque-finance.html">
+ <span class="dropdown-text">Banque, finance &amp; assurance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/industrie.html">
+ <span class="dropdown-text">Industrie &amp; ingénierie</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/enseignement.html">
+ <span class="dropdown-text">Enseignement &amp; formation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/gouvernance.html">
+ <span class="dropdown-text">Gouvernance &amp; sécurité</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../calendrier.html"> 
+<span class="menu-text">Calendrier</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../a-propos.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/LucienSyTraore"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/syltra-consulting/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Dans cet article</h2>
+   
+  <ul>
+  <li><a href="#lidée-essentielle" id="toc-lidée-essentielle" class="nav-link active" data-scroll-target="#lidée-essentielle"><span class="header-section-number">1</span> L’idée essentielle</a></li>
+  <li><a href="#la-question-scientifique-est-la-colonne-vertébrale" id="toc-la-question-scientifique-est-la-colonne-vertébrale" class="nav-link" data-scroll-target="#la-question-scientifique-est-la-colonne-vertébrale"><span class="header-section-number">2</span> La question scientifique est la colonne vertébrale</a>
+  <ul class="collapse">
+  <li><a href="#distinguer-le-thème-lobjectif-et-la-question" id="toc-distinguer-le-thème-lobjectif-et-la-question" class="nav-link" data-scroll-target="#distinguer-le-thème-lobjectif-et-la-question"><span class="header-section-number">2.1</span> Distinguer le thème, l’objectif et la question</a></li>
+  <li><a href="#reconstruire-la-question-avec-un-cadre-adapté" id="toc-reconstruire-la-question-avec-un-cadre-adapté" class="nav-link" data-scroll-target="#reconstruire-la-question-avec-un-cadre-adapté"><span class="header-section-number">2.2</span> Reconstruire la question avec un cadre adapté</a></li>
+  </ul></li>
+  <li><a href="#lire-dans-un-ordre-qui-protège-contre-leffet-de-cadrage" id="toc-lire-dans-un-ordre-qui-protège-contre-leffet-de-cadrage" class="nav-link" data-scroll-target="#lire-dans-un-ordre-qui-protège-contre-leffet-de-cadrage"><span class="header-section-number">3</span> Lire dans un ordre qui protège contre l’effet de cadrage</a>
+  <ul class="collapse">
+  <li><a href="#passage-1-titre-résumé-et-figures" id="toc-passage-1-titre-résumé-et-figures" class="nav-link" data-scroll-target="#passage-1-titre-résumé-et-figures"><span class="header-section-number">3.1</span> Passage 1 — Titre, résumé et figures</a></li>
+  <li><a href="#passage-2-méthodes" id="toc-passage-2-méthodes" class="nav-link" data-scroll-target="#passage-2-méthodes"><span class="header-section-number">3.2</span> Passage 2 — Méthodes</a></li>
+  <li><a href="#passage-3-résultats" id="toc-passage-3-résultats" class="nav-link" data-scroll-target="#passage-3-résultats"><span class="header-section-number">3.3</span> Passage 3 — Résultats</a></li>
+  <li><a href="#passage-4-discussion" id="toc-passage-4-discussion" class="nav-link" data-scroll-target="#passage-4-discussion"><span class="header-section-number">3.4</span> Passage 4 — Discussion</a></li>
+  </ul></li>
+  <li><a href="#extraire-avant-de-rédiger" id="toc-extraire-avant-de-rédiger" class="nav-link" data-scroll-target="#extraire-avant-de-rédiger"><span class="header-section-number">4</span> Extraire avant de rédiger</a>
+  <ul class="collapse">
+  <li><a href="#matrice-minimale-dextraction" id="toc-matrice-minimale-dextraction" class="nav-link" data-scroll-target="#matrice-minimale-dextraction"><span class="header-section-number">4.1</span> Matrice minimale d’extraction</a></li>
+  </ul></li>
+  <li><a href="#résumer-selon-le-dessin-détude" id="toc-résumer-selon-le-dessin-détude" class="nav-link" data-scroll-target="#résumer-selon-le-dessin-détude"><span class="header-section-number">5</span> Résumer selon le dessin d’étude</a>
+  <ul class="collapse">
+  <li><a href="#essai-randomisé" id="toc-essai-randomisé" class="nav-link" data-scroll-target="#essai-randomisé"><span class="header-section-number">5.1</span> Essai randomisé</a></li>
+  <li><a href="#cohorte-observationnelle" id="toc-cohorte-observationnelle" class="nav-link" data-scroll-target="#cohorte-observationnelle"><span class="header-section-number">5.2</span> Cohorte observationnelle</a></li>
+  <li><a href="#étude-cas-témoins" id="toc-étude-cas-témoins" class="nav-link" data-scroll-target="#étude-cas-témoins"><span class="header-section-number">5.3</span> Étude cas-témoins</a></li>
+  <li><a href="#étude-transversale" id="toc-étude-transversale" class="nav-link" data-scroll-target="#étude-transversale"><span class="header-section-number">5.4</span> Étude transversale</a></li>
+  <li><a href="#étude-qualitative" id="toc-étude-qualitative" class="nav-link" data-scroll-target="#étude-qualitative"><span class="header-section-number">5.5</span> Étude qualitative</a></li>
+  <li><a href="#étude-de-prédiction" id="toc-étude-de-prédiction" class="nav-link" data-scroll-target="#étude-de-prédiction"><span class="header-section-number">5.6</span> Étude de prédiction</a></li>
+  <li><a href="#revue-systématique-et-méta-analyse" id="toc-revue-systématique-et-méta-analyse" class="nav-link" data-scroll-target="#revue-systématique-et-méta-analyse"><span class="header-section-number">5.7</span> Revue systématique et méta-analyse</a></li>
+  </ul></li>
+  <li><a href="#préserver-la-hiérarchie-entre-résultat-et-interprétation" id="toc-préserver-la-hiérarchie-entre-résultat-et-interprétation" class="nav-link" data-scroll-target="#préserver-la-hiérarchie-entre-résultat-et-interprétation"><span class="header-section-number">6</span> Préserver la hiérarchie entre résultat et interprétation</a>
+  <ul class="collapse">
+  <li><a href="#quatre-niveaux-à-ne-pas-confondre" id="toc-quatre-niveaux-à-ne-pas-confondre" class="nav-link" data-scroll-target="#quatre-niveaux-à-ne-pas-confondre"><span class="header-section-number">6.1</span> Quatre niveaux à ne pas confondre</a></li>
+  </ul></li>
+  <li><a href="#quantifier-sans-déformer" id="toc-quantifier-sans-déformer" class="nav-link" data-scroll-target="#quantifier-sans-déformer"><span class="header-section-number">7</span> Quantifier sans déformer</a>
+  <ul class="collapse">
+  <li><a href="#taille-deffet-avant-significativité" id="toc-taille-deffet-avant-significativité" class="nav-link" data-scroll-target="#taille-deffet-avant-significativité"><span class="header-section-number">7.1</span> Taille d’effet avant significativité</a></li>
+  <li><a href="#résultat-non-significatif" id="toc-résultat-non-significatif" class="nav-link" data-scroll-target="#résultat-non-significatif"><span class="header-section-number">7.2</span> Résultat non significatif</a></li>
+  <li><a href="#multiplicité" id="toc-multiplicité" class="nav-link" data-scroll-target="#multiplicité"><span class="header-section-number">7.3</span> Multiplicité</a></li>
+  </ul></li>
+  <li><a href="#examiner-les-biais-comme-des-mécanismes" id="toc-examiner-les-biais-comme-des-mécanismes" class="nav-link" data-scroll-target="#examiner-les-biais-comme-des-mécanismes"><span class="header-section-number">8</span> Examiner les biais comme des mécanismes</a>
+  <ul class="collapse">
+  <li><a href="#biais-de-sélection" id="toc-biais-de-sélection" class="nav-link" data-scroll-target="#biais-de-sélection"><span class="header-section-number">8.1</span> Biais de sélection</a></li>
+  <li><a href="#biais-de-mesure" id="toc-biais-de-mesure" class="nav-link" data-scroll-target="#biais-de-mesure"><span class="header-section-number">8.2</span> Biais de mesure</a></li>
+  <li><a href="#confusion" id="toc-confusion" class="nav-link" data-scroll-target="#confusion"><span class="header-section-number">8.3</span> Confusion</a></li>
+  <li><a href="#données-manquantes" id="toc-données-manquantes" class="nav-link" data-scroll-target="#données-manquantes"><span class="header-section-number">8.4</span> Données manquantes</a></li>
+  <li><a href="#biais-de-publication-et-de-rapport" id="toc-biais-de-publication-et-de-rapport" class="nav-link" data-scroll-target="#biais-de-publication-et-de-rapport"><span class="header-section-number">8.5</span> Biais de publication et de rapport</a></li>
+  </ul></li>
+  <li><a href="#évaluer-lapplicabilité" id="toc-évaluer-lapplicabilité" class="nav-link" data-scroll-target="#évaluer-lapplicabilité"><span class="header-section-number">9</span> Évaluer l’applicabilité</a></li>
+  <li><a href="#utiliser-lia-sans-perdre-le-contrôle" id="toc-utiliser-lia-sans-perdre-le-contrôle" class="nav-link" data-scroll-target="#utiliser-lia-sans-perdre-le-contrôle"><span class="header-section-number">10</span> Utiliser l’IA sans perdre le contrôle</a>
+  <ul class="collapse">
+  <li><a href="#tâches-utiles" id="toc-tâches-utiles" class="nav-link" data-scroll-target="#tâches-utiles"><span class="header-section-number">10.1</span> Tâches utiles</a></li>
+  <li><a href="#tâches-risquées" id="toc-tâches-risquées" class="nav-link" data-scroll-target="#tâches-risquées"><span class="header-section-number">10.2</span> Tâches risquées</a></li>
+  <li><a href="#prompt-de-synthèse-contrôlée" id="toc-prompt-de-synthèse-contrôlée" class="nav-link" data-scroll-target="#prompt-de-synthèse-contrôlée"><span class="header-section-number">10.3</span> Prompt de synthèse contrôlée</a></li>
+  </ul></li>
+  <li><a href="#trois-formats-de-résumé" id="toc-trois-formats-de-résumé" class="nav-link" data-scroll-target="#trois-formats-de-résumé"><span class="header-section-number">11</span> Trois formats de résumé</a>
+  <ul class="collapse">
+  <li><a href="#le-résumé-de-150-mots" id="toc-le-résumé-de-150-mots" class="nav-link" data-scroll-target="#le-résumé-de-150-mots"><span class="header-section-number">11.1</span> Le résumé de 150 mots</a></li>
+  <li><a href="#la-synthèse-critique-dune-page" id="toc-la-synthèse-critique-dune-page" class="nav-link" data-scroll-target="#la-synthèse-critique-dune-page"><span class="header-section-number">11.2</span> La synthèse critique d’une page</a></li>
+  <li><a href="#la-fiche-dextraction-détaillée" id="toc-la-fiche-dextraction-détaillée" class="nav-link" data-scroll-target="#la-fiche-dextraction-détaillée"><span class="header-section-number">11.3</span> La fiche d’extraction détaillée</a></li>
+  </ul></li>
+  <li><a href="#exemple-commenté" id="toc-exemple-commenté" class="nav-link" data-scroll-target="#exemple-commenté"><span class="header-section-number">12</span> Exemple commenté</a>
+  <ul class="collapse">
+  <li><a href="#résumé-faible" id="toc-résumé-faible" class="nav-link" data-scroll-target="#résumé-faible"><span class="header-section-number">12.1</span> Résumé faible</a></li>
+  <li><a href="#résumé-reconstruit" id="toc-résumé-reconstruit" class="nav-link" data-scroll-target="#résumé-reconstruit"><span class="header-section-number">12.2</span> Résumé reconstruit</a></li>
+  </ul></li>
+  <li><a href="#grille-de-contrôle-avant-publication" id="toc-grille-de-contrôle-avant-publication" class="nav-link" data-scroll-target="#grille-de-contrôle-avant-publication"><span class="header-section-number">13</span> Grille de contrôle avant publication</a>
+  <ul class="collapse">
+  <li><a href="#fidélité" id="toc-fidélité" class="nav-link" data-scroll-target="#fidélité"><span class="header-section-number">13.1</span> Fidélité</a></li>
+  <li><a href="#méthodologie" id="toc-méthodologie" class="nav-link" data-scroll-target="#méthodologie"><span class="header-section-number">13.2</span> Méthodologie</a></li>
+  <li><a href="#langage" id="toc-langage" class="nav-link" data-scroll-target="#langage"><span class="header-section-number">13.3</span> Langage</a></li>
+  <li><a href="#transparence" id="toc-transparence" class="nav-link" data-scroll-target="#transparence"><span class="header-section-number">13.4</span> Transparence</a></li>
+  </ul></li>
+  <li><a href="#lignes-directrices-utiles" id="toc-lignes-directrices-utiles" class="nav-link" data-scroll-target="#lignes-directrices-utiles"><span class="header-section-number">14</span> Lignes directrices utiles</a></li>
+  <li><a href="#une-méthode-de-travail-reproductible-en-douze-étapes" id="toc-une-méthode-de-travail-reproductible-en-douze-étapes" class="nav-link" data-scroll-target="#une-méthode-de-travail-reproductible-en-douze-étapes"><span class="header-section-number">15</span> Une méthode de travail reproductible en douze étapes</a></li>
+  <li><a href="#annexe-modèle-de-fiche-de-synthèse-scientifique" id="toc-annexe-modèle-de-fiche-de-synthèse-scientifique" class="nav-link" data-scroll-target="#annexe-modèle-de-fiche-de-synthèse-scientifique"><span class="header-section-number">16</span> Annexe — Modèle de fiche de synthèse scientifique</a>
+  <ul class="collapse">
+  <li><a href="#référence-complète" id="toc-référence-complète" class="nav-link" data-scroll-target="#référence-complète"><span class="header-section-number">16.1</span> Référence complète</a></li>
+  <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question"><span class="header-section-number">16.2</span> Question</a></li>
+  <li><a href="#méthodes" id="toc-méthodes" class="nav-link" data-scroll-target="#méthodes"><span class="header-section-number">16.3</span> Méthodes</a></li>
+  <li><a href="#résultats" id="toc-résultats" class="nav-link" data-scroll-target="#résultats"><span class="header-section-number">16.4</span> Résultats</a></li>
+  <li><a href="#interprétation" id="toc-interprétation" class="nav-link" data-scroll-target="#interprétation"><span class="header-section-number">16.5</span> Interprétation</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">17</span> Conclusion</a></li>
+  <li><a href="#besoin-dun-accompagnement" id="toc-besoin-dun-accompagnement" class="nav-link" data-scroll-target="#besoin-dun-accompagnement"><span class="header-section-number">18</span> Besoin d’un accompagnement ?</a></li>
+  <li><a href="#annexe-avancée-dictionnaire-de-formulations-proportionnées" id="toc-annexe-avancée-dictionnaire-de-formulations-proportionnées" class="nav-link" data-scroll-target="#annexe-avancée-dictionnaire-de-formulations-proportionnées"><span class="header-section-number">19</span> Annexe avancée — Dictionnaire de formulations proportionnées</a>
+  <ul class="collapse">
+  <li><a href="#pour-une-association-observationnelle" id="toc-pour-une-association-observationnelle" class="nav-link" data-scroll-target="#pour-une-association-observationnelle"><span class="header-section-number">19.1</span> Pour une association observationnelle</a></li>
+  <li><a href="#pour-un-résultat-imprécis" id="toc-pour-un-résultat-imprécis" class="nav-link" data-scroll-target="#pour-un-résultat-imprécis"><span class="header-section-number">19.2</span> Pour un résultat imprécis</a></li>
+  <li><a href="#pour-une-analyse-de-sous-groupe" id="toc-pour-une-analyse-de-sous-groupe" class="nav-link" data-scroll-target="#pour-une-analyse-de-sous-groupe"><span class="header-section-number">19.3</span> Pour une analyse de sous-groupe</a></li>
+  <li><a href="#pour-une-validation-de-modèle" id="toc-pour-une-validation-de-modèle" class="nav-link" data-scroll-target="#pour-une-validation-de-modèle"><span class="header-section-number">19.4</span> Pour une validation de modèle</a></li>
+  <li><a href="#pour-une-revue-systématique" id="toc-pour-une-revue-systématique" class="nav-link" data-scroll-target="#pour-une-revue-systématique"><span class="header-section-number">19.5</span> Pour une revue systématique</a></li>
+  </ul></li>
+  <li><a href="#annexe-contrôle-numérique-rapide" id="toc-annexe-contrôle-numérique-rapide" class="nav-link" data-scroll-target="#annexe-contrôle-numérique-rapide"><span class="header-section-number">20</span> Annexe — Contrôle numérique rapide</a></li>
+  <li><a href="#annexe-questions-pour-un-journal-club-exigeant" id="toc-annexe-questions-pour-un-journal-club-exigeant" class="nav-link" data-scroll-target="#annexe-questions-pour-un-journal-club-exigeant"><span class="header-section-number">21</span> Annexe — Questions pour un journal club exigeant</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Résumer un article scientifique sans perdre la question de recherche</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Recherche</div>
+    <div class="quarto-category">Méthodologie scientifique</div>
+    <div class="quarto-category">Intelligence artificielle</div>
+    <div class="quarto-category">Biostatistique</div>
+    <div class="quarto-category">Lecture critique</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Une méthode de lecture, d’extraction et de synthèse qui préserve la question scientifique, le dessin d’étude, l’incertitude, les limites et la portée réelle des résultats.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>SYLTRA Consulting </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">8 août 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modifié</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">8 août 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="article-kicker">
+<p><strong>Publication 12 · Niveau intermédiaire · Thème : lecture critique et synthèse scientifique</strong></p>
+</div>
+<section id="lidée-essentielle" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="lidée-essentielle"><span class="header-section-number">1</span> L’idée essentielle</h2>
+<p>Un bon résumé scientifique n’est pas une version plus courte de l’article. C’est une reconstruction fidèle de son raisonnement.</p>
+<p>Il doit permettre au lecteur de répondre à six questions :</p>
+<ol type="1">
+<li>Quel problème les auteurs cherchent-ils à résoudre ?</li>
+<li>Quelle question précise ont-ils effectivement étudiée ?</li>
+<li>Par quel dessin et quelles données ont-ils tenté d’y répondre ?</li>
+<li>Quels résultats ont-ils observés, avec quelle incertitude ?</li>
+<li>Quelles limites restreignent l’interprétation ?</li>
+<li>Dans quelles conditions ces résultats peuvent-ils être utilisés ?</li>
+</ol>
+<p>Lorsque l’on résume uniquement l’introduction et la conclusion, on risque de conserver la promesse de l’article tout en perdant les conditions qui rendent cette promesse crédible ou fragile. L’intelligence artificielle accentue ce danger parce qu’elle produit facilement un texte fluide, compact et affirmatif. La fluidité ne garantit ni la fidélité, ni la qualité méthodologique.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Erreur fréquente">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Avertissement</span>Erreur fréquente
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un résumé qui dit seulement « l’étude montre que X améliore Y » supprime presque toujours des informations décisives : population, comparateur, temporalité, taille d’effet, incertitude, ajustements, données manquantes, multiplicité et limites du dessin.</p>
+</div>
+</div>
+</section>
+<section id="la-question-scientifique-est-la-colonne-vertébrale" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="la-question-scientifique-est-la-colonne-vertébrale"><span class="header-section-number">2</span> La question scientifique est la colonne vertébrale</h2>
+<section id="distinguer-le-thème-lobjectif-et-la-question" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="distinguer-le-thème-lobjectif-et-la-question"><span class="header-section-number">2.1</span> Distinguer le thème, l’objectif et la question</h3>
+<p>Le <strong>thème</strong> est large : pollution atmosphérique et santé respiratoire.</p>
+<p>L’<strong>objectif déclaré</strong> peut rester général : étudier l’association entre pollution et exacerbations d’asthme.</p>
+<p>La <strong>question effectivement testée</strong> est plus précise : chez des adultes suivis dans trois villes, l’augmentation quotidienne des particules fines est-elle associée au nombre d’exacerbations enregistrées dans les sept jours suivants, après ajustement sur la température, la saison et les infections respiratoires ?</p>
+<p>Résumer sans cette précision crée une illusion de généralité. Le résultat ne porte pas sur « la pollution » en tout lieu, toute durée et toute population. Il porte sur une exposition définie, une mesure particulière, une fenêtre temporelle, une population et un modèle d’analyse.</p>
+</section>
+<section id="reconstruire-la-question-avec-un-cadre-adapté" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="reconstruire-la-question-avec-un-cadre-adapté"><span class="header-section-number">2.2</span> Reconstruire la question avec un cadre adapté</h3>
+<p>Les cadres PICO, PECO, SPIDER ou PICOT sont utiles, mais ils ne doivent pas être appliqués mécaniquement.</p>
+<p><strong>PICO/PICOT</strong> convient souvent aux interventions :</p>
+<ul>
+<li>Population ;</li>
+<li>Intervention ;</li>
+<li>Comparateur ;</li>
+<li>Outcome ou critère de jugement ;</li>
+<li>Temps.</li>
+</ul>
+<p><strong>PECO</strong> convient aux expositions :</p>
+<ul>
+<li>Population ;</li>
+<li>Exposition ;</li>
+<li>Comparateur ;</li>
+<li>Outcome.</li>
+</ul>
+<p><strong>SPIDER</strong> peut être utile pour des études qualitatives :</p>
+<ul>
+<li>Sample ;</li>
+<li>Phenomenon of Interest ;</li>
+<li>Design ;</li>
+<li>Evaluation ;</li>
+<li>Research type.</li>
+</ul>
+<p>Pour les études prédictives, ajoutez :</p>
+<ul>
+<li>population cible ;</li>
+<li>instant de prédiction ;</li>
+<li>horizon ;</li>
+<li>événement ;</li>
+<li>prédicteurs disponibles à cet instant ;</li>
+<li>stratégie de validation ;</li>
+<li>métriques de performance ;</li>
+<li>usage prévu.</li>
+</ul>
+<p>Pour les études diagnostiques, précisez :</p>
+<ul>
+<li>test index ;</li>
+<li>standard de référence ;</li>
+<li>population et spectre clinique ;</li>
+<li>seuil ;</li>
+<li>conditions de lecture ;</li>
+<li>délai entre tests.</li>
+</ul>
+</section>
+</section>
+<section id="lire-dans-un-ordre-qui-protège-contre-leffet-de-cadrage" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="lire-dans-un-ordre-qui-protège-contre-leffet-de-cadrage"><span class="header-section-number">3</span> Lire dans un ordre qui protège contre l’effet de cadrage</h2>
+<p>Lire un article de la première à la dernière ligne favorise parfois l’adhésion au récit des auteurs. Une lecture critique peut suivre un ordre différent.</p>
+<section id="passage-1-titre-résumé-et-figures" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="passage-1-titre-résumé-et-figures"><span class="header-section-number">3.1</span> Passage 1 — Titre, résumé et figures</h3>
+<p>L’objectif est de comprendre la promesse et la structure générale, sans conclure.</p>
+<p>Notez :</p>
+<ul>
+<li>la question annoncée ;</li>
+<li>le résultat principal revendiqué ;</li>
+<li>les figures centrales ;</li>
+<li>les termes qui demandent une définition.</li>
+</ul>
+</section>
+<section id="passage-2-méthodes" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="passage-2-méthodes"><span class="header-section-number">3.2</span> Passage 2 — Méthodes</h3>
+<p>Avant de lire la discussion, déterminez ce que le dessin permet réellement d’estimer.</p>
+<p>Examinez :</p>
+<ul>
+<li>la provenance de la population ;</li>
+<li>les critères d’inclusion et d’exclusion ;</li>
+<li>la mesure de l’exposition ou de l’intervention ;</li>
+<li>la définition des critères de jugement ;</li>
+<li>la durée de suivi ;</li>
+<li>les comparateurs ;</li>
+<li>les facteurs de confusion ;</li>
+<li>les données manquantes ;</li>
+<li>le plan d’analyse ;</li>
+<li>les analyses de sensibilité ;</li>
+<li>les écarts au protocole.</li>
+</ul>
+</section>
+<section id="passage-3-résultats" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="passage-3-résultats"><span class="header-section-number">3.3</span> Passage 3 — Résultats</h3>
+<p>Relevez les nombres nécessaires à l’interprétation. Évitez les adjectifs comme « important », « marqué » ou « prometteur » tant que la taille d’effet et son incertitude ne sont pas établies.</p>
+</section>
+<section id="passage-4-discussion" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="passage-4-discussion"><span class="header-section-number">3.4</span> Passage 4 — Discussion</h3>
+<p>Comparez les conclusions des auteurs à ce que vous aviez déduit des méthodes et résultats. Repérez :</p>
+<ul>
+<li>les inférences causales non justifiées ;</li>
+<li>les généralisations au-delà de la population ;</li>
+<li>la confusion entre absence de preuve et preuve d’absence ;</li>
+<li>la mise en avant d’analyses secondaires ;</li>
+<li>les limites reconnues et celles qui restent implicites.</li>
+</ul>
+</section>
+</section>
+<section id="extraire-avant-de-rédiger" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="extraire-avant-de-rédiger"><span class="header-section-number">4</span> Extraire avant de rédiger</h2>
+<p>La synthèse est plus fiable lorsque l’extraction est séparée de la rédaction.</p>
+<section id="matrice-minimale-dextraction" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="matrice-minimale-dextraction"><span class="header-section-number">4.1</span> Matrice minimale d’extraction</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Domaine</th>
+<th>Informations à relever</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Référence</td>
+<td>Auteurs, année, revue, DOI, financement</td>
+</tr>
+<tr class="even">
+<td>Question</td>
+<td>Population, exposition/intervention, comparateur, outcome, temps</td>
+</tr>
+<tr class="odd">
+<td>Dessin</td>
+<td>Essai, cohorte, cas-témoins, transversal, qualitatif, prédictif, etc.</td>
+</tr>
+<tr class="even">
+<td>Échantillon</td>
+<td>Taille planifiée, incluse, analysée, attrition</td>
+</tr>
+<tr class="odd">
+<td>Mesures</td>
+<td>Définitions, instruments, seuils, calendrier</td>
+</tr>
+<tr class="even">
+<td>Analyse</td>
+<td>Modèles, ajustements, hypothèses, multiplicité</td>
+</tr>
+<tr class="odd">
+<td>Résultat principal</td>
+<td>Estimateur, intervalle de confiance, unité, période</td>
+</tr>
+<tr class="even">
+<td>Résultats secondaires</td>
+<td>Seulement ceux nécessaires à la question</td>
+</tr>
+<tr class="odd">
+<td>Robustesse</td>
+<td>Sensibilités, sous-groupes, validation</td>
+</tr>
+<tr class="even">
+<td>Limites</td>
+<td>Biais possibles et direction probable</td>
+</tr>
+<tr class="odd">
+<td>Applicabilité</td>
+<td>Population et contexte auxquels l’étude peut raisonnablement s’appliquer</td>
+</tr>
+</tbody>
+</table>
+<p>Ne commencez pas par écrire un paragraphe. Remplissez d’abord cette matrice avec des éléments traçables vers les pages, tableaux ou figures.</p>
+</section>
+</section>
+<section id="résumer-selon-le-dessin-détude" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="résumer-selon-le-dessin-détude"><span class="header-section-number">5</span> Résumer selon le dessin d’étude</h2>
+<section id="essai-randomisé" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="essai-randomisé"><span class="header-section-number">5.1</span> Essai randomisé</h3>
+<p>Un résumé d’essai doit préciser :</p>
+<ul>
+<li>unité de randomisation ;</li>
+<li>intervention et comparateur ;</li>
+<li>dissimulation de l’allocation ;</li>
+<li>aveugle lorsque pertinent ;</li>
+<li>critère principal préspécifié ;</li>
+<li>population d’analyse ;</li>
+<li>pertes de suivi ;</li>
+<li>taille d’effet absolue et relative ;</li>
+<li>événements indésirables ;</li>
+<li>durée ;</li>
+<li>protocole et enregistrement.</li>
+</ul>
+<p>La mise à jour CONSORT 2025 fournit une ligne directrice actuelle pour le rapport des essais randomisés. Elle ne remplace pas l’évaluation critique, mais aide à vérifier que les éléments nécessaires sont rapportés.</p>
+</section>
+<section id="cohorte-observationnelle" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="cohorte-observationnelle"><span class="header-section-number">5.2</span> Cohorte observationnelle</h3>
+<p>Relevez :</p>
+<ul>
+<li>origine des groupes ;</li>
+<li>temporalité exposition–événement ;</li>
+<li>mesure initiale des facteurs de confusion ;</li>
+<li>modifications d’exposition ;</li>
+<li>pertes de suivi ;</li>
+<li>risque de confusion résiduelle ;</li>
+<li>ajustements et justification ;</li>
+<li>éventuelle causalité inverse.</li>
+</ul>
+<p>La ligne directrice STROBE aide à examiner le rapport des études observationnelles, sans constituer à elle seule une grille de qualité.</p>
+</section>
+<section id="étude-cas-témoins" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="étude-cas-témoins"><span class="header-section-number">5.3</span> Étude cas-témoins</h3>
+<p>Le choix des témoins est central. Ils doivent représenter la population source dont proviennent les cas. Un résumé qui ignore ce point peut rendre crédible une comparaison structurellement biaisée.</p>
+<p>Précisez :</p>
+<ul>
+<li>définition et recrutement des cas ;</li>
+<li>source des témoins ;</li>
+<li>période d’éligibilité ;</li>
+<li>mesure rétrospective de l’exposition ;</li>
+<li>appariement ;</li>
+<li>modèle conditionnel ou non ;</li>
+<li>interprétation de l’odds ratio.</li>
+</ul>
+</section>
+<section id="étude-transversale" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="étude-transversale"><span class="header-section-number">5.4</span> Étude transversale</h3>
+<p>Elle mesure exposition et résultat sur une période proche. La temporalité est souvent insuffisante pour établir le sens de la relation. Évitez d’écrire qu’un facteur « augmente » ou « réduit » un phénomène lorsqu’une simple association de prévalence a été estimée.</p>
+</section>
+<section id="étude-qualitative" class="level3" data-number="5.5">
+<h3 data-number="5.5" class="anchored" data-anchor-id="étude-qualitative"><span class="header-section-number">5.5</span> Étude qualitative</h3>
+<p>Un résumé ne doit pas réduire les résultats à une liste de thèmes. Il doit préciser :</p>
+<ul>
+<li>approche épistémologique ;</li>
+<li>stratégie d’échantillonnage ;</li>
+<li>contexte ;</li>
+<li>collecte ;</li>
+<li>rôle des chercheurs ;</li>
+<li>méthode d’analyse ;</li>
+<li>recherche de cas négatifs ;</li>
+<li>saturation ou suffisance informationnelle ;</li>
+<li>éléments de verbatim soutenant l’interprétation.</li>
+</ul>
+</section>
+<section id="étude-de-prédiction" class="level3" data-number="5.6">
+<h3 data-number="5.6" class="anchored" data-anchor-id="étude-de-prédiction"><span class="header-section-number">5.6</span> Étude de prédiction</h3>
+<p>Distinguez développement, validation interne et validation externe. Une performance sur les données de développement ne démontre pas l’utilité dans une autre population.</p>
+<p>Relevez :</p>
+<ul>
+<li>nombre d’événements ;</li>
+<li>gestion des prédicteurs ;</li>
+<li>prévention du surapprentissage ;</li>
+<li>discrimination ;</li>
+<li>calibration ;</li>
+<li>performance clinique ;</li>
+<li>traitement des données manquantes ;</li>
+<li>disponibilité réelle des prédicteurs au moment d’usage.</li>
+</ul>
+</section>
+<section id="revue-systématique-et-méta-analyse" class="level3" data-number="5.7">
+<h3 data-number="5.7" class="anchored" data-anchor-id="revue-systématique-et-méta-analyse"><span class="header-section-number">5.7</span> Revue systématique et méta-analyse</h3>
+<p>PRISMA 2020 structure le rapport d’une revue systématique : question, critères, sources, stratégie de recherche, sélection, extraction, risque de biais, synthèse et flux des études.</p>
+<p>Un résumé utile indique :</p>
+<ul>
+<li>date de recherche ;</li>
+<li>bases interrogées ;</li>
+<li>critères d’éligibilité ;</li>
+<li>nombre d’études ;</li>
+<li>hétérogénéité clinique et méthodologique ;</li>
+<li>modèle de synthèse ;</li>
+<li>risque de biais ;</li>
+<li>certitude des preuves ;</li>
+<li>éventuels biais de publication.</li>
+</ul>
+</section>
+</section>
+<section id="préserver-la-hiérarchie-entre-résultat-et-interprétation" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="préserver-la-hiérarchie-entre-résultat-et-interprétation"><span class="header-section-number">6</span> Préserver la hiérarchie entre résultat et interprétation</h2>
+<section id="quatre-niveaux-à-ne-pas-confondre" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="quatre-niveaux-à-ne-pas-confondre"><span class="header-section-number">6.1</span> Quatre niveaux à ne pas confondre</h3>
+<ol type="1">
+<li><strong>Observation :</strong> ce qui est mesuré dans l’échantillon.</li>
+<li><strong>Estimation :</strong> ce que le modèle attribue à la population cible, avec incertitude.</li>
+<li><strong>Interprétation :</strong> le sens proposé au regard du dessin et du contexte.</li>
+<li><strong>Décision :</strong> l’action envisagée en combinant preuves, valeurs, coûts et contraintes.</li>
+</ol>
+<p>Exemple :</p>
+<ul>
+<li>observation : le groupe intervention a présenté 12 événements contre 20 ;</li>
+<li>estimation : risque relatif 0,60, intervalle de confiance donné ;</li>
+<li>interprétation : l’intervention pourrait réduire le risque dans la population étudiée ;</li>
+<li>décision : adoption éventuelle après examen des effets indésirables, coûts et transférabilité.</li>
+</ul>
+<p>Une IA peut fusionner ces niveaux en une phrase trop forte. Le résumé doit les maintenir séparés.</p>
+</section>
+</section>
+<section id="quantifier-sans-déformer" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="quantifier-sans-déformer"><span class="header-section-number">7</span> Quantifier sans déformer</h2>
+<section id="taille-deffet-avant-significativité" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="taille-deffet-avant-significativité"><span class="header-section-number">7.1</span> Taille d’effet avant significativité</h3>
+<p>La valeur de <em>p</em> ne décrit ni l’ampleur, ni l’importance pratique. Présentez l’estimation et l’intervalle de confiance.</p>
+<p>Pour un événement binaire, l’effet relatif peut sembler spectaculaire lorsque le risque de base est faible. Ajoutez si possible :</p>
+<ul>
+<li>risque dans chaque groupe ;</li>
+<li>différence absolue ;</li>
+<li>nombre nécessaire à traiter, avec prudence ;</li>
+<li>durée de suivi.</li>
+</ul>
+<p>Pour une variable continue, précisez :</p>
+<ul>
+<li>unité ;</li>
+<li>différence moyenne ;</li>
+<li>variabilité ;</li>
+<li>signification clinique ou opérationnelle ;</li>
+<li>éventuelle transformation.</li>
+</ul>
+</section>
+<section id="résultat-non-significatif" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="résultat-non-significatif"><span class="header-section-number">7.2</span> Résultat non significatif</h3>
+<p>N’écrivez pas « il n’y a pas d’effet » sauf si le dessin et l’analyse ont réellement évalué une équivalence ou une non-infériorité avec des marges justifiées.</p>
+<p>Préférez :</p>
+<blockquote class="blockquote">
+<p>L’estimation est compatible avec une réduction modérée, une absence d’effet ou une augmentation légère ; l’étude ne permet pas de distinguer ces possibilités avec précision.</p>
+</blockquote>
+</section>
+<section id="multiplicité" class="level3" data-number="7.3">
+<h3 data-number="7.3" class="anchored" data-anchor-id="multiplicité"><span class="header-section-number">7.3</span> Multiplicité</h3>
+<p>Un article peut tester de nombreux critères, sous-groupes et temps. Le résumé doit identifier le résultat préspécifié et signaler les analyses exploratoires. Une conclusion fondée sur le test le plus favorable parmi des dizaines de comparaisons est fragile.</p>
+</section>
+</section>
+<section id="examiner-les-biais-comme-des-mécanismes" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="examiner-les-biais-comme-des-mécanismes"><span class="header-section-number">8</span> Examiner les biais comme des mécanismes</h2>
+<p>Une liste générique de biais n’aide pas. Décrivez le mécanisme, la variable touchée et la direction probable.</p>
+<section id="biais-de-sélection" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="biais-de-sélection"><span class="header-section-number">8.1</span> Biais de sélection</h3>
+<p>Question : l’inclusion ou le maintien dans l’étude dépend-il conjointement de l’exposition et du résultat ?</p>
+<p>Conséquence possible : les groupes analysés ne représentent plus la comparaison cible.</p>
+</section>
+<section id="biais-de-mesure" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="biais-de-mesure"><span class="header-section-number">8.2</span> Biais de mesure</h3>
+<p>Question : la mesure diffère-t-elle entre groupes ou comporte-t-elle une erreur liée au résultat ?</p>
+<p>Conséquence : dilution, amplification ou création d’une association.</p>
+</section>
+<section id="confusion" class="level3" data-number="8.3">
+<h3 data-number="8.3" class="anchored" data-anchor-id="confusion"><span class="header-section-number">8.3</span> Confusion</h3>
+<p>Question : un facteur antérieur influence-t-il à la fois l’exposition et le résultat ?</p>
+<p>Conséquence : une partie de l’association observée est attribuable à ce facteur.</p>
+</section>
+<section id="données-manquantes" class="level3" data-number="8.4">
+<h3 data-number="8.4" class="anchored" data-anchor-id="données-manquantes"><span class="header-section-number">8.4</span> Données manquantes</h3>
+<p>Question : pourquoi les données manquent-elles et ce mécanisme dépend-il de valeurs non observées ?</p>
+<p>Conséquence : la suppression des dossiers incomplets ou une imputation mal spécifiée peut déplacer l’estimation.</p>
+</section>
+<section id="biais-de-publication-et-de-rapport" class="level3" data-number="8.5">
+<h3 data-number="8.5" class="anchored" data-anchor-id="biais-de-publication-et-de-rapport"><span class="header-section-number">8.5</span> Biais de publication et de rapport</h3>
+<p>Question : les résultats positifs, certains critères ou certaines analyses ont-ils plus de chances d’être publiés ?</p>
+<p>Conséquence : l’image disponible de la preuve devient trop favorable.</p>
+</section>
+</section>
+<section id="évaluer-lapplicabilité" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="évaluer-lapplicabilité"><span class="header-section-number">9</span> Évaluer l’applicabilité</h2>
+<p>Un résultat crédible dans l’échantillon n’est pas automatiquement applicable ailleurs.</p>
+<p>Examinez :</p>
+<ul>
+<li>proximité de la population cible ;</li>
+<li>système de soins ou environnement ;</li>
+<li>période ;</li>
+<li>compétences nécessaires ;</li>
+<li>ressources ;</li>
+<li>définition des résultats ;</li>
+<li>acceptabilité ;</li>
+<li>risques ;</li>
+<li>distribution des facteurs pronostiques ;</li>
+<li>différences de prise en charge.</li>
+</ul>
+<p>La question n’est pas « l’étude est-elle généralisable ? » de manière binaire. Demandez plutôt : « Quel mécanisme pourrait changer lorsque le contexte change ? »</p>
+</section>
+<section id="utiliser-lia-sans-perdre-le-contrôle" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="utiliser-lia-sans-perdre-le-contrôle"><span class="header-section-number">10</span> Utiliser l’IA sans perdre le contrôle</h2>
+<section id="tâches-utiles" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="tâches-utiles"><span class="header-section-number">10.1</span> Tâches utiles</h3>
+<p>L’IA peut aider à :</p>
+<ul>
+<li>transformer une question en grille d’extraction ;</li>
+<li>expliquer un terme méthodologique ;</li>
+<li>comparer deux formulations ;</li>
+<li>repérer les affirmations nécessitant une preuve ;</li>
+<li>produire des questions de lecture ;</li>
+<li>convertir une extraction en tableau ;</li>
+<li>vérifier la cohérence entre chiffres rapportés ;</li>
+<li>générer une version courte après validation du contenu.</li>
+</ul>
+</section>
+<section id="tâches-risquées" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="tâches-risquées"><span class="header-section-number">10.2</span> Tâches risquées</h3>
+<p>Elle ne doit pas être considérée comme source fiable pour :</p>
+<ul>
+<li>inventer une référence ;</li>
+<li>attribuer une méthode non explicitée ;</li>
+<li>déduire un résultat absent ;</li>
+<li>juger la qualité sans accès complet à l’article ;</li>
+<li>résumer un PDF mal extrait ;</li>
+<li>remplacer l’examen des tableaux et figures ;</li>
+<li>décider de la portée causale ;</li>
+<li>évaluer seule le risque de biais.</li>
+</ul>
+</section>
+<section id="prompt-de-synthèse-contrôlée" class="level3" data-number="10.3">
+<h3 data-number="10.3" class="anchored" data-anchor-id="prompt-de-synthèse-contrôlée"><span class="header-section-number">10.3</span> Prompt de synthèse contrôlée</h3>
+<pre class="text"><code>Travaille uniquement à partir du texte fourni. Ne complète aucune information.
+Structure la réponse en :
+1. question étudiée ;
+2. dessin et population ;
+3. exposition/intervention et comparateur ;
+4. critère principal ;
+5. analyse ;
+6. résultat principal avec nombres ;
+7. limites explicitement mentionnées ;
+8. éléments absents nécessaires à l’interprétation.
+Pour chaque point, indique la page ou la section. Utilise « non rapporté » quand
+l’information n’est pas disponible. Ne formule aucune recommandation.</code></pre>
+<p>Ce prompt réduit le risque de remplissage automatique, mais ne supprime pas la nécessité d’une vérification humaine.</p>
+</section>
+</section>
+<section id="trois-formats-de-résumé" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="trois-formats-de-résumé"><span class="header-section-number">11</span> Trois formats de résumé</h2>
+<section id="le-résumé-de-150-mots" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="le-résumé-de-150-mots"><span class="header-section-number">11.1</span> Le résumé de 150 mots</h3>
+<p>Utilité : veille rapide ou sélection initiale.</p>
+<p>Structure :</p>
+<ol type="1">
+<li>question ;</li>
+<li>dessin et échantillon ;</li>
+<li>résultat principal ;</li>
+<li>limite majeure ;</li>
+<li>portée.</li>
+</ol>
+</section>
+<section id="la-synthèse-critique-dune-page" class="level3" data-number="11.2">
+<h3 data-number="11.2" class="anchored" data-anchor-id="la-synthèse-critique-dune-page"><span class="header-section-number">11.2</span> La synthèse critique d’une page</h3>
+<p>Utilité : réunion scientifique, journal club, décision préliminaire.</p>
+<p>Ajoutez :</p>
+<ul>
+<li>méthode d’analyse ;</li>
+<li>taille d’effet ;</li>
+<li>risque de biais ;</li>
+<li>cohérence avec d’autres preuves ;</li>
+<li>implications conditionnelles.</li>
+</ul>
+</section>
+<section id="la-fiche-dextraction-détaillée" class="level3" data-number="11.3">
+<h3 data-number="11.3" class="anchored" data-anchor-id="la-fiche-dextraction-détaillée"><span class="header-section-number">11.3</span> La fiche d’extraction détaillée</h3>
+<p>Utilité : revue systématique, thèse, recommandation ou expertise.</p>
+<p>Elle doit être structurée, versionnée et suffisamment précise pour qu’une autre personne puisse vérifier chaque élément.</p>
+</section>
+</section>
+<section id="exemple-commenté" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="exemple-commenté"><span class="header-section-number">12</span> Exemple commenté</h2>
+<section id="résumé-faible" class="level3" data-number="12.1">
+<h3 data-number="12.1" class="anchored" data-anchor-id="résumé-faible"><span class="header-section-number">12.1</span> Résumé faible</h3>
+<blockquote class="blockquote">
+<p>Cette étude montre que le télétravail améliore la productivité et le bien-être des employés.</p>
+</blockquote>
+<p>Problèmes :</p>
+<ul>
+<li>dessin inconnu ;</li>
+<li>définition de la productivité absente ;</li>
+<li>sélection des employés inconnue ;</li>
+<li>durée absente ;</li>
+<li>taille d’effet absente ;</li>
+<li>confusion possible ;</li>
+<li>causalité affirmée ;</li>
+<li>conditions de télétravail non précisées.</li>
+</ul>
+</section>
+<section id="résumé-reconstruit" class="level3" data-number="12.2">
+<h3 data-number="12.2" class="anchored" data-anchor-id="résumé-reconstruit"><span class="header-section-number">12.2</span> Résumé reconstruit</h3>
+<blockquote class="blockquote">
+<p>Dans une cohorte prospective d’employés volontaires de quatre entreprises technologiques, les auteurs ont comparé l’évolution sur six mois d’un indicateur interne de production et d’un score auto-rapporté de bien-être selon le nombre de jours télétravaillés. Après ajustement sur le poste, l’ancienneté et le score initial, une fréquence plus élevée était associée à une variation moyenne favorable des deux indicateurs. L’étude ne randomisait pas l’exposition, reposait en partie sur une mesure déclarative et concernait un secteur disposant d’une forte infrastructure numérique. Elle soutient une association dans ce contexte, mais ne permet pas de conclure qu’une politique identique produirait le même effet dans d’autres métiers.</p>
+</blockquote>
+<p>Ce résumé est plus long, mais il évite une conclusion trompeuse.</p>
+</section>
+</section>
+<section id="grille-de-contrôle-avant-publication" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="grille-de-contrôle-avant-publication"><span class="header-section-number">13</span> Grille de contrôle avant publication</h2>
+<section id="fidélité" class="level3" data-number="13.1">
+<h3 data-number="13.1" class="anchored" data-anchor-id="fidélité"><span class="header-section-number">13.1</span> Fidélité</h3>
+<ul>
+<li>La question est-elle celle réellement étudiée ?</li>
+<li>Les résultats viennent-ils du critère principal ?</li>
+<li>Les nombres correspondent-ils aux tableaux ?</li>
+<li>Les auteurs distinguent-ils analyses préspécifiées et exploratoires ?</li>
+<li>Les absences d’information sont-elles signalées ?</li>
+</ul>
+</section>
+<section id="méthodologie" class="level3" data-number="13.2">
+<h3 data-number="13.2" class="anchored" data-anchor-id="méthodologie"><span class="header-section-number">13.2</span> Méthodologie</h3>
+<ul>
+<li>Le dessin est-il correctement nommé ?</li>
+<li>La population source est-elle décrite ?</li>
+<li>Les mesures sont-elles définies ?</li>
+<li>Les ajustements sont-ils présentés sans les interpréter comme une garantie ?</li>
+<li>Les limites découlent-elles de mécanismes plausibles ?</li>
+</ul>
+</section>
+<section id="langage" class="level3" data-number="13.3">
+<h3 data-number="13.3" class="anchored" data-anchor-id="langage"><span class="header-section-number">13.3</span> Langage</h3>
+<ul>
+<li>Les verbes causaux sont-ils justifiés ?</li>
+<li>« Prouve » a-t-il été évité ?</li>
+<li>« Pas de différence » est-il remplacé par une formulation tenant compte de l’incertitude ?</li>
+<li>Les adjectifs promotionnels ont-ils été supprimés ?</li>
+<li>La portée est-elle proportionnée ?</li>
+</ul>
+</section>
+<section id="transparence" class="level3" data-number="13.4">
+<h3 data-number="13.4" class="anchored" data-anchor-id="transparence"><span class="header-section-number">13.4</span> Transparence</h3>
+<ul>
+<li>Les financements et conflits d’intérêts sont-ils notés ?</li>
+<li>Le protocole est-il disponible ?</li>
+<li>Le code ou les données sont-ils accessibles ?</li>
+<li>L’usage éventuel de l’IA est-il déclaré selon les règles applicables ?</li>
+</ul>
+</section>
+</section>
+<section id="lignes-directrices-utiles" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="lignes-directrices-utiles"><span class="header-section-number">14</span> Lignes directrices utiles</h2>
+<p>Les lignes directrices de rapport ne sont pas des scores de qualité. Elles indiquent ce qui devrait être décrit pour que le lecteur puisse comprendre et évaluer une étude.</p>
+<ul>
+<li><strong>CONSORT 2025</strong> : essais randomisés ;</li>
+<li><strong>STROBE</strong> : études observationnelles ;</li>
+<li><strong>PRISMA 2020</strong> : revues systématiques ;</li>
+<li><strong>TRIPOD</strong> : modèles de prédiction ;</li>
+<li><strong>STARD</strong> : études d’exactitude diagnostique ;</li>
+<li><strong>COREQ</strong> : entretiens et groupes de discussion qualitatifs ;</li>
+<li><strong>CARE</strong> : cas cliniques ;</li>
+<li><strong>ARRIVE</strong> : recherche animale ;</li>
+<li><strong>CHEERS</strong> : évaluations économiques.</li>
+</ul>
+<p>Le répertoire EQUATOR aide à identifier la ligne directrice adaptée au dessin.</p>
+</section>
+<section id="une-méthode-de-travail-reproductible-en-douze-étapes" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="une-méthode-de-travail-reproductible-en-douze-étapes"><span class="header-section-number">15</span> Une méthode de travail reproductible en douze étapes</h2>
+<ol type="1">
+<li>Enregistrer la référence et le PDF.</li>
+<li>Identifier la version de l’article.</li>
+<li>Lire le protocole ou l’enregistrement si disponible.</li>
+<li>Reformuler la question sans reprendre les conclusions.</li>
+<li>Identifier le dessin.</li>
+<li>Extraire les caractéristiques de la population.</li>
+<li>Définir exposition, intervention, comparateur et outcome.</li>
+<li>Extraire le résultat principal avec incertitude.</li>
+<li>Décrire les analyses de robustesse.</li>
+<li>Cartographier les biais.</li>
+<li>Évaluer l’applicabilité.</li>
+<li>Rédiger puis vérifier chaque phrase contre la source.</li>
+</ol>
+</section>
+<section id="annexe-modèle-de-fiche-de-synthèse-scientifique" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="annexe-modèle-de-fiche-de-synthèse-scientifique"><span class="header-section-number">16</span> Annexe — Modèle de fiche de synthèse scientifique</h2>
+<section id="référence-complète" class="level3" data-number="16.1">
+<h3 data-number="16.1" class="anchored" data-anchor-id="référence-complète"><span class="header-section-number">16.1</span> Référence complète</h3>
+<ul>
+<li>Auteurs :</li>
+<li>Titre :</li>
+<li>Revue :</li>
+<li>Année :</li>
+<li>DOI :</li>
+<li>Version :</li>
+<li>Financement :</li>
+<li>Conflits d’intérêts :</li>
+</ul>
+</section>
+<section id="question" class="level3" data-number="16.2">
+<h3 data-number="16.2" class="anchored" data-anchor-id="question"><span class="header-section-number">16.2</span> Question</h3>
+<ul>
+<li>Problème :</li>
+<li>Population cible :</li>
+<li>Population étudiée :</li>
+<li>Intervention ou exposition :</li>
+<li>Comparateur :</li>
+<li>Critère principal :</li>
+<li>Horizon :</li>
+<li>Estimand ou quantité d’intérêt :</li>
+</ul>
+</section>
+<section id="méthodes" class="level3" data-number="16.3">
+<h3 data-number="16.3" class="anchored" data-anchor-id="méthodes"><span class="header-section-number">16.3</span> Méthodes</h3>
+<ul>
+<li>Dessin :</li>
+<li>Cadre :</li>
+<li>Recrutement :</li>
+<li>Taille prévue :</li>
+<li>Taille analysée :</li>
+<li>Mesures :</li>
+<li>Calendrier :</li>
+<li>Modèle statistique :</li>
+<li>Ajustements :</li>
+<li>Données manquantes :</li>
+<li>Analyses secondaires :</li>
+<li>Sensibilités :</li>
+</ul>
+</section>
+<section id="résultats" class="level3" data-number="16.4">
+<h3 data-number="16.4" class="anchored" data-anchor-id="résultats"><span class="header-section-number">16.4</span> Résultats</h3>
+<ul>
+<li>Flux des participants :</li>
+<li>Résultat principal :</li>
+<li>Intervalle de confiance :</li>
+<li>Résultats absolus :</li>
+<li>Effets indésirables :</li>
+<li>Hétérogénéité :</li>
+<li>Sous-groupes :</li>
+<li>Robustesse :</li>
+</ul>
+</section>
+<section id="interprétation" class="level3" data-number="16.5">
+<h3 data-number="16.5" class="anchored" data-anchor-id="interprétation"><span class="header-section-number">16.5</span> Interprétation</h3>
+<ul>
+<li>Conclusion directement soutenue :</li>
+<li>Conclusion non soutenue :</li>
+<li>Biais principal :</li>
+<li>Direction probable :</li>
+<li>Transférabilité :</li>
+<li>Information manquante la plus importante :</li>
+<li>Étude suivante nécessaire :</li>
+</ul>
+</section>
+</section>
+<section id="conclusion" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">17</span> Conclusion</h2>
+<p>Résumer un article scientifique exige davantage que réduire son nombre de mots. Il faut préserver la structure logique qui relie une question à un dessin, des données à une estimation, une estimation à une interprétation et une interprétation à une décision.</p>
+<p>L’intelligence artificielle peut accélérer l’extraction et la mise en forme, mais elle tend à combler les vides, lisser les contradictions et renforcer les conclusions. La méthode la plus sûre consiste à séparer extraction, évaluation et rédaction, puis à rendre chaque phrase traçable vers la source.</p>
+<p>Un résumé de référence ne donne pas seulement envie de croire un résultat. Il permet de comprendre exactement pourquoi on pourrait le croire, jusqu’où et sous quelles réserves.</p>
+<div class="discussion-box">
+<p><strong>Question à la communauté :</strong> quelle information est le plus souvent perdue lorsque vous lisez un résumé automatique d’article scientifique ?</p>
+</div>
+</section>
+<section id="besoin-dun-accompagnement" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="besoin-dun-accompagnement"><span class="header-section-number">18</span> Besoin d’un accompagnement ?</h2>
+<p>SYLTRA Consulting accompagne les laboratoires, entreprises et équipes de recherche dans la lecture critique, les revues de littérature, la biostatistique, la Data Science et l’usage responsable de l’IA.</p>
+<p><a href="../contact.html" class="btn btn-primary">Nous contacter</a></p>
+<div class="post-tags">
+<p>#RechercheScientifique #LectureCritique #Biostatistique #RevueDeLittérature #IAResponsable #SYLTRAConsulting</p>
+</div>
+</section>
+<section id="annexe-avancée-dictionnaire-de-formulations-proportionnées" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="annexe-avancée-dictionnaire-de-formulations-proportionnées"><span class="header-section-number">19</span> Annexe avancée — Dictionnaire de formulations proportionnées</h2>
+<section id="pour-une-association-observationnelle" class="level3" data-number="19.1">
+<h3 data-number="19.1" class="anchored" data-anchor-id="pour-une-association-observationnelle"><span class="header-section-number">19.1</span> Pour une association observationnelle</h3>
+<p>À privilégier :</p>
+<ul>
+<li>« était associé à » ;</li>
+<li>« l’estimation suggère » ;</li>
+<li>« dans la population étudiée » ;</li>
+<li>« après ajustement sur les variables mesurées » ;</li>
+<li>« une confusion résiduelle demeure possible ».</li>
+</ul>
+<p>À éviter sans justification :</p>
+<ul>
+<li>« a entraîné » ;</li>
+<li>« a permis de » ;</li>
+<li>« protège contre » ;</li>
+<li>« est responsable de ».</li>
+</ul>
+</section>
+<section id="pour-un-résultat-imprécis" class="level3" data-number="19.2">
+<h3 data-number="19.2" class="anchored" data-anchor-id="pour-un-résultat-imprécis"><span class="header-section-number">19.2</span> Pour un résultat imprécis</h3>
+<p>À privilégier :</p>
+<ul>
+<li>« l’intervalle reste compatible avec plusieurs amplitudes d’effet » ;</li>
+<li>« l’étude manque de précision pour exclure un effet cliniquement pertinent » ;</li>
+<li>« les données ne permettent pas une conclusion ferme ».</li>
+</ul>
+<p>À éviter :</p>
+<ul>
+<li>« aucun effet » ;</li>
+<li>« les groupes sont identiques » ;</li>
+<li>« l’hypothèse nulle est vraie ».</li>
+</ul>
+</section>
+<section id="pour-une-analyse-de-sous-groupe" class="level3" data-number="19.3">
+<h3 data-number="19.3" class="anchored" data-anchor-id="pour-une-analyse-de-sous-groupe"><span class="header-section-number">19.3</span> Pour une analyse de sous-groupe</h3>
+<p>À privilégier :</p>
+<ul>
+<li>« résultat exploratoire » ;</li>
+<li>« interaction à interpréter avec prudence » ;</li>
+<li>« non préspécifié » ;</li>
+<li>« nécessite confirmation indépendante ».</li>
+</ul>
+</section>
+<section id="pour-une-validation-de-modèle" class="level3" data-number="19.4">
+<h3 data-number="19.4" class="anchored" data-anchor-id="pour-une-validation-de-modèle"><span class="header-section-number">19.4</span> Pour une validation de modèle</h3>
+<p>À privilégier :</p>
+<ul>
+<li>« performance apparente » pour le jeu de développement ;</li>
+<li>« validation interne par rééchantillonnage » ;</li>
+<li>« validation externe temporelle ou géographique » ;</li>
+<li>« calibration insuffisamment documentée ».</li>
+</ul>
+</section>
+<section id="pour-une-revue-systématique" class="level3" data-number="19.5">
+<h3 data-number="19.5" class="anchored" data-anchor-id="pour-une-revue-systématique"><span class="header-section-number">19.5</span> Pour une revue systématique</h3>
+<p>À privilégier :</p>
+<ul>
+<li>« les études disponibles » plutôt que « toutes les études » ;</li>
+<li>« certitude faible/modérée/élevée » selon une méthode explicite ;</li>
+<li>« hétérogénéité limitant la synthèse » ;</li>
+<li>« risque de biais dans les études incluses ».</li>
+</ul>
+</section>
+</section>
+<section id="annexe-contrôle-numérique-rapide" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="annexe-contrôle-numérique-rapide"><span class="header-section-number">20</span> Annexe — Contrôle numérique rapide</h2>
+<p>Avant de finaliser un résumé, vérifiez :</p>
+<ol type="1">
+<li>Les effectifs des groupes s’additionnent-ils ?</li>
+<li>Le nombre analysé correspond-il au diagramme de flux ?</li>
+<li>Les pourcentages sont-ils calculés sur le même dénominateur ?</li>
+<li>L’intervalle de confiance est-il compatible avec la valeur de <em>p</em> annoncée ?</li>
+<li>La direction de l’effet est-elle cohérente entre texte, tableau et figure ?</li>
+<li>Les unités sont-elles les mêmes ?</li>
+<li>Le temps de suivi est-il identique entre groupes ?</li>
+<li>Les analyses ajustées et non ajustées sont-elles distinguées ?</li>
+<li>Le résultat principal est-il clairement séparé des secondaires ?</li>
+<li>Une transformation logarithmique ou standardisation modifie-t-elle l’interprétation ?</li>
+</ol>
+</section>
+<section id="annexe-questions-pour-un-journal-club-exigeant" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="annexe-questions-pour-un-journal-club-exigeant"><span class="header-section-number">21</span> Annexe — Questions pour un journal club exigeant</h2>
+<ul>
+<li>Quelle décision l’étude cherche-t-elle implicitement à influencer ?</li>
+<li>Quel est l’estimand réel ?</li>
+<li>Quelle population source a produit l’échantillon ?</li>
+<li>À quel moment les variables ont-elles été mesurées ?</li>
+<li>Quelle hypothèse non testable est la plus importante ?</li>
+<li>Quel biais pourrait inverser l’interprétation ?</li>
+<li>Quel résultat aurait dû être rapporté en valeur absolue ?</li>
+<li>Une mesure composite masque-t-elle des composantes divergentes ?</li>
+<li>La perte de suivi est-elle compatible avec une analyse non biaisée ?</li>
+<li>Le modèle statistique répond-il à la question ou seulement à une question voisine ?</li>
+<li>Quelle conclusion resterait vraie si l’effet était deux fois plus faible ?</li>
+<li>Quelle réplication serait la plus informative ?</li>
+</ul>
+<p>Ces questions empêchent le résumé de devenir une simple paraphrase de l’abstract.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('a[href^="http"]').forEach(a=>{if(!a.href.includes(location.hostname)){a.rel="noopener noreferrer";a.target="_blank";}});});</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.syltra-consulting\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026–2027 SYLTRA Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>IA utile • Data Science • Biostatistique • Recherche</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="SYLTRA Consulting">
+<meta name="description" content="Un système de lecture scientifique qui transforme chaque article en ressource traçable pour la problématique, la méthode, l’analyse, la discussion et la rédaction de la thèse.">
+
+<title>Créer une fiche de lecture réellement utile pour un doctorant – SYLTRA Consulting</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9080f0b6d81bdf8015e035bfde39d928.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Créer une fiche de lecture réellement utile pour un doctorant – SYLTRA Consulting">
+<meta property="og:description" content="Un système de lecture scientifique qui transforme chaque article en ressource traçable pour la problématique, la méthode, l’analyse, la discussion et la rédaction de la thèse.">
+<meta property="og:image" content="https://blog.syltra-consulting.com/assets/img/posts/j013.svg">
+<meta property="og:site_name" content="SYLTRA Consulting">
+<meta name="twitter:title" content="Créer une fiche de lecture réellement utile pour un doctorant – SYLTRA Consulting">
+<meta name="twitter:description" content="Un système de lecture scientifique qui transforme chaque article en ressource traçable pour la problématique, la méthode, l’analyse, la discussion et la rédaction de la thèse.">
+<meta name="twitter:image" content="https://blog.syltra-consulting.com/assets/img/posts/j013.svg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo light-content">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SYLTRA Consulting</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-domaines" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Domaines</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-domaines">    
+        <li>
+    <a class="dropdown-item" href="../domaines/sante.html">
+ <span class="dropdown-text">Santé &amp; biostatistique</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/recherche.html">
+ <span class="dropdown-text">Recherche</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/banque-finance.html">
+ <span class="dropdown-text">Banque, finance &amp; assurance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/industrie.html">
+ <span class="dropdown-text">Industrie &amp; ingénierie</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/enseignement.html">
+ <span class="dropdown-text">Enseignement &amp; formation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/gouvernance.html">
+ <span class="dropdown-text">Gouvernance &amp; sécurité</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../calendrier.html"> 
+<span class="menu-text">Calendrier</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../a-propos.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/LucienSyTraore"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/syltra-consulting/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Dans cet article</h2>
+   
+  <ul>
+  <li><a href="#lidée-essentielle" id="toc-lidée-essentielle" class="nav-link active" data-scroll-target="#lidée-essentielle"><span class="header-section-number">1</span> L’idée essentielle</a></li>
+  <li><a href="#pourquoi-les-fiches-classiques-échouent" id="toc-pourquoi-les-fiches-classiques-échouent" class="nav-link" data-scroll-target="#pourquoi-les-fiches-classiques-échouent"><span class="header-section-number">2</span> Pourquoi les fiches classiques échouent</a>
+  <ul class="collapse">
+  <li><a href="#elles-résument-larticle-au-lieu-de-soutenir-le-projet" id="toc-elles-résument-larticle-au-lieu-de-soutenir-le-projet" class="nav-link" data-scroll-target="#elles-résument-larticle-au-lieu-de-soutenir-le-projet"><span class="header-section-number">2.1</span> Elles résument l’article au lieu de soutenir le projet</a></li>
+  <li><a href="#elles-stockent-trop-dextraits" id="toc-elles-stockent-trop-dextraits" class="nav-link" data-scroll-target="#elles-stockent-trop-dextraits"><span class="header-section-number">2.2</span> Elles stockent trop d’extraits</a></li>
+  <li><a href="#elles-mélangent-la-voix-de-lauteur-et-celle-du-lecteur" id="toc-elles-mélangent-la-voix-de-lauteur-et-celle-du-lecteur" class="nav-link" data-scroll-target="#elles-mélangent-la-voix-de-lauteur-et-celle-du-lecteur"><span class="header-section-number">2.3</span> Elles mélangent la voix de l’auteur et celle du lecteur</a></li>
+  <li><a href="#elles-ne-sont-jamais-retrouvées" id="toc-elles-ne-sont-jamais-retrouvées" class="nav-link" data-scroll-target="#elles-ne-sont-jamais-retrouvées"><span class="header-section-number">2.4</span> Elles ne sont jamais retrouvées</a></li>
+  </ul></li>
+  <li><a href="#concevoir-la-fiche-à-partir-des-usages-futurs" id="toc-concevoir-la-fiche-à-partir-des-usages-futurs" class="nav-link" data-scroll-target="#concevoir-la-fiche-à-partir-des-usages-futurs"><span class="header-section-number">3</span> Concevoir la fiche à partir des usages futurs</a></li>
+  <li><a href="#les-quatre-couches-dune-fiche-robuste" id="toc-les-quatre-couches-dune-fiche-robuste" class="nav-link" data-scroll-target="#les-quatre-couches-dune-fiche-robuste"><span class="header-section-number">4</span> Les quatre couches d’une fiche robuste</a>
+  <ul class="collapse">
+  <li><a href="#couche-1-identité-et-traçabilité" id="toc-couche-1-identité-et-traçabilité" class="nav-link" data-scroll-target="#couche-1-identité-et-traçabilité"><span class="header-section-number">4.1</span> Couche 1 — Identité et traçabilité</a></li>
+  <li><a href="#couche-2-reconstruction-scientifique" id="toc-couche-2-reconstruction-scientifique" class="nav-link" data-scroll-target="#couche-2-reconstruction-scientifique"><span class="header-section-number">4.2</span> Couche 2 — Reconstruction scientifique</a></li>
+  <li><a href="#couche-3-évaluation-critique" id="toc-couche-3-évaluation-critique" class="nav-link" data-scroll-target="#couche-3-évaluation-critique"><span class="header-section-number">4.3</span> Couche 3 — Évaluation critique</a></li>
+  <li><a href="#couche-4-utilité-pour-la-thèse" id="toc-couche-4-utilité-pour-la-thèse" class="nav-link" data-scroll-target="#couche-4-utilité-pour-la-thèse"><span class="header-section-number">4.4</span> Couche 4 — Utilité pour la thèse</a></li>
+  </ul></li>
+  <li><a href="#le-modèle-complet-de-fiche" id="toc-le-modèle-complet-de-fiche" class="nav-link" data-scroll-target="#le-modèle-complet-de-fiche"><span class="header-section-number">5</span> Le modèle complet de fiche</a>
+  <ul class="collapse">
+  <li><a href="#référence" id="toc-référence" class="nav-link" data-scroll-target="#référence"><span class="header-section-number">5.1</span> Référence</a></li>
+  <li><a href="#pourquoi-je-lis-cet-article" id="toc-pourquoi-je-lis-cet-article" class="nav-link" data-scroll-target="#pourquoi-je-lis-cet-article"><span class="header-section-number">5.2</span> Pourquoi je lis cet article</a></li>
+  <li><a href="#contribution-principale-en-une-phrase" id="toc-contribution-principale-en-une-phrase" class="nav-link" data-scroll-target="#contribution-principale-en-une-phrase"><span class="header-section-number">5.3</span> Contribution principale en une phrase</a></li>
+  <li><a href="#question-étudiée" id="toc-question-étudiée" class="nav-link" data-scroll-target="#question-étudiée"><span class="header-section-number">5.4</span> Question étudiée</a></li>
+  <li><a href="#méthodes-essentielles" id="toc-méthodes-essentielles" class="nav-link" data-scroll-target="#méthodes-essentielles"><span class="header-section-number">5.5</span> Méthodes essentielles</a></li>
+  <li><a href="#résultats-utiles" id="toc-résultats-utiles" class="nav-link" data-scroll-target="#résultats-utiles"><span class="header-section-number">5.6</span> Résultats utiles</a></li>
+  <li><a href="#limites" id="toc-limites" class="nav-link" data-scroll-target="#limites"><span class="header-section-number">5.7</span> Limites</a></li>
+  <li><a href="#connexions-avec-la-thèse" id="toc-connexions-avec-la-thèse" class="nav-link" data-scroll-target="#connexions-avec-la-thèse"><span class="header-section-number">5.8</span> Connexions avec la thèse</a></li>
+  </ul></li>
+  <li><a href="#séparer-les-types-de-notes" id="toc-séparer-les-types-de-notes" class="nav-link" data-scroll-target="#séparer-les-types-de-notes"><span class="header-section-number">6</span> Séparer les types de notes</a>
+  <ul class="collapse">
+  <li><a href="#citation-exacte" id="toc-citation-exacte" class="nav-link" data-scroll-target="#citation-exacte"><span class="header-section-number">6.1</span> Citation exacte</a></li>
+  <li><a href="#paraphrase-fidèle" id="toc-paraphrase-fidèle" class="nav-link" data-scroll-target="#paraphrase-fidèle"><span class="header-section-number">6.2</span> Paraphrase fidèle</a></li>
+  <li><a href="#commentaire-personnel" id="toc-commentaire-personnel" class="nav-link" data-scroll-target="#commentaire-personnel"><span class="header-section-number">6.3</span> Commentaire personnel</a></li>
+  <li><a href="#hypothèse" id="toc-hypothèse" class="nav-link" data-scroll-target="#hypothèse"><span class="header-section-number">6.4</span> Hypothèse</a></li>
+  <li><a href="#décision" id="toc-décision" class="nav-link" data-scroll-target="#décision"><span class="header-section-number">6.5</span> Décision</a></li>
+  <li><a href="#question-ouverte" id="toc-question-ouverte" class="nav-link" data-scroll-target="#question-ouverte"><span class="header-section-number">6.6</span> Question ouverte</a></li>
+  </ul></li>
+  <li><a href="#lire-par-niveaux-plutôt-que-tout-lire-immédiatement" id="toc-lire-par-niveaux-plutôt-que-tout-lire-immédiatement" class="nav-link" data-scroll-target="#lire-par-niveaux-plutôt-que-tout-lire-immédiatement"><span class="header-section-number">7</span> Lire par niveaux plutôt que tout lire immédiatement</a>
+  <ul class="collapse">
+  <li><a href="#niveau-0-triage" id="toc-niveau-0-triage" class="nav-link" data-scroll-target="#niveau-0-triage"><span class="header-section-number">7.1</span> Niveau 0 — Triage</a></li>
+  <li><a href="#niveau-1-cartographie" id="toc-niveau-1-cartographie" class="nav-link" data-scroll-target="#niveau-1-cartographie"><span class="header-section-number">7.2</span> Niveau 1 — Cartographie</a></li>
+  <li><a href="#niveau-2-extraction" id="toc-niveau-2-extraction" class="nav-link" data-scroll-target="#niveau-2-extraction"><span class="header-section-number">7.3</span> Niveau 2 — Extraction</a></li>
+  <li><a href="#niveau-3-critique" id="toc-niveau-3-critique" class="nav-link" data-scroll-target="#niveau-3-critique"><span class="header-section-number">7.4</span> Niveau 3 — Critique</a></li>
+  <li><a href="#niveau-4-intégration" id="toc-niveau-4-intégration" class="nav-link" data-scroll-target="#niveau-4-intégration"><span class="header-section-number">7.5</span> Niveau 4 — Intégration</a></li>
+  </ul></li>
+  <li><a href="#construire-une-taxonomie-maîtrisée" id="toc-construire-une-taxonomie-maîtrisée" class="nav-link" data-scroll-target="#construire-une-taxonomie-maîtrisée"><span class="header-section-number">8</span> Construire une taxonomie maîtrisée</a></li>
+  <li><a href="#la-matrice-de-synthèse" id="toc-la-matrice-de-synthèse" class="nav-link" data-scroll-target="#la-matrice-de-synthèse"><span class="header-section-number">9</span> La matrice de synthèse</a></li>
+  <li><a href="#relier-les-fiches-à-des-questions-pas-seulement-à-des-thèmes" id="toc-relier-les-fiches-à-des-questions-pas-seulement-à-des-thèmes" class="nav-link" data-scroll-target="#relier-les-fiches-à-des-questions-pas-seulement-à-des-thèmes"><span class="header-section-number">10</span> Relier les fiches à des questions, pas seulement à des thèmes</a></li>
+  <li><a href="#le-rôle-du-graphe-de-connaissances" id="toc-le-rôle-du-graphe-de-connaissances" class="nav-link" data-scroll-target="#le-rôle-du-graphe-de-connaissances"><span class="header-section-number">11</span> Le rôle du graphe de connaissances</a></li>
+  <li><a href="#intégrer-zotero-sans-transformer-zotero-en-entrepôt" id="toc-intégrer-zotero-sans-transformer-zotero-en-entrepôt" class="nav-link" data-scroll-target="#intégrer-zotero-sans-transformer-zotero-en-entrepôt"><span class="header-section-number">12</span> Intégrer Zotero sans transformer Zotero en entrepôt</a></li>
+  <li><a href="#utiliser-les-couleurs-dannotation-avec-parcimonie" id="toc-utiliser-les-couleurs-dannotation-avec-parcimonie" class="nav-link" data-scroll-target="#utiliser-les-couleurs-dannotation-avec-parcimonie"><span class="header-section-number">13</span> Utiliser les couleurs d’annotation avec parcimonie</a></li>
+  <li><a href="#lia-comme-assistant-de-fiche-jamais-comme-lecteur-souverain" id="toc-lia-comme-assistant-de-fiche-jamais-comme-lecteur-souverain" class="nav-link" data-scroll-target="#lia-comme-assistant-de-fiche-jamais-comme-lecteur-souverain"><span class="header-section-number">14</span> L’IA comme assistant de fiche, jamais comme lecteur souverain</a>
+  <ul class="collapse">
+  <li><a href="#usages-pertinents" id="toc-usages-pertinents" class="nav-link" data-scroll-target="#usages-pertinents"><span class="header-section-number">14.1</span> Usages pertinents</a></li>
+  <li><a href="#risques" id="toc-risques" class="nav-link" data-scroll-target="#risques"><span class="header-section-number">14.2</span> Risques</a></li>
+  <li><a href="#prompt-dextraction-traçable" id="toc-prompt-dextraction-traçable" class="nav-link" data-scroll-target="#prompt-dextraction-traçable"><span class="header-section-number">14.3</span> Prompt d’extraction traçable</a></li>
+  <li><a href="#prompt-de-contradiction" id="toc-prompt-de-contradiction" class="nav-link" data-scroll-target="#prompt-de-contradiction"><span class="header-section-number">14.4</span> Prompt de contradiction</a></li>
+  </ul></li>
+  <li><a href="#évaluer-la-qualité-dune-fiche" id="toc-évaluer-la-qualité-dune-fiche" class="nav-link" data-scroll-target="#évaluer-la-qualité-dune-fiche"><span class="header-section-number">15</span> Évaluer la qualité d’une fiche</a>
+  <ul class="collapse">
+  <li><a href="#fidèle" id="toc-fidèle" class="nav-link" data-scroll-target="#fidèle"><span class="header-section-number">15.1</span> Fidèle</a></li>
+  <li><a href="#sélective" id="toc-sélective" class="nav-link" data-scroll-target="#sélective"><span class="header-section-number">15.2</span> Sélective</a></li>
+  <li><a href="#critique" id="toc-critique" class="nav-link" data-scroll-target="#critique"><span class="header-section-number">15.3</span> Critique</a></li>
+  <li><a href="#connectée" id="toc-connectée" class="nav-link" data-scroll-target="#connectée"><span class="header-section-number">15.4</span> Connectée</a></li>
+  <li><a href="#retrouvable" id="toc-retrouvable" class="nav-link" data-scroll-target="#retrouvable"><span class="header-section-number">15.5</span> Retrouvable</a></li>
+  <li><a href="#actionnable" id="toc-actionnable" class="nav-link" data-scroll-target="#actionnable"><span class="header-section-number">15.6</span> Actionnable</a></li>
+  <li><a href="#durable" id="toc-durable" class="nav-link" data-scroll-target="#durable"><span class="header-section-number">15.7</span> Durable</a></li>
+  </ul></li>
+  <li><a href="#workflow-hebdomadaire-pour-un-doctorant" id="toc-workflow-hebdomadaire-pour-un-doctorant" class="nav-link" data-scroll-target="#workflow-hebdomadaire-pour-un-doctorant"><span class="header-section-number">16</span> Workflow hebdomadaire pour un doctorant</a>
+  <ul class="collapse">
+  <li><a href="#capture-quotidienne" id="toc-capture-quotidienne" class="nav-link" data-scroll-target="#capture-quotidienne"><span class="header-section-number">16.1</span> Capture quotidienne</a></li>
+  <li><a href="#triage-deux-fois-par-semaine" id="toc-triage-deux-fois-par-semaine" class="nav-link" data-scroll-target="#triage-deux-fois-par-semaine"><span class="header-section-number">16.2</span> Triage deux fois par semaine</a></li>
+  <li><a href="#lecture-profonde-planifiée" id="toc-lecture-profonde-planifiée" class="nav-link" data-scroll-target="#lecture-profonde-planifiée"><span class="header-section-number">16.3</span> Lecture profonde planifiée</a></li>
+  <li><a href="#intégration-immédiate" id="toc-intégration-immédiate" class="nav-link" data-scroll-target="#intégration-immédiate"><span class="header-section-number">16.4</span> Intégration immédiate</a></li>
+  <li><a href="#revue-hebdomadaire" id="toc-revue-hebdomadaire" class="nav-link" data-scroll-target="#revue-hebdomadaire"><span class="header-section-number">16.5</span> Revue hebdomadaire</a></li>
+  <li><a href="#synthèse-mensuelle" id="toc-synthèse-mensuelle" class="nav-link" data-scroll-target="#synthèse-mensuelle"><span class="header-section-number">16.6</span> Synthèse mensuelle</a></li>
+  </ul></li>
+  <li><a href="#construire-la-problématique-à-partir-des-fiches" id="toc-construire-la-problématique-à-partir-des-fiches" class="nav-link" data-scroll-target="#construire-la-problématique-à-partir-des-fiches"><span class="header-section-number">17</span> Construire la problématique à partir des fiches</a>
+  <ul class="collapse">
+  <li><a href="#types-de-lacunes" id="toc-types-de-lacunes" class="nav-link" data-scroll-target="#types-de-lacunes"><span class="header-section-number">17.1</span> Types de lacunes</a></li>
+  </ul></li>
+  <li><a href="#préparer-la-rédaction-sans-copier-coller" id="toc-préparer-la-rédaction-sans-copier-coller" class="nav-link" data-scroll-target="#préparer-la-rédaction-sans-copier-coller"><span class="header-section-number">18</span> Préparer la rédaction sans copier-coller</a></li>
+  <li><a href="#préparer-une-discussion-de-thèse" id="toc-préparer-une-discussion-de-thèse" class="nav-link" data-scroll-target="#préparer-une-discussion-de-thèse"><span class="header-section-number">19</span> Préparer une discussion de thèse</a></li>
+  <li><a href="#gérer-les-articles-contradictoires" id="toc-gérer-les-articles-contradictoires" class="nav-link" data-scroll-target="#gérer-les-articles-contradictoires"><span class="header-section-number">20</span> Gérer les articles contradictoires</a></li>
+  <li><a href="#reproductibilité-de-la-lecture" id="toc-reproductibilité-de-la-lecture" class="nav-link" data-scroll-target="#reproductibilité-de-la-lecture"><span class="header-section-number">21</span> Reproductibilité de la lecture</a></li>
+  <li><a href="#modèle-complet-en-markdown" id="toc-modèle-complet-en-markdown" class="nav-link" data-scroll-target="#modèle-complet-en-markdown"><span class="header-section-number">22</span> Modèle complet en Markdown</a></li>
+  <li><a href="#checklist-avant-de-considérer-une-fiche-comme-terminée" id="toc-checklist-avant-de-considérer-une-fiche-comme-terminée" class="nav-link" data-scroll-target="#checklist-avant-de-considérer-une-fiche-comme-terminée"><span class="header-section-number">23</span> Checklist avant de considérer une fiche comme terminée</a></li>
+  <li><a href="#erreurs-à-éliminer" id="toc-erreurs-à-éliminer" class="nav-link" data-scroll-target="#erreurs-à-éliminer"><span class="header-section-number">24</span> Erreurs à éliminer</a>
+  <ul class="collapse">
+  <li><a href="#à-lire-plus-tard-sans-priorité" id="toc-à-lire-plus-tard-sans-priorité" class="nav-link" data-scroll-target="#à-lire-plus-tard-sans-priorité"><span class="header-section-number">24.1</span> « À lire plus tard » sans priorité</a></li>
+  <li><a href="#tout-surligner" id="toc-tout-surligner" class="nav-link" data-scroll-target="#tout-surligner"><span class="header-section-number">24.2</span> Tout surligner</a></li>
+  <li><a href="#copier-labstract" id="toc-copier-labstract" class="nav-link" data-scroll-target="#copier-labstract"><span class="header-section-number">24.3</span> Copier l’abstract</a></li>
+  <li><a href="#évaluer-par-prestige" id="toc-évaluer-par-prestige" class="nav-link" data-scroll-target="#évaluer-par-prestige"><span class="header-section-number">24.4</span> Évaluer par prestige</a></li>
+  <li><a href="#accumuler-les-tags" id="toc-accumuler-les-tags" class="nav-link" data-scroll-target="#accumuler-les-tags"><span class="header-section-number">24.5</span> Accumuler les tags</a></li>
+  <li><a href="#écrire-une-fiche-sans-lien" id="toc-écrire-une-fiche-sans-lien" class="nav-link" data-scroll-target="#écrire-une-fiche-sans-lien"><span class="header-section-number">24.6</span> Écrire une fiche sans lien</a></li>
+  </ul></li>
+  <li><a href="#indicateurs-de-maturité-du-système" id="toc-indicateurs-de-maturité-du-système" class="nav-link" data-scroll-target="#indicateurs-de-maturité-du-système"><span class="header-section-number">25</span> Indicateurs de maturité du système</a></li>
+  <li><a href="#ressources-recommandées" id="toc-ressources-recommandées" class="nav-link" data-scroll-target="#ressources-recommandées"><span class="header-section-number">26</span> Ressources recommandées</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">27</span> Conclusion</a></li>
+  <li><a href="#besoin-dun-accompagnement" id="toc-besoin-dun-accompagnement" class="nav-link" data-scroll-target="#besoin-dun-accompagnement"><span class="header-section-number">28</span> Besoin d’un accompagnement ?</a></li>
+  <li><a href="#annexe-tableau-de-bord-doctoral" id="toc-annexe-tableau-de-bord-doctoral" class="nav-link" data-scroll-target="#annexe-tableau-de-bord-doctoral"><span class="header-section-number">29</span> Annexe — Tableau de bord doctoral</a>
+  <ul class="collapse">
+  <li><a href="#file-dentrée" id="toc-file-dentrée" class="nav-link" data-scroll-target="#file-dentrée"><span class="header-section-number">29.1</span> File d’entrée</a></li>
+  <li><a href="#articles-essentiels" id="toc-articles-essentiels" class="nav-link" data-scroll-target="#articles-essentiels"><span class="header-section-number">29.2</span> Articles essentiels</a></li>
+  <li><a href="#contradictions-actives" id="toc-contradictions-actives" class="nav-link" data-scroll-target="#contradictions-actives"><span class="header-section-number">29.3</span> Contradictions actives</a></li>
+  <li><a href="#décisions-méthodologiques" id="toc-décisions-méthodologiques" class="nav-link" data-scroll-target="#décisions-méthodologiques"><span class="header-section-number">29.4</span> Décisions méthodologiques</a></li>
+  <li><a href="#questions-ouvertes" id="toc-questions-ouvertes" class="nav-link" data-scroll-target="#questions-ouvertes"><span class="header-section-number">29.5</span> Questions ouvertes</a></li>
+  </ul></li>
+  <li><a href="#annexe-taxonomie-de-départ" id="toc-annexe-taxonomie-de-départ" class="nav-link" data-scroll-target="#annexe-taxonomie-de-départ"><span class="header-section-number">30</span> Annexe — Taxonomie de départ</a></li>
+  <li><a href="#annexe-revue-mensuelle-guidée" id="toc-annexe-revue-mensuelle-guidée" class="nav-link" data-scroll-target="#annexe-revue-mensuelle-guidée"><span class="header-section-number">31</span> Annexe — Revue mensuelle guidée</a></li>
+  <li><a href="#annexe-protocole-de-lecture-dun-article-méthodologique" id="toc-annexe-protocole-de-lecture-dun-article-méthodologique" class="nav-link" data-scroll-target="#annexe-protocole-de-lecture-dun-article-méthodologique"><span class="header-section-number">32</span> Annexe — Protocole de lecture d’un article méthodologique</a>
+  <ul class="collapse">
+  <li><a href="#problème-méthodologique" id="toc-problème-méthodologique" class="nav-link" data-scroll-target="#problème-méthodologique"><span class="header-section-number">32.1</span> Problème méthodologique</a></li>
+  <li><a href="#hypothèses" id="toc-hypothèses" class="nav-link" data-scroll-target="#hypothèses"><span class="header-section-number">32.2</span> Hypothèses</a></li>
+  <li><a href="#comparateurs" id="toc-comparateurs" class="nav-link" data-scroll-target="#comparateurs"><span class="header-section-number">32.3</span> Comparateurs</a></li>
+  <li><a href="#simulation" id="toc-simulation" class="nav-link" data-scroll-target="#simulation"><span class="header-section-number">32.4</span> Simulation</a></li>
+  <li><a href="#application-réelle" id="toc-application-réelle" class="nav-link" data-scroll-target="#application-réelle"><span class="header-section-number">32.5</span> Application réelle</a></li>
+  <li><a href="#reproductibilité" id="toc-reproductibilité" class="nav-link" data-scroll-target="#reproductibilité"><span class="header-section-number">32.6</span> Reproductibilité</a></li>
+  </ul></li>
+  <li><a href="#annexe-protocole-de-lecture-dun-article-de-données-ou-de-cohorte" id="toc-annexe-protocole-de-lecture-dun-article-de-données-ou-de-cohorte" class="nav-link" data-scroll-target="#annexe-protocole-de-lecture-dun-article-de-données-ou-de-cohorte"><span class="header-section-number">33</span> Annexe — Protocole de lecture d’un article de données ou de cohorte</a></li>
+  <li><a href="#annexe-de-la-fiche-au-paragraphe-de-revue" id="toc-annexe-de-la-fiche-au-paragraphe-de-revue" class="nav-link" data-scroll-target="#annexe-de-la-fiche-au-paragraphe-de-revue"><span class="header-section-number">34</span> Annexe — De la fiche au paragraphe de revue</a></li>
+  <li><a href="#annexe-règles-de-nommage" id="toc-annexe-règles-de-nommage" class="nav-link" data-scroll-target="#annexe-règles-de-nommage"><span class="header-section-number">35</span> Annexe — Règles de nommage</a>
+  <ul class="collapse">
+  <li><a href="#clé-bibliographique" id="toc-clé-bibliographique" class="nav-link" data-scroll-target="#clé-bibliographique"><span class="header-section-number">35.1</span> Clé bibliographique</a></li>
+  <li><a href="#question" id="toc-question" class="nav-link" data-scroll-target="#question"><span class="header-section-number">35.2</span> Question</a></li>
+  <li><a href="#hypothèse-1" id="toc-hypothèse-1" class="nav-link" data-scroll-target="#hypothèse-1"><span class="header-section-number">35.3</span> Hypothèse</a></li>
+  <li><a href="#décision-1" id="toc-décision-1" class="nav-link" data-scroll-target="#décision-1"><span class="header-section-number">35.4</span> Décision</a></li>
+  <li><a href="#synthèse" id="toc-synthèse" class="nav-link" data-scroll-target="#synthèse"><span class="header-section-number">35.5</span> Synthèse</a></li>
+  <li><a href="#jeu-de-données" id="toc-jeu-de-données" class="nav-link" data-scroll-target="#jeu-de-données"><span class="header-section-number">35.6</span> Jeu de données</a></li>
+  </ul></li>
+  <li><a href="#annexe-politique-darchivage" id="toc-annexe-politique-darchivage" class="nav-link" data-scroll-target="#annexe-politique-darchivage"><span class="header-section-number">36</span> Annexe — Politique d’archivage</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Créer une fiche de lecture réellement utile pour un doctorant</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Doctorat</div>
+    <div class="quarto-category">Recherche</div>
+    <div class="quarto-category">Méthodologie scientifique</div>
+    <div class="quarto-category">Gestion des connaissances</div>
+    <div class="quarto-category">Intelligence artificielle</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Un système de lecture scientifique qui transforme chaque article en ressource traçable pour la problématique, la méthode, l’analyse, la discussion et la rédaction de la thèse.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>SYLTRA Consulting </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">9 août 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modifié</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">9 août 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="article-kicker">
+<p><strong>Publication 13 · Niveau intermédiaire · Thème : système de connaissance doctoral</strong></p>
+</div>
+<section id="lidée-essentielle" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="lidée-essentielle"><span class="header-section-number">1</span> L’idée essentielle</h2>
+<p>Une fiche de lecture doctorale n’est ni un résumé scolaire, ni une collection de citations. C’est une unité de connaissance conçue pour être retrouvée, comparée, contestée et réutilisée plusieurs mois plus tard.</p>
+<p>Elle doit répondre à une question pratique :</p>
+<blockquote class="blockquote">
+<p>Qu’est-ce que cet article change dans ma compréhension du problème, de la méthode ou de la preuve ?</p>
+</blockquote>
+<p>Une fiche utile ne cherche donc pas à tout conserver. Elle sélectionne ce qui servira à construire la problématique, justifier un choix, comparer des résultats, reproduire une méthode, identifier une limite ou préparer une discussion.</p>
+<p>Le doctorant qui accumule des PDF sans système produit une bibliothèque. Celui qui relie chaque lecture à des questions et à des décisions produit progressivement une thèse.</p>
+</section>
+<section id="pourquoi-les-fiches-classiques-échouent" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="pourquoi-les-fiches-classiques-échouent"><span class="header-section-number">2</span> Pourquoi les fiches classiques échouent</h2>
+<section id="elles-résument-larticle-au-lieu-de-soutenir-le-projet" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="elles-résument-larticle-au-lieu-de-soutenir-le-projet"><span class="header-section-number">2.1</span> Elles résument l’article au lieu de soutenir le projet</h3>
+<p>Une fiche organisée seulement en « introduction, méthodes, résultats, conclusion » reproduit la structure du document. Elle ne dit pas comment l’article intervient dans le raisonnement doctoral.</p>
+<p>Deux articles méthodologiquement différents peuvent répondre à la même sous-question. Le système de notes doit permettre leur comparaison transversale.</p>
+</section>
+<section id="elles-stockent-trop-dextraits" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="elles-stockent-trop-dextraits"><span class="header-section-number">2.2</span> Elles stockent trop d’extraits</h3>
+<p>Surligner donne une impression de travail, mais une accumulation de passages ne constitue pas une synthèse. Une citation n’est utile que si elle est accompagnée de :</p>
+<ul>
+<li>sa fonction ;</li>
+<li>son contexte ;</li>
+<li>son statut ;</li>
+<li>une interprétation ;</li>
+<li>une destination probable ;</li>
+<li>une référence précise.</li>
+</ul>
+</section>
+<section id="elles-mélangent-la-voix-de-lauteur-et-celle-du-lecteur" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="elles-mélangent-la-voix-de-lauteur-et-celle-du-lecteur"><span class="header-section-number">2.3</span> Elles mélangent la voix de l’auteur et celle du lecteur</h3>
+<p>Quelques mois plus tard, il devient difficile de savoir si une phrase était une citation, une paraphrase, une hypothèse personnelle ou une critique. Cette confusion crée un risque scientifique et rédactionnel.</p>
+</section>
+<section id="elles-ne-sont-jamais-retrouvées" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="elles-ne-sont-jamais-retrouvées"><span class="header-section-number">2.4</span> Elles ne sont jamais retrouvées</h3>
+<p>Une note intitulée « Article intéressant » est presque inutilisable. La recherche exige des identifiants stables, des mots-clés contrôlés, des liens vers les questions et une structure homogène.</p>
+</section>
+</section>
+<section id="concevoir-la-fiche-à-partir-des-usages-futurs" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="concevoir-la-fiche-à-partir-des-usages-futurs"><span class="header-section-number">3</span> Concevoir la fiche à partir des usages futurs</h2>
+<p>Une fiche doctorale peut servir à au moins huit tâches :</p>
+<ol type="1">
+<li>établir l’état de l’art ;</li>
+<li>définir une lacune ;</li>
+<li>justifier une méthode ;</li>
+<li>préparer une analyse ;</li>
+<li>interpréter un résultat ;</li>
+<li>discuter une contradiction ;</li>
+<li>répondre à un relecteur ;</li>
+<li>préparer une communication.</li>
+</ol>
+<p>La structure de la fiche doit soutenir ces usages.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Règle de conception">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Règle de conception
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Avant de créer un champ, demandez : « Dans quelle décision ou quelle section de la thèse cette information pourra-t-elle être utilisée ? »</p>
+</div>
+</div>
+</section>
+<section id="les-quatre-couches-dune-fiche-robuste" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="les-quatre-couches-dune-fiche-robuste"><span class="header-section-number">4</span> Les quatre couches d’une fiche robuste</h2>
+<section id="couche-1-identité-et-traçabilité" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="couche-1-identité-et-traçabilité"><span class="header-section-number">4.1</span> Couche 1 — Identité et traçabilité</h3>
+<p>Elle comprend :</p>
+<ul>
+<li>référence bibliographique complète ;</li>
+<li>DOI ou identifiant ;</li>
+<li>version consultée ;</li>
+<li>date de lecture ;</li>
+<li>lien vers le PDF ;</li>
+<li>projet ou chapitre associé ;</li>
+<li>statut de lecture ;</li>
+<li>personne ayant extrait les informations dans un travail collectif.</li>
+</ul>
+<p>La version est importante : prépublication, article accepté, correction ou mise à jour peuvent différer.</p>
+</section>
+<section id="couche-2-reconstruction-scientifique" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="couche-2-reconstruction-scientifique"><span class="header-section-number">4.2</span> Couche 2 — Reconstruction scientifique</h3>
+<p>Elle décrit :</p>
+<ul>
+<li>problème ;</li>
+<li>question ;</li>
+<li>dessin ;</li>
+<li>population ;</li>
+<li>variables ;</li>
+<li>analyse ;</li>
+<li>résultats ;</li>
+<li>limites ;</li>
+<li>portée.</li>
+</ul>
+<p>Cette couche doit rester fidèle à la source.</p>
+</section>
+<section id="couche-3-évaluation-critique" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="couche-3-évaluation-critique"><span class="header-section-number">4.3</span> Couche 3 — Évaluation critique</h3>
+<p>Elle documente le jugement du lecteur :</p>
+<ul>
+<li>forces ;</li>
+<li>risques de biais ;</li>
+<li>hypothèses fragiles ;</li>
+<li>cohérence avec d’autres travaux ;</li>
+<li>transférabilité ;</li>
+<li>informations manquantes ;</li>
+<li>niveau de confiance.</li>
+</ul>
+</section>
+<section id="couche-4-utilité-pour-la-thèse" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="couche-4-utilité-pour-la-thèse"><span class="header-section-number">4.4</span> Couche 4 — Utilité pour la thèse</h3>
+<p>Elle répond :</p>
+<ul>
+<li>quelle affirmation cet article soutient-il ?</li>
+<li>quelle affirmation contredit-il ?</li>
+<li>quel choix méthodologique éclaire-t-il ?</li>
+<li>où pourrait-il être cité ?</li>
+<li>quelle étude ou analyse suggère-t-il ?</li>
+<li>quelle question reste ouverte ?</li>
+</ul>
+<p>Cette dernière couche transforme la lecture en capital de recherche.</p>
+</section>
+</section>
+<section id="le-modèle-complet-de-fiche" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="le-modèle-complet-de-fiche"><span class="header-section-number">5</span> Le modèle complet de fiche</h2>
+<section id="référence" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="référence"><span class="header-section-number">5.1</span> Référence</h3>
+<ul>
+<li><strong>Clé :</strong> <code>AuteurAnnée_MotCourt</code></li>
+<li><strong>Citation complète :</strong></li>
+<li><strong>DOI/URL :</strong></li>
+<li><strong>Version :</strong></li>
+<li><strong>Date de lecture :</strong></li>
+<li><strong>Statut :</strong> repéré / parcouru / lu / extrait / critiqué / intégré</li>
+<li><strong>Collections :</strong></li>
+<li><strong>Tags contrôlés :</strong></li>
+</ul>
+</section>
+<section id="pourquoi-je-lis-cet-article" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="pourquoi-je-lis-cet-article"><span class="header-section-number">5.2</span> Pourquoi je lis cet article</h3>
+<p>Rédigez une phrase avant la lecture :</p>
+<blockquote class="blockquote">
+<p>Je consulte cet article pour déterminer si…</p>
+</blockquote>
+<p>Cette phrase protège contre une lecture passive et permet de décider quand s’arrêter.</p>
+</section>
+<section id="contribution-principale-en-une-phrase" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="contribution-principale-en-une-phrase"><span class="header-section-number">5.3</span> Contribution principale en une phrase</h3>
+<p>La phrase doit contenir le résultat, le contexte et la réserve principale.</p>
+</section>
+<section id="question-étudiée" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="question-étudiée"><span class="header-section-number">5.4</span> Question étudiée</h3>
+<p>Décomposez la question selon le dessin adapté.</p>
+</section>
+<section id="méthodes-essentielles" class="level3" data-number="5.5">
+<h3 data-number="5.5" class="anchored" data-anchor-id="méthodes-essentielles"><span class="header-section-number">5.5</span> Méthodes essentielles</h3>
+<p>Ne copiez pas toute la section. Extrayez les décisions qui conditionnent la validité et la reproductibilité.</p>
+</section>
+<section id="résultats-utiles" class="level3" data-number="5.6">
+<h3 data-number="5.6" class="anchored" data-anchor-id="résultats-utiles"><span class="header-section-number">5.6</span> Résultats utiles</h3>
+<p>Conservez les estimations, incertitudes, unités, sous-populations et temps nécessaires à votre projet.</p>
+</section>
+<section id="limites" class="level3" data-number="5.7">
+<h3 data-number="5.7" class="anchored" data-anchor-id="limites"><span class="header-section-number">5.7</span> Limites</h3>
+<p>Distinguez :</p>
+<ul>
+<li>limites reconnues par les auteurs ;</li>
+<li>limites identifiées par vous ;</li>
+<li>limites liées à l’usage que vous envisagez.</li>
+</ul>
+</section>
+<section id="connexions-avec-la-thèse" class="level3" data-number="5.8">
+<h3 data-number="5.8" class="anchored" data-anchor-id="connexions-avec-la-thèse"><span class="header-section-number">5.8</span> Connexions avec la thèse</h3>
+<ul>
+<li>chapitre ;</li>
+<li>sous-question ;</li>
+<li>hypothèse ;</li>
+<li>méthode ;</li>
+<li>discussion ;</li>
+<li>article contradicteur ;</li>
+<li>article fondateur ;</li>
+<li>action suivante.</li>
+</ul>
+</section>
+</section>
+<section id="séparer-les-types-de-notes" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="séparer-les-types-de-notes"><span class="header-section-number">6</span> Séparer les types de notes</h2>
+<section id="citation-exacte" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="citation-exacte"><span class="header-section-number">6.1</span> Citation exacte</h3>
+<p>Utilisez des guillemets ou un bloc de citation et indiquez la page.</p>
+</section>
+<section id="paraphrase-fidèle" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="paraphrase-fidèle"><span class="header-section-number">6.2</span> Paraphrase fidèle</h3>
+<p>Reformulez sans changer la portée. Ajoutez la page.</p>
+</section>
+<section id="commentaire-personnel" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="commentaire-personnel"><span class="header-section-number">6.3</span> Commentaire personnel</h3>
+<p>Préfixez par <code>Commentaire :</code> ou utilisez un style visuel distinct.</p>
+</section>
+<section id="hypothèse" class="level3" data-number="6.4">
+<h3 data-number="6.4" class="anchored" data-anchor-id="hypothèse"><span class="header-section-number">6.4</span> Hypothèse</h3>
+<p>Préfixez par <code>Hypothèse :</code> et indiquez ce qui permettrait de la tester.</p>
+</section>
+<section id="décision" class="level3" data-number="6.5">
+<h3 data-number="6.5" class="anchored" data-anchor-id="décision"><span class="header-section-number">6.5</span> Décision</h3>
+<p>Préfixez par <code>Décision :</code> et datez-la.</p>
+</section>
+<section id="question-ouverte" class="level3" data-number="6.6">
+<h3 data-number="6.6" class="anchored" data-anchor-id="question-ouverte"><span class="header-section-number">6.6</span> Question ouverte</h3>
+<p>Préfixez par <code>Question :</code> puis reliez-la à une liste d’actions.</p>
+<p>Cette séparation limite le plagiat involontaire et facilite la réutilisation.</p>
+</section>
+</section>
+<section id="lire-par-niveaux-plutôt-que-tout-lire-immédiatement" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="lire-par-niveaux-plutôt-que-tout-lire-immédiatement"><span class="header-section-number">7</span> Lire par niveaux plutôt que tout lire immédiatement</h2>
+<section id="niveau-0-triage" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="niveau-0-triage"><span class="header-section-number">7.1</span> Niveau 0 — Triage</h3>
+<p>Durée : quelques minutes.</p>
+<p>Décidez si l’article mérite une lecture plus profonde. Examinez titre, résumé, date, revue, références, figures et adéquation à la question.</p>
+</section>
+<section id="niveau-1-cartographie" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="niveau-1-cartographie"><span class="header-section-number">7.2</span> Niveau 1 — Cartographie</h3>
+<p>Identifiez question, dessin, résultat principal, apport et limite majeure.</p>
+</section>
+<section id="niveau-2-extraction" class="level3" data-number="7.3">
+<h3 data-number="7.3" class="anchored" data-anchor-id="niveau-2-extraction"><span class="header-section-number">7.3</span> Niveau 2 — Extraction</h3>
+<p>Remplissez la fiche de manière structurée.</p>
+</section>
+<section id="niveau-3-critique" class="level3" data-number="7.4">
+<h3 data-number="7.4" class="anchored" data-anchor-id="niveau-3-critique"><span class="header-section-number">7.4</span> Niveau 3 — Critique</h3>
+<p>Analysez biais, hypothèses, robustesse et applicabilité.</p>
+</section>
+<section id="niveau-4-intégration" class="level3" data-number="7.5">
+<h3 data-number="7.5" class="anchored" data-anchor-id="niveau-4-intégration"><span class="header-section-number">7.5</span> Niveau 4 — Intégration</h3>
+<p>Reliez l’article aux autres notes, au plan de thèse et à une décision.</p>
+<p>Tous les articles ne nécessitent pas le niveau 4. Un système efficace réserve l’effort aux sources qui influencent réellement le projet.</p>
+</section>
+</section>
+<section id="construire-une-taxonomie-maîtrisée" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="construire-une-taxonomie-maîtrisée"><span class="header-section-number">8</span> Construire une taxonomie maîtrisée</h2>
+<p>Des tags libres produisent rapidement des doublons : <code>machine-learning</code>, <code>ML</code>, <code>apprentissage-automatique</code>, <code>IA-ML</code>.</p>
+<p>Définissez des familles :</p>
+<ul>
+<li><strong>domaine</strong> : oncologie, maintenance, finance ;</li>
+<li><strong>méthode</strong> : cohorte, essai, modèle-mixte ;</li>
+<li><strong>fonction</strong> : fondation, contradiction, méthode, limite ;</li>
+<li><strong>statut</strong> : à-lire, lu, intégré ;</li>
+<li><strong>chapitre</strong> : intro, méthodes, discussion ;</li>
+<li><strong>population</strong> ;</li>
+<li><strong>outcome</strong> ;</li>
+<li><strong>jeu-de-données</strong>.</li>
+</ul>
+<p>Un tag doit aider à retrouver un ensemble utile. Il ne doit pas simplement répéter le titre.</p>
+</section>
+<section id="la-matrice-de-synthèse" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="la-matrice-de-synthèse"><span class="header-section-number">9</span> La matrice de synthèse</h2>
+<p>La fiche individuelle devient puissante lorsqu’elle alimente une matrice comparative.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Étude</th>
+<th>Population</th>
+<th>Dessin</th>
+<th>Exposition/intervention</th>
+<th>Outcome</th>
+<th>Effet</th>
+<th>Biais majeur</th>
+<th>Utilité</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<p>Cette matrice révèle :</p>
+<ul>
+<li>les zones surétudiées ;</li>
+<li>les populations absentes ;</li>
+<li>les différences de définition ;</li>
+<li>les contradictions ;</li>
+<li>les méthodes dominantes ;</li>
+<li>les lacunes exploitables.</li>
+</ul>
+<p>Pour une thèse méthodologique, ajoutez :</p>
+<ul>
+<li>prétraitement ;</li>
+<li>modèle ;</li>
+<li>validation ;</li>
+<li>métrique ;</li>
+<li>code disponible ;</li>
+<li>reproductibilité ;</li>
+<li>coût computationnel.</li>
+</ul>
+</section>
+<section id="relier-les-fiches-à-des-questions-pas-seulement-à-des-thèmes" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="relier-les-fiches-à-des-questions-pas-seulement-à-des-thèmes"><span class="header-section-number">10</span> Relier les fiches à des questions, pas seulement à des thèmes</h2>
+<p>Un thème comme « toxicité cardiaque » est trop large. Une question opérationnelle produit une meilleure organisation :</p>
+<ul>
+<li>quelles mesures dosimétriques prédisent l’événement ?</li>
+<li>comment la toxicité est-elle définie ?</li>
+<li>quelles fenêtres temporelles sont utilisées ?</li>
+<li>quels facteurs cliniques sont ajustés ?</li>
+<li>les modèles sont-ils validés hors du centre d’origine ?</li>
+</ul>
+<p>Chaque fiche doit être liée à une ou plusieurs questions. La synthèse devient alors la comparaison des réponses disponibles.</p>
+</section>
+<section id="le-rôle-du-graphe-de-connaissances" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="le-rôle-du-graphe-de-connaissances"><span class="header-section-number">11</span> Le rôle du graphe de connaissances</h2>
+<p>Un graphe simple relie :</p>
+<ul>
+<li>article ;</li>
+<li>concept ;</li>
+<li>méthode ;</li>
+<li>population ;</li>
+<li>résultat ;</li>
+<li>jeu de données ;</li>
+<li>auteur ;</li>
+<li>question ;</li>
+<li>décision.</li>
+</ul>
+<p>Vous n’avez pas besoin d’un logiciel complexe. Des liens internes dans des notes Markdown suffisent.</p>
+<p>Exemple :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Répond à : [<span class="co">[</span><span class="ot">Q-Calibration-risque</span><span class="co">]</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Utilise : [<span class="co">[</span><span class="ot">Méthode-Bootstrap</span><span class="co">]</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Contredit : [<span class="co">[</span><span class="ot">Smith2022_ModeleX</span><span class="co">]</span>]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Soutient : [<span class="co">[</span><span class="ot">Hypothèse-H03</span><span class="co">]</span>]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>À citer dans : [<span class="co">[</span><span class="ot">Chapitre-2-Validation</span><span class="co">]</span>]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La valeur vient de la cohérence, non du nombre de liens.</p>
+</section>
+<section id="intégrer-zotero-sans-transformer-zotero-en-entrepôt" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="intégrer-zotero-sans-transformer-zotero-en-entrepôt"><span class="header-section-number">12</span> Intégrer Zotero sans transformer Zotero en entrepôt</h2>
+<p>Zotero permet d’organiser les références, attacher les fichiers, annoter les PDF et créer des notes à partir des annotations. Les annotations peuvent être accompagnées de citations actives, ce qui améliore la traçabilité.</p>
+<p>Une organisation possible :</p>
+<ul>
+<li>Zotero conserve la référence, le PDF, les annotations et les métadonnées ;</li>
+<li>un système Markdown conserve les fiches analytiques et les liens entre idées ;</li>
+<li>une clé de citation stable relie les deux.</li>
+</ul>
+<p>Évitez de conserver un PDF comme pièce jointe autonome sans métadonnées lorsqu’une notice bibliographique peut être créée. Une référence propre améliore la recherche, la citation et la déduplication.</p>
+</section>
+<section id="utiliser-les-couleurs-dannotation-avec-parcimonie" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="utiliser-les-couleurs-dannotation-avec-parcimonie"><span class="header-section-number">13</span> Utiliser les couleurs d’annotation avec parcimonie</h2>
+<p>Une convention possible :</p>
+<ul>
+<li>jaune : idée ou résultat ;</li>
+<li>bleu : méthode ;</li>
+<li>rouge : limite ou biais ;</li>
+<li>vert : utilité pour la thèse ;</li>
+<li>violet : citation exacte ;</li>
+<li>gris : détail secondaire.</li>
+</ul>
+<p>La couleur n’est utile que si elle déclenche une action. Une page multicolore sans synthèse reste difficile à exploiter.</p>
+<p>Après lecture, transformez les annotations sélectionnées en fiche. Ne conservez pas tout.</p>
+</section>
+<section id="lia-comme-assistant-de-fiche-jamais-comme-lecteur-souverain" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="lia-comme-assistant-de-fiche-jamais-comme-lecteur-souverain"><span class="header-section-number">14</span> L’IA comme assistant de fiche, jamais comme lecteur souverain</h2>
+<section id="usages-pertinents" class="level3" data-number="14.1">
+<h3 data-number="14.1" class="anchored" data-anchor-id="usages-pertinents"><span class="header-section-number">14.1</span> Usages pertinents</h3>
+<ul>
+<li>proposer une structure adaptée au dessin ;</li>
+<li>convertir des notes brutes en tableau ;</li>
+<li>repérer des incohérences internes ;</li>
+<li>formuler des questions critiques ;</li>
+<li>comparer deux fiches déjà validées ;</li>
+<li>suggérer des liens avec des concepts existants ;</li>
+<li>condenser une fiche longue en version de réunion.</li>
+</ul>
+</section>
+<section id="risques" class="level3" data-number="14.2">
+<h3 data-number="14.2" class="anchored" data-anchor-id="risques"><span class="header-section-number">14.2</span> Risques</h3>
+<ul>
+<li>inventer une information absente ;</li>
+<li>confondre conclusion et résultat ;</li>
+<li>gommer une contradiction ;</li>
+<li>attribuer une intention aux auteurs ;</li>
+<li>produire une référence fictive ;</li>
+<li>perdre les unités ;</li>
+<li>ignorer les tableaux ;</li>
+<li>mélanger plusieurs versions ;</li>
+<li>réécrire un passage trop près de l’original.</li>
+</ul>
+</section>
+<section id="prompt-dextraction-traçable" class="level3" data-number="14.3">
+<h3 data-number="14.3" class="anchored" data-anchor-id="prompt-dextraction-traçable"><span class="header-section-number">14.3</span> Prompt d’extraction traçable</h3>
+<pre class="text"><code>N’utilise que le document fourni. Pour chaque information, indique la page,
+le tableau ou la figure. Si elle n’est pas rapportée, écris « non rapporté ».
+Sépare strictement :
+A. contenu des auteurs ;
+B. inférences possibles ;
+C. questions du lecteur.
+N’ajoute aucune référence externe et ne complète pas les méthodes.</code></pre>
+</section>
+<section id="prompt-de-contradiction" class="level3" data-number="14.4">
+<h3 data-number="14.4" class="anchored" data-anchor-id="prompt-de-contradiction"><span class="header-section-number">14.4</span> Prompt de contradiction</h3>
+<pre class="text"><code>Compare les deux fiches validées ci-dessous. Identifie les différences portant
+sur la population, la définition de l’exposition, le critère, le temps, le
+modèle et l’incertitude. Ne conclus pas qu’elles se contredisent avant d’avoir
+vérifié si elles répondent à la même question.</code></pre>
+</section>
+</section>
+<section id="évaluer-la-qualité-dune-fiche" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="évaluer-la-qualité-dune-fiche"><span class="header-section-number">15</span> Évaluer la qualité d’une fiche</h2>
+<p>Une bonne fiche est :</p>
+<section id="fidèle" class="level3" data-number="15.1">
+<h3 data-number="15.1" class="anchored" data-anchor-id="fidèle"><span class="header-section-number">15.1</span> Fidèle</h3>
+<p>Chaque affirmation peut être retracée jusqu’à l’article.</p>
+</section>
+<section id="sélective" class="level3" data-number="15.2">
+<h3 data-number="15.2" class="anchored" data-anchor-id="sélective"><span class="header-section-number">15.2</span> Sélective</h3>
+<p>Elle ne copie pas ce qui n’a aucune utilité probable.</p>
+</section>
+<section id="critique" class="level3" data-number="15.3">
+<h3 data-number="15.3" class="anchored" data-anchor-id="critique"><span class="header-section-number">15.3</span> Critique</h3>
+<p>Elle distingue rapport, interprétation et jugement.</p>
+</section>
+<section id="connectée" class="level3" data-number="15.4">
+<h3 data-number="15.4" class="anchored" data-anchor-id="connectée"><span class="header-section-number">15.4</span> Connectée</h3>
+<p>Elle est liée à une question, un chapitre ou une décision.</p>
+</section>
+<section id="retrouvable" class="level3" data-number="15.5">
+<h3 data-number="15.5" class="anchored" data-anchor-id="retrouvable"><span class="header-section-number">15.5</span> Retrouvable</h3>
+<p>Titre, clé, tags et liens sont cohérents.</p>
+</section>
+<section id="actionnable" class="level3" data-number="15.6">
+<h3 data-number="15.6" class="anchored" data-anchor-id="actionnable"><span class="header-section-number">15.6</span> Actionnable</h3>
+<p>Elle produit au moins une action : citer, comparer, reproduire, vérifier, contacter, analyser ou lire.</p>
+</section>
+<section id="durable" class="level3" data-number="15.7">
+<h3 data-number="15.7" class="anchored" data-anchor-id="durable"><span class="header-section-number">15.7</span> Durable</h3>
+<p>Une personne qui la relit six mois plus tard comprend le contexte.</p>
+</section>
+</section>
+<section id="workflow-hebdomadaire-pour-un-doctorant" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="workflow-hebdomadaire-pour-un-doctorant"><span class="header-section-number">16</span> Workflow hebdomadaire pour un doctorant</h2>
+<section id="capture-quotidienne" class="level3" data-number="16.1">
+<h3 data-number="16.1" class="anchored" data-anchor-id="capture-quotidienne"><span class="header-section-number">16.1</span> Capture quotidienne</h3>
+<p>Enregistrez rapidement les références intéressantes dans une collection « Inbox ».</p>
+</section>
+<section id="triage-deux-fois-par-semaine" class="level3" data-number="16.2">
+<h3 data-number="16.2" class="anchored" data-anchor-id="triage-deux-fois-par-semaine"><span class="header-section-number">16.2</span> Triage deux fois par semaine</h3>
+<p>Supprimez les doublons, complétez les métadonnées et attribuez une priorité.</p>
+</section>
+<section id="lecture-profonde-planifiée" class="level3" data-number="16.3">
+<h3 data-number="16.3" class="anchored" data-anchor-id="lecture-profonde-planifiée"><span class="header-section-number">16.3</span> Lecture profonde planifiée</h3>
+<p>Réservez des blocs sans notifications. Commencez par une question.</p>
+</section>
+<section id="intégration-immédiate" class="level3" data-number="16.4">
+<h3 data-number="16.4" class="anchored" data-anchor-id="intégration-immédiate"><span class="header-section-number">16.4</span> Intégration immédiate</h3>
+<p>Après chaque lecture importante, reliez la fiche à la matrice et au plan.</p>
+</section>
+<section id="revue-hebdomadaire" class="level3" data-number="16.5">
+<h3 data-number="16.5" class="anchored" data-anchor-id="revue-hebdomadaire"><span class="header-section-number">16.5</span> Revue hebdomadaire</h3>
+<p>Examinez :</p>
+<ul>
+<li>questions sans source ;</li>
+<li>sources jamais intégrées ;</li>
+<li>contradictions ;</li>
+<li>méthodes à reproduire ;</li>
+<li>décisions en attente.</li>
+</ul>
+</section>
+<section id="synthèse-mensuelle" class="level3" data-number="16.6">
+<h3 data-number="16.6" class="anchored" data-anchor-id="synthèse-mensuelle"><span class="header-section-number">16.6</span> Synthèse mensuelle</h3>
+<p>Rédigez une note de 500 à 1 000 mots intitulée : « Ce que la littérature a changé ce mois-ci ». Cette pratique évite l’accumulation sans maturation.</p>
+</section>
+</section>
+<section id="construire-la-problématique-à-partir-des-fiches" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="construire-la-problématique-à-partir-des-fiches"><span class="header-section-number">17</span> Construire la problématique à partir des fiches</h2>
+<p>Une problématique ne se résume pas à « il existe peu d’études ». Elle doit montrer :</p>
+<ol type="1">
+<li>ce que l’on sait ;</li>
+<li>sur quelles populations et méthodes ;</li>
+<li>ce qui reste incertain ;</li>
+<li>pourquoi cette incertitude importe ;</li>
+<li>ce qui empêche les études existantes d’y répondre ;</li>
+<li>comment la thèse apporte une réponse crédible.</li>
+</ol>
+<p>Les fiches permettent de documenter chaque étape.</p>
+<section id="types-de-lacunes" class="level3" data-number="17.1">
+<h3 data-number="17.1" class="anchored" data-anchor-id="types-de-lacunes"><span class="header-section-number">17.1</span> Types de lacunes</h3>
+<ul>
+<li>populationnelle ;</li>
+<li>contextuelle ;</li>
+<li>temporelle ;</li>
+<li>conceptuelle ;</li>
+<li>méthodologique ;</li>
+<li>métrique ;</li>
+<li>liée à la validation ;</li>
+<li>liée à l’implémentation ;</li>
+<li>liée à l’équité ;</li>
+<li>liée à la reproductibilité.</li>
+</ul>
+<p>Une lacune pertinente n’est pas seulement une absence. C’est une absence qui empêche une décision, une explication ou un progrès méthodologique.</p>
+</section>
+</section>
+<section id="préparer-la-rédaction-sans-copier-coller" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="préparer-la-rédaction-sans-copier-coller"><span class="header-section-number">18</span> Préparer la rédaction sans copier-coller</h2>
+<p>Créez des notes de synthèse par argument.</p>
+<p>Exemple :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Argument : la validation externe reste limitée</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Proposition</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>La majorité des modèles sont évalués dans leur centre de développement.</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Preuves convergentes</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>[<span class="co">[</span><span class="ot">Auteur2023_ModeleA</span><span class="co">]</span>]</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>[<span class="co">[</span><span class="ot">Auteur2024_ModeleB</span><span class="co">]</span>]</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exceptions</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>[<span class="co">[</span><span class="ot">Auteur2025_ValidationMulticentrique</span><span class="co">]</span>]</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Limites de la synthèse</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>Définitions hétérogènes de la performance et faible description du transport.</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Formulation prudente</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>Les travaux disponibles suggèrent une dépendance importante au contexte, mais</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>l’hétérogénéité des validations empêche d’estimer précisément la perte attendue.</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La rédaction finale part de cette synthèse, non des phrases originales.</p>
+</section>
+<section id="préparer-une-discussion-de-thèse" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="préparer-une-discussion-de-thèse"><span class="header-section-number">19</span> Préparer une discussion de thèse</h2>
+<p>Pour chaque résultat de la thèse, créez une fiche de discussion :</p>
+<ul>
+<li>résultat propre ;</li>
+<li>études concordantes ;</li>
+<li>études divergentes ;</li>
+<li>différences de dessin ;</li>
+<li>mécanismes explicatifs ;</li>
+<li>limites ;</li>
+<li>implication ;</li>
+<li>analyse complémentaire ;</li>
+<li>prudence de langage.</li>
+</ul>
+<p>Cette méthode évite la discussion sous forme de catalogue.</p>
+</section>
+<section id="gérer-les-articles-contradictoires" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="gérer-les-articles-contradictoires"><span class="header-section-number">20</span> Gérer les articles contradictoires</h2>
+<p>Deux articles peuvent sembler opposés sans étudier la même chose.</p>
+<p>Comparez :</p>
+<ul>
+<li>population ;</li>
+<li>exposition ;</li>
+<li>comparateur ;</li>
+<li>outcome ;</li>
+<li>temps ;</li>
+<li>mesure ;</li>
+<li>ajustement ;</li>
+<li>précision ;</li>
+<li>biais ;</li>
+<li>contexte.</li>
+</ul>
+<p>Créez une note de désaccord décrivant les hypothèses explicatives. Le désaccord devient un objet de recherche.</p>
+</section>
+<section id="reproductibilité-de-la-lecture" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="reproductibilité-de-la-lecture"><span class="header-section-number">21</span> Reproductibilité de la lecture</h2>
+<p>Dans un projet collaboratif, définissez un manuel d’extraction :</p>
+<ul>
+<li>champs ;</li>
+<li>définitions ;</li>
+<li>conventions ;</li>
+<li>gestion des informations absentes ;</li>
+<li>règles de citation ;</li>
+<li>procédure de double extraction ;</li>
+<li>résolution des désaccords ;</li>
+<li>versionnage.</li>
+</ul>
+<p>Une fiche structurée peut être exportée vers un tableur ou une base. L’usage de champs stables facilite la synthèse et l’audit.</p>
+</section>
+<section id="modèle-complet-en-markdown" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="modèle-complet-en-markdown"><span class="header-section-number">22</span> Modèle complet en Markdown</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">citekey:</span><span class="co"> Auteur2026_MotCle</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="an">status:</span><span class="co"> critique</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="an">read_date:</span><span class="co"> 2026-08-09</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="an">questions:</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">  - Q-001</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="an">chapters:</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">  - introduction</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="an">tags:</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">  - methode/cohorte</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">  - fonction/contradiction</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu"># Contribution en une phrase</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># Pourquoi je l’ai lu</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="fu"># Question étudiée</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="fu"># Dessin et données</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu"># Analyse</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="fu"># Résultats traçables</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="fu"># Limites rapportées</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="fu"># Évaluation personnelle</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="fu"># Relations avec d’autres travaux</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a><span class="fu"># Utilité pour la thèse</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="fu"># Citations exactes</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="fu"># Questions ouvertes</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="fu"># Actions</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="checklist-avant-de-considérer-une-fiche-comme-terminée" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="checklist-avant-de-considérer-une-fiche-comme-terminée"><span class="header-section-number">23</span> Checklist avant de considérer une fiche comme terminée</h2>
+<ul>
+<li>La version de l’article est-elle identifiée ?</li>
+<li>La raison de lecture est-elle explicite ?</li>
+<li>La question est-elle reconstruite ?</li>
+<li>Les résultats incluent-ils des nombres ?</li>
+<li>Les pages sont-elles indiquées ?</li>
+<li>Les limites des auteurs sont-elles séparées des vôtres ?</li>
+<li>La voix de l’auteur est-elle séparée de votre commentaire ?</li>
+<li>La fiche est-elle liée à une question de thèse ?</li>
+<li>Une action suivante est-elle définie ?</li>
+<li>Les tags respectent-ils la taxonomie ?</li>
+<li>Une citation exacte est-elle signalée comme telle ?</li>
+<li>La fiche peut-elle être comprise hors contexte ?</li>
+</ul>
+</section>
+<section id="erreurs-à-éliminer" class="level2" data-number="24">
+<h2 data-number="24" class="anchored" data-anchor-id="erreurs-à-éliminer"><span class="header-section-number">24</span> Erreurs à éliminer</h2>
+<section id="à-lire-plus-tard-sans-priorité" class="level3" data-number="24.1">
+<h3 data-number="24.1" class="anchored" data-anchor-id="à-lire-plus-tard-sans-priorité"><span class="header-section-number">24.1</span> « À lire plus tard » sans priorité</h3>
+<p>Attribuez une raison et une échéance, sinon archivez.</p>
+</section>
+<section id="tout-surligner" class="level3" data-number="24.2">
+<h3 data-number="24.2" class="anchored" data-anchor-id="tout-surligner"><span class="header-section-number">24.2</span> Tout surligner</h3>
+<p>Limitez les extraits à ce qui servira à vérifier ou citer.</p>
+</section>
+<section id="copier-labstract" class="level3" data-number="24.3">
+<h3 data-number="24.3" class="anchored" data-anchor-id="copier-labstract"><span class="header-section-number">24.3</span> Copier l’abstract</h3>
+<p>L’abstract reflète le cadrage des auteurs. Reconstruisez vous-même la question et les limites.</p>
+</section>
+<section id="évaluer-par-prestige" class="level3" data-number="24.4">
+<h3 data-number="24.4" class="anchored" data-anchor-id="évaluer-par-prestige"><span class="header-section-number">24.4</span> Évaluer par prestige</h3>
+<p>La revue et les auteurs sont des informations contextuelles, pas des garanties de validité.</p>
+</section>
+<section id="accumuler-les-tags" class="level3" data-number="24.5">
+<h3 data-number="24.5" class="anchored" data-anchor-id="accumuler-les-tags"><span class="header-section-number">24.5</span> Accumuler les tags</h3>
+<p>Un petit vocabulaire contrôlé est plus utile qu’une centaine de variantes.</p>
+</section>
+<section id="écrire-une-fiche-sans-lien" class="level3" data-number="24.6">
+<h3 data-number="24.6" class="anchored" data-anchor-id="écrire-une-fiche-sans-lien"><span class="header-section-number">24.6</span> Écrire une fiche sans lien</h3>
+<p>Une note isolée est une dette de connaissance. Reliez-la immédiatement.</p>
+</section>
+</section>
+<section id="indicateurs-de-maturité-du-système" class="level2" data-number="25">
+<h2 data-number="25" class="anchored" data-anchor-id="indicateurs-de-maturité-du-système"><span class="header-section-number">25</span> Indicateurs de maturité du système</h2>
+<p>Vous progressez lorsque :</p>
+<ul>
+<li>vous retrouvez une preuve en moins de deux minutes ;</li>
+<li>vous pouvez expliquer pourquoi une source est citée ;</li>
+<li>les contradictions sont visibles ;</li>
+<li>les décisions méthodologiques ont une trace ;</li>
+<li>le plan de thèse est relié aux fiches ;</li>
+<li>la lecture produit des actions ;</li>
+<li>les références inutiles diminuent ;</li>
+<li>la synthèse mensuelle devient plus précise ;</li>
+<li>les nouvelles lectures modifient ou renforcent des hypothèses explicites.</li>
+</ul>
+</section>
+<section id="ressources-recommandées" class="level2" data-number="26">
+<h2 data-number="26" class="anchored" data-anchor-id="ressources-recommandées"><span class="header-section-number">26</span> Ressources recommandées</h2>
+<ul>
+<li>Zotero Documentation : gestion des références, fichiers, annotations et modèles de notes.</li>
+<li>PRISMA 2020 : structure du rapport des revues systématiques.</li>
+<li>EQUATOR Network : lignes directrices par dessin d’étude.</li>
+<li>Booth, Sutton et Papaioannou : méthodes de revue de littérature.</li>
+<li>Hart : lecture critique et construction d’une revue.</li>
+<li>Machi et McEvoy : développement d’une revue de littérature.</li>
+<li>guides institutionnels sur l’intégrité scientifique, la citation et la gestion des données.</li>
+</ul>
+</section>
+<section id="conclusion" class="level2" data-number="27">
+<h2 data-number="27" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">27</span> Conclusion</h2>
+<p>Une fiche de lecture doctorale n’est pas un produit administratif ajouté à la lecture. Elle est l’infrastructure intellectuelle de la thèse.</p>
+<p>Sa valeur vient de quatre qualités : fidélité à la source, critique méthodologique, connexion au projet et possibilité de réutilisation. L’IA peut accélérer certaines opérations, mais elle ne doit jamais effacer les frontières entre texte, interprétation et décision.</p>
+<p>Le système le plus sophistiqué n’est pas nécessairement le meilleur. Un modèle Markdown stable, une bibliothèque Zotero propre, une taxonomie limitée et une revue hebdomadaire peuvent suffire. Ce qui compte est la continuité entre lire, penser, relier, décider et écrire.</p>
+<div class="discussion-box">
+<p><strong>Question à la communauté doctorale :</strong> quelle information avez-vous le plus souvent regretté de ne pas avoir notée lors d’une première lecture ?</p>
+</div>
+</section>
+<section id="besoin-dun-accompagnement" class="level2" data-number="28">
+<h2 data-number="28" class="anchored" data-anchor-id="besoin-dun-accompagnement"><span class="header-section-number">28</span> Besoin d’un accompagnement ?</h2>
+<p>SYLTRA Consulting accompagne les doctorants, laboratoires et équipes de recherche dans la structuration des revues de littérature, la gestion des connaissances, la biostatistique, la Data Science et l’usage responsable de l’IA.</p>
+<p><a href="../contact.html" class="btn btn-primary">Nous contacter</a></p>
+<div class="post-tags">
+<p>#Doctorat #FicheDeLecture #RevueDeLittérature #Zotero #Recherche #SYLTRAConsulting</p>
+</div>
+</section>
+<section id="annexe-tableau-de-bord-doctoral" class="level2" data-number="29">
+<h2 data-number="29" class="anchored" data-anchor-id="annexe-tableau-de-bord-doctoral"><span class="header-section-number">29</span> Annexe — Tableau de bord doctoral</h2>
+<section id="file-dentrée" class="level3" data-number="29.1">
+<h3 data-number="29.1" class="anchored" data-anchor-id="file-dentrée"><span class="header-section-number">29.1</span> File d’entrée</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Référence</th>
+<th>Raison de lecture</th>
+<th style="text-align: right;">Priorité</th>
+<th>Question liée</th>
+<th>Échéance</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</section>
+<section id="articles-essentiels" class="level3" data-number="29.2">
+<h3 data-number="29.2" class="anchored" data-anchor-id="articles-essentiels"><span class="header-section-number">29.2</span> Articles essentiels</h3>
+<table class="caption-top">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Article</th>
+<th>Contribution</th>
+<th>Niveau de confiance</th>
+<th>Chapitre</th>
+<th>Statut d’intégration</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</section>
+<section id="contradictions-actives" class="level3" data-number="29.3">
+<h3 data-number="29.3" class="anchored" data-anchor-id="contradictions-actives"><span class="header-section-number">29.3</span> Contradictions actives</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Étude A</th>
+<th>Étude B</th>
+<th>Différence probable</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</section>
+<section id="décisions-méthodologiques" class="level3" data-number="29.4">
+<h3 data-number="29.4" class="anchored" data-anchor-id="décisions-méthodologiques"><span class="header-section-number">29.4</span> Décisions méthodologiques</h3>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Décision</th>
+<th>Options examinées</th>
+<th>Justification</th>
+<th>Sources</th>
+<th>Date</th>
+<th>À réviser si</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</section>
+<section id="questions-ouvertes" class="level3" data-number="29.5">
+<h3 data-number="29.5" class="anchored" data-anchor-id="questions-ouvertes"><span class="header-section-number">29.5</span> Questions ouvertes</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Question</th>
+<th style="text-align: right;">Importance</th>
+<th>Sources actuelles</th>
+<th>Prochaine action</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</section>
+</section>
+<section id="annexe-taxonomie-de-départ" class="level2" data-number="30">
+<h2 data-number="30" class="anchored" data-anchor-id="annexe-taxonomie-de-départ"><span class="header-section-number">30</span> Annexe — Taxonomie de départ</h2>
+<pre class="text"><code>domaine/
+  sante
+  industrie
+  finance
+  education
+
+dessin/
+  essai
+  cohorte
+  cas-temoins
+  transversal
+  qualitatif
+  revue-systematique
+  prediction
+
+fonction/
+  fondation
+  methode
+  resultat
+  contradiction
+  limite
+  discussion
+
+statut/
+  inbox
+  parcouru
+  lu
+  extrait
+  critique
+  integre
+
+preuve/
+  forte
+  moderee
+  faible
+  incertaine</code></pre>
+<p>Adaptez cette taxonomie au projet. Ne conservez aucun niveau qui ne sert pas à retrouver ou comparer.</p>
+</section>
+<section id="annexe-revue-mensuelle-guidée" class="level2" data-number="31">
+<h2 data-number="31" class="anchored" data-anchor-id="annexe-revue-mensuelle-guidée"><span class="header-section-number">31</span> Annexe — Revue mensuelle guidée</h2>
+<p>Répondez par écrit :</p>
+<ol type="1">
+<li>Quelle idée que je croyais solide a été fragilisée ?</li>
+<li>Quelle définition varie entre les articles ?</li>
+<li>Quelle population reste absente ?</li>
+<li>Quelle méthode semble dominante sans validation suffisante ?</li>
+<li>Quelle contradiction peut être expliquée par le dessin ?</li>
+<li>Quelle décision de ma thèse doit être revue ?</li>
+<li>Quel article essentiel n’a pas encore été intégré ?</li>
+<li>Quelle nouvelle analyse devient possible ?</li>
+<li>Quelle question est maintenant suffisamment précise pour une recherche ciblée ?</li>
+<li>Quel paragraphe de synthèse puis-je rédiger dès maintenant ?</li>
+</ol>
+<p>Cette revue transforme la bibliothèque en raisonnement cumulatif.</p>
+</section>
+<section id="annexe-protocole-de-lecture-dun-article-méthodologique" class="level2" data-number="32">
+<h2 data-number="32" class="anchored" data-anchor-id="annexe-protocole-de-lecture-dun-article-méthodologique"><span class="header-section-number">32</span> Annexe — Protocole de lecture d’un article méthodologique</h2>
+<p>Les articles méthodologiques demandent une fiche différente des études empiriques. Leur contribution peut être un estimateur, un algorithme, une preuve, une procédure de validation ou un cadre conceptuel.</p>
+<section id="problème-méthodologique" class="level3" data-number="32.1">
+<h3 data-number="32.1" class="anchored" data-anchor-id="problème-méthodologique"><span class="header-section-number">32.1</span> Problème méthodologique</h3>
+<ul>
+<li>Quelle difficulté existante motive la proposition ?</li>
+<li>Dans quelles conditions les méthodes courantes échouent-elles ?</li>
+<li>Le problème est-il statistique, computationnel, conceptuel ou opérationnel ?</li>
+<li>Quelle quantité les auteurs cherchent-ils à estimer ou optimiser ?</li>
+</ul>
+</section>
+<section id="hypothèses" class="level3" data-number="32.2">
+<h3 data-number="32.2" class="anchored" data-anchor-id="hypothèses"><span class="header-section-number">32.2</span> Hypothèses</h3>
+<p>Listez chaque hypothèse et classez-la :</p>
+<ul>
+<li>structurelle ;</li>
+<li>distributionnelle ;</li>
+<li>liée à l’échantillonnage ;</li>
+<li>liée aux données manquantes ;</li>
+<li>liée à l’identifiabilité ;</li>
+<li>liée au calcul ;</li>
+<li>liée à l’usage.</li>
+</ul>
+<p>Pour chaque hypothèse, notez comment elle pourrait être examinée dans vos données et ce qui se produit lorsqu’elle est violée.</p>
+</section>
+<section id="comparateurs" class="level3" data-number="32.3">
+<h3 data-number="32.3" class="anchored" data-anchor-id="comparateurs"><span class="header-section-number">32.3</span> Comparateurs</h3>
+<p>Une nouvelle méthode doit être comparée à des alternatives pertinentes. Vérifiez :</p>
+<ul>
+<li>si les méthodes concurrentes sont bien réglées ;</li>
+<li>si les mêmes informations sont disponibles pour toutes ;</li>
+<li>si les métriques favorisent une famille de modèles ;</li>
+<li>si les scénarios de simulation couvrent des cas défavorables ;</li>
+<li>si le coût de calcul est rapporté ;</li>
+<li>si une comparaison avec une méthode simple est présente.</li>
+</ul>
+</section>
+<section id="simulation" class="level3" data-number="32.4">
+<h3 data-number="32.4" class="anchored" data-anchor-id="simulation"><span class="header-section-number">32.4</span> Simulation</h3>
+<p>Une simulation convaincante fait varier les dimensions qui conditionnent la performance :</p>
+<ul>
+<li>taille d’échantillon ;</li>
+<li>nombre d’événements ;</li>
+<li>force du signal ;</li>
+<li>corrélation ;</li>
+<li>bruit ;</li>
+<li>déséquilibre ;</li>
+<li>mécanisme de données manquantes ;</li>
+<li>décalage de distribution ;</li>
+<li>mauvaise spécification.</li>
+</ul>
+<p>Ne résumez pas une simulation par « la méthode est meilleure ». Indiquez dans quels scénarios, selon quelle métrique et avec quelle contrepartie.</p>
+</section>
+<section id="application-réelle" class="level3" data-number="32.5">
+<h3 data-number="32.5" class="anchored" data-anchor-id="application-réelle"><span class="header-section-number">32.5</span> Application réelle</h3>
+<p>L’exemple réel doit démontrer autre chose qu’une possibilité d’exécution. Demandez s’il permet d’évaluer la validité, l’utilité ou seulement l’illustration.</p>
+</section>
+<section id="reproductibilité" class="level3" data-number="32.6">
+<h3 data-number="32.6" class="anchored" data-anchor-id="reproductibilité"><span class="header-section-number">32.6</span> Reproductibilité</h3>
+<p>Conservez :</p>
+<ul>
+<li>dépôt de code ;</li>
+<li>version du logiciel ;</li>
+<li>dépendances ;</li>
+<li>graine aléatoire ;</li>
+<li>données ;</li>
+<li>licence ;</li>
+<li>instructions ;</li>
+<li>date d’accès.</li>
+</ul>
+<p>Une fiche reproductible doit permettre de retrouver l’environnement nécessaire, même si la reproduction complète est reportée.</p>
+</section>
+</section>
+<section id="annexe-protocole-de-lecture-dun-article-de-données-ou-de-cohorte" class="level2" data-number="33">
+<h2 data-number="33" class="anchored" data-anchor-id="annexe-protocole-de-lecture-dun-article-de-données-ou-de-cohorte"><span class="header-section-number">33</span> Annexe — Protocole de lecture d’un article de données ou de cohorte</h2>
+<p>Pour un article décrivant une base, une cohorte ou une ressource, extrayez :</p>
+<ul>
+<li>population source ;</li>
+<li>période de recrutement ;</li>
+<li>critères d’inclusion ;</li>
+<li>consentement ;</li>
+<li>gouvernance ;</li>
+<li>calendrier des visites ;</li>
+<li>dictionnaire de variables ;</li>
+<li>modalités d’accès ;</li>
+<li>taux de données manquantes ;</li>
+<li>qualité des mesures ;</li>
+<li>possibilité de chaînage ;</li>
+<li>suivi ;</li>
+<li>attrition ;</li>
+<li>restrictions d’usage ;</li>
+<li>version des données.</li>
+</ul>
+<p>Reliez la fiche à une note distincte consacrée à la faisabilité de votre analyse. Une cohorte peut être scientifiquement riche mais inadaptée à votre question si l’instant de mesure, la définition du résultat ou la disponibilité des covariables ne correspondent pas à l’estimand visé.</p>
+</section>
+<section id="annexe-de-la-fiche-au-paragraphe-de-revue" class="level2" data-number="34">
+<h2 data-number="34" class="anchored" data-anchor-id="annexe-de-la-fiche-au-paragraphe-de-revue"><span class="header-section-number">34</span> Annexe — De la fiche au paragraphe de revue</h2>
+<p>Un paragraphe scientifique solide peut être construit en cinq mouvements :</p>
+<ol type="1">
+<li><strong>Proposition</strong> : l’idée que le paragraphe doit établir.</li>
+<li><strong>Convergence</strong> : plusieurs sources soutiennent cette idée.</li>
+<li><strong>Nuance</strong> : les études diffèrent par contexte ou méthode.</li>
+<li><strong>Limite</strong> : une incertitude demeure.</li>
+<li><strong>Transition</strong> : cette incertitude justifie la question suivante.</li>
+</ol>
+<p>Exemple de squelette :</p>
+<pre class="text"><code>Plusieurs travaux rapportent [proposition]. Cette convergence repose toutefois
+sur des études menées principalement dans [contexte]. Les différences observées
+semblent liées à [méthode, population ou définition]. En outre, [limite]
+empêche d’établir [conclusion plus forte]. Il reste donc nécessaire d’évaluer
+[question précise].</code></pre>
+<p>Chaque phrase doit renvoyer à une ou plusieurs fiches validées. Le paragraphe est ainsi une synthèse argumentée plutôt qu’une succession de résumés.</p>
+</section>
+<section id="annexe-règles-de-nommage" class="level2" data-number="35">
+<h2 data-number="35" class="anchored" data-anchor-id="annexe-règles-de-nommage"><span class="header-section-number">35</span> Annexe — Règles de nommage</h2>
+<p>Une convention stable évite la création de notes impossibles à retrouver.</p>
+<section id="clé-bibliographique" class="level3" data-number="35.1">
+<h3 data-number="35.1" class="anchored" data-anchor-id="clé-bibliographique"><span class="header-section-number">35.1</span> Clé bibliographique</h3>
+<p><code>PremierAuteur_Année_MotDistinctif</code></p>
+</section>
+<section id="question" class="level3" data-number="35.2">
+<h3 data-number="35.2" class="anchored" data-anchor-id="question"><span class="header-section-number">35.2</span> Question</h3>
+<p><code>Q-###-verbe-objet</code></p>
+</section>
+<section id="hypothèse-1" class="level3" data-number="35.3">
+<h3 data-number="35.3" class="anchored" data-anchor-id="hypothèse-1"><span class="header-section-number">35.3</span> Hypothèse</h3>
+<p><code>H-###-relation-attendue</code></p>
+</section>
+<section id="décision-1" class="level3" data-number="35.4">
+<h3 data-number="35.4" class="anchored" data-anchor-id="décision-1"><span class="header-section-number">35.4</span> Décision</h3>
+<p><code>D-YYYYMMDD-objet</code></p>
+</section>
+<section id="synthèse" class="level3" data-number="35.5">
+<h3 data-number="35.5" class="anchored" data-anchor-id="synthèse"><span class="header-section-number">35.5</span> Synthèse</h3>
+<p><code>SYN-theme-sousquestion</code></p>
+</section>
+<section id="jeu-de-données" class="level3" data-number="35.6">
+<h3 data-number="35.6" class="anchored" data-anchor-id="jeu-de-données"><span class="header-section-number">35.6</span> Jeu de données</h3>
+<p><code>DATA-nom-version</code></p>
+<p>Les identifiants restent courts, uniques et indépendants du titre affiché. Ils facilitent les liens, l’export et la collaboration.</p>
+</section>
+</section>
+<section id="annexe-politique-darchivage" class="level2" data-number="36">
+<h2 data-number="36" class="anchored" data-anchor-id="annexe-politique-darchivage"><span class="header-section-number">36</span> Annexe — Politique d’archivage</h2>
+<p>Une fiche peut être :</p>
+<ul>
+<li><strong>active</strong> : utilisée dans le travail courant ;</li>
+<li><strong>de référence</strong> : importante mais rarement modifiée ;</li>
+<li><strong>supersédée</strong> : remplacée par une version plus récente ;</li>
+<li><strong>écartée</strong> : non pertinente, avec raison ;</li>
+<li><strong>à vérifier</strong> : information ou référence incertaine.</li>
+</ul>
+<p>Ne supprimez pas silencieusement une fiche ayant influencé une décision. Marquez son statut et reliez-la à la note qui la remplace. Cette trace évite de répéter les mêmes explorations et rend le raisonnement scientifique auditable.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('a[href^="http"]').forEach(a=>{if(!a.href.includes(location.hostname)){a.rel="noopener noreferrer";a.target="_blank";}});});</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.syltra-consulting\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026–2027 SYLTRA Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>IA utile • Data Science • Biostatistique • Recherche</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

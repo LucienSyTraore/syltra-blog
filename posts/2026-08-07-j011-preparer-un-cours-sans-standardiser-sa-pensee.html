@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="SYLTRA Consulting">
+<meta name="description" content="Une méthode complète pour utiliser l’intelligence artificielle comme atelier de conception pédagogique, sans uniformiser les objectifs, les exemples, les raisonnements ni la voix de l’enseignant.">
+
+<title>Préparer un cours avec l’IA sans standardiser sa pensée – SYLTRA Consulting</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9080f0b6d81bdf8015e035bfde39d928.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Préparer un cours avec l’IA sans standardiser sa pensée – SYLTRA Consulting">
+<meta property="og:description" content="Une méthode complète pour utiliser l’intelligence artificielle comme atelier de conception pédagogique, sans uniformiser les objectifs, les exemples, les raisonnements ni la voix de l’enseignant.">
+<meta property="og:image" content="https://blog.syltra-consulting.com/assets/img/posts/j011.svg">
+<meta property="og:site_name" content="SYLTRA Consulting">
+<meta name="twitter:title" content="Préparer un cours avec l’IA sans standardiser sa pensée – SYLTRA Consulting">
+<meta name="twitter:description" content="Une méthode complète pour utiliser l’intelligence artificielle comme atelier de conception pédagogique, sans uniformiser les objectifs, les exemples, les raisonnements ni la voix de l’enseignant.">
+<meta name="twitter:image" content="https://blog.syltra-consulting.com/assets/img/posts/j011.svg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo light-content">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SYLTRA Consulting</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-domaines" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Domaines</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-domaines">    
+        <li>
+    <a class="dropdown-item" href="../domaines/sante.html">
+ <span class="dropdown-text">Santé &amp; biostatistique</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/recherche.html">
+ <span class="dropdown-text">Recherche</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/banque-finance.html">
+ <span class="dropdown-text">Banque, finance &amp; assurance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/industrie.html">
+ <span class="dropdown-text">Industrie &amp; ingénierie</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/enseignement.html">
+ <span class="dropdown-text">Enseignement &amp; formation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/gouvernance.html">
+ <span class="dropdown-text">Gouvernance &amp; sécurité</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../calendrier.html"> 
+<span class="menu-text">Calendrier</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../a-propos.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/LucienSyTraore"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/syltra-consulting/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Dans cet article</h2>
+   
+  <ul>
+  <li><a href="#lidée-essentielle" id="toc-lidée-essentielle" class="nav-link active" data-scroll-target="#lidée-essentielle"><span class="header-section-number">1</span> L’idée essentielle</a></li>
+  <li><a href="#pourquoi-la-standardisation-est-un-risque-réel" id="toc-pourquoi-la-standardisation-est-un-risque-réel" class="nav-link" data-scroll-target="#pourquoi-la-standardisation-est-un-risque-réel"><span class="header-section-number">2</span> Pourquoi la standardisation est un risque réel</a>
+  <ul class="collapse">
+  <li><a href="#la-facilité-de-production-peut-masquer-une-perte-de-singularité" id="toc-la-facilité-de-production-peut-masquer-une-perte-de-singularité" class="nav-link" data-scroll-target="#la-facilité-de-production-peut-masquer-une-perte-de-singularité"><span class="header-section-number">2.1</span> La facilité de production peut masquer une perte de singularité</a></li>
+  <li><a href="#un-cours-nest-pas-un-document-cest-un-dispositif-de-transformation" id="toc-un-cours-nest-pas-un-document-cest-un-dispositif-de-transformation" class="nav-link" data-scroll-target="#un-cours-nest-pas-un-document-cest-un-dispositif-de-transformation"><span class="header-section-number">2.2</span> Un cours n’est pas un document : c’est un dispositif de transformation</a></li>
+  </ul></li>
+  <li><a href="#commencer-par-larchitecture-pédagogique-pas-par-le-contenu" id="toc-commencer-par-larchitecture-pédagogique-pas-par-le-contenu" class="nav-link" data-scroll-target="#commencer-par-larchitecture-pédagogique-pas-par-le-contenu"><span class="header-section-number">3</span> Commencer par l’architecture pédagogique, pas par le contenu</a>
+  <ul class="collapse">
+  <li><a href="#étape-1-définir-la-transformation-attendue" id="toc-étape-1-définir-la-transformation-attendue" class="nav-link" data-scroll-target="#étape-1-définir-la-transformation-attendue"><span class="header-section-number">3.1</span> Étape 1 — Définir la transformation attendue</a></li>
+  <li><a href="#étape-2-décrire-les-apprenants-réels" id="toc-étape-2-décrire-les-apprenants-réels" class="nav-link" data-scroll-target="#étape-2-décrire-les-apprenants-réels"><span class="header-section-number">3.2</span> Étape 2 — Décrire les apprenants réels</a></li>
+  <li><a href="#étape-3-cartographier-les-obstacles" id="toc-étape-3-cartographier-les-obstacles" class="nav-link" data-scroll-target="#étape-3-cartographier-les-obstacles"><span class="header-section-number">3.3</span> Étape 3 — Cartographier les obstacles</a></li>
+  </ul></li>
+  <li><a href="#la-méthode-syltra-en-huit-mouvements" id="toc-la-méthode-syltra-en-huit-mouvements" class="nav-link" data-scroll-target="#la-méthode-syltra-en-huit-mouvements"><span class="header-section-number">4</span> La méthode SYLTRA en huit mouvements</a>
+  <ul class="collapse">
+  <li><a href="#ancrer" id="toc-ancrer" class="nav-link" data-scroll-target="#ancrer"><span class="header-section-number">4.1</span> 1. Ancrer</a></li>
+  <li><a href="#diverger" id="toc-diverger" class="nav-link" data-scroll-target="#diverger"><span class="header-section-number">4.2</span> 2. Diverger</a></li>
+  <li><a href="#sélectionner" id="toc-sélectionner" class="nav-link" data-scroll-target="#sélectionner"><span class="header-section-number">4.3</span> 3. Sélectionner</a></li>
+  <li><a href="#singulariser" id="toc-singulariser" class="nav-link" data-scroll-target="#singulariser"><span class="header-section-number">4.4</span> 4. Singulariser</a></li>
+  <li><a href="#mettre-en-activité" id="toc-mettre-en-activité" class="nav-link" data-scroll-target="#mettre-en-activité"><span class="header-section-number">4.5</span> 5. Mettre en activité</a></li>
+  <li><a href="#tester" id="toc-tester" class="nav-link" data-scroll-target="#tester"><span class="header-section-number">4.6</span> 6. Tester</a></li>
+  <li><a href="#auditer" id="toc-auditer" class="nav-link" data-scroll-target="#auditer"><span class="header-section-number">4.7</span> 7. Auditer</a></li>
+  <li><a href="#documenter" id="toc-documenter" class="nav-link" data-scroll-target="#documenter"><span class="header-section-number">4.8</span> 8. Documenter</a></li>
+  </ul></li>
+  <li><a href="#concevoir-un-alignement-pédagogique-vérifiable" id="toc-concevoir-un-alignement-pédagogique-vérifiable" class="nav-link" data-scroll-target="#concevoir-un-alignement-pédagogique-vérifiable"><span class="header-section-number">5</span> Concevoir un alignement pédagogique vérifiable</a>
+  <ul class="collapse">
+  <li><a href="#exemple-dalignement" id="toc-exemple-dalignement" class="nav-link" data-scroll-target="#exemple-dalignement"><span class="header-section-number">5.1</span> Exemple d’alignement</a></li>
+  </ul></li>
+  <li><a href="#utiliser-lia-pour-augmenter-la-diversité-intellectuelle" id="toc-utiliser-lia-pour-augmenter-la-diversité-intellectuelle" class="nav-link" data-scroll-target="#utiliser-lia-pour-augmenter-la-diversité-intellectuelle"><span class="header-section-number">6</span> Utiliser l’IA pour augmenter la diversité intellectuelle</a>
+  <ul class="collapse">
+  <li><a href="#générer-des-contre-exemples" id="toc-générer-des-contre-exemples" class="nav-link" data-scroll-target="#générer-des-contre-exemples"><span class="header-section-number">6.1</span> Générer des contre-exemples</a></li>
+  <li><a href="#faire-apparaître-les-controverses" id="toc-faire-apparaître-les-controverses" class="nav-link" data-scroll-target="#faire-apparaître-les-controverses"><span class="header-section-number">6.2</span> Faire apparaître les controverses</a></li>
+  <li><a href="#multiplier-les-représentations" id="toc-multiplier-les-représentations" class="nav-link" data-scroll-target="#multiplier-les-représentations"><span class="header-section-number">6.3</span> Multiplier les représentations</a></li>
+  </ul></li>
+  <li><a href="#concevoir-des-activités-qui-résistent-à-la-réponse-automatique" id="toc-concevoir-des-activités-qui-résistent-à-la-réponse-automatique" class="nav-link" data-scroll-target="#concevoir-des-activités-qui-résistent-à-la-réponse-automatique"><span class="header-section-number">7</span> Concevoir des activités qui résistent à la réponse automatique</a>
+  <ul class="collapse">
+  <li><a href="#activités-à-forte-valeur-cognitive" id="toc-activités-à-forte-valeur-cognitive" class="nav-link" data-scroll-target="#activités-à-forte-valeur-cognitive"><span class="header-section-number">7.1</span> Activités à forte valeur cognitive</a></li>
+  <li><a href="#le-rôle-du-journal-de-décision" id="toc-le-rôle-du-journal-de-décision" class="nav-link" data-scroll-target="#le-rôle-du-journal-de-décision"><span class="header-section-number">7.2</span> Le rôle du journal de décision</a></li>
+  </ul></li>
+  <li><a href="#construire-des-évaluations-compatibles-avec-un-usage-responsable-de-lia" id="toc-construire-des-évaluations-compatibles-avec-un-usage-responsable-de-lia" class="nav-link" data-scroll-target="#construire-des-évaluations-compatibles-avec-un-usage-responsable-de-lia"><span class="header-section-number">8</span> Construire des évaluations compatibles avec un usage responsable de l’IA</a>
+  <ul class="collapse">
+  <li><a href="#définir-la-politique-dusage" id="toc-définir-la-politique-dusage" class="nav-link" data-scroll-target="#définir-la-politique-dusage"><span class="header-section-number">8.1</span> Définir la politique d’usage</a></li>
+  <li><a href="#évaluer-ce-qui-demeure-humainement-imputable" id="toc-évaluer-ce-qui-demeure-humainement-imputable" class="nav-link" data-scroll-target="#évaluer-ce-qui-demeure-humainement-imputable"><span class="header-section-number">8.2</span> Évaluer ce qui demeure humainement imputable</a></li>
+  </ul></li>
+  <li><a href="#prévenir-les-hallucinations-et-les-références-inventées" id="toc-prévenir-les-hallucinations-et-les-références-inventées" class="nav-link" data-scroll-target="#prévenir-les-hallucinations-et-les-références-inventées"><span class="header-section-number">9</span> Prévenir les hallucinations et les références inventées</a>
+  <ul class="collapse">
+  <li><a href="#protocole-de-vérification-en-quatre-niveaux" id="toc-protocole-de-vérification-en-quatre-niveaux" class="nav-link" data-scroll-target="#protocole-de-vérification-en-quatre-niveaux"><span class="header-section-number">9.1</span> Protocole de vérification en quatre niveaux</a></li>
+  </ul></li>
+  <li><a href="#protéger-les-données-et-les-personnes" id="toc-protéger-les-données-et-les-personnes" class="nav-link" data-scroll-target="#protéger-les-données-et-les-personnes"><span class="header-section-number">10</span> Protéger les données et les personnes</a></li>
+  <li><a href="#un-atelier-complet-de-préparation-en-90-minutes" id="toc-un-atelier-complet-de-préparation-en-90-minutes" class="nav-link" data-scroll-target="#un-atelier-complet-de-préparation-en-90-minutes"><span class="header-section-number">11</span> Un atelier complet de préparation en 90 minutes</a>
+  <ul class="collapse">
+  <li><a href="#phase-1-cadrage-15-minutes" id="toc-phase-1-cadrage-15-minutes" class="nav-link" data-scroll-target="#phase-1-cadrage-15-minutes"><span class="header-section-number">11.1</span> Phase 1 — Cadrage, 15 minutes</a></li>
+  <li><a href="#phase-2-divergence-15-minutes" id="toc-phase-2-divergence-15-minutes" class="nav-link" data-scroll-target="#phase-2-divergence-15-minutes"><span class="header-section-number">11.2</span> Phase 2 — Divergence, 15 minutes</a></li>
+  <li><a href="#phase-3-choix-10-minutes" id="toc-phase-3-choix-10-minutes" class="nav-link" data-scroll-target="#phase-3-choix-10-minutes"><span class="header-section-number">11.3</span> Phase 3 — Choix, 10 minutes</a></li>
+  <li><a href="#phase-4-scénarisation-20-minutes" id="toc-phase-4-scénarisation-20-minutes" class="nav-link" data-scroll-target="#phase-4-scénarisation-20-minutes"><span class="header-section-number">11.4</span> Phase 4 — Scénarisation, 20 minutes</a></li>
+  <li><a href="#phase-5-stress-test-15-minutes" id="toc-phase-5-stress-test-15-minutes" class="nav-link" data-scroll-target="#phase-5-stress-test-15-minutes"><span class="header-section-number">11.5</span> Phase 5 — Stress test, 15 minutes</a></li>
+  <li><a href="#phase-6-vérification-10-minutes" id="toc-phase-6-vérification-10-minutes" class="nav-link" data-scroll-target="#phase-6-vérification-10-minutes"><span class="header-section-number">11.6</span> Phase 6 — Vérification, 10 minutes</a></li>
+  <li><a href="#phase-7-signature-pédagogique-5-minutes" id="toc-phase-7-signature-pédagogique-5-minutes" class="nav-link" data-scroll-target="#phase-7-signature-pédagogique-5-minutes"><span class="header-section-number">11.7</span> Phase 7 — Signature pédagogique, 5 minutes</a></li>
+  </ul></li>
+  <li><a href="#étude-de-cas-enseigner-la-calibration-dun-modèle-prédictif" id="toc-étude-de-cas-enseigner-la-calibration-dun-modèle-prédictif" class="nav-link" data-scroll-target="#étude-de-cas-enseigner-la-calibration-dun-modèle-prédictif"><span class="header-section-number">12</span> Étude de cas : enseigner la calibration d’un modèle prédictif</a>
+  <ul class="collapse">
+  <li><a href="#situation-initiale" id="toc-situation-initiale" class="nav-link" data-scroll-target="#situation-initiale"><span class="header-section-number">12.1</span> Situation initiale</a></li>
+  <li><a href="#refonte-centrée-sur-la-décision" id="toc-refonte-centrée-sur-la-décision" class="nav-link" data-scroll-target="#refonte-centrée-sur-la-décision"><span class="header-section-number">12.2</span> Refonte centrée sur la décision</a></li>
+  </ul></li>
+  <li><a href="#étude-de-cas-former-des-ingénieurs-à-lanalyse-dincidents" id="toc-étude-de-cas-former-des-ingénieurs-à-lanalyse-dincidents" class="nav-link" data-scroll-target="#étude-de-cas-former-des-ingénieurs-à-lanalyse-dincidents"><span class="header-section-number">13</span> Étude de cas : former des ingénieurs à l’analyse d’incidents</a></li>
+  <li><a href="#grille-daudit-dun-cours-préparé-avec-lia" id="toc-grille-daudit-dun-cours-préparé-avec-lia" class="nav-link" data-scroll-target="#grille-daudit-dun-cours-préparé-avec-lia"><span class="header-section-number">14</span> Grille d’audit d’un cours préparé avec l’IA</a></li>
+  <li><a href="#bibliothèque-de-prompts-exigeants" id="toc-bibliothèque-de-prompts-exigeants" class="nav-link" data-scroll-target="#bibliothèque-de-prompts-exigeants"><span class="header-section-number">15</span> Bibliothèque de prompts exigeants</a>
+  <ul class="collapse">
+  <li><a href="#pour-critiquer-une-architecture" id="toc-pour-critiquer-une-architecture" class="nav-link" data-scroll-target="#pour-critiquer-une-architecture"><span class="header-section-number">15.1</span> Pour critiquer une architecture</a></li>
+  <li><a href="#pour-produire-des-variantes-réellement-différentes" id="toc-pour-produire-des-variantes-réellement-différentes" class="nav-link" data-scroll-target="#pour-produire-des-variantes-réellement-différentes"><span class="header-section-number">15.2</span> Pour produire des variantes réellement différentes</a></li>
+  <li><a href="#pour-simuler-une-incompréhension" id="toc-pour-simuler-une-incompréhension" class="nav-link" data-scroll-target="#pour-simuler-une-incompréhension"><span class="header-section-number">15.3</span> Pour simuler une incompréhension</a></li>
+  <li><a href="#pour-auditer-les-sources" id="toc-pour-auditer-les-sources" class="nav-link" data-scroll-target="#pour-auditer-les-sources"><span class="header-section-number">15.4</span> Pour auditer les sources</a></li>
+  </ul></li>
+  <li><a href="#ce-quil-vaut-mieux-ne-pas-déléguer" id="toc-ce-quil-vaut-mieux-ne-pas-déléguer" class="nav-link" data-scroll-target="#ce-quil-vaut-mieux-ne-pas-déléguer"><span class="header-section-number">16</span> Ce qu’il vaut mieux ne pas déléguer</a></li>
+  <li><a href="#indicateurs-pour-améliorer-le-cours-après-la-séance" id="toc-indicateurs-pour-améliorer-le-cours-après-la-séance" class="nav-link" data-scroll-target="#indicateurs-pour-améliorer-le-cours-après-la-séance"><span class="header-section-number">17</span> Indicateurs pour améliorer le cours après la séance</a></li>
+  <li><a href="#charte-minimale-dutilisation-de-lia-par-lenseignant" id="toc-charte-minimale-dutilisation-de-lia-par-lenseignant" class="nav-link" data-scroll-target="#charte-minimale-dutilisation-de-lia-par-lenseignant"><span class="header-section-number">18</span> Charte minimale d’utilisation de l’IA par l’enseignant</a></li>
+  <li><a href="#ressources-de-référence" id="toc-ressources-de-référence" class="nav-link" data-scroll-target="#ressources-de-référence"><span class="header-section-number">19</span> Ressources de référence</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">20</span> Conclusion</a></li>
+  <li><a href="#besoin-dun-accompagnement" id="toc-besoin-dun-accompagnement" class="nav-link" data-scroll-target="#besoin-dun-accompagnement"><span class="header-section-number">21</span> Besoin d’un accompagnement ?</a></li>
+  <li><a href="#annexe-canevas-de-conception-réutilisable" id="toc-annexe-canevas-de-conception-réutilisable" class="nav-link" data-scroll-target="#annexe-canevas-de-conception-réutilisable"><span class="header-section-number">22</span> Annexe — Canevas de conception réutilisable</a>
+  <ul class="collapse">
+  <li><a href="#identité-de-la-séquence" id="toc-identité-de-la-séquence" class="nav-link" data-scroll-target="#identité-de-la-séquence"><span class="header-section-number">22.1</span> Identité de la séquence</a></li>
+  <li><a href="#transformation-attendue" id="toc-transformation-attendue" class="nav-link" data-scroll-target="#transformation-attendue"><span class="header-section-number">22.2</span> Transformation attendue</a></li>
+  <li><a href="#diagnostic-initial" id="toc-diagnostic-initial" class="nav-link" data-scroll-target="#diagnostic-initial"><span class="header-section-number">22.3</span> Diagnostic initial</a></li>
+  <li><a href="#carte-des-concepts" id="toc-carte-des-concepts" class="nav-link" data-scroll-target="#carte-des-concepts"><span class="header-section-number">22.4</span> Carte des concepts</a></li>
+  <li><a href="#scénario-minuté" id="toc-scénario-minuté" class="nav-link" data-scroll-target="#scénario-minuté"><span class="header-section-number">22.5</span> Scénario minuté</a></li>
+  <li><a href="#test-de-non-standardisation" id="toc-test-de-non-standardisation" class="nav-link" data-scroll-target="#test-de-non-standardisation"><span class="header-section-number">22.6</span> Test de non-standardisation</a></li>
+  <li><a href="#registre-de-vérification" id="toc-registre-de-vérification" class="nav-link" data-scroll-target="#registre-de-vérification"><span class="header-section-number">22.7</span> Registre de vérification</a></li>
+  <li><a href="#retour-après-séance" id="toc-retour-après-séance" class="nav-link" data-scroll-target="#retour-après-séance"><span class="header-section-number">22.8</span> Retour après séance</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Préparer un cours avec l’IA sans standardiser sa pensée</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Intelligence artificielle</div>
+    <div class="quarto-category">Enseignement &amp; formation</div>
+    <div class="quarto-category">Pédagogie</div>
+    <div class="quarto-category">Recherche</div>
+    <div class="quarto-category">Gouvernance &amp; sécurité</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Une méthode complète pour utiliser l’intelligence artificielle comme atelier de conception pédagogique, sans uniformiser les objectifs, les exemples, les raisonnements ni la voix de l’enseignant.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>SYLTRA Consulting </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">7 août 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modifié</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">7 août 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="article-kicker">
+<p><strong>Publication 11 · Niveau intermédiaire · Thème : conception pédagogique augmentée</strong></p>
+</div>
+<section id="lidée-essentielle" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="lidée-essentielle"><span class="header-section-number">1</span> L’idée essentielle</h2>
+<p>L’intelligence artificielle peut accélérer la préparation d’un cours, mais elle ne doit pas décider à la place de l’enseignant de ce qui mérite d’être appris, de la manière de le problématiser ni des efforts intellectuels que les étudiants doivent accomplir.</p>
+<p>Le risque principal n’est pas seulement l’erreur factuelle. Il est plus discret : produire des cours techniquement propres, très lisibles et parfaitement interchangeables. Quand les mêmes outils sont interrogés avec les mêmes formulations, ils tendent à proposer des plans moyens, des exemples prévisibles, des transitions lisses et des activités qui donnent l’apparence de la pédagogie sans toujours provoquer un apprentissage profond.</p>
+<p>Préparer un cours avec l’IA exige donc une inversion de perspective. L’enseignant ne part pas d’une question comme « Fais-moi un cours sur… ». Il commence par expliciter son intention : quelle transformation cognitive, professionnelle ou méthodologique attend-il de l’apprenant ? L’IA intervient ensuite comme partenaire de divergence, de structuration, de simulation et de critique. Elle ne devient jamais l’auteur invisible du curriculum.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Principe directeur">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Principe directeur
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>On peut déléguer la production de variantes, jamais la responsabilité pédagogique.</strong><br>
+La qualité d’un cours ne se mesure pas au volume de diapositives produites, mais à la cohérence entre les objectifs, les activités, les preuves d’apprentissage, le contexte des apprenants et les exigences de la discipline.</p>
+</div>
+</div>
+</section>
+<section id="pourquoi-la-standardisation-est-un-risque-réel" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="pourquoi-la-standardisation-est-un-risque-réel"><span class="header-section-number">2</span> Pourquoi la standardisation est un risque réel</h2>
+<section id="la-facilité-de-production-peut-masquer-une-perte-de-singularité" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="la-facilité-de-production-peut-masquer-une-perte-de-singularité"><span class="header-section-number">2.1</span> La facilité de production peut masquer une perte de singularité</h3>
+<p>Un modèle génératif est très performant pour recombiner des formes déjà fréquentes : définition, liste d’avantages, exemple, mini-quiz, conclusion. Cette capacité est utile, mais elle peut produire une convergence involontaire. Plusieurs enseignants travaillant séparément sur un même sujet peuvent obtenir des plans presque identiques, non parce que ces plans seraient nécessairement les meilleurs, mais parce qu’ils sont statistiquement familiers.</p>
+<p>La standardisation apparaît lorsque :</p>
+<ul>
+<li>les objectifs sont formulés uniquement avec des verbes génériques comme « comprendre » ou « connaître » ;</li>
+<li>les exemples sont détachés du terrain réel des étudiants ;</li>
+<li>les controverses disciplinaires sont effacées au profit d’un consensus artificiel ;</li>
+<li>les activités évaluent la restitution plutôt que le raisonnement ;</li>
+<li>les cas sont trop propres et ne contiennent aucune ambiguïté ;</li>
+<li>le vocabulaire de l’enseignant est remplacé par une prose institutionnelle uniforme ;</li>
+<li>les erreurs typiques des apprenants ne sont jamais intégrées au scénario ;</li>
+<li>la progression suit une logique encyclopédique plutôt qu’une logique d’apprentissage.</li>
+</ul>
+<p>Un cours peut alors sembler professionnel tout en étant pédagogiquement faible. Il transmet de l’information, mais il ne construit ni discernement, ni capacité de transfert, ni autonomie.</p>
+</section>
+<section id="un-cours-nest-pas-un-document-cest-un-dispositif-de-transformation" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="un-cours-nest-pas-un-document-cest-un-dispositif-de-transformation"><span class="header-section-number">2.2</span> Un cours n’est pas un document : c’est un dispositif de transformation</h3>
+<p>Le support visible — texte, diaporama, notebook, vidéo ou fiche — n’est qu’une partie du cours. Le dispositif complet comprend :</p>
+<ol type="1">
+<li>un état initial des apprenants ;</li>
+<li>une cible de progression ;</li>
+<li>des obstacles prévisibles ;</li>
+<li>des situations qui rendent ces obstacles visibles ;</li>
+<li>des activités qui obligent à les dépasser ;</li>
+<li>des rétroactions ;</li>
+<li>des preuves permettant d’établir que l’apprentissage a eu lieu ;</li>
+<li>une possibilité de réutiliser ce qui a été appris dans un autre contexte.</li>
+</ol>
+<p>L’IA peut contribuer à chacune de ces composantes, à condition que l’enseignant garde la maîtrise des choix. Elle peut suggérer des exemples contrastés, simuler des réponses d’étudiants, générer des distracteurs, reformuler une consigne ou analyser la couverture d’un plan. Elle ne connaît toutefois ni la culture réelle du groupe, ni ses expériences, ni les enjeux implicites de l’établissement, ni les conséquences d’une mauvaise compréhension dans le métier visé.</p>
+</section>
+</section>
+<section id="commencer-par-larchitecture-pédagogique-pas-par-le-contenu" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="commencer-par-larchitecture-pédagogique-pas-par-le-contenu"><span class="header-section-number">3</span> Commencer par l’architecture pédagogique, pas par le contenu</h2>
+<section id="étape-1-définir-la-transformation-attendue" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="étape-1-définir-la-transformation-attendue"><span class="header-section-number">3.1</span> Étape 1 — Définir la transformation attendue</h3>
+<p>Avant tout usage d’un outil, rédigez une phrase répondant à la question suivante :</p>
+<blockquote class="blockquote">
+<p>À la fin de cette séquence, que pourra faire l’apprenant qu’il ne pouvait pas faire de manière fiable auparavant ?</p>
+</blockquote>
+<p>Une cible robuste décrit une performance observable. Elle évite de confondre exposition et apprentissage.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Formulation faible</th>
+<th>Formulation opérationnelle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Comprendre la régression logistique</td>
+<td>Choisir une régression logistique lorsqu’une issue binaire et un objectif d’estimation du risque le justifient, puis interpréter correctement les coefficients et les probabilités</td>
+</tr>
+<tr class="even">
+<td>Connaître les biais de l’IA</td>
+<td>Identifier au moins trois mécanismes de biais dans un cas d’usage, distinguer leurs origines et proposer une mesure de réduction adaptée</td>
+</tr>
+<tr class="odd">
+<td>Apprendre la maintenance prédictive</td>
+<td>Construire une stratégie de détection anticipée en distinguant horizon de prédiction, événement cible, coût des faux positifs et coût des faux négatifs</td>
+</tr>
+<tr class="even">
+<td>Maîtriser la revue de littérature</td>
+<td>Transformer une question de recherche en stratégie de recherche reproductible, sélectionner les études pertinentes et synthétiser les résultats sans écraser leur hétérogénéité</td>
+</tr>
+</tbody>
+</table>
+<p>Cette cible devient la contrainte supérieure. Tout contenu qui ne contribue pas à cette transformation doit être raccourci, déplacé en ressource complémentaire ou supprimé.</p>
+</section>
+<section id="étape-2-décrire-les-apprenants-réels" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="étape-2-décrire-les-apprenants-réels"><span class="header-section-number">3.2</span> Étape 2 — Décrire les apprenants réels</h3>
+<p>Une préparation solide ne repose pas sur un « étudiant moyen ». Documentez au minimum :</p>
+<ul>
+<li>les prérequis réellement maîtrisés ;</li>
+<li>les écarts probables entre participants ;</li>
+<li>le vocabulaire déjà connu ;</li>
+<li>les expériences professionnelles mobilisables ;</li>
+<li>les représentations erronées fréquentes ;</li>
+<li>les contraintes d’attention, de langue ou d’accessibilité ;</li>
+<li>les conditions matérielles de la séance ;</li>
+<li>le niveau d’autonomie attendu après la formation.</li>
+</ul>
+<p>L’IA peut aider à produire plusieurs hypothèses de profils, mais ces hypothèses doivent être confrontées à des données réelles : productions antérieures, questionnaire diagnostique, observations de classe, échanges avec l’équipe pédagogique ou retours des promotions précédentes.</p>
+</section>
+<section id="étape-3-cartographier-les-obstacles" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="étape-3-cartographier-les-obstacles"><span class="header-section-number">3.3</span> Étape 3 — Cartographier les obstacles</h3>
+<p>Un bon cours ne se contente pas d’ordonner des notions. Il organise la rencontre avec des difficultés fécondes.</p>
+<p>Pour chaque objectif, posez quatre questions :</p>
+<ol type="1">
+<li>Quelle erreur un débutant intelligent pourrait-il commettre ?</li>
+<li>Pourquoi cette erreur paraît-elle raisonnable ?</li>
+<li>Quelle situation permet de la rendre visible sans humilier l’apprenant ?</li>
+<li>Quelle activité l’aide à reconstruire une compréhension plus robuste ?</li>
+</ol>
+<p>Exemple en statistique : un étudiant peut croire qu’une valeur de <em>p</em> élevée prouve l’absence d’effet. Cette erreur paraît raisonnable parce que le langage courant associe « non significatif » à « rien ». Une activité utile consiste à présenter deux études ayant le même effet estimé mais des tailles d’échantillon différentes, puis à demander ce qui change réellement : l’effet, l’incertitude ou la décision conventionnelle.</p>
+<p>L’IA peut générer des erreurs plausibles, mais l’enseignant doit vérifier qu’elles correspondent aux difficultés observées dans la discipline et qu’elles ne caricaturent pas les apprenants.</p>
+</section>
+</section>
+<section id="la-méthode-syltra-en-huit-mouvements" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="la-méthode-syltra-en-huit-mouvements"><span class="header-section-number">4</span> La méthode SYLTRA en huit mouvements</h2>
+<section id="ancrer" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="ancrer"><span class="header-section-number">4.1</span> 1. Ancrer</h3>
+<p>Formulez l’objectif, le public, la durée, les contraintes et les critères de réussite. Ajoutez ce qui ne doit pas être sacrifié : rigueur mathématique, débat critique, pratique instrumentale, contextualisation locale, sécurité ou conformité.</p>
+<p><strong>Livrable :</strong> une note de cadrage d’une page maximum.</p>
+</section>
+<section id="diverger" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="diverger"><span class="header-section-number">4.2</span> 2. Diverger</h3>
+<p>Demandez à l’IA plusieurs architectures franchement différentes, non de simples reformulations. Par exemple :</p>
+<ul>
+<li>une progression par problème ;</li>
+<li>une progression par cas ;</li>
+<li>une progression historique ;</li>
+<li>une progression par erreurs fréquentes ;</li>
+<li>une progression par projet ;</li>
+<li>une progression comparative entre méthodes concurrentes.</li>
+</ul>
+<p>L’objectif est d’élargir l’espace des possibilités, pas de sélectionner immédiatement une solution.</p>
+</section>
+<section id="sélectionner" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="sélectionner"><span class="header-section-number">4.3</span> 3. Sélectionner</h3>
+<p>Évaluez chaque architecture avec des critères explicites :</p>
+<ul>
+<li>adéquation au niveau du public ;</li>
+<li>charge cognitive ;</li>
+<li>possibilité d’activité authentique ;</li>
+<li>équilibre entre explication et pratique ;</li>
+<li>qualité des preuves d’apprentissage ;</li>
+<li>temps réel disponible ;</li>
+<li>accessibilité ;</li>
+<li>risques d’interprétation.</li>
+</ul>
+<p>Une matrice de décision simple protège contre la préférence spontanée pour le plan le plus élégant.</p>
+</section>
+<section id="singulariser" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="singulariser"><span class="header-section-number">4.4</span> 4. Singulariser</h3>
+<p>Injectez ce que le modèle ne peut pas inventer légitimement :</p>
+<ul>
+<li>un cas issu du terrain ;</li>
+<li>une décision professionnelle réelle ;</li>
+<li>une erreur observée dans une promotion précédente ;</li>
+<li>une donnée locale ;</li>
+<li>une controverse propre à la discipline ;</li>
+<li>une manière personnelle d’expliquer ;</li>
+<li>une contrainte institutionnelle ;</li>
+<li>un témoignage ou une expérience, anonymisés si nécessaire.</li>
+</ul>
+<p>C’est à cette étape que le cours cesse d’être générique.</p>
+</section>
+<section id="mettre-en-activité" class="level3" data-number="4.5">
+<h3 data-number="4.5" class="anchored" data-anchor-id="mettre-en-activité"><span class="header-section-number">4.5</span> 5. Mettre en activité</h3>
+<p>Pour chaque bloc explicatif, prévoyez ce que l’apprenant doit faire. Une activité n’est pas un simple changement de format. Elle doit produire une trace interprétable : justification, schéma, choix argumenté, calcul, diagnostic, prototype, comparaison ou critique.</p>
+</section>
+<section id="tester" class="level3" data-number="4.6">
+<h3 data-number="4.6" class="anchored" data-anchor-id="tester"><span class="header-section-number">4.6</span> 6. Tester</h3>
+<p>Simulez plusieurs profils d’apprenants : novice anxieux, professionnel expérimenté mais peu académique, étudiant très rapide, participant qui confond deux notions, personne maîtrisant mal la langue d’enseignement. Demandez à l’IA d’anticiper leurs questions, puis confrontez ces simulations à votre expérience.</p>
+</section>
+<section id="auditer" class="level3" data-number="4.7">
+<h3 data-number="4.7" class="anchored" data-anchor-id="auditer"><span class="header-section-number">4.7</span> 7. Auditer</h3>
+<p>Vérifiez les faits, les sources, les chiffres, les exemples, les citations, les droits d’utilisation et la cohérence des consignes. Toute information produite par un modèle doit être considérée comme une proposition à contrôler.</p>
+</section>
+<section id="documenter" class="level3" data-number="4.8">
+<h3 data-number="4.8" class="anchored" data-anchor-id="documenter"><span class="header-section-number">4.8</span> 8. Documenter</h3>
+<p>Conservez une trace des choix : versions, prompts utiles, sources, modifications majeures, décisions de rejet et résultats des évaluations. Cette documentation permet d’améliorer le cours sans repartir de zéro et de rendre l’usage de l’IA explicable.</p>
+</section>
+</section>
+<section id="concevoir-un-alignement-pédagogique-vérifiable" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="concevoir-un-alignement-pédagogique-vérifiable"><span class="header-section-number">5</span> Concevoir un alignement pédagogique vérifiable</h2>
+<p>Un cours est cohérent lorsque les objectifs, les activités et l’évaluation portent sur le même niveau de performance.</p>
+<section id="exemple-dalignement" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="exemple-dalignement"><span class="header-section-number">5.1</span> Exemple d’alignement</h3>
+<p><strong>Objectif :</strong> évaluer la crédibilité d’une étude observationnelle.</p>
+<p><strong>Activité d’apprentissage :</strong> en groupes, analyser un article à l’aide d’une grille comprenant sélection, mesure, confusion, temporalité et généralisation.</p>
+<p><strong>Évaluation :</strong> rédiger une note de décision de 600 mots indiquant ce que l’étude permet de conclure, ce qu’elle ne permet pas de conclure et quelle information supplémentaire modifierait le jugement.</p>
+<p><strong>Critères :</strong></p>
+<ul>
+<li>distinction correcte entre association et causalité ;</li>
+<li>identification des biais principaux ;</li>
+<li>prise en compte de l’incertitude ;</li>
+<li>justification fondée sur le texte de l’étude ;</li>
+<li>formulation proportionnée des conclusions.</li>
+</ul>
+<p>Une évaluation sous forme de questionnaire de définitions serait ici mal alignée. Elle pourrait mesurer la mémorisation du vocabulaire, mais pas la capacité d’évaluer une étude.</p>
+</section>
+</section>
+<section id="utiliser-lia-pour-augmenter-la-diversité-intellectuelle" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="utiliser-lia-pour-augmenter-la-diversité-intellectuelle"><span class="header-section-number">6</span> Utiliser l’IA pour augmenter la diversité intellectuelle</h2>
+<section id="générer-des-contre-exemples" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="générer-des-contre-exemples"><span class="header-section-number">6.1</span> Générer des contre-exemples</h3>
+<p>Les modèles sont souvent sollicités pour expliquer ce qui est vrai. Ils sont également utiles pour fabriquer des cas limites, des objections et des contre-exemples.</p>
+<p>Prompt de travail :</p>
+<pre class="text"><code>À partir de l’objectif ci-dessous, propose cinq situations qui mettent en échec
+une application mécanique de la règle enseignée. Pour chaque situation :
+1. explique pourquoi un étudiant pourrait appliquer la règle ;
+2. montre ce qui rend cette application inadéquate ;
+3. indique la question de diagnostic à poser avant de décider.
+Ne rédige pas la solution finale à la place de l’étudiant.</code></pre>
+<p>Cette approche évite de transformer une méthode en recette universelle.</p>
+</section>
+<section id="faire-apparaître-les-controverses" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="faire-apparaître-les-controverses"><span class="header-section-number">6.2</span> Faire apparaître les controverses</h3>
+<p>Une discipline vivante contient des désaccords : choix d’indicateurs, écoles théoriques, méthodes d’estimation, normes professionnelles ou critères d’interprétation. Demandez à l’IA de cartographier les positions, puis vérifiez chaque référence.</p>
+<p>Le cours doit distinguer :</p>
+<ul>
+<li>ce qui fait consensus ;</li>
+<li>ce qui dépend du contexte ;</li>
+<li>ce qui reste controversé ;</li>
+<li>ce qui relève d’une convention ;</li>
+<li>ce qui correspond au choix pédagogique de l’enseignant.</li>
+</ul>
+</section>
+<section id="multiplier-les-représentations" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="multiplier-les-représentations"><span class="header-section-number">6.3</span> Multiplier les représentations</h3>
+<p>Une notion peut être exprimée sous forme verbale, graphique, mathématique, procédurale, analogique ou contextuelle. L’IA peut proposer plusieurs représentations, mais l’enseignant doit examiner leurs limites.</p>
+<p>Une analogie facilite parfois l’entrée dans une notion tout en créant une erreur durable. Elle doit donc être accompagnée d’une section : « Ce que l’analogie explique » et « Là où elle cesse de fonctionner ».</p>
+</section>
+</section>
+<section id="concevoir-des-activités-qui-résistent-à-la-réponse-automatique" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="concevoir-des-activités-qui-résistent-à-la-réponse-automatique"><span class="header-section-number">7</span> Concevoir des activités qui résistent à la réponse automatique</h2>
+<p>À l’ère des modèles génératifs, une activité fondée uniquement sur la restitution d’une information publique est fragile. L’objectif n’est pas de rendre toute assistance impossible, mais de demander un travail intellectuel traçable.</p>
+<section id="activités-à-forte-valeur-cognitive" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="activités-à-forte-valeur-cognitive"><span class="header-section-number">7.1</span> Activités à forte valeur cognitive</h3>
+<ul>
+<li>comparer deux réponses plausibles et choisir la plus défendable ;</li>
+<li>corriger une analyse contenant des erreurs réalistes ;</li>
+<li>justifier une décision avec des contraintes contradictoires ;</li>
+<li>adapter une méthode à un jeu de données local ;</li>
+<li>expliquer comment une conclusion changerait sous une autre hypothèse ;</li>
+<li>produire une version initiale, recevoir une critique, puis documenter la révision ;</li>
+<li>relier un concept à une observation de terrain ;</li>
+<li>construire un protocole de vérification ;</li>
+<li>défendre oralement les arbitrages effectués.</li>
+</ul>
+</section>
+<section id="le-rôle-du-journal-de-décision" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="le-rôle-du-journal-de-décision"><span class="header-section-number">7.2</span> Le rôle du journal de décision</h3>
+<p>Demandez aux apprenants de conserver un bref journal comprenant :</p>
+<ol type="1">
+<li>leur première interprétation ;</li>
+<li>les informations recherchées ;</li>
+<li>les outils utilisés ;</li>
+<li>les propositions rejetées ;</li>
+<li>les vérifications réalisées ;</li>
+<li>la décision finale ;</li>
+<li>ce qu’ils modifieraient avec plus de temps.</li>
+</ol>
+<p>Ce journal évalue la qualité du processus, pas seulement l’apparence du résultat.</p>
+</section>
+</section>
+<section id="construire-des-évaluations-compatibles-avec-un-usage-responsable-de-lia" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="construire-des-évaluations-compatibles-avec-un-usage-responsable-de-lia"><span class="header-section-number">8</span> Construire des évaluations compatibles avec un usage responsable de l’IA</h2>
+<section id="définir-la-politique-dusage" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="définir-la-politique-dusage"><span class="header-section-number">8.1</span> Définir la politique d’usage</h3>
+<p>Une consigne doit préciser ce qui est :</p>
+<ul>
+<li>autorisé ;</li>
+<li>autorisé sous déclaration ;</li>
+<li>interdit ;</li>
+<li>attendu en matière de citation ;</li>
+<li>vérifié lors d’un oral ou d’une démonstration ;</li>
+<li>conservé comme preuve du processus.</li>
+</ul>
+<p>Une formulation vague telle que « l’IA est interdite » est difficile à appliquer et peut déplacer les usages dans l’ombre. Une politique plus robuste décrit les fonctions interdites ou permises.</p>
+<p>Exemple :</p>
+<blockquote class="blockquote">
+<p>Vous pouvez utiliser un outil génératif pour proposer une structure, reformuler un passage et produire des questions de contrôle. Vous devez déclarer l’outil, résumer son rôle et vérifier toutes les informations. La sélection des preuves, l’analyse critique et la conclusion doivent être les vôtres. Un entretien de cinq minutes pourra porter sur vos choix.</p>
+</blockquote>
+</section>
+<section id="évaluer-ce-qui-demeure-humainement-imputable" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="évaluer-ce-qui-demeure-humainement-imputable"><span class="header-section-number">8.2</span> Évaluer ce qui demeure humainement imputable</h3>
+<p>Une production est plus authentique lorsqu’elle exige :</p>
+<ul>
+<li>une connaissance du contexte local ;</li>
+<li>une décision sous contrainte ;</li>
+<li>une justification personnelle ;</li>
+<li>une analyse de données fournies ;</li>
+<li>un retour sur erreurs ;</li>
+<li>une défense orale ;</li>
+<li>une adaptation après rétroaction.</li>
+</ul>
+<p>L’IA peut participer au processus, mais elle ne peut pas assumer la responsabilité de la décision.</p>
+</section>
+</section>
+<section id="prévenir-les-hallucinations-et-les-références-inventées" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="prévenir-les-hallucinations-et-les-références-inventées"><span class="header-section-number">9</span> Prévenir les hallucinations et les références inventées</h2>
+<section id="protocole-de-vérification-en-quatre-niveaux" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="protocole-de-vérification-en-quatre-niveaux"><span class="header-section-number">9.1</span> Protocole de vérification en quatre niveaux</h3>
+<p><strong>Niveau 1 — Cohérence interne</strong><br>
+La réponse se contredit-elle ? Les termes sont-ils définis de manière stable ? Les chiffres sont-ils compatibles ?</p>
+<p><strong>Niveau 2 — Vérification documentaire</strong><br>
+Chaque affirmation importante est-elle confirmée par une source accessible et identifiable ?</p>
+<p><strong>Niveau 3 — Vérification disciplinaire</strong><br>
+L’interprétation respecte-t-elle les conventions et limites propres au domaine ?</p>
+<p><strong>Niveau 4 — Vérification pédagogique</strong><br>
+Même exacte, l’information est-elle adaptée au niveau, au contexte et à l’objectif du cours ?</p>
+<p>Une référence qui ne possède ni DOI vérifiable, ni page institutionnelle, ni notice bibliographique fiable ne doit pas être retenue sur la seule foi du modèle.</p>
+</section>
+</section>
+<section id="protéger-les-données-et-les-personnes" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="protéger-les-données-et-les-personnes"><span class="header-section-number">10</span> Protéger les données et les personnes</h2>
+<p>Ne transmettez pas à un service public :</p>
+<ul>
+<li>des copies non anonymisées ;</li>
+<li>des données de santé ;</li>
+<li>des évaluations individuelles ;</li>
+<li>des informations disciplinaires ;</li>
+<li>des documents contractuels confidentiels ;</li>
+<li>des sujets d’examen non publiés ;</li>
+<li>des travaux de recherche sous embargo ;</li>
+<li>des informations permettant d’identifier un étudiant.</li>
+</ul>
+<p>Avant usage, vérifiez la politique de l’établissement, le contrat du service, le lieu de traitement des données, les options de conservation, les droits de réutilisation et les procédures d’exercice des droits.</p>
+<p>L’UNESCO recommande une approche de l’IA générative en éducation centrée sur l’humain, attentive à la protection des données, à l’équité, à l’inclusion et au maintien de l’agentivité humaine. Cette perspective fournit un cadre utile : la technologie doit servir les finalités éducatives, et non les redéfinir silencieusement.</p>
+</section>
+<section id="un-atelier-complet-de-préparation-en-90-minutes" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="un-atelier-complet-de-préparation-en-90-minutes"><span class="header-section-number">11</span> Un atelier complet de préparation en 90 minutes</h2>
+<section id="phase-1-cadrage-15-minutes" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="phase-1-cadrage-15-minutes"><span class="header-section-number">11.1</span> Phase 1 — Cadrage, 15 minutes</h3>
+<p>Rédigez :</p>
+<ul>
+<li>la transformation attendue ;</li>
+<li>trois prérequis ;</li>
+<li>deux erreurs fréquentes ;</li>
+<li>une contrainte forte ;</li>
+<li>une preuve d’apprentissage.</li>
+</ul>
+</section>
+<section id="phase-2-divergence-15-minutes" class="level3" data-number="11.2">
+<h3 data-number="11.2" class="anchored" data-anchor-id="phase-2-divergence-15-minutes"><span class="header-section-number">11.2</span> Phase 2 — Divergence, 15 minutes</h3>
+<p>Générez quatre architectures distinctes. Interdisez les variantes superficielles. Exigez pour chacune un avantage, un risque et le profil d’apprenants auquel elle convient.</p>
+</section>
+<section id="phase-3-choix-10-minutes" class="level3" data-number="11.3">
+<h3 data-number="11.3" class="anchored" data-anchor-id="phase-3-choix-10-minutes"><span class="header-section-number">11.3</span> Phase 3 — Choix, 10 minutes</h3>
+<p>Notez les architectures sur cinq critères. Justifiez le choix en trois phrases.</p>
+</section>
+<section id="phase-4-scénarisation-20-minutes" class="level3" data-number="11.4">
+<h3 data-number="11.4" class="anchored" data-anchor-id="phase-4-scénarisation-20-minutes"><span class="header-section-number">11.4</span> Phase 4 — Scénarisation, 20 minutes</h3>
+<p>Découpez la séance en séquences. Pour chaque séquence, indiquez : intention, activité, durée, trace produite, rétroaction et transition.</p>
+</section>
+<section id="phase-5-stress-test-15-minutes" class="level3" data-number="11.5">
+<h3 data-number="11.5" class="anchored" data-anchor-id="phase-5-stress-test-15-minutes"><span class="header-section-number">11.5</span> Phase 5 — Stress test, 15 minutes</h3>
+<p>Demandez :</p>
+<ul>
+<li>quelles incompréhensions restent possibles ;</li>
+<li>quelle partie surcharge la mémoire de travail ;</li>
+<li>quel exemple pourrait induire en erreur ;</li>
+<li>quelle consigne est ambiguë ;</li>
+<li>quel apprenant risque d’être exclu.</li>
+</ul>
+</section>
+<section id="phase-6-vérification-10-minutes" class="level3" data-number="11.6">
+<h3 data-number="11.6" class="anchored" data-anchor-id="phase-6-vérification-10-minutes"><span class="header-section-number">11.6</span> Phase 6 — Vérification, 10 minutes</h3>
+<p>Contrôlez les sources et les éléments sensibles.</p>
+</section>
+<section id="phase-7-signature-pédagogique-5-minutes" class="level3" data-number="11.7">
+<h3 data-number="11.7" class="anchored" data-anchor-id="phase-7-signature-pédagogique-5-minutes"><span class="header-section-number">11.7</span> Phase 7 — Signature pédagogique, 5 minutes</h3>
+<p>Ajoutez un cas, une question ou une explication que vous seul pouvez apporter grâce à votre expérience.</p>
+</section>
+</section>
+<section id="étude-de-cas-enseigner-la-calibration-dun-modèle-prédictif" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="étude-de-cas-enseigner-la-calibration-dun-modèle-prédictif"><span class="header-section-number">12</span> Étude de cas : enseigner la calibration d’un modèle prédictif</h2>
+<section id="situation-initiale" class="level3" data-number="12.1">
+<h3 data-number="12.1" class="anchored" data-anchor-id="situation-initiale"><span class="header-section-number">12.1</span> Situation initiale</h3>
+<p>Une formation de trois heures s’adresse à des data scientists connaissant l’AUC mais utilisant peu les courbes de calibration. Une préparation générique proposerait : définition, formule, graphique, exercice.</p>
+</section>
+<section id="refonte-centrée-sur-la-décision" class="level3" data-number="12.2">
+<h3 data-number="12.2" class="anchored" data-anchor-id="refonte-centrée-sur-la-décision"><span class="header-section-number">12.2</span> Refonte centrée sur la décision</h3>
+<p>La question professionnelle devient : « Peut-on utiliser ce modèle pour décider d’une action clinique lorsque le seuil dépend d’un risque absolu ? »</p>
+<p>Le scénario débute par deux modèles ayant la même discrimination mais des probabilités très différentes. Les participants doivent choisir lequel utiliser pour déclencher une intervention à 20 %. Leur hésitation fait apparaître le besoin de calibration.</p>
+<p>La théorie arrive ensuite comme outil pour résoudre le problème, non comme préalable abstrait. L’activité finale demande de proposer une stratégie de recalibration, d’expliquer ses limites et d’indiquer quelles données externes seraient nécessaires.</p>
+<p>L’IA peut :</p>
+<ul>
+<li>proposer des profils de courbes ;</li>
+<li>générer des interprétations erronées plausibles ;</li>
+<li>créer des variantes du cas ;</li>
+<li>critiquer une consigne ;</li>
+<li>simuler des questions.</li>
+</ul>
+<p>Elle ne doit pas choisir le message scientifique final ni valider les chiffres.</p>
+</section>
+</section>
+<section id="étude-de-cas-former-des-ingénieurs-à-lanalyse-dincidents" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="étude-de-cas-former-des-ingénieurs-à-lanalyse-dincidents"><span class="header-section-number">13</span> Étude de cas : former des ingénieurs à l’analyse d’incidents</h2>
+<p>Le but n’est pas de réciter les étapes d’une analyse des causes racines. Les participants reçoivent un dossier incomplet : alarmes, observations, contraintes de production et témoignages contradictoires.</p>
+<p>Le cours alterne :</p>
+<ol type="1">
+<li>hypothèse initiale ;</li>
+<li>information nouvelle ;</li>
+<li>révision de l’hypothèse ;</li>
+<li>recherche d’un mécanisme ;</li>
+<li>distinction entre cause, facteur contributif et signal ;</li>
+<li>proposition d’une action vérifiable.</li>
+</ol>
+<p>L’IA peut jouer le rôle d’un contradicteur ou générer des pistes, mais les données du scénario doivent être maîtrisées par le formateur. Une génération libre risquerait d’introduire des mécanismes physiquement impossibles.</p>
+</section>
+<section id="grille-daudit-dun-cours-préparé-avec-lia" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="grille-daudit-dun-cours-préparé-avec-lia"><span class="header-section-number">14</span> Grille d’audit d’un cours préparé avec l’IA</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Questions de contrôle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Finalité</td>
+<td>La transformation attendue est-elle explicite et observable ?</td>
+</tr>
+<tr class="even">
+<td>Public</td>
+<td>Les prérequis et différences entre apprenants sont-ils pris en compte ?</td>
+</tr>
+<tr class="odd">
+<td>Singularité</td>
+<td>Le cours contient-il des situations, choix ou données propres au contexte ?</td>
+</tr>
+<tr class="even">
+<td>Exactitude</td>
+<td>Les affirmations importantes ont-elles été vérifiées ?</td>
+</tr>
+<tr class="odd">
+<td>Activité</td>
+<td>Les apprenants produisent-ils des traces de raisonnement ?</td>
+</tr>
+<tr class="even">
+<td>Alignement</td>
+<td>L’évaluation mesure-t-elle réellement l’objectif annoncé ?</td>
+</tr>
+<tr class="odd">
+<td>Diversité</td>
+<td>Plusieurs points de vue, exemples et représentations sont-ils présents ?</td>
+</tr>
+<tr class="even">
+<td>Accessibilité</td>
+<td>Les supports et consignes sont-ils utilisables par le public concerné ?</td>
+</tr>
+<tr class="odd">
+<td>IA</td>
+<td>Les usages autorisés, limites et obligations de déclaration sont-ils clairs ?</td>
+</tr>
+<tr class="even">
+<td>Données</td>
+<td>Aucune information sensible n’a-t-elle été transmise sans base légitime ?</td>
+</tr>
+<tr class="odd">
+<td>Révision</td>
+<td>Le cours prévoit-il une collecte de retours et une amélioration documentée ?</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bibliothèque-de-prompts-exigeants" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="bibliothèque-de-prompts-exigeants"><span class="header-section-number">15</span> Bibliothèque de prompts exigeants</h2>
+<section id="pour-critiquer-une-architecture" class="level3" data-number="15.1">
+<h3 data-number="15.1" class="anchored" data-anchor-id="pour-critiquer-une-architecture"><span class="header-section-number">15.1</span> Pour critiquer une architecture</h3>
+<pre class="text"><code>Agis comme un comité pédagogique exigeant. Analyse le scénario ci-dessous sans
+le réécrire immédiatement. Identifie :
+- les objectifs non observables ;
+- les activités qui ne produisent aucune preuve d’apprentissage ;
+- les ruptures d’alignement ;
+- les risques de surcharge cognitive ;
+- les éléments trop génériques ;
+- les apprenants susceptibles d’être désavantagés.
+Pour chaque critique, propose un test permettant de vérifier le problème.</code></pre>
+</section>
+<section id="pour-produire-des-variantes-réellement-différentes" class="level3" data-number="15.2">
+<h3 data-number="15.2" class="anchored" data-anchor-id="pour-produire-des-variantes-réellement-différentes"><span class="header-section-number">15.2</span> Pour produire des variantes réellement différentes</h3>
+<pre class="text"><code>Propose quatre scénarios incompatibles entre eux par leur logique pédagogique :
+problème, enquête, controverse et projet. Conserve le même objectif final et la
+même durée. Pour chaque scénario, décris le rôle de l’enseignant, la trace
+produite par l’apprenant, le principal avantage et le principal risque.</code></pre>
+</section>
+<section id="pour-simuler-une-incompréhension" class="level3" data-number="15.3">
+<h3 data-number="15.3" class="anchored" data-anchor-id="pour-simuler-une-incompréhension"><span class="header-section-number">15.3</span> Pour simuler une incompréhension</h3>
+<pre class="text"><code>Réponds comme un apprenant sérieux qui a compris les mots mais pas le mécanisme.
+Produis une réponse plausible contenant une seule erreur conceptuelle profonde.
+N’indique pas l’erreur. Fournis ensuite, dans une section séparée destinée à
+l’enseignant, le diagnostic et une question de relance non directive.</code></pre>
+</section>
+<section id="pour-auditer-les-sources" class="level3" data-number="15.4">
+<h3 data-number="15.4" class="anchored" data-anchor-id="pour-auditer-les-sources"><span class="header-section-number">15.4</span> Pour auditer les sources</h3>
+<pre class="text"><code>Dresse la liste de toutes les affirmations du support qui nécessitent une source.
+Classe-les en : définition, résultat empirique, recommandation, chiffre, norme,
+interprétation. N’invente aucune référence. Indique seulement le type de source
+primaire ou institutionnelle à rechercher pour chaque affirmation.</code></pre>
+</section>
+</section>
+<section id="ce-quil-vaut-mieux-ne-pas-déléguer" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="ce-quil-vaut-mieux-ne-pas-déléguer"><span class="header-section-number">16</span> Ce qu’il vaut mieux ne pas déléguer</h2>
+<p>Certaines tâches exigent une responsabilité directe :</p>
+<ul>
+<li>décider des finalités du curriculum ;</li>
+<li>interpréter les besoins d’un groupe réel ;</li>
+<li>arbitrer entre simplification et exactitude ;</li>
+<li>traiter une situation sensible ;</li>
+<li>évaluer une personne à fort enjeu ;</li>
+<li>décider qu’une source est suffisamment fiable ;</li>
+<li>attribuer une note sans procédure contrôlée ;</li>
+<li>produire une recommandation engageant la sécurité ;</li>
+<li>utiliser un cas réel sans vérifier les droits et la confidentialité.</li>
+</ul>
+<p>L’IA est un instrument de préparation. Elle ne peut ni connaître toutes les conséquences de la formation, ni répondre de ces conséquences.</p>
+</section>
+<section id="indicateurs-pour-améliorer-le-cours-après-la-séance" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="indicateurs-pour-améliorer-le-cours-après-la-séance"><span class="header-section-number">17</span> Indicateurs pour améliorer le cours après la séance</h2>
+<p>Ne vous limitez pas à la satisfaction. Recueillez des indices plus informatifs :</p>
+<ul>
+<li>taux de réussite par objectif ;</li>
+<li>types d’erreurs ;</li>
+<li>qualité des justifications ;</li>
+<li>temps nécessaire par activité ;</li>
+<li>demandes de clarification ;</li>
+<li>capacité de transfert sur un cas nouveau ;</li>
+<li>écart entre auto-évaluation et performance ;</li>
+<li>éléments du cours réellement réutilisés en situation professionnelle.</li>
+</ul>
+<p>Demandez également aux apprenants d’indiquer le moment où leur compréhension a changé. Cette question révèle souvent les activités les plus structurantes.</p>
+</section>
+<section id="charte-minimale-dutilisation-de-lia-par-lenseignant" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="charte-minimale-dutilisation-de-lia-par-lenseignant"><span class="header-section-number">18</span> Charte minimale d’utilisation de l’IA par l’enseignant</h2>
+<ol type="1">
+<li>Je définis moi-même les finalités d’apprentissage.</li>
+<li>Je vérifie toute information importante.</li>
+<li>Je protège les données des apprenants.</li>
+<li>Je rends explicites les usages qui affectent l’évaluation.</li>
+<li>Je conserve la maîtrise des décisions à fort enjeu.</li>
+<li>Je recherche la diversité des exemples et des points de vue.</li>
+<li>Je documente les modifications importantes.</li>
+<li>Je teste l’accessibilité et les effets d’exclusion possibles.</li>
+<li>Je ne confonds pas fluidité du texte et qualité scientifique.</li>
+<li>Je révise le cours à partir de preuves d’apprentissage.</li>
+</ol>
+</section>
+<section id="ressources-de-référence" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="ressources-de-référence"><span class="header-section-number">19</span> Ressources de référence</h2>
+<ul>
+<li>UNESCO. <em>Orientations pour l’intelligence artificielle générative dans l’éducation et la recherche</em>. Approche centrée sur l’humain, protection des données, inclusion et conception pédagogique responsable.</li>
+<li>Biggs, J. et Tang, C. <em>Teaching for Quality Learning at University</em>. Référence sur l’alignement constructif.</li>
+<li>Wiggins, G. et McTighe, J. <em>Understanding by Design</em>. Méthode de conception à rebours.</li>
+<li>Ambrose, S. A. et coll. <em>How Learning Works</em>. Synthèse de principes issus des sciences de l’apprentissage.</li>
+<li>Dunlosky, J. et coll. « Improving Students’ Learning with Effective Learning Techniques ». Revue des techniques d’apprentissage.</li>
+<li>Sweller, J., van Merriënboer, J. et Paas, F. Travaux sur la théorie de la charge cognitive.</li>
+<li>EQUATOR Network. Répertoire de lignes directrices utiles pour enseigner la lecture critique et le rapport scientifique.</li>
+<li>Commission européenne. Ressources sur l’éthique de l’IA et la protection des données dans les usages éducatifs.</li>
+</ul>
+</section>
+<section id="conclusion" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">20</span> Conclusion</h2>
+<p>Préparer un cours avec l’IA ne consiste pas à automatiser l’écriture d’un support. Il s’agit de construire un atelier de conception dans lequel la machine aide à explorer, comparer, simuler et critiquer, tandis que l’enseignant conserve la responsabilité du sens.</p>
+<p>La meilleure protection contre la standardisation n’est pas de refuser l’outil. C’est de renforcer ce qui précède et ce qui suit son utilisation : objectifs précis, connaissance du public, cas authentiques, controverses disciplinaires, vérification documentaire, activités exigeantes et analyse des apprentissages.</p>
+<p>Un cours devient remarquable lorsqu’il porte une intention claire, une expérience située et une exigence intellectuelle reconnaissable. L’IA peut aider à le rendre plus robuste. Elle ne doit jamais le rendre interchangeable.</p>
+<div class="discussion-box">
+<p><strong>Question à la communauté :</strong> Quelle partie de votre pratique pédagogique doit absolument rester reconnaissable, même lorsque vous utilisez une IA pour préparer vos cours ?</p>
+</div>
+</section>
+<section id="besoin-dun-accompagnement" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="besoin-dun-accompagnement"><span class="header-section-number">21</span> Besoin d’un accompagnement ?</h2>
+<p>SYLTRA Consulting accompagne les établissements, équipes pédagogiques, laboratoires et entreprises dans la conception de formations en IA, Data Science, biostatistique, recherche appliquée et automatisation responsable.</p>
+<p><a href="../contact.html" class="btn btn-primary">Nous contacter</a></p>
+<div class="post-tags">
+<p>#IntelligenceArtificielle #Pédagogie #EnseignementSupérieur #Formation #IAResponsable #SYLTRAConsulting</p>
+</div>
+</section>
+<section id="annexe-canevas-de-conception-réutilisable" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="annexe-canevas-de-conception-réutilisable"><span class="header-section-number">22</span> Annexe — Canevas de conception réutilisable</h2>
+<section id="identité-de-la-séquence" class="level3" data-number="22.1">
+<h3 data-number="22.1" class="anchored" data-anchor-id="identité-de-la-séquence"><span class="header-section-number">22.1</span> Identité de la séquence</h3>
+<ul>
+<li><strong>Titre :</strong></li>
+<li><strong>Public :</strong></li>
+<li><strong>Durée :</strong></li>
+<li><strong>Modalité :</strong></li>
+<li><strong>Taille du groupe :</strong></li>
+<li><strong>Contraintes techniques :</strong></li>
+<li><strong>Politique d’usage de l’IA :</strong></li>
+</ul>
+</section>
+<section id="transformation-attendue" class="level3" data-number="22.2">
+<h3 data-number="22.2" class="anchored" data-anchor-id="transformation-attendue"><span class="header-section-number">22.2</span> Transformation attendue</h3>
+<p>Complétez : « À l’issue de la séquence, l’apprenant sera capable de… »</p>
+<p>Ajoutez une situation dans laquelle cette capacité devra être mobilisée, un niveau de qualité attendu et une limite à ne pas franchir.</p>
+</section>
+<section id="diagnostic-initial" class="level3" data-number="22.3">
+<h3 data-number="22.3" class="anchored" data-anchor-id="diagnostic-initial"><span class="header-section-number">22.3</span> Diagnostic initial</h3>
+<p>Décrivez trois catégories :</p>
+<ul>
+<li>ce que les participants savent probablement déjà ;</li>
+<li>ce qu’ils pensent savoir mais risquent de mal appliquer ;</li>
+<li>ce qu’ils ne peuvent pas encore faire sans accompagnement.</li>
+</ul>
+</section>
+<section id="carte-des-concepts" class="level3" data-number="22.4">
+<h3 data-number="22.4" class="anchored" data-anchor-id="carte-des-concepts"><span class="header-section-number">22.4</span> Carte des concepts</h3>
+<p>Pour chaque concept, précisez :</p>
+<ul>
+<li>sa fonction dans la résolution du problème ;</li>
+<li>les prérequis ;</li>
+<li>la confusion la plus fréquente ;</li>
+<li>la représentation la plus adaptée ;</li>
+<li>un contre-exemple ;</li>
+<li>une question diagnostique.</li>
+</ul>
+</section>
+<section id="scénario-minuté" class="level3" data-number="22.5">
+<h3 data-number="22.5" class="anchored" data-anchor-id="scénario-minuté"><span class="header-section-number">22.5</span> Scénario minuté</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Temps</th>
+<th>Intention</th>
+<th>Action de l’enseignant</th>
+<th>Action de l’apprenant</th>
+<th>Trace</th>
+<th>Rétroaction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0–10 min</td>
+<td>Faire émerger le problème</td>
+<td>Présenter une situation</td>
+<td>Formuler une première décision</td>
+<td>Hypothèse</td>
+<td>Mise en commun</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">10–25 min</td>
+<td>Déstabiliser une règle naïve</td>
+<td>Introduire un cas limite</td>
+<td>Comparer les résultats</td>
+<td>Tableau argumenté</td>
+<td>Questions ciblées</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">25–45 min</td>
+<td>Construire le modèle</td>
+<td>Expliciter les relations</td>
+<td>Représenter le mécanisme</td>
+<td>Schéma</td>
+<td>Correction commentée</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">45–65 min</td>
+<td>Mettre en pratique</td>
+<td>Distribuer un cas nouveau</td>
+<td>Appliquer et justifier</td>
+<td>Production</td>
+<td>Retour par critères</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">65–80 min</td>
+<td>Transférer</td>
+<td>Modifier une contrainte</td>
+<td>Adapter la solution</td>
+<td>Version révisée</td>
+<td>Discussion</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">80–90 min</td>
+<td>Consolider</td>
+<td>Faire expliciter les acquis</td>
+<td>Rédiger une synthèse</td>
+<td>Ticket de sortie</td>
+<td>Analyse différée</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="test-de-non-standardisation" class="level3" data-number="22.6">
+<h3 data-number="22.6" class="anchored" data-anchor-id="test-de-non-standardisation"><span class="header-section-number">22.6</span> Test de non-standardisation</h3>
+<p>Répondez honnêtement :</p>
+<ul>
+<li>Ce cours pourrait-il être donné sans changement dans n’importe quel établissement ?</li>
+<li>Les exemples pourraient-ils provenir de n’importe quel secteur ?</li>
+<li>Le plan reflète-t-il un choix intellectuel ou seulement une convention ?</li>
+<li>Les apprenants rencontrent-ils une vraie décision ?</li>
+<li>Une controverse ou une limite est-elle rendue visible ?</li>
+<li>Le langage conserve-t-il la voix de l’enseignant ?</li>
+<li>Le cours contient-il une observation tirée du terrain ?</li>
+<li>Les activités nécessitent-elles une compréhension plutôt qu’une reproduction ?</li>
+</ul>
+<p>Si la majorité des réponses indique une forte interchangeabilité, reprenez la phase de singularisation.</p>
+</section>
+<section id="registre-de-vérification" class="level3" data-number="22.7">
+<h3 data-number="22.7" class="anchored" data-anchor-id="registre-de-vérification"><span class="header-section-number">22.7</span> Registre de vérification</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Élément</th>
+<th>Source attendue</th>
+<th>Vérifié par</th>
+<th>Date</th>
+<th>Décision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Définition centrale</td>
+<td>Manuel ou norme</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Chiffre clé</td>
+<td>Source primaire</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Recommandation</td>
+<td>Autorité compétente</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Exemple</td>
+<td>Données contrôlées</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Illustration</td>
+<td>Licence vérifiée</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Cas réel</td>
+<td>Anonymisation validée</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="retour-après-séance" class="level3" data-number="22.8">
+<h3 data-number="22.8" class="anchored" data-anchor-id="retour-après-séance"><span class="header-section-number">22.8</span> Retour après séance</h3>
+<p>Documentez :</p>
+<ul>
+<li>ce qui a surpris les apprenants ;</li>
+<li>les erreurs les plus fréquentes ;</li>
+<li>la séquence trop longue ;</li>
+<li>la consigne la moins claire ;</li>
+<li>la preuve la plus convaincante d’apprentissage ;</li>
+<li>ce qui doit être supprimé ;</li>
+<li>ce qui doit être approfondi ;</li>
+<li>ce qui doit rester inchangé.</li>
+</ul>
+<p>Cette annexe transforme la préparation en processus d’amélioration continue plutôt qu’en production ponctuelle de contenus.</p>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('a[href^="http"]').forEach(a=>{if(!a.href.includes(location.hostname)){a.rel="noopener noreferrer";a.target="_blank";}});});</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.syltra-consulting\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026–2027 SYLTRA Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>IA utile • Data Science • Biostatistique • Recherche</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="SYLTRA Consulting">
+<meta name="description" content="Un guide complet pour passer d’une question encore floue à une bibliographie initiale structurée, traçable, diversifiée et scientifiquement défendable.">
+
+<title>Construire une bibliographie de départ : méthode reproductible, critique et assistée par l’IA – SYLTRA Consulting</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9080f0b6d81bdf8015e035bfde39d928.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Construire une bibliographie de départ : méthode reproductible, critique et assistée par l’IA – SYLTRA Consulting">
+<meta property="og:description" content="Un guide complet pour passer d’une question encore floue à une bibliographie initiale structurée, traçable, diversifiée et scientifiquement défendable.">
+<meta property="og:image" content="https://blog.syltra-consulting.com/assets/img/posts/j017.svg">
+<meta property="og:site_name" content="SYLTRA Consulting">
+<meta name="twitter:title" content="Construire une bibliographie de départ : méthode reproductible, critique et assistée par l’IA – SYLTRA Consulting">
+<meta name="twitter:description" content="Un guide complet pour passer d’une question encore floue à une bibliographie initiale structurée, traçable, diversifiée et scientifiquement défendable.">
+<meta name="twitter:image" content="https://blog.syltra-consulting.com/assets/img/posts/j017.svg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo light-content">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SYLTRA Consulting</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-domaines" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Domaines</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-domaines">    
+        <li>
+    <a class="dropdown-item" href="../domaines/sante.html">
+ <span class="dropdown-text">Santé &amp; biostatistique</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/recherche.html">
+ <span class="dropdown-text">Recherche</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/banque-finance.html">
+ <span class="dropdown-text">Banque, finance &amp; assurance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/industrie.html">
+ <span class="dropdown-text">Industrie &amp; ingénierie</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/enseignement.html">
+ <span class="dropdown-text">Enseignement &amp; formation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/gouvernance.html">
+ <span class="dropdown-text">Gouvernance &amp; sécurité</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../calendrier.html"> 
+<span class="menu-text">Calendrier</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../a-propos.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/LucienSyTraore"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/syltra-consulting/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Dans cet article</h2>
+   
+  <ul>
+  <li><a href="#lidée-essentielle" id="toc-lidée-essentielle" class="nav-link active" data-scroll-target="#lidée-essentielle"><span class="header-section-number">1</span> L’idée essentielle</a></li>
+  <li><a href="#pourquoi-la-bibliographie-de-départ-est-une-étape-scientifique-à-part-entière" id="toc-pourquoi-la-bibliographie-de-départ-est-une-étape-scientifique-à-part-entière" class="nav-link" data-scroll-target="#pourquoi-la-bibliographie-de-départ-est-une-étape-scientifique-à-part-entière"><span class="header-section-number">2</span> Pourquoi la bibliographie de départ est une étape scientifique à part entière</a></li>
+  <li><a href="#bibliographie-de-départ-revue-narrative-et-revue-systématique-ne-pas-confondre" id="toc-bibliographie-de-départ-revue-narrative-et-revue-systématique-ne-pas-confondre" class="nav-link" data-scroll-target="#bibliographie-de-départ-revue-narrative-et-revue-systématique-ne-pas-confondre"><span class="header-section-number">3</span> Bibliographie de départ, revue narrative et revue systématique : ne pas confondre</a></li>
+  <li><a href="#étape-1-transformer-un-thème-en-question-exploitable" id="toc-étape-1-transformer-un-thème-en-question-exploitable" class="nav-link" data-scroll-target="#étape-1-transformer-un-thème-en-question-exploitable"><span class="header-section-number">4</span> Étape 1 — Transformer un thème en question exploitable</a>
+  <ul class="collapse">
+  <li><a href="#choisir-un-cadre-adapté" id="toc-choisir-un-cadre-adapté" class="nav-link" data-scroll-target="#choisir-un-cadre-adapté"><span class="header-section-number">4.1</span> Choisir un cadre adapté</a></li>
+  <li><a href="#définir-lobjectif-de-la-recherche-documentaire" id="toc-définir-lobjectif-de-la-recherche-documentaire" class="nav-link" data-scroll-target="#définir-lobjectif-de-la-recherche-documentaire"><span class="header-section-number">4.2</span> Définir l’objectif de la recherche documentaire</a></li>
+  </ul></li>
+  <li><a href="#étape-2-construire-une-matrice-de-concepts" id="toc-étape-2-construire-une-matrice-de-concepts" class="nav-link" data-scroll-target="#étape-2-construire-une-matrice-de-concepts"><span class="header-section-number">5</span> Étape 2 — Construire une matrice de concepts</a>
+  <ul class="collapse">
+  <li><a href="#exemple-de-matrice" id="toc-exemple-de-matrice" class="nav-link" data-scroll-target="#exemple-de-matrice"><span class="header-section-number">5.1</span> Exemple de matrice</a></li>
+  <li><a href="#pourquoi-commencer-large" id="toc-pourquoi-commencer-large" class="nav-link" data-scroll-target="#pourquoi-commencer-large"><span class="header-section-number">5.2</span> Pourquoi commencer large</a></li>
+  </ul></li>
+  <li><a href="#étape-3-choisir-les-sources-documentaires-selon-la-question" id="toc-étape-3-choisir-les-sources-documentaires-selon-la-question" class="nav-link" data-scroll-target="#étape-3-choisir-les-sources-documentaires-selon-la-question"><span class="header-section-number">6</span> Étape 3 — Choisir les sources documentaires selon la question</a>
+  <ul class="collapse">
+  <li><a href="#bases-bibliographiques" id="toc-bases-bibliographiques" class="nav-link" data-scroll-target="#bases-bibliographiques"><span class="header-section-number">6.1</span> Bases bibliographiques</a></li>
+  <li><a href="#sources-complémentaires" id="toc-sources-complémentaires" class="nav-link" data-scroll-target="#sources-complémentaires"><span class="header-section-number">6.2</span> Sources complémentaires</a></li>
+  <li><a href="#littérature-grise" id="toc-littérature-grise" class="nav-link" data-scroll-target="#littérature-grise"><span class="header-section-number">6.3</span> Littérature grise</a></li>
+  </ul></li>
+  <li><a href="#étape-4-écrire-une-stratégie-de-recherche-reproductible" id="toc-étape-4-écrire-une-stratégie-de-recherche-reproductible" class="nav-link" data-scroll-target="#étape-4-écrire-une-stratégie-de-recherche-reproductible"><span class="header-section-number">7</span> Étape 4 — Écrire une stratégie de recherche reproductible</a>
+  <ul class="collapse">
+  <li><a href="#exemple-conceptuel-de-requête-pubmed" id="toc-exemple-conceptuel-de-requête-pubmed" class="nav-link" data-scroll-target="#exemple-conceptuel-de-requête-pubmed"><span class="header-section-number">7.1</span> Exemple conceptuel de requête PubMed</a></li>
+  <li><a href="#traduire-une-requête-entre-bases" id="toc-traduire-une-requête-entre-bases" class="nav-link" data-scroll-target="#traduire-une-requête-entre-bases"><span class="header-section-number">7.2</span> Traduire une requête entre bases</a></li>
+  </ul></li>
+  <li><a href="#étape-5-utiliser-des-articles-pivots" id="toc-étape-5-utiliser-des-articles-pivots" class="nav-link" data-scroll-target="#étape-5-utiliser-des-articles-pivots"><span class="header-section-number">8</span> Étape 5 — Utiliser des articles pivots</a>
+  <ul class="collapse">
+  <li><a href="#recherche-rétrospective-et-prospective" id="toc-recherche-rétrospective-et-prospective" class="nav-link" data-scroll-target="#recherche-rétrospective-et-prospective"><span class="header-section-number">8.1</span> Recherche rétrospective et prospective</a></li>
+  </ul></li>
+  <li><a href="#étape-6-sélectionner-sans-improviser" id="toc-étape-6-sélectionner-sans-improviser" class="nav-link" data-scroll-target="#étape-6-sélectionner-sans-improviser"><span class="header-section-number">9</span> Étape 6 — Sélectionner sans improviser</a>
+  <ul class="collapse">
+  <li><a href="#exemple-de-critères" id="toc-exemple-de-critères" class="nav-link" data-scroll-target="#exemple-de-critères"><span class="header-section-number">9.1</span> Exemple de critères</a></li>
+  <li><a href="#tenir-un-journal-de-décision" id="toc-tenir-un-journal-de-décision" class="nav-link" data-scroll-target="#tenir-un-journal-de-décision"><span class="header-section-number">9.2</span> Tenir un journal de décision</a></li>
+  </ul></li>
+  <li><a href="#étape-7-évaluer-la-qualité-et-la-pertinence" id="toc-étape-7-évaluer-la-qualité-et-la-pertinence" class="nav-link" data-scroll-target="#étape-7-évaluer-la-qualité-et-la-pertinence"><span class="header-section-number">10</span> Étape 7 — Évaluer la qualité et la pertinence</a>
+  <ul class="collapse">
+  <li><a href="#questions-transversales" id="toc-questions-transversales" class="nav-link" data-scroll-target="#questions-transversales"><span class="header-section-number">10.1</span> Questions transversales</a></li>
+  <li><a href="#pour-les-modèles-prédictifs" id="toc-pour-les-modèles-prédictifs" class="nav-link" data-scroll-target="#pour-les-modèles-prédictifs"><span class="header-section-number">10.2</span> Pour les modèles prédictifs</a></li>
+  <li><a href="#pour-les-études-causales" id="toc-pour-les-études-causales" class="nav-link" data-scroll-target="#pour-les-études-causales"><span class="header-section-number">10.3</span> Pour les études causales</a></li>
+  </ul></li>
+  <li><a href="#étape-8-organiser-les-références-et-les-notes" id="toc-étape-8-organiser-les-références-et-les-notes" class="nav-link" data-scroll-target="#étape-8-organiser-les-références-et-les-notes"><span class="header-section-number">11</span> Étape 8 — Organiser les références et les notes</a>
+  <ul class="collapse">
+  <li><a href="#arborescence-de-collections-suggérée" id="toc-arborescence-de-collections-suggérée" class="nav-link" data-scroll-target="#arborescence-de-collections-suggérée"><span class="header-section-number">11.1</span> Arborescence de collections suggérée</a></li>
+  <li><a href="#système-détiquettes" id="toc-système-détiquettes" class="nav-link" data-scroll-target="#système-détiquettes"><span class="header-section-number">11.2</span> Système d’étiquettes</a></li>
+  </ul></li>
+  <li><a href="#étape-9-construire-une-matrice-de-lecture" id="toc-étape-9-construire-une-matrice-de-lecture" class="nav-link" data-scroll-target="#étape-9-construire-une-matrice-de-lecture"><span class="header-section-number">12</span> Étape 9 — Construire une matrice de lecture</a>
+  <ul class="collapse">
+  <li><a href="#exemple-de-note-analytique" id="toc-exemple-de-note-analytique" class="nav-link" data-scroll-target="#exemple-de-note-analytique"><span class="header-section-number">12.1</span> Exemple de note analytique</a></li>
+  </ul></li>
+  <li><a href="#étape-10-détecter-les-lacunes-et-contradictions" id="toc-étape-10-détecter-les-lacunes-et-contradictions" class="nav-link" data-scroll-target="#étape-10-détecter-les-lacunes-et-contradictions"><span class="header-section-number">13</span> Étape 10 — Détecter les lacunes et contradictions</a>
+  <ul class="collapse">
+  <li><a href="#axes-de-comparaison-utiles" id="toc-axes-de-comparaison-utiles" class="nav-link" data-scroll-target="#axes-de-comparaison-utiles"><span class="header-section-number">13.1</span> Axes de comparaison utiles</a></li>
+  <li><a href="#tableau-de-synthèse-des-contradictions" id="toc-tableau-de-synthèse-des-contradictions" class="nav-link" data-scroll-target="#tableau-de-synthèse-des-contradictions"><span class="header-section-number">13.2</span> Tableau de synthèse des contradictions</a></li>
+  </ul></li>
+  <li><a href="#étape-11-employer-lia-sans-fabriquer-de-références" id="toc-étape-11-employer-lia-sans-fabriquer-de-références" class="nav-link" data-scroll-target="#étape-11-employer-lia-sans-fabriquer-de-références"><span class="header-section-number">14</span> Étape 11 — Employer l’IA sans fabriquer de références</a>
+  <ul class="collapse">
+  <li><a href="#usages-raisonnables" id="toc-usages-raisonnables" class="nav-link" data-scroll-target="#usages-raisonnables"><span class="header-section-number">14.1</span> Usages raisonnables</a></li>
+  <li><a href="#usages-dangereux" id="toc-usages-dangereux" class="nav-link" data-scroll-target="#usages-dangereux"><span class="header-section-number">14.2</span> Usages dangereux</a></li>
+  <li><a href="#protocole-de-vérification-dune-référence-proposée-par-une-ia" id="toc-protocole-de-vérification-dune-référence-proposée-par-une-ia" class="nav-link" data-scroll-target="#protocole-de-vérification-dune-référence-proposée-par-une-ia"><span class="header-section-number">14.3</span> Protocole de vérification d’une référence proposée par une IA</a></li>
+  </ul></li>
+  <li><a href="#modèles-de-prompts-utiles-et-contrôlables" id="toc-modèles-de-prompts-utiles-et-contrôlables" class="nav-link" data-scroll-target="#modèles-de-prompts-utiles-et-contrôlables"><span class="header-section-number">15</span> Modèles de prompts utiles et contrôlables</a>
+  <ul class="collapse">
+  <li><a href="#générer-une-matrice-de-concepts" id="toc-générer-une-matrice-de-concepts" class="nav-link" data-scroll-target="#générer-une-matrice-de-concepts"><span class="header-section-number">15.1</span> Générer une matrice de concepts</a></li>
+  <li><a href="#auditer-une-requête" id="toc-auditer-une-requête" class="nav-link" data-scroll-target="#auditer-une-requête"><span class="header-section-number">15.2</span> Auditer une requête</a></li>
+  <li><a href="#préparer-une-grille-de-lecture" id="toc-préparer-une-grille-de-lecture" class="nav-link" data-scroll-target="#préparer-une-grille-de-lecture"><span class="header-section-number">15.3</span> Préparer une grille de lecture</a></li>
+  </ul></li>
+  <li><a href="#contrôle-qualité-de-la-bibliographie" id="toc-contrôle-qualité-de-la-bibliographie" class="nav-link" data-scroll-target="#contrôle-qualité-de-la-bibliographie"><span class="header-section-number">16</span> Contrôle qualité de la bibliographie</a>
+  <ul class="collapse">
+  <li><a href="#couverture" id="toc-couverture" class="nav-link" data-scroll-target="#couverture"><span class="header-section-number">16.1</span> Couverture</a></li>
+  <li><a href="#fiabilité" id="toc-fiabilité" class="nav-link" data-scroll-target="#fiabilité"><span class="header-section-number">16.2</span> Fiabilité</a></li>
+  <li><a href="#transparence" id="toc-transparence" class="nav-link" data-scroll-target="#transparence"><span class="header-section-number">16.3</span> Transparence</a></li>
+  </ul></li>
+  <li><a href="#reproductibilité-le-journal-minimal-à-conserver" id="toc-reproductibilité-le-journal-minimal-à-conserver" class="nav-link" data-scroll-target="#reproductibilité-le-journal-minimal-à-conserver"><span class="header-section-number">17</span> Reproductibilité : le journal minimal à conserver</a></li>
+  <li><a href="#exemple-complet-de-la-question-au-corpus-initial" id="toc-exemple-complet-de-la-question-au-corpus-initial" class="nav-link" data-scroll-target="#exemple-complet-de-la-question-au-corpus-initial"><span class="header-section-number">18</span> Exemple complet : de la question au corpus initial</a>
+  <ul class="collapse">
+  <li><a href="#situation" id="toc-situation" class="nav-link" data-scroll-target="#situation"><span class="header-section-number">18.1</span> Situation</a></li>
+  <li><a href="#question-structurée" id="toc-question-structurée" class="nav-link" data-scroll-target="#question-structurée"><span class="header-section-number">18.2</span> Question structurée</a></li>
+  <li><a href="#blocs-conceptuels" id="toc-blocs-conceptuels" class="nav-link" data-scroll-target="#blocs-conceptuels"><span class="header-section-number">18.3</span> Blocs conceptuels</a></li>
+  <li><a href="#corpus-prioritaire" id="toc-corpus-prioritaire" class="nav-link" data-scroll-target="#corpus-prioritaire"><span class="header-section-number">18.4</span> Corpus prioritaire</a></li>
+  <li><a href="#critères-danalyse" id="toc-critères-danalyse" class="nav-link" data-scroll-target="#critères-danalyse"><span class="header-section-number">18.5</span> Critères d’analyse</a></li>
+  </ul></li>
+  <li><a href="#erreurs-fréquentes-et-corrections" id="toc-erreurs-fréquentes-et-corrections" class="nav-link" data-scroll-target="#erreurs-fréquentes-et-corrections"><span class="header-section-number">19</span> Erreurs fréquentes et corrections</a>
+  <ul class="collapse">
+  <li><a href="#chercher-une-phrase-entière" id="toc-chercher-une-phrase-entière" class="nav-link" data-scroll-target="#chercher-une-phrase-entière"><span class="header-section-number">19.1</span> Chercher une phrase entière</a></li>
+  <li><a href="#utiliser-uniquement-google-scholar" id="toc-utiliser-uniquement-google-scholar" class="nav-link" data-scroll-target="#utiliser-uniquement-google-scholar"><span class="header-section-number">19.2</span> Utiliser uniquement Google Scholar</a></li>
+  <li><a href="#appliquer-trop-tôt-des-filtres" id="toc-appliquer-trop-tôt-des-filtres" class="nav-link" data-scroll-target="#appliquer-trop-tôt-des-filtres"><span class="header-section-number">19.3</span> Appliquer trop tôt des filtres</a></li>
+  <li><a href="#confondre-citation-et-preuve" id="toc-confondre-citation-et-preuve" class="nav-link" data-scroll-target="#confondre-citation-et-preuve"><span class="header-section-number">19.4</span> Confondre citation et preuve</a></li>
+  <li><a href="#accumuler-sans-synthétiser" id="toc-accumuler-sans-synthétiser" class="nav-link" data-scroll-target="#accumuler-sans-synthétiser"><span class="header-section-number">19.5</span> Accumuler sans synthétiser</a></li>
+  <li><a href="#ignorer-les-résultats-négatifs" id="toc-ignorer-les-résultats-négatifs" class="nav-link" data-scroll-target="#ignorer-les-résultats-négatifs"><span class="header-section-number">19.6</span> Ignorer les résultats négatifs</a></li>
+  </ul></li>
+  <li><a href="#quand-arrêter-la-recherche-initiale" id="toc-quand-arrêter-la-recherche-initiale" class="nav-link" data-scroll-target="#quand-arrêter-la-recherche-initiale"><span class="header-section-number">20</span> Quand arrêter la recherche initiale ?</a></li>
+  <li><a href="#modèle-de-livrable-professionnel" id="toc-modèle-de-livrable-professionnel" class="nav-link" data-scroll-target="#modèle-de-livrable-professionnel"><span class="header-section-number">21</span> Modèle de livrable professionnel</a></li>
+  <li><a href="#références-méthodologiques-essentielles" id="toc-références-méthodologiques-essentielles" class="nav-link" data-scroll-target="#références-méthodologiques-essentielles"><span class="header-section-number">22</span> Références méthodologiques essentielles</a></li>
+  <li><a href="#checklist-finale" id="toc-checklist-finale" class="nav-link" data-scroll-target="#checklist-finale"><span class="header-section-number">23</span> Checklist finale</a></li>
+  <li><a href="#à-retenir" id="toc-à-retenir" class="nav-link" data-scroll-target="#à-retenir"><span class="header-section-number">24</span> À retenir</a></li>
+  <li><a href="#besoin-dun-accompagnement" id="toc-besoin-dun-accompagnement" class="nav-link" data-scroll-target="#besoin-dun-accompagnement"><span class="header-section-number">25</span> Besoin d’un accompagnement ?</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Construire une bibliographie de départ : méthode reproductible, critique et assistée par l’IA</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Intelligence artificielle</div>
+    <div class="quarto-category">Santé &amp; biostatistique</div>
+    <div class="quarto-category">Recherche</div>
+    <div class="quarto-category">Méthodologie</div>
+    <div class="quarto-category">Revue de littérature</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Un guide complet pour passer d’une question encore floue à une bibliographie initiale structurée, traçable, diversifiée et scientifiquement défendable.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>SYLTRA Consulting </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">13 août 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modifié</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">13 août 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="article-kicker">
+<p><strong>Publication 17 · Niveau Intermédiaire · Thème Recherche documentaire et IA responsable</strong></p>
+</div>
+<section id="lidée-essentielle" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="lidée-essentielle"><span class="header-section-number">1</span> L’idée essentielle</h2>
+<p>Une bibliographie de départ n’est ni une liste produite automatiquement, ni une accumulation de références trouvées au hasard. C’est une <strong>carte provisoire du champ scientifique</strong>, construite pour clarifier une question, identifier les concepts utiles, repérer les méthodes dominantes, reconnaître les controverses et préparer une recherche documentaire plus exhaustive.</p>
+<p>Sa qualité dépend moins du nombre de références que de cinq propriétés :</p>
+<ol type="1">
+<li><strong>pertinence</strong> par rapport à la question étudiée ;</li>
+<li><strong>diversité</strong> des types de sources et des points de vue ;</li>
+<li><strong>traçabilité</strong> des requêtes, dates, bases et décisions ;</li>
+<li><strong>évaluation critique</strong> de la solidité méthodologique ;</li>
+<li><strong>mise à jour</strong> avant toute décision, publication ou recommandation.</li>
+</ol>
+<p>L’intelligence artificielle peut accélérer certaines tâches — traduction de concepts, proposition de synonymes, classement thématique, extraction de métadonnées ou génération d’un tableau de lecture — mais elle ne doit jamais devenir la source d’autorité. Une référence n’entre dans la bibliographie qu’après vérification dans une base fiable, sur la page de l’éditeur, dans un registre ou via un identifiant persistant.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Principe directeur">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Principe directeur
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une bibliographie crédible ne répond pas seulement à la question « qu’ai-je trouvé ? ». Elle documente aussi <strong>où, quand, comment et pourquoi</strong> chaque source a été retenue.</p>
+</div>
+</div>
+</section>
+<section id="pourquoi-la-bibliographie-de-départ-est-une-étape-scientifique-à-part-entière" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="pourquoi-la-bibliographie-de-départ-est-une-étape-scientifique-à-part-entière"><span class="header-section-number">2</span> Pourquoi la bibliographie de départ est une étape scientifique à part entière</h2>
+<p>Avant de choisir une méthode statistique, d’écrire un protocole ou de formuler une hypothèse, il faut comprendre le paysage intellectuel dans lequel le projet s’inscrit. Une bibliographie initiale bien construite permet notamment de :</p>
+<ul>
+<li>préciser le vocabulaire du domaine ;</li>
+<li>distinguer les concepts voisins mais non équivalents ;</li>
+<li>identifier les études fondatrices et les travaux récents ;</li>
+<li>repérer les revues systématiques existantes ;</li>
+<li>comprendre les populations, comparateurs et critères déjà étudiés ;</li>
+<li>découvrir les instruments de mesure validés ;</li>
+<li>anticiper les biais connus ;</li>
+<li>éviter de reproduire une question déjà résolue ;</li>
+<li>localiser les zones d’incertitude réellement intéressantes ;</li>
+<li>préparer un argumentaire justifiant la nouveauté du projet.</li>
+</ul>
+<p>Dans une thèse, un mémoire, une étude clinique, un projet industriel ou une mission de conseil, cette étape protège contre deux erreurs opposées : <strong>l’ignorance du champ</strong> et <strong>l’illusion d’exhaustivité</strong>. La première conduit à poser une question mal informée ; la seconde à croire qu’une recherche rapide sur un moteur généraliste représente toute la littérature pertinente.</p>
+</section>
+<section id="bibliographie-de-départ-revue-narrative-et-revue-systématique-ne-pas-confondre" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="bibliographie-de-départ-revue-narrative-et-revue-systématique-ne-pas-confondre"><span class="header-section-number">3</span> Bibliographie de départ, revue narrative et revue systématique : ne pas confondre</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Démarche</th>
+<th>Objectif principal</th>
+<th style="text-align: right;">Niveau d’exhaustivité attendu</th>
+<th style="text-align: right;">Protocole préalable</th>
+<th style="text-align: right;">Évaluation du risque de biais</th>
+<th>Usage typique</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bibliographie de départ</td>
+<td>Cartographier rapidement un sujet et préparer la suite</td>
+<td style="text-align: right;">Modéré</td>
+<td style="text-align: right;">Recommandé mais léger</td>
+<td style="text-align: right;">Souvent qualitative</td>
+<td>Cadrage d’un projet</td>
+</tr>
+<tr class="even">
+<td>Revue narrative</td>
+<td>Expliquer et discuter un domaine</td>
+<td style="text-align: right;">Variable</td>
+<td style="text-align: right;">Pas toujours</td>
+<td style="text-align: right;">Variable</td>
+<td>Article de synthèse, chapitre</td>
+</tr>
+<tr class="odd">
+<td>Scoping review</td>
+<td>Décrire l’étendue, les concepts et les lacunes</td>
+<td style="text-align: right;">Élevé</td>
+<td style="text-align: right;">Oui</td>
+<td style="text-align: right;">Selon l’objectif</td>
+<td>Champ hétérogène ou émergent</td>
+</tr>
+<tr class="even">
+<td>Revue systématique</td>
+<td>Répondre à une question précisément définie</td>
+<td style="text-align: right;">Très élevé</td>
+<td style="text-align: right;">Oui, idéalement enregistré</td>
+<td style="text-align: right;">Oui</td>
+<td>Synthèse d’efficacité, association, diagnostic</td>
+</tr>
+<tr class="odd">
+<td>Méta-analyse</td>
+<td>Combiner quantitativement des résultats comparables</td>
+<td style="text-align: right;">Dépend de la revue systématique</td>
+<td style="text-align: right;">Oui</td>
+<td style="text-align: right;">Oui</td>
+<td>Estimation globale d’un effet</td>
+</tr>
+</tbody>
+</table>
+<p>La bibliographie de départ peut évoluer vers une revue systématique, mais il serait méthodologiquement incorrect de présenter quelques recherches exploratoires comme une synthèse exhaustive. Le vocabulaire employé dans le rapport doit refléter le niveau réel de rigueur atteint.</p>
+</section>
+<section id="étape-1-transformer-un-thème-en-question-exploitable" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="étape-1-transformer-un-thème-en-question-exploitable"><span class="header-section-number">4</span> Étape 1 — Transformer un thème en question exploitable</h2>
+<p>Un thème comme « intelligence artificielle et santé » est trop vaste pour guider une recherche. Il faut d’abord expliciter :</p>
+<ul>
+<li>le phénomène étudié ;</li>
+<li>la population ou le contexte ;</li>
+<li>le type de résultat attendu ;</li>
+<li>l’usage final de la littérature ;</li>
+<li>la période pertinente ;</li>
+<li>les types d’études acceptables.</li>
+</ul>
+<section id="choisir-un-cadre-adapté" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="choisir-un-cadre-adapté"><span class="header-section-number">4.1</span> Choisir un cadre adapté</h3>
+<p>Plusieurs cadres peuvent structurer la question :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cadre</th>
+<th>Composantes</th>
+<th>Cas d’usage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PICO</td>
+<td>Population, Intervention, Comparateur, Outcome</td>
+<td>Efficacité d’une intervention</td>
+</tr>
+<tr class="even">
+<td>PECO</td>
+<td>Population, Exposition, Comparateur, Outcome</td>
+<td>Épidémiologie, facteurs de risque</td>
+</tr>
+<tr class="odd">
+<td>PICo</td>
+<td>Population, phénomène d’Intérêt, Contexte</td>
+<td>Recherche qualitative</td>
+</tr>
+<tr class="even">
+<td>SPIDER</td>
+<td>Sample, Phenomenon, Design, Evaluation, Research type</td>
+<td>Études qualitatives et mixtes</td>
+</tr>
+<tr class="odd">
+<td>PCC</td>
+<td>Population, Concept, Contexte</td>
+<td>Scoping review</td>
+</tr>
+<tr class="even">
+<td>CIMO</td>
+<td>Contexte, Intervention, Mécanisme, Outcome</td>
+<td>Management, organisation, industrie</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemple trop vague</strong> : « L’IA améliore-t-elle la radiothérapie ? »</p>
+<p><strong>Question mieux structurée</strong> : « Chez les adultes traités par radiothérapie thoracique, quels modèles d’apprentissage automatique ont été évalués pour prédire une toxicité cardiopulmonaire tardive, avec quelles données d’entrée, quels schémas de validation et quelles performances de discrimination et de calibration ? »</p>
+<p>Cette seconde formulation fait apparaître des blocs conceptuels directement traduisibles en stratégie de recherche.</p>
+</section>
+<section id="définir-lobjectif-de-la-recherche-documentaire" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="définir-lobjectif-de-la-recherche-documentaire"><span class="header-section-number">4.2</span> Définir l’objectif de la recherche documentaire</h3>
+<p>Une même question peut nécessiter des corpus différents :</p>
+<ul>
+<li>comprendre l’état de l’art méthodologique ;</li>
+<li>identifier une méthode de référence ;</li>
+<li>préparer un protocole ;</li>
+<li>justifier une hypothèse ;</li>
+<li>choisir un instrument de mesure ;</li>
+<li>comparer des logiciels ;</li>
+<li>trouver des jeux de données ;</li>
+<li>repérer les normes, recommandations ou obligations réglementaires ;</li>
+<li>préparer une décision d’investissement.</li>
+</ul>
+<p>La finalité doit être écrite en une phrase avant toute recherche. Sans cela, la bibliographie risque de dériver vers les documents les plus visibles plutôt que vers les documents les plus utiles.</p>
+</section>
+</section>
+<section id="étape-2-construire-une-matrice-de-concepts" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="étape-2-construire-une-matrice-de-concepts"><span class="header-section-number">5</span> Étape 2 — Construire une matrice de concepts</h2>
+<p>La matrice de concepts décompose la question en blocs. Chaque bloc contient :</p>
+<ul>
+<li>le terme principal ;</li>
+<li>les synonymes ;</li>
+<li>les variantes orthographiques ;</li>
+<li>les acronymes ;</li>
+<li>les traductions ;</li>
+<li>les termes contrôlés d’une base ;</li>
+<li>les exclusions éventuelles.</li>
+</ul>
+<section id="exemple-de-matrice" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="exemple-de-matrice"><span class="header-section-number">5.1</span> Exemple de matrice</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bloc</th>
+<th>Terme principal</th>
+<th>Synonymes et variantes</th>
+<th>Vocabulaire contrôlé possible</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Population</td>
+<td>cancer thoracique</td>
+<td>lung cancer, breast cancer, lymphoma, thoracic neoplasm</td>
+<td>MeSH selon la pathologie</td>
+</tr>
+<tr class="even">
+<td>Exposition</td>
+<td>radiothérapie</td>
+<td>radiation therapy, radiotherapy, irradiation</td>
+<td>Radiotherapy</td>
+</tr>
+<tr class="odd">
+<td>Prédiction</td>
+<td>apprentissage automatique</td>
+<td>machine learning, deep learning, neural network, prediction model</td>
+<td>Artificial Intelligence</td>
+</tr>
+<tr class="even">
+<td>Résultat</td>
+<td>toxicité cardiopulmonaire</td>
+<td>cardiac toxicity, pulmonary toxicity, late effects, cardiotoxicity</td>
+<td>Radiation Injuries, Heart Diseases</td>
+</tr>
+</tbody>
+</table>
+<p>Les synonymes d’un même bloc sont reliés par <code>OR</code>. Les blocs conceptuels sont reliés par <code>AND</code>. Les exclusions avec <code>NOT</code> doivent être utilisées avec prudence, car elles peuvent éliminer des articles pertinents contenant un terme exclu dans une autre partie du résumé.</p>
+</section>
+<section id="pourquoi-commencer-large" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="pourquoi-commencer-large"><span class="header-section-number">5.2</span> Pourquoi commencer large</h3>
+<p>Au début, la priorité est le rappel : retrouver la majorité des documents pertinents. Une requête trop précise peut donner une impression de propreté tout en manquant des publications importantes. La précision est améliorée progressivement par :</p>
+<ul>
+<li>l’ajout de champs de recherche ;</li>
+<li>l’usage de descripteurs contrôlés ;</li>
+<li>l’introduction de proximités ;</li>
+<li>la limitation raisonnée des types de documents ;</li>
+<li>l’analyse des faux positifs.</li>
+</ul>
+</section>
+</section>
+<section id="étape-3-choisir-les-sources-documentaires-selon-la-question" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="étape-3-choisir-les-sources-documentaires-selon-la-question"><span class="header-section-number">6</span> Étape 3 — Choisir les sources documentaires selon la question</h2>
+<p>Aucune base ne couvre tout. Une recherche robuste combine plusieurs écosystèmes.</p>
+<section id="bases-bibliographiques" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="bases-bibliographiques"><span class="header-section-number">6.1</span> Bases bibliographiques</h3>
+<ul>
+<li><strong>PubMed/MEDLINE</strong> : biomédecine, santé publique, sciences de la vie ;</li>
+<li><strong>Embase</strong> : biomédecine, pharmacologie, couverture complémentaire à MEDLINE ;</li>
+<li><strong>Web of Science</strong> et <strong>Scopus</strong> : interdisciplinarité, citations, analyse de réseaux ;</li>
+<li><strong>CINAHL</strong> : soins infirmiers et professions paramédicales ;</li>
+<li><strong>PsycINFO</strong> : psychologie, psychiatrie, sciences comportementales ;</li>
+<li><strong>IEEE Xplore</strong> : ingénierie, informatique, traitement du signal ;</li>
+<li><strong>ACM Digital Library</strong> : informatique et interaction humain-machine ;</li>
+<li><strong>EconLit</strong> : économie ;</li>
+<li><strong>ERIC</strong> : sciences de l’éducation.</li>
+</ul>
+</section>
+<section id="sources-complémentaires" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="sources-complémentaires"><span class="header-section-number">6.2</span> Sources complémentaires</h3>
+<ul>
+<li>registres d’essais cliniques ;</li>
+<li>dépôts de prépublications ;</li>
+<li>thèses et archives ouvertes ;</li>
+<li>recommandations professionnelles ;</li>
+<li>rapports d’agences publiques ;</li>
+<li>normes techniques ;</li>
+<li>actes de conférences ;</li>
+<li>documentation réglementaire ;</li>
+<li>sites institutionnels ;</li>
+<li>bibliographies des articles pivots.</li>
+</ul>
+</section>
+<section id="littérature-grise" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="littérature-grise"><span class="header-section-number">6.3</span> Littérature grise</h3>
+<p>La littérature grise peut limiter le biais de publication, mais exige une évaluation critique renforcée. Elle inclut notamment les rapports, mémoires, communications, documents institutionnels, livres blancs et résultats non publiés dans une revue. Son inclusion doit répondre à un objectif explicite et non servir à augmenter artificiellement le volume de références.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Règle pratique">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Règle pratique
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour une bibliographie de départ scientifique, utilisez au minimum une base spécialisée du domaine, une base interdisciplinaire ou un moteur académique complémentaire, puis une recherche par citations.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="étape-4-écrire-une-stratégie-de-recherche-reproductible" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="étape-4-écrire-une-stratégie-de-recherche-reproductible"><span class="header-section-number">7</span> Étape 4 — Écrire une stratégie de recherche reproductible</h2>
+<p>Une stratégie défendable précise :</p>
+<ul>
+<li>la base interrogée ;</li>
+<li>la plateforme utilisée ;</li>
+<li>la date de recherche ;</li>
+<li>la requête exacte ;</li>
+<li>les champs interrogés ;</li>
+<li>les filtres ;</li>
+<li>le nombre de résultats ;</li>
+<li>la personne ayant exécuté la recherche ;</li>
+<li>les modifications apportées entre versions.</li>
+</ul>
+<section id="exemple-conceptuel-de-requête-pubmed" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="exemple-conceptuel-de-requête-pubmed"><span class="header-section-number">7.1</span> Exemple conceptuel de requête PubMed</h3>
+<pre class="text"><code>(
+  "Radiotherapy"[Mesh]
+  OR radiotherap*[Title/Abstract]
+  OR "radiation therapy"[Title/Abstract]
+)
+AND
+(
+  "Artificial Intelligence"[Mesh]
+  OR "machine learning"[Title/Abstract]
+  OR "deep learning"[Title/Abstract]
+  OR "prediction model*"[Title/Abstract]
+)
+AND
+(
+  cardiotox*[Title/Abstract]
+  OR pulmon* toxic*[Title/Abstract]
+  OR "late effect*"[Title/Abstract]
+)</code></pre>
+<p>Cette requête n’est qu’un point de départ. Elle doit être testée contre des articles sentinelles déjà connus. Si un article manifestement pertinent n’est pas retrouvé, la stratégie doit être corrigée.</p>
+</section>
+<section id="traduire-une-requête-entre-bases" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="traduire-une-requête-entre-bases"><span class="header-section-number">7.2</span> Traduire une requête entre bases</h3>
+<p>Il ne faut pas copier-coller aveuglément une syntaxe PubMed dans Scopus ou Web of Science. Les opérateurs, troncatures, champs et vocabulaires contrôlés diffèrent. La traduction implique :</p>
+<ol type="1">
+<li>conserver les concepts ;</li>
+<li>adapter la syntaxe ;</li>
+<li>remplacer les descripteurs propres à la base ;</li>
+<li>vérifier les guillemets, parenthèses et troncatures ;</li>
+<li>comparer les rendements ;</li>
+<li>documenter les écarts.</li>
+</ol>
+</section>
+</section>
+<section id="étape-5-utiliser-des-articles-pivots" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="étape-5-utiliser-des-articles-pivots"><span class="header-section-number">8</span> Étape 5 — Utiliser des articles pivots</h2>
+<p>Un article pivot est une publication fortement liée à la question et suffisamment informative pour servir de point d’ancrage. Il permet d’explorer :</p>
+<ul>
+<li>ses références antérieures ;</li>
+<li>les articles qui le citent ;</li>
+<li>les travaux des mêmes auteurs ;</li>
+<li>les mots-clés indexés ;</li>
+<li>les études similaires proposées par les bases ;</li>
+<li>les revues systématiques qui l’incluent.</li>
+</ul>
+<p>Cette approche, souvent appelée recherche en boule de neige, complète la recherche par mots-clés. Elle est particulièrement utile lorsque le vocabulaire a évolué ou que le sujet traverse plusieurs disciplines.</p>
+<section id="recherche-rétrospective-et-prospective" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="recherche-rétrospective-et-prospective"><span class="header-section-number">8.1</span> Recherche rétrospective et prospective</h3>
+<ul>
+<li><strong>Rétrospective</strong> : examiner la liste de références de l’article pivot.</li>
+<li><strong>Prospective</strong> : rechercher les documents qui citent cet article.</li>
+</ul>
+<p>Les deux directions sont nécessaires. La première remonte vers les fondations ; la seconde montre les développements plus récents.</p>
+</section>
+</section>
+<section id="étape-6-sélectionner-sans-improviser" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="étape-6-sélectionner-sans-improviser"><span class="header-section-number">9</span> Étape 6 — Sélectionner sans improviser</h2>
+<p>Même pour une bibliographie initiale, définissez des critères d’inclusion et d’exclusion.</p>
+<section id="exemple-de-critères" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="exemple-de-critères"><span class="header-section-number">9.1</span> Exemple de critères</h3>
+<p><strong>Inclure</strong> :</p>
+<ul>
+<li>études portant sur la population d’intérêt ;</li>
+<li>travaux décrivant la méthode recherchée ;</li>
+<li>articles avec validation interne ou externe ;</li>
+<li>recommandations de sociétés savantes ;</li>
+<li>revues systématiques récentes ;</li>
+<li>publications fondatrices indispensables.</li>
+</ul>
+<p><strong>Exclure</strong> :</p>
+<ul>
+<li>éditoriaux sans apport méthodologique ;</li>
+<li>études hors contexte ;</li>
+<li>doublons ;</li>
+<li>résumés sans données exploitables, sauf justification ;</li>
+<li>textes dont la provenance ou l’intégrité ne peut être vérifiée ;</li>
+<li>sources secondaires répétant une information sans accès à l’origine.</li>
+</ul>
+</section>
+<section id="tenir-un-journal-de-décision" class="level3" data-number="9.2">
+<h3 data-number="9.2" class="anchored" data-anchor-id="tenir-un-journal-de-décision"><span class="header-section-number">9.2</span> Tenir un journal de décision</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Référence</th>
+<th>Décision</th>
+<th>Motif</th>
+<th>Vérification nécessaire</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Article A</td>
+<td>Inclure</td>
+<td>Méthode principale, validation externe</td>
+<td>Extraire calibration</td>
+</tr>
+<tr class="even">
+<td>Article B</td>
+<td>Exclure</td>
+<td>Population pédiatrique hors périmètre</td>
+<td>Aucune</td>
+</tr>
+<tr class="odd">
+<td>Article C</td>
+<td>En attente</td>
+<td>Texte intégral indisponible</td>
+<td>Demander via bibliothèque</td>
+</tr>
+</tbody>
+</table>
+<p>Ce journal réduit les décisions incohérentes et facilite la révision ultérieure du corpus.</p>
+</section>
+</section>
+<section id="étape-7-évaluer-la-qualité-et-la-pertinence" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="étape-7-évaluer-la-qualité-et-la-pertinence"><span class="header-section-number">10</span> Étape 7 — Évaluer la qualité et la pertinence</h2>
+<p>La notoriété d’une revue ou le nombre de citations ne suffisent pas. L’évaluation doit porter sur la source elle-même.</p>
+<section id="questions-transversales" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="questions-transversales"><span class="header-section-number">10.1</span> Questions transversales</h3>
+<ul>
+<li>La question de recherche est-elle clairement formulée ?</li>
+<li>Le plan d’étude est-il adapté ?</li>
+<li>La population est-elle décrite et pertinente ?</li>
+<li>Les données manquantes sont-elles traitées de façon crédible ?</li>
+<li>Les analyses correspondent-elles au protocole ?</li>
+<li>Les résultats sont-ils accompagnés d’incertitude ?</li>
+<li>Les conclusions dépassent-elles les données ?</li>
+<li>Les conflits d’intérêts sont-ils déclarés ?</li>
+<li>Le protocole, le code ou les données sont-ils accessibles ?</li>
+<li>Les résultats ont-ils été répliqués ou validés ailleurs ?</li>
+</ul>
+</section>
+<section id="pour-les-modèles-prédictifs" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="pour-les-modèles-prédictifs"><span class="header-section-number">10.2</span> Pour les modèles prédictifs</h3>
+<p>Vérifiez notamment :</p>
+<ul>
+<li>la séparation entre apprentissage et évaluation ;</li>
+<li>le risque de fuite de données ;</li>
+<li>la taille d’échantillon effective ;</li>
+<li>la gestion du déséquilibre ;</li>
+<li>le choix des métriques ;</li>
+<li>la calibration ;</li>
+<li>la validation externe ;</li>
+<li>l’utilité clinique ou opérationnelle ;</li>
+<li>le transport du modèle vers une autre population ;</li>
+<li>la transparence du prétraitement.</li>
+</ul>
+<p>Un article affichant une AUC élevée n’est pas nécessairement utile si la validation est optimiste, si la calibration est absente ou si le contexte de déploiement n’est pas étudié.</p>
+</section>
+<section id="pour-les-études-causales" class="level3" data-number="10.3">
+<h3 data-number="10.3" class="anchored" data-anchor-id="pour-les-études-causales"><span class="header-section-number">10.3</span> Pour les études causales</h3>
+<p>Interrogez :</p>
+<ul>
+<li>la définition de l’exposition ;</li>
+<li>la temporalité ;</li>
+<li>les facteurs de confusion ;</li>
+<li>les biais de sélection ;</li>
+<li>la mesure des résultats ;</li>
+<li>les analyses de sensibilité ;</li>
+<li>la plausibilité de l’hypothèse d’échangeabilité.</li>
+</ul>
+</section>
+</section>
+<section id="étape-8-organiser-les-références-et-les-notes" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="étape-8-organiser-les-références-et-les-notes"><span class="header-section-number">11</span> Étape 8 — Organiser les références et les notes</h2>
+<p>Un gestionnaire bibliographique est préférable à un document texte isolé. Il permet de :</p>
+<ul>
+<li>dédupliquer ;</li>
+<li>conserver les métadonnées ;</li>
+<li>attacher les PDF ;</li>
+<li>ajouter des étiquettes ;</li>
+<li>générer des citations ;</li>
+<li>synchroniser une bibliothèque ;</li>
+<li>exporter en BibTeX, RIS ou CSL JSON ;</li>
+<li>documenter les annotations.</li>
+</ul>
+<section id="arborescence-de-collections-suggérée" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="arborescence-de-collections-suggérée"><span class="header-section-number">11.1</span> Arborescence de collections suggérée</h3>
+<pre class="text"><code>Projet_X/
+├── 00_A_lire
+├── 01_Recommandations
+├── 02_Revues_systematiques
+├── 03_Etudes_fondatrices
+├── 04_Methodes
+├── 05_Applications
+├── 06_Validation_externe
+├── 07_Limites_et_controverses
+└── 99_Exclus</code></pre>
+</section>
+<section id="système-détiquettes" class="level3" data-number="11.2">
+<h3 data-number="11.2" class="anchored" data-anchor-id="système-détiquettes"><span class="header-section-number">11.2</span> Système d’étiquettes</h3>
+<p>Utilisez des étiquettes qui décrivent une fonction analytique plutôt qu’une impression vague :</p>
+<ul>
+<li><code>question-principale</code> ;</li>
+<li><code>méthode</code> ;</li>
+<li><code>population</code> ;</li>
+<li><code>mesure</code> ;</li>
+<li><code>validation-externe</code> ;</li>
+<li><code>risque-biais-élevé</code> ;</li>
+<li><code>à-vérifier</code> ;</li>
+<li><code>citation-clé</code> ;</li>
+<li><code>discussion</code> ;</li>
+<li><code>limite</code>.</li>
+</ul>
+</section>
+</section>
+<section id="étape-9-construire-une-matrice-de-lecture" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="étape-9-construire-une-matrice-de-lecture"><span class="header-section-number">12</span> Étape 9 — Construire une matrice de lecture</h2>
+<p>La matrice de lecture évite de relire plusieurs fois les mêmes documents sans capitaliser l’information.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Champ</th>
+<th>Contenu attendu</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Référence</td>
+<td>Citation complète et identifiant</td>
+</tr>
+<tr class="even">
+<td>Objectif</td>
+<td>Question réellement étudiée</td>
+</tr>
+<tr class="odd">
+<td>Population</td>
+<td>Taille, contexte, critères</td>
+</tr>
+<tr class="even">
+<td>Données</td>
+<td>Sources, période, variables</td>
+</tr>
+<tr class="odd">
+<td>Méthode</td>
+<td>Plan d’étude, modèle, validation</td>
+</tr>
+<tr class="even">
+<td>Résultats</td>
+<td>Estimations principales et incertitude</td>
+</tr>
+<tr class="odd">
+<td>Forces</td>
+<td>Apports solides</td>
+</tr>
+<tr class="even">
+<td>Limites</td>
+<td>Biais et restrictions</td>
+</tr>
+<tr class="odd">
+<td>Applicabilité</td>
+<td>Transférabilité au projet</td>
+</tr>
+<tr class="even">
+<td>Citation utile</td>
+<td>Passage vérifié et page</td>
+</tr>
+<tr class="odd">
+<td>Décision</td>
+<td>Rôle dans le manuscrit</td>
+</tr>
+</tbody>
+</table>
+<section id="exemple-de-note-analytique" class="level3" data-number="12.1">
+<h3 data-number="12.1" class="anchored" data-anchor-id="exemple-de-note-analytique"><span class="header-section-number">12.1</span> Exemple de note analytique</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="an">Référence :</span><span class="co"> Auteur et al., année</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">Rôle :</span><span class="co"> méthode de référence</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">Question :</span><span class="co"> ...</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="an">Données :</span><span class="co"> ...</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="an">Résultat utile :</span><span class="co"> ...</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="an">Limite majeure :</span><span class="co"> ...</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="an">Ce que cette étude change pour notre projet :</span><span class="co"> ...</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="an">Vérifications restantes :</span><span class="co"> ...</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La dernière ligne est essentielle : elle transforme la lecture en décision scientifique.</p>
+</section>
+</section>
+<section id="étape-10-détecter-les-lacunes-et-contradictions" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="étape-10-détecter-les-lacunes-et-contradictions"><span class="header-section-number">13</span> Étape 10 — Détecter les lacunes et contradictions</h2>
+<p>Une bibliographie de qualité ne se contente pas de résumer. Elle compare.</p>
+<section id="axes-de-comparaison-utiles" class="level3" data-number="13.1">
+<h3 data-number="13.1" class="anchored" data-anchor-id="axes-de-comparaison-utiles"><span class="header-section-number">13.1</span> Axes de comparaison utiles</h3>
+<ul>
+<li>définitions divergentes ;</li>
+<li>populations différentes ;</li>
+<li>fenêtres temporelles incompatibles ;</li>
+<li>méthodes de mesure hétérogènes ;</li>
+<li>algorithmes ou modèles concurrents ;</li>
+<li>résultats contradictoires ;</li>
+<li>validation insuffisante ;</li>
+<li>manque de données pour certains sous-groupes ;</li>
+<li>absence d’évaluation prospective ;</li>
+<li>écart entre performance technique et impact réel.</li>
+</ul>
+</section>
+<section id="tableau-de-synthèse-des-contradictions" class="level3" data-number="13.2">
+<h3 data-number="13.2" class="anchored" data-anchor-id="tableau-de-synthèse-des-contradictions"><span class="header-section-number">13.2</span> Tableau de synthèse des contradictions</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Études favorables</th>
+<th>Études défavorables</th>
+<th>Explications possibles</th>
+<th>Besoin de recherche</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Le modèle améliore-t-il la prédiction ?</td>
+<td>A, B</td>
+<td>C</td>
+<td>Population, prétraitement, validation</td>
+<td>Validation multicentrique</td>
+</tr>
+<tr class="even">
+<td>La variable X est-elle robuste ?</td>
+<td>D</td>
+<td>E, F</td>
+<td>Mesure différente</td>
+<td>Harmonisation</td>
+</tr>
+</tbody>
+</table>
+<p>Une contradiction n’est pas un problème à masquer. Elle peut constituer la meilleure justification d’un nouveau projet.</p>
+</section>
+</section>
+<section id="étape-11-employer-lia-sans-fabriquer-de-références" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="étape-11-employer-lia-sans-fabriquer-de-références"><span class="header-section-number">14</span> Étape 11 — Employer l’IA sans fabriquer de références</h2>
+<section id="usages-raisonnables" class="level3" data-number="14.1">
+<h3 data-number="14.1" class="anchored" data-anchor-id="usages-raisonnables"><span class="header-section-number">14.1</span> Usages raisonnables</h3>
+<p>L’IA peut aider à :</p>
+<ul>
+<li>proposer des synonymes ;</li>
+<li>traduire des termes techniques ;</li>
+<li>transformer une question en matrice de concepts ;</li>
+<li>expliquer la syntaxe d’une base ;</li>
+<li>classifier des titres déjà vérifiés ;</li>
+<li>générer un canevas d’extraction ;</li>
+<li>repérer des thèmes dans des résumés fournis ;</li>
+<li>reformuler une synthèse rédigée par l’auteur ;</li>
+<li>comparer deux versions d’une requête.</li>
+</ul>
+</section>
+<section id="usages-dangereux" class="level3" data-number="14.2">
+<h3 data-number="14.2" class="anchored" data-anchor-id="usages-dangereux"><span class="header-section-number">14.2</span> Usages dangereux</h3>
+<p>Ne lui confiez pas sans contrôle :</p>
+<ul>
+<li>la génération d’une bibliographie « complète » ;</li>
+<li>l’invention d’identifiants DOI ;</li>
+<li>l’attribution de résultats à des auteurs ;</li>
+<li>la sélection finale des études ;</li>
+<li>l’évaluation automatique du risque de biais ;</li>
+<li>la conclusion sur l’efficacité d’une intervention ;</li>
+<li>l’analyse d’un document confidentiel dans un service non autorisé.</li>
+</ul>
+</section>
+<section id="protocole-de-vérification-dune-référence-proposée-par-une-ia" class="level3" data-number="14.3">
+<h3 data-number="14.3" class="anchored" data-anchor-id="protocole-de-vérification-dune-référence-proposée-par-une-ia"><span class="header-section-number">14.3</span> Protocole de vérification d’une référence proposée par une IA</h3>
+<ol type="1">
+<li>rechercher le titre exact ;</li>
+<li>vérifier les auteurs ;</li>
+<li>vérifier l’année et la revue ;</li>
+<li>ouvrir la page de l’éditeur ou l’index bibliographique ;</li>
+<li>confirmer le DOI ou l’identifiant ;</li>
+<li>lire au minimum le résumé ;</li>
+<li>confirmer que l’article soutient réellement l’affirmation ;</li>
+<li>enregistrer la référence depuis la source vérifiée ;</li>
+<li>supprimer toute entrée non confirmée.</li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled" title="Alerte aux hallucinations bibliographiques">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Avertissement</span>Alerte aux hallucinations bibliographiques
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un titre plausible, un DOI bien formé et une revue réelle ne prouvent pas qu’une référence existe. La vérification doit être externe au modèle génératif.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="modèles-de-prompts-utiles-et-contrôlables" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="modèles-de-prompts-utiles-et-contrôlables"><span class="header-section-number">15</span> Modèles de prompts utiles et contrôlables</h2>
+<section id="générer-une-matrice-de-concepts" class="level3" data-number="15.1">
+<h3 data-number="15.1" class="anchored" data-anchor-id="générer-une-matrice-de-concepts"><span class="header-section-number">15.1</span> Générer une matrice de concepts</h3>
+<pre class="text"><code>À partir de la question suivante, propose une matrice de concepts.
+Pour chaque bloc, fournis : terme principal, synonymes anglais et français,
+acronymes, variantes orthographiques et termes plus larges ou plus étroits.
+N’invente aucune référence. Signale les termes ambigus.
+Question : [insérer la question]</code></pre>
+</section>
+<section id="auditer-une-requête" class="level3" data-number="15.2">
+<h3 data-number="15.2" class="anchored" data-anchor-id="auditer-une-requête"><span class="header-section-number">15.2</span> Auditer une requête</h3>
+<pre class="text"><code>Analyse cette requête bibliographique sans l’exécuter.
+Vérifie la logique booléenne, les parenthèses, les synonymes manquants,
+les risques de perte de rappel et les filtres trop restrictifs.
+Propose une version révisée et explique chaque changement.
+Base ciblée : [nom]
+Requête : [requête]</code></pre>
+</section>
+<section id="préparer-une-grille-de-lecture" class="level3" data-number="15.3">
+<h3 data-number="15.3" class="anchored" data-anchor-id="préparer-une-grille-de-lecture"><span class="header-section-number">15.3</span> Préparer une grille de lecture</h3>
+<pre class="text"><code>Crée une grille d’extraction adaptée à des études de [type].
+La grille doit distinguer données factuelles, jugement critique et décision d’inclusion.
+Ajoute les champs nécessaires pour le risque de biais, la transférabilité,
+la reproductibilité et les informations manquantes.</code></pre>
+</section>
+</section>
+<section id="contrôle-qualité-de-la-bibliographie" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="contrôle-qualité-de-la-bibliographie"><span class="header-section-number">16</span> Contrôle qualité de la bibliographie</h2>
+<p>Avant de considérer le corpus comme exploitable, vérifiez les points suivants.</p>
+<section id="couverture" class="level3" data-number="16.1">
+<h3 data-number="16.1" class="anchored" data-anchor-id="couverture"><span class="header-section-number">16.1</span> Couverture</h3>
+<ul>
+<li>Au moins une base spécialisée a-t-elle été interrogée ?</li>
+<li>Les articles pivots sont-ils retrouvés ?</li>
+<li>Les termes historiques et récents sont-ils couverts ?</li>
+<li>Les revues systématiques existantes sont-elles incluses ?</li>
+<li>Les travaux récents ont-ils été recherchés ?</li>
+<li>La littérature grise est-elle nécessaire ?</li>
+</ul>
+</section>
+<section id="fiabilité" class="level3" data-number="16.2">
+<h3 data-number="16.2" class="anchored" data-anchor-id="fiabilité"><span class="header-section-number">16.2</span> Fiabilité</h3>
+<ul>
+<li>Chaque référence existe-t-elle réellement ?</li>
+<li>Les métadonnées sont-elles correctes ?</li>
+<li>Les affirmations sont-elles reliées aux bonnes sources ?</li>
+<li>Les rétractations ou corrections ont-elles été vérifiées ?</li>
+<li>Les prépublications sont-elles identifiées comme telles ?</li>
+</ul>
+</section>
+<section id="transparence" class="level3" data-number="16.3">
+<h3 data-number="16.3" class="anchored" data-anchor-id="transparence"><span class="header-section-number">16.3</span> Transparence</h3>
+<ul>
+<li>Les requêtes sont-elles enregistrées ?</li>
+<li>Les dates de recherche sont-elles indiquées ?</li>
+<li>Les critères de sélection sont-ils explicites ?</li>
+<li>Les exclusions importantes sont-elles justifiées ?</li>
+<li>Les usages de l’IA sont-ils documentés lorsqu’ils influencent le travail ?</li>
+</ul>
+</section>
+</section>
+<section id="reproductibilité-le-journal-minimal-à-conserver" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="reproductibilité-le-journal-minimal-à-conserver"><span class="header-section-number">17</span> Reproductibilité : le journal minimal à conserver</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">projet</span><span class="kw">:</span><span class="at"> </span><span class="st">"Nom du projet"</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">question</span><span class="kw">:</span><span class="at"> </span><span class="st">"Question structurée"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">date_recherche</span><span class="kw">:</span><span class="at"> </span><span class="st">"AAAA-MM-JJ"</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">bases</span><span class="kw">:</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">nom</span><span class="kw">:</span><span class="at"> </span><span class="st">"PubMed"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">plateforme</span><span class="kw">:</span><span class="at"> </span><span class="st">"NLM"</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">requete</span><span class="kw">:</span><span class="at"> </span><span class="st">"..."</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">resultats</span><span class="kw">:</span><span class="at"> </span><span class="dv">000</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">nom</span><span class="kw">:</span><span class="at"> </span><span class="st">"Scopus"</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">plateforme</span><span class="kw">:</span><span class="at"> </span><span class="st">"Elsevier"</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">requete</span><span class="kw">:</span><span class="at"> </span><span class="st">"..."</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">resultats</span><span class="kw">:</span><span class="at"> </span><span class="dv">000</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">criteres_inclusion</span><span class="kw">:</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="st">"..."</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="fu">criteres_exclusion</span><span class="kw">:</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="st">"..."</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="fu">articles_pivots</span><span class="kw">:</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="st">"DOI ou PMID"</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="fu">outils_ia</span><span class="kw">:</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">outil</span><span class="kw">:</span><span class="at"> </span><span class="st">"..."</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">usage</span><span class="kw">:</span><span class="at"> </span><span class="st">"synonymes uniquement"</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">verification_humaine</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ce niveau de documentation est simple, mais il permet déjà de comprendre et de répéter la démarche.</p>
+</section>
+<section id="exemple-complet-de-la-question-au-corpus-initial" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="exemple-complet-de-la-question-au-corpus-initial"><span class="header-section-number">18</span> Exemple complet : de la question au corpus initial</h2>
+<section id="situation" class="level3" data-number="18.1">
+<h3 data-number="18.1" class="anchored" data-anchor-id="situation"><span class="header-section-number">18.1</span> Situation</h3>
+<p>Une équipe souhaite évaluer l’intérêt de modèles d’apprentissage automatique pour anticiper les ruptures de production dans une usine.</p>
+</section>
+<section id="question-structurée" class="level3" data-number="18.2">
+<h3 data-number="18.2" class="anchored" data-anchor-id="question-structurée"><span class="header-section-number">18.2</span> Question structurée</h3>
+<p>« Dans les environnements industriels continus, quelles approches d’apprentissage automatique utilisent des données de capteurs pour prédire une panne ou une rupture de production, et comment leur performance est-elle validée en conditions réelles ? »</p>
+</section>
+<section id="blocs-conceptuels" class="level3" data-number="18.3">
+<h3 data-number="18.3" class="anchored" data-anchor-id="blocs-conceptuels"><span class="header-section-number">18.3</span> Blocs conceptuels</h3>
+<ol type="1">
+<li>industrie continue ;</li>
+<li>maintenance prédictive ;</li>
+<li>données capteurs ;</li>
+<li>apprentissage automatique ;</li>
+<li>panne ou arrêt ;</li>
+<li>validation réelle.</li>
+</ol>
+</section>
+<section id="corpus-prioritaire" class="level3" data-number="18.4">
+<h3 data-number="18.4" class="anchored" data-anchor-id="corpus-prioritaire"><span class="header-section-number">18.4</span> Corpus prioritaire</h3>
+<ul>
+<li>revues récentes sur la maintenance prédictive ;</li>
+<li>études de validation sur sites industriels ;</li>
+<li>articles méthodologiques sur les séries temporelles ;</li>
+<li>travaux sur la dérive des données ;</li>
+<li>publications sur le coût des faux positifs et faux négatifs ;</li>
+<li>normes ou recommandations sur la gestion des actifs ;</li>
+<li>études décrivant l’intégration dans un système de maintenance.</li>
+</ul>
+</section>
+<section id="critères-danalyse" class="level3" data-number="18.5">
+<h3 data-number="18.5" class="anchored" data-anchor-id="critères-danalyse"><span class="header-section-number">18.5</span> Critères d’analyse</h3>
+<ul>
+<li>horizon de prédiction ;</li>
+<li>fréquence d’échantillonnage ;</li>
+<li>définition d’une panne ;</li>
+<li>séparation temporelle apprentissage-test ;</li>
+<li>données multisites ou monosites ;</li>
+<li>métriques adaptées au déséquilibre ;</li>
+<li>coût opérationnel ;</li>
+<li>preuve d’utilisation réelle.</li>
+</ul>
+<p>Cet exemple montre que la bibliographie ne se limite pas à « quels algorithmes ? ». Elle doit couvrir le système de décision complet.</p>
+</section>
+</section>
+<section id="erreurs-fréquentes-et-corrections" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="erreurs-fréquentes-et-corrections"><span class="header-section-number">19</span> Erreurs fréquentes et corrections</h2>
+<section id="chercher-une-phrase-entière" class="level3" data-number="19.1">
+<h3 data-number="19.1" class="anchored" data-anchor-id="chercher-une-phrase-entière"><span class="header-section-number">19.1</span> Chercher une phrase entière</h3>
+<p><strong>Problème</strong> : le moteur retrouve peu de résultats ou des formulations très proches.</p>
+<p><strong>Correction</strong> : découper la phrase en concepts, puis développer les synonymes.</p>
+</section>
+<section id="utiliser-uniquement-google-scholar" class="level3" data-number="19.2">
+<h3 data-number="19.2" class="anchored" data-anchor-id="utiliser-uniquement-google-scholar"><span class="header-section-number">19.2</span> Utiliser uniquement Google Scholar</h3>
+<p><strong>Problème</strong> : couverture large mais classement peu transparent, déduplication imparfaite et reproductibilité limitée.</p>
+<p><strong>Correction</strong> : l’utiliser en complément d’une base spécialisée et documenter les recherches clés.</p>
+</section>
+<section id="appliquer-trop-tôt-des-filtres" class="level3" data-number="19.3">
+<h3 data-number="19.3" class="anchored" data-anchor-id="appliquer-trop-tôt-des-filtres"><span class="header-section-number">19.3</span> Appliquer trop tôt des filtres</h3>
+<p><strong>Problème</strong> : les filtres de langue, période ou type de publication peuvent supprimer des études pertinentes.</p>
+<p><strong>Correction</strong> : tester d’abord une requête plus large et justifier chaque restriction.</p>
+</section>
+<section id="confondre-citation-et-preuve" class="level3" data-number="19.4">
+<h3 data-number="19.4" class="anchored" data-anchor-id="confondre-citation-et-preuve"><span class="header-section-number">19.4</span> Confondre citation et preuve</h3>
+<p><strong>Problème</strong> : un article cité après une phrase ne soutient pas nécessairement toute la phrase.</p>
+<p><strong>Correction</strong> : vérifier l’alignement exact entre l’affirmation, le résultat de l’étude et le niveau de certitude.</p>
+</section>
+<section id="accumuler-sans-synthétiser" class="level3" data-number="19.5">
+<h3 data-number="19.5" class="anchored" data-anchor-id="accumuler-sans-synthétiser"><span class="header-section-number">19.5</span> Accumuler sans synthétiser</h3>
+<p><strong>Problème</strong> : une bibliothèque volumineuse devient inutilisable.</p>
+<p><strong>Correction</strong> : associer à chaque référence un rôle, une note analytique et une décision.</p>
+</section>
+<section id="ignorer-les-résultats-négatifs" class="level3" data-number="19.6">
+<h3 data-number="19.6" class="anchored" data-anchor-id="ignorer-les-résultats-négatifs"><span class="header-section-number">19.6</span> Ignorer les résultats négatifs</h3>
+<p><strong>Problème</strong> : la vision du champ devient artificiellement optimiste.</p>
+<p><strong>Correction</strong> : rechercher explicitement les limites, échecs, validations externes et critiques.</p>
+</section>
+</section>
+<section id="quand-arrêter-la-recherche-initiale" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="quand-arrêter-la-recherche-initiale"><span class="header-section-number">20</span> Quand arrêter la recherche initiale ?</h2>
+<p>Une bibliographie de départ peut être considérée comme suffisamment mûre lorsque :</p>
+<ul>
+<li>les nouveaux résultats apportent peu de concepts supplémentaires ;</li>
+<li>les principaux articles pivots sont identifiés ;</li>
+<li>les méthodes dominantes sont connues ;</li>
+<li>les contradictions majeures sont visibles ;</li>
+<li>les lacunes peuvent être formulées ;</li>
+<li>la stratégie pour la recherche exhaustive suivante est prête.</li>
+</ul>
+<p>Cela ne signifie pas que la littérature est complète. Cela signifie que le projet dispose d’un socle assez solide pour avancer sans prétendre à l’exhaustivité.</p>
+</section>
+<section id="modèle-de-livrable-professionnel" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="modèle-de-livrable-professionnel"><span class="header-section-number">21</span> Modèle de livrable professionnel</h2>
+<p>Un livrable de cadrage bibliographique peut contenir :</p>
+<ol type="1">
+<li>question et objectif ;</li>
+<li>périmètre ;</li>
+<li>bases et sources ;</li>
+<li>stratégie de recherche ;</li>
+<li>critères de sélection ;</li>
+<li>diagramme simplifié des résultats ;</li>
+<li>tableau des références prioritaires ;</li>
+<li>synthèse thématique ;</li>
+<li>controverses ;</li>
+<li>lacunes ;</li>
+<li>implications pour le projet ;</li>
+<li>limites de la recherche ;</li>
+<li>plan de mise à jour.</li>
+</ol>
+</section>
+<section id="références-méthodologiques-essentielles" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="références-méthodologiques-essentielles"><span class="header-section-number">22</span> Références méthodologiques essentielles</h2>
+<ul>
+<li>Rethlefsen ML et al.&nbsp;<strong>PRISMA-S: an extension to the PRISMA Statement for Reporting Literature Searches in Systematic Reviews</strong>. <em>Systematic Reviews</em>. 2021;10:39. <a href="https://www.equator-network.org/reporting-guidelines/prisma-s/">Consulter la présentation EQUATOR</a>.</li>
+<li>Page MJ et al.&nbsp;<strong>The PRISMA 2020 statement: an updated guideline for reporting systematic reviews</strong>. <em>BMJ</em>. 2021;372:n71.</li>
+<li>McGowan J et al.&nbsp;<strong>PRESS Peer Review of Electronic Search Strategies: 2015 Guideline Statement</strong>. <em>Journal of Clinical Epidemiology</em>. 2016;75:40–46.</li>
+<li>Bramer WM et al.&nbsp;<strong>A systematic approach to searching: an efficient and complete method to develop literature searches</strong>. <em>Journal of the Medical Library Association</em>. 2018;106(4):531–541.</li>
+<li>Lefebvre C et al.&nbsp;<strong>Searching for and selecting studies</strong>. Dans : <em>Cochrane Handbook for Systematic Reviews of Interventions</em>.</li>
+<li>Peters MDJ et al.&nbsp;<strong>Updated methodological guidance for the conduct of scoping reviews</strong>. <em>JBI Evidence Synthesis</em>. 2020;18(10):2119–2126.</li>
+<li>ICMJE. <strong>Use of Artificial Intelligence in Publishing</strong>. Recommandations mises à jour en 2026. <a href="https://www.icmje.org/recommendations/browse/artificial-intelligence/">Consulter les recommandations</a>.</li>
+</ul>
+</section>
+<section id="checklist-finale" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="checklist-finale"><span class="header-section-number">23</span> Checklist finale</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">La question est structurée.</label></li>
+<li><label><input type="checkbox">L’objectif documentaire est écrit.</label></li>
+<li><label><input type="checkbox">Les concepts et synonymes sont cartographiés.</label></li>
+<li><label><input type="checkbox">Plusieurs sources adaptées sont utilisées.</label></li>
+<li><label><input type="checkbox">Les requêtes exactes sont conservées.</label></li>
+<li><label><input type="checkbox">Les articles pivots sont testés.</label></li>
+<li><label><input type="checkbox">Les critères de sélection sont explicites.</label></li>
+<li><label><input type="checkbox">Les références sont vérifiées dans une source fiable.</label></li>
+<li><label><input type="checkbox">Les doublons sont supprimés.</label></li>
+<li><label><input type="checkbox">Une matrice de lecture est renseignée.</label></li>
+<li><label><input type="checkbox">Les contradictions et lacunes sont identifiées.</label></li>
+<li><label><input type="checkbox">Les usages de l’IA sont limités et documentés.</label></li>
+<li><label><input type="checkbox">Une date de mise à jour est prévue.</label></li>
+</ul>
+</section>
+<section id="à-retenir" class="level2" data-number="24">
+<h2 data-number="24" class="anchored" data-anchor-id="à-retenir"><span class="header-section-number">24</span> À retenir</h2>
+<p>Construire une bibliographie de départ est un exercice de raisonnement scientifique. La recherche documentaire doit relier une question explicite, une stratégie reproductible, une sélection justifiée et une lecture critique. L’IA peut accélérer la préparation, mais la qualité finale repose sur la vérification des sources, la compréhension des méthodes et la responsabilité de l’expert.</p>
+<div class="discussion-box">
+<p><strong>Question à la communauté :</strong> quelle étape de votre recherche bibliographique vous fait perdre le plus de temps : trouver les bons mots-clés, sélectionner les sources, lire les articles ou organiser les références ?</p>
+</div>
+</section>
+<section id="besoin-dun-accompagnement" class="level2" data-number="25">
+<h2 data-number="25" class="anchored" data-anchor-id="besoin-dun-accompagnement"><span class="header-section-number">25</span> Besoin d’un accompagnement ?</h2>
+<p>SYLTRA Consulting accompagne les équipes de recherche, de santé, d’ingénierie et de décision dans la structuration de revues de littérature, la conception de protocoles, l’analyse statistique, la Data Science, la biostatistique et l’usage responsable de l’intelligence artificielle.</p>
+<p><a href="../contact.html" class="btn btn-primary">Nous contacter</a></p>
+<div class="post-tags">
+<p>#RechercheScientifique #Bibliographie #RevueDeLitterature #PRISMA #IntelligenceArtificielle #Biostatistique #Methodologie #ScienceOuverte #SYLTRAConsulting</p>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('a[href^="http"]').forEach(a=>{if(!a.href.includes(location.hostname)){a.rel="noopener noreferrer";a.target="_blank";}});});</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.syltra-consulting\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026–2027 SYLTRA Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>IA utile • Data Science • Biostatistique • Recherche</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,2319 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="SYLTRA Consulting">
+<meta name="description" content="Un guide méthodologique complet pour comprendre les frontières entre intelligence artificielle, machine learning, deep learning et IA générative, choisir la bonne approche et évaluer un système de manière rigoureuse.">
+
+<title>IA, Machine Learning et Deep Learning : les distinguer pour mieux décider – SYLTRA Consulting</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/img/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9080f0b6d81bdf8015e035bfde39d928.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9aa21a40dbb39132369637faf316968b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="IA, Machine Learning et Deep Learning : les distinguer pour mieux décider – SYLTRA Consulting">
+<meta property="og:description" content="Un guide méthodologique complet pour comprendre les frontières entre intelligence artificielle, machine learning, deep learning et IA générative, choisir la bonne approche et évaluer un système de manière rigoureuse.">
+<meta property="og:image" content="https://blog.syltra-consulting.com/assets/img/posts/j004.svg">
+<meta property="og:site_name" content="SYLTRA Consulting">
+<meta name="twitter:title" content="IA, Machine Learning et Deep Learning : les distinguer pour mieux décider – SYLTRA Consulting">
+<meta name="twitter:description" content="Un guide méthodologique complet pour comprendre les frontières entre intelligence artificielle, machine learning, deep learning et IA générative, choisir la bonne approche et évaluer un système de manière rigoureuse.">
+<meta name="twitter:image" content="https://blog.syltra-consulting.com/assets/img/posts/j004.svg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo light-content">
+    <img src="../assets/img/logo-syltra.svg" alt="SYLTRA Consulting" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SYLTRA Consulting</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-domaines" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Domaines</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-domaines">    
+        <li>
+    <a class="dropdown-item" href="../domaines/sante.html">
+ <span class="dropdown-text">Santé &amp; biostatistique</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/recherche.html">
+ <span class="dropdown-text">Recherche</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/banque-finance.html">
+ <span class="dropdown-text">Banque, finance &amp; assurance</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/industrie.html">
+ <span class="dropdown-text">Industrie &amp; ingénierie</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/enseignement.html">
+ <span class="dropdown-text">Enseignement &amp; formation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../domaines/gouvernance.html">
+ <span class="dropdown-text">Gouvernance &amp; sécurité</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../calendrier.html"> 
+<span class="menu-text">Calendrier</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../a-propos.html"> 
+<span class="menu-text">À propos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/LucienSyTraore"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/company/syltra-consulting/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Basculer en mode lecteur">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Dans cet article</h2>
+   
+  <ul>
+  <li><a href="#pourquoi-cette-distinction-est-devenue-indispensable" id="toc-pourquoi-cette-distinction-est-devenue-indispensable" class="nav-link active" data-scroll-target="#pourquoi-cette-distinction-est-devenue-indispensable"><span class="header-section-number">1</span> Pourquoi cette distinction est devenue indispensable</a></li>
+  <li><a href="#une-représentation-simple-mais-correcte" id="toc-une-représentation-simple-mais-correcte" class="nav-link" data-scroll-target="#une-représentation-simple-mais-correcte"><span class="header-section-number">2</span> Une représentation simple, mais correcte</a></li>
+  <li><a href="#quest-ce-que-lintelligence-artificielle" id="toc-quest-ce-que-lintelligence-artificielle" class="nav-link" data-scroll-target="#quest-ce-que-lintelligence-artificielle"><span class="header-section-number">3</span> 1. Qu’est-ce que l’intelligence artificielle ?</a>
+  <ul class="collapse">
+  <li><a href="#un-domaine-pas-un-algorithme-unique" id="toc-un-domaine-pas-un-algorithme-unique" class="nav-link" data-scroll-target="#un-domaine-pas-un-algorithme-unique"><span class="header-section-number">3.1</span> 1.1 Un domaine, pas un algorithme unique</a></li>
+  <li><a href="#exemple-dia-sans-machine-learning" id="toc-exemple-dia-sans-machine-learning" class="nav-link" data-scroll-target="#exemple-dia-sans-machine-learning"><span class="header-section-number">3.2</span> 1.2 Exemple d’IA sans machine learning</a></li>
+  <li><a href="#lia-nest-pas-synonyme-dautonomie-totale" id="toc-lia-nest-pas-synonyme-dautonomie-totale" class="nav-link" data-scroll-target="#lia-nest-pas-synonyme-dautonomie-totale"><span class="header-section-number">3.3</span> 1.3 L’IA n’est pas synonyme d’autonomie totale</a></li>
+  </ul></li>
+  <li><a href="#quest-ce-que-le-machine-learning" id="toc-quest-ce-que-le-machine-learning" class="nav-link" data-scroll-target="#quest-ce-que-le-machine-learning"><span class="header-section-number">4</span> 2. Qu’est-ce que le machine learning ?</a>
+  <ul class="collapse">
+  <li><a href="#apprendre-une-relation-à-partir-dexemples" id="toc-apprendre-une-relation-à-partir-dexemples" class="nav-link" data-scroll-target="#apprendre-une-relation-à-partir-dexemples"><span class="header-section-number">4.1</span> 2.1 Apprendre une relation à partir d’exemples</a></li>
+  <li><a href="#lobjectif-réel-généraliser" id="toc-lobjectif-réel-généraliser" class="nav-link" data-scroll-target="#lobjectif-réel-généraliser"><span class="header-section-number">4.2</span> 2.2 L’objectif réel : généraliser</a></li>
+  <li><a href="#les-principaux-paradigmes" id="toc-les-principaux-paradigmes" class="nav-link" data-scroll-target="#les-principaux-paradigmes"><span class="header-section-number">4.3</span> 2.3 Les principaux paradigmes</a></li>
+  <li><a href="#exemples-de-modèles-classiques" id="toc-exemples-de-modèles-classiques" class="nav-link" data-scroll-target="#exemples-de-modèles-classiques"><span class="header-section-number">4.4</span> 2.4 Exemples de modèles classiques</a></li>
+  </ul></li>
+  <li><a href="#quest-ce-que-le-deep-learning" id="toc-quest-ce-que-le-deep-learning" class="nav-link" data-scroll-target="#quest-ce-que-le-deep-learning"><span class="header-section-number">5</span> 3. Qu’est-ce que le deep learning ?</a>
+  <ul class="collapse">
+  <li><a href="#une-famille-de-réseaux-de-neurones-profonds" id="toc-une-famille-de-réseaux-de-neurones-profonds" class="nav-link" data-scroll-target="#une-famille-de-réseaux-de-neurones-profonds"><span class="header-section-number">5.1</span> 3.1 Une famille de réseaux de neurones profonds</a></li>
+  <li><a href="#pourquoi-le-deep-learning-a-transformé-certains-domaines" id="toc-pourquoi-le-deep-learning-a-transformé-certains-domaines" class="nav-link" data-scroll-target="#pourquoi-le-deep-learning-a-transformé-certains-domaines"><span class="header-section-number">5.2</span> 3.2 Pourquoi le deep learning a transformé certains domaines</a></li>
+  <li><a href="#les-grandes-architectures" id="toc-les-grandes-architectures" class="nav-link" data-scroll-target="#les-grandes-architectures"><span class="header-section-number">5.3</span> 3.3 Les grandes architectures</a></li>
+  <li><a href="#ce-que-le-deep-learning-ne-garantit-pas" id="toc-ce-que-le-deep-learning-ne-garantit-pas" class="nav-link" data-scroll-target="#ce-que-le-deep-learning-ne-garantit-pas"><span class="header-section-number">5.4</span> 3.4 Ce que le deep learning ne garantit pas</a></li>
+  </ul></li>
+  <li><a href="#ia-générative-modèles-de-fondation-et-grands-modèles-de-langage" id="toc-ia-générative-modèles-de-fondation-et-grands-modèles-de-langage" class="nav-link" data-scroll-target="#ia-générative-modèles-de-fondation-et-grands-modèles-de-langage"><span class="header-section-number">6</span> 4. IA générative, modèles de fondation et grands modèles de langage</a>
+  <ul class="collapse">
+  <li><a href="#lia-générative-nest-pas-toute-lia" id="toc-lia-générative-nest-pas-toute-lia" class="nav-link" data-scroll-target="#lia-générative-nest-pas-toute-lia"><span class="header-section-number">6.1</span> 4.1 L’IA générative n’est pas toute l’IA</a></li>
+  <li><a href="#modèle-de-fondation" id="toc-modèle-de-fondation" class="nav-link" data-scroll-target="#modèle-de-fondation"><span class="header-section-number">6.2</span> 4.2 Modèle de fondation</a></li>
+  <li><a href="#grand-modèle-de-langage" id="toc-grand-modèle-de-langage" class="nav-link" data-scroll-target="#grand-modèle-de-langage"><span class="header-section-number">6.3</span> 4.3 Grand modèle de langage</a></li>
+  <li><a href="#rag-fine-tuning-et-prompt-trois-leviers-différents" id="toc-rag-fine-tuning-et-prompt-trois-leviers-différents" class="nav-link" data-scroll-target="#rag-fine-tuning-et-prompt-trois-leviers-différents"><span class="header-section-number">6.4</span> 4.4 RAG, fine-tuning et prompt : trois leviers différents</a></li>
+  </ul></li>
+  <li><a href="#comparaison-opérationnelle" id="toc-comparaison-opérationnelle" class="nav-link" data-scroll-target="#comparaison-opérationnelle"><span class="header-section-number">7</span> 5. Comparaison opérationnelle</a></li>
+  <li><a href="#comment-choisir-la-bonne-approche" id="toc-comment-choisir-la-bonne-approche" class="nav-link" data-scroll-target="#comment-choisir-la-bonne-approche"><span class="header-section-number">8</span> 6. Comment choisir la bonne approche ?</a>
+  <ul class="collapse">
+  <li><a href="#commencer-par-le-problème-pas-par-lalgorithme" id="toc-commencer-par-le-problème-pas-par-lalgorithme" class="nav-link" data-scroll-target="#commencer-par-le-problème-pas-par-lalgorithme"><span class="header-section-number">8.1</span> 6.1 Commencer par le problème, pas par l’algorithme</a></li>
+  <li><a href="#les-douze-questions-de-cadrage" id="toc-les-douze-questions-de-cadrage" class="nav-link" data-scroll-target="#les-douze-questions-de-cadrage"><span class="header-section-number">8.2</span> 6.2 Les douze questions de cadrage</a></li>
+  <li><a href="#construire-une-baseline" id="toc-construire-une-baseline" class="nav-link" data-scroll-target="#construire-une-baseline"><span class="header-section-number">8.3</span> 6.3 Construire une baseline</a></li>
+  </ul></li>
+  <li><a href="#concevoir-une-étude-de-machine-learning-rigoureuse" id="toc-concevoir-une-étude-de-machine-learning-rigoureuse" class="nav-link" data-scroll-target="#concevoir-une-étude-de-machine-learning-rigoureuse"><span class="header-section-number">9</span> 7. Concevoir une étude de machine learning rigoureuse</a>
+  <ul class="collapse">
+  <li><a href="#définir-lunité-statistique" id="toc-définir-lunité-statistique" class="nav-link" data-scroll-target="#définir-lunité-statistique"><span class="header-section-number">9.1</span> 7.1 Définir l’unité statistique</a></li>
+  <li><a href="#prévenir-la-fuite-dinformation" id="toc-prévenir-la-fuite-dinformation" class="nav-link" data-scroll-target="#prévenir-la-fuite-dinformation"><span class="header-section-number">9.2</span> 7.2 Prévenir la fuite d’information</a></li>
+  <li><a href="#choisir-une-stratégie-de-validation-adaptée" id="toc-choisir-une-stratégie-de-validation-adaptée" class="nav-link" data-scroll-target="#choisir-une-stratégie-de-validation-adaptée"><span class="header-section-number">9.3</span> 7.3 Choisir une stratégie de validation adaptée</a></li>
+  <li><a href="#séparer-développement-et-évaluation-finale" id="toc-séparer-développement-et-évaluation-finale" class="nav-link" data-scroll-target="#séparer-développement-et-évaluation-finale"><span class="header-section-number">9.4</span> 7.4 Séparer développement et évaluation finale</a></li>
+  </ul></li>
+  <li><a href="#choisir-les-bonnes-métriques" id="toc-choisir-les-bonnes-métriques" class="nav-link" data-scroll-target="#choisir-les-bonnes-métriques"><span class="header-section-number">10</span> 8. Choisir les bonnes métriques</a>
+  <ul class="collapse">
+  <li><a href="#classification" id="toc-classification" class="nav-link" data-scroll-target="#classification"><span class="header-section-number">10.1</span> 8.1 Classification</a></li>
+  <li><a href="#calibration" id="toc-calibration" class="nav-link" data-scroll-target="#calibration"><span class="header-section-number">10.2</span> 8.2 Calibration</a></li>
+  <li><a href="#régression" id="toc-régression" class="nav-link" data-scroll-target="#régression"><span class="header-section-number">10.3</span> 8.3 Régression</a></li>
+  <li><a href="#génération-de-contenu" id="toc-génération-de-contenu" class="nav-link" data-scroll-target="#génération-de-contenu"><span class="header-section-number">10.4</span> 8.4 Génération de contenu</a></li>
+  </ul></li>
+  <li><a href="#interprétabilité-explicabilité-et-causalité" id="toc-interprétabilité-explicabilité-et-causalité" class="nav-link" data-scroll-target="#interprétabilité-explicabilité-et-causalité"><span class="header-section-number">11</span> 9. Interprétabilité, explicabilité et causalité</a>
+  <ul class="collapse">
+  <li><a href="#trois-notions-différentes" id="toc-trois-notions-différentes" class="nav-link" data-scroll-target="#trois-notions-différentes"><span class="header-section-number">11.1</span> 9.1 Trois notions différentes</a></li>
+  <li><a href="#outils-dexplication" id="toc-outils-dexplication" class="nav-link" data-scroll-target="#outils-dexplication"><span class="header-section-number">11.2</span> 9.2 Outils d’explication</a></li>
+  </ul></li>
+  <li><a href="#robustesse-dérive-et-surveillance" id="toc-robustesse-dérive-et-surveillance" class="nav-link" data-scroll-target="#robustesse-dérive-et-surveillance"><span class="header-section-number">12</span> 10. Robustesse, dérive et surveillance</a>
+  <ul class="collapse">
+  <li><a href="#les-données-changent" id="toc-les-données-changent" class="nav-link" data-scroll-target="#les-données-changent"><span class="header-section-number">12.1</span> 10.1 Les données changent</a></li>
+  <li><a href="#tableau-de-surveillance-minimal" id="toc-tableau-de-surveillance-minimal" class="nav-link" data-scroll-target="#tableau-de-surveillance-minimal"><span class="header-section-number">12.2</span> 10.2 Tableau de surveillance minimal</a></li>
+  <li><a href="#prévoir-un-mode-dégradé" id="toc-prévoir-un-mode-dégradé" class="nav-link" data-scroll-target="#prévoir-un-mode-dégradé"><span class="header-section-number">12.3</span> 10.3 Prévoir un mode dégradé</a></li>
+  </ul></li>
+  <li><a href="#biais-équité-et-qualité-des-données" id="toc-biais-équité-et-qualité-des-données" class="nav-link" data-scroll-target="#biais-équité-et-qualité-des-données"><span class="header-section-number">13</span> 11. Biais, équité et qualité des données</a>
+  <ul class="collapse">
+  <li><a href="#le-biais-ne-vient-pas-seulement-de-lalgorithme" id="toc-le-biais-ne-vient-pas-seulement-de-lalgorithme" class="nav-link" data-scroll-target="#le-biais-ne-vient-pas-seulement-de-lalgorithme"><span class="header-section-number">13.1</span> 11.1 Le biais ne vient pas seulement de l’algorithme</a></li>
+  <li><a href="#évaluer-par-sous-groupes" id="toc-évaluer-par-sous-groupes" class="nav-link" data-scroll-target="#évaluer-par-sous-groupes"><span class="header-section-number">13.2</span> 11.2 Évaluer par sous-groupes</a></li>
+  <li><a href="#aucun-indicateur-unique-déquité" id="toc-aucun-indicateur-unique-déquité" class="nav-link" data-scroll-target="#aucun-indicateur-unique-déquité"><span class="header-section-number">13.3</span> 11.3 Aucun indicateur unique d’équité</a></li>
+  </ul></li>
+  <li><a href="#cas-pratiques-sectoriels" id="toc-cas-pratiques-sectoriels" class="nav-link" data-scroll-target="#cas-pratiques-sectoriels"><span class="header-section-number">14</span> 12. Cas pratiques sectoriels</a>
+  <ul class="collapse">
+  <li><a href="#santé-et-biostatistique" id="toc-santé-et-biostatistique" class="nav-link" data-scroll-target="#santé-et-biostatistique"><span class="header-section-number">14.1</span> 12.1 Santé et biostatistique</a></li>
+  <li><a href="#banque-finance-et-assurance" id="toc-banque-finance-et-assurance" class="nav-link" data-scroll-target="#banque-finance-et-assurance"><span class="header-section-number">14.2</span> 12.2 Banque, finance et assurance</a></li>
+  <li><a href="#industrie-et-ingénierie" id="toc-industrie-et-ingénierie" class="nav-link" data-scroll-target="#industrie-et-ingénierie"><span class="header-section-number">14.3</span> 12.3 Industrie et ingénierie</a></li>
+  <li><a href="#recherche-scientifique" id="toc-recherche-scientifique" class="nav-link" data-scroll-target="#recherche-scientifique"><span class="header-section-number">14.4</span> 12.4 Recherche scientifique</a></li>
+  <li><a href="#enseignement" id="toc-enseignement" class="nav-link" data-scroll-target="#enseignement"><span class="header-section-number">14.5</span> 12.5 Enseignement</a></li>
+  </ul></li>
+  <li><a href="#exemple-reproductible-comparer-une-baseline-et-un-modèle" id="toc-exemple-reproductible-comparer-une-baseline-et-un-modèle" class="nav-link" data-scroll-target="#exemple-reproductible-comparer-une-baseline-et-un-modèle"><span class="header-section-number">15</span> 13. Exemple reproductible : comparer une baseline et un modèle</a></li>
+  <li><a href="#méthode-syltra-en-neuf-étapes" id="toc-méthode-syltra-en-neuf-étapes" class="nav-link" data-scroll-target="#méthode-syltra-en-neuf-étapes"><span class="header-section-number">16</span> 14. Méthode SYLTRA en neuf étapes</a>
+  <ul class="collapse">
+  <li><a href="#étape-1-formuler-la-décision" id="toc-étape-1-formuler-la-décision" class="nav-link" data-scroll-target="#étape-1-formuler-la-décision"><span class="header-section-number">16.1</span> Étape 1 — Formuler la décision</a></li>
+  <li><a href="#étape-2-définir-la-valeur" id="toc-étape-2-définir-la-valeur" class="nav-link" data-scroll-target="#étape-2-définir-la-valeur"><span class="header-section-number">16.2</span> Étape 2 — Définir la valeur</a></li>
+  <li><a href="#étape-3-cartographier-les-données" id="toc-étape-3-cartographier-les-données" class="nav-link" data-scroll-target="#étape-3-cartographier-les-données"><span class="header-section-number">16.3</span> Étape 3 — Cartographier les données</a></li>
+  <li><a href="#étape-4-choisir-la-famille-la-plus-simple-crédible" id="toc-étape-4-choisir-la-famille-la-plus-simple-crédible" class="nav-link" data-scroll-target="#étape-4-choisir-la-famille-la-plus-simple-crédible"><span class="header-section-number">16.4</span> Étape 4 — Choisir la famille la plus simple crédible</a></li>
+  <li><a href="#étape-5-construire-un-protocole-avant-les-résultats" id="toc-étape-5-construire-un-protocole-avant-les-résultats" class="nav-link" data-scroll-target="#étape-5-construire-un-protocole-avant-les-résultats"><span class="header-section-number">16.5</span> Étape 5 — Construire un protocole avant les résultats</a></li>
+  <li><a href="#étape-6-développer-de-manière-reproductible" id="toc-étape-6-développer-de-manière-reproductible" class="nav-link" data-scroll-target="#étape-6-développer-de-manière-reproductible"><span class="header-section-number">16.6</span> Étape 6 — Développer de manière reproductible</a></li>
+  <li><a href="#étape-7-évaluer-au-niveau-du-système" id="toc-étape-7-évaluer-au-niveau-du-système" class="nav-link" data-scroll-target="#étape-7-évaluer-au-niveau-du-système"><span class="header-section-number">16.7</span> Étape 7 — Évaluer au niveau du système</a></li>
+  <li><a href="#étape-8-déployer-progressivement" id="toc-étape-8-déployer-progressivement" class="nav-link" data-scroll-target="#étape-8-déployer-progressivement"><span class="header-section-number">16.8</span> Étape 8 — Déployer progressivement</a></li>
+  <li><a href="#étape-9-surveiller-et-réviser" id="toc-étape-9-surveiller-et-réviser" class="nav-link" data-scroll-target="#étape-9-surveiller-et-réviser"><span class="header-section-number">16.9</span> Étape 9 — Surveiller et réviser</a></li>
+  </ul></li>
+  <li><a href="#gouvernance-et-confiance" id="toc-gouvernance-et-confiance" class="nav-link" data-scroll-target="#gouvernance-et-confiance"><span class="header-section-number">17</span> 15. Gouvernance et confiance</a>
+  <ul class="collapse">
+  <li><a href="#documentation-minimale" id="toc-documentation-minimale" class="nav-link" data-scroll-target="#documentation-minimale"><span class="header-section-number">17.1</span> Documentation minimale</a></li>
+  <li><a href="#cadre-européen" id="toc-cadre-européen" class="nav-link" data-scroll-target="#cadre-européen"><span class="header-section-number">17.2</span> Cadre européen</a></li>
+  </ul></li>
+  <li><a href="#les-erreurs-les-plus-fréquentes" id="toc-les-erreurs-les-plus-fréquentes" class="nav-link" data-scroll-target="#les-erreurs-les-plus-fréquentes"><span class="header-section-number">18</span> 16. Les erreurs les plus fréquentes</a>
+  <ul class="collapse">
+  <li><a href="#nous-avons-beaucoup-de-données-donc-il-faut-du-deep-learning" id="toc-nous-avons-beaucoup-de-données-donc-il-faut-du-deep-learning" class="nav-link" data-scroll-target="#nous-avons-beaucoup-de-données-donc-il-faut-du-deep-learning"><span class="header-section-number">18.1</span> « Nous avons beaucoup de données, donc il faut du deep learning »</a></li>
+  <li><a href="#le-modèle-a-95-dexactitude-donc-il-est-excellent" id="toc-le-modèle-a-95-dexactitude-donc-il-est-excellent" class="nav-link" data-scroll-target="#le-modèle-a-95-dexactitude-donc-il-est-excellent"><span class="header-section-number">18.2</span> « Le modèle a 95 % d’exactitude, donc il est excellent »</a></li>
+  <li><a href="#le-modèle-est-objectif-puisquil-est-mathématique" id="toc-le-modèle-est-objectif-puisquil-est-mathématique" class="nav-link" data-scroll-target="#le-modèle-est-objectif-puisquil-est-mathématique"><span class="header-section-number">18.3</span> « Le modèle est objectif puisqu’il est mathématique »</a></li>
+  <li><a href="#une-explication-shap-prouve-la-causalité" id="toc-une-explication-shap-prouve-la-causalité" class="nav-link" data-scroll-target="#une-explication-shap-prouve-la-causalité"><span class="header-section-number">18.4</span> « Une explication SHAP prouve la causalité »</a></li>
+  <li><a href="#lia-générative-connaît-la-réponse" id="toc-lia-générative-connaît-la-réponse" class="nav-link" data-scroll-target="#lia-générative-connaît-la-réponse"><span class="header-section-number">18.5</span> « L’IA générative connaît la réponse »</a></li>
+  <li><a href="#le-modèle-sera-stable-après-déploiement" id="toc-le-modèle-sera-stable-après-déploiement" class="nav-link" data-scroll-target="#le-modèle-sera-stable-après-déploiement"><span class="header-section-number">18.6</span> « Le modèle sera stable après déploiement »</a></li>
+  <li><a href="#plus-complexe-signifie-plus-performant" id="toc-plus-complexe-signifie-plus-performant" class="nav-link" data-scroll-target="#plus-complexe-signifie-plus-performant"><span class="header-section-number">18.7</span> « Plus complexe signifie plus performant »</a></li>
+  </ul></li>
+  <li><a href="#checklist-de-décision" id="toc-checklist-de-décision" class="nav-link" data-scroll-target="#checklist-de-décision"><span class="header-section-number">19</span> 17. Checklist de décision</a>
+  <ul class="collapse">
+  <li><a href="#avant-de-dire-nous-avons-besoin-dia" id="toc-avant-de-dire-nous-avons-besoin-dia" class="nav-link" data-scroll-target="#avant-de-dire-nous-avons-besoin-dia"><span class="header-section-number">19.1</span> Avant de dire « nous avons besoin d’IA »</a></li>
+  </ul></li>
+  <li><a href="#glossaire-essentiel" id="toc-glossaire-essentiel" class="nav-link" data-scroll-target="#glossaire-essentiel"><span class="header-section-number">20</span> 18. Glossaire essentiel</a></li>
+  <li><a href="#ce-quil-faut-retenir" id="toc-ce-quil-faut-retenir" class="nav-link" data-scroll-target="#ce-quil-faut-retenir"><span class="header-section-number">21</span> 19. Ce qu’il faut retenir</a></li>
+  <li><a href="#références-et-ressources-recommandées" id="toc-références-et-ressources-recommandées" class="nav-link" data-scroll-target="#références-et-ressources-recommandées"><span class="header-section-number">22</span> 20. Références et ressources recommandées</a>
+  <ul class="collapse">
+  <li><a href="#fondations-scientifiques" id="toc-fondations-scientifiques" class="nav-link" data-scroll-target="#fondations-scientifiques"><span class="header-section-number">22.1</span> Fondations scientifiques</a></li>
+  <li><a href="#évaluation-confiance-et-gouvernance" id="toc-évaluation-confiance-et-gouvernance" class="nav-link" data-scroll-target="#évaluation-confiance-et-gouvernance"><span class="header-section-number">22.2</span> Évaluation, confiance et gouvernance</a></li>
+  <li><a href="#pour-approfondir-la-méthodologie" id="toc-pour-approfondir-la-méthodologie" class="nav-link" data-scroll-target="#pour-approfondir-la-méthodologie"><span class="header-section-number">22.3</span> Pour approfondir la méthodologie</a></li>
+  </ul></li>
+  <li><a href="#besoin-dun-accompagnement" id="toc-besoin-dun-accompagnement" class="nav-link" data-scroll-target="#besoin-dun-accompagnement"><span class="header-section-number">23</span> Besoin d’un accompagnement ?</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">IA, Machine Learning et Deep Learning : les distinguer pour mieux décider</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Intelligence artificielle</div>
+    <div class="quarto-category">Machine Learning</div>
+    <div class="quarto-category">Deep Learning</div>
+    <div class="quarto-category">Data Science</div>
+    <div class="quarto-category">Méthodologie</div>
+    <div class="quarto-category">Gouvernance</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Un guide méthodologique complet pour comprendre les frontières entre intelligence artificielle, machine learning, deep learning et IA générative, choisir la bonne approche et évaluer un système de manière rigoureuse.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Auteur·rice</div>
+    <div class="quarto-title-meta-contents">
+             <p>SYLTRA Consulting </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Date de publication</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">31 juillet 2026</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modifié</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">2 août 2026</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="article-kicker">
+<p><strong>Publication 4 · Niveau débutant à intermédiaire · Thème : fondations de l’intelligence artificielle</strong></p>
+</div>
+<section id="pourquoi-cette-distinction-est-devenue-indispensable" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="pourquoi-cette-distinction-est-devenue-indispensable"><span class="header-section-number">1</span> Pourquoi cette distinction est devenue indispensable</h2>
+<p>Les expressions <em>intelligence artificielle</em>, <em>machine learning</em> et <em>deep learning</em> sont souvent employées comme des synonymes. Cette habitude semble anodine, mais elle crée des erreurs très concrètes : choix d’une technologie surdimensionnée, attentes irréalistes, budgets mal orientés, données insuffisantes, indicateurs inadaptés et mauvaise compréhension des risques.</p>
+<p>Une organisation ne devrait donc pas commencer par demander : <strong>« Quel modèle d’IA devons-nous utiliser ? »</strong> Elle devrait d’abord clarifier : <strong>« Quel problème cherchons-nous à résoudre, quelle décision voulons-nous améliorer et quelles preuves permettront de conclure que la solution est utile ? »</strong></p>
+<p>La distinction entre IA, machine learning et deep learning n’est pas seulement terminologique. Elle structure toute la démarche : formulation du besoin, collecte des données, choix du niveau d’automatisation, validation, déploiement, surveillance et gouvernance.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="L’idée centrale">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>L’idée centrale
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>L’intelligence artificielle désigne un champ large de méthodes visant à produire des comportements ou des sorties utiles à partir d’objectifs et d’entrées. Le machine learning est une manière de construire certains systèmes d’IA en apprenant des régularités à partir de données. Le deep learning est une famille particulière de machine learning fondée sur des réseaux de neurones comportant plusieurs niveaux de représentation.</p>
+</div>
+</div>
+<p>Ce guide poursuit cinq objectifs :</p>
+<ol type="1">
+<li>définir les concepts sans simplification trompeuse ;</li>
+<li>montrer leurs relations et leurs différences opérationnelles ;</li>
+<li>expliquer comment choisir une approche adaptée au problème ;</li>
+<li>présenter une méthode rigoureuse d’évaluation ;</li>
+<li>relier les notions techniques aux enjeux métier, scientifiques, éthiques et réglementaires.</li>
+</ol>
+</section>
+<section id="une-représentation-simple-mais-correcte" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="une-représentation-simple-mais-correcte"><span class="header-section-number">2</span> Une représentation simple, mais correcte</h2>
+<p>L’image la plus utile est celle d’ensembles imbriqués :</p>
+<div class="cell" data-layout-align="default">
+<details class="code-fold">
+<summary>Afficher le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    A["Intelligence artificielle"] --&gt; B["Machine Learning"]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    B --&gt; C["Réseaux de neurones"]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    C --&gt; D["Deep Learning"]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    D --&gt; E["Modèles de fondation et IA générative moderne"]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    A --&gt; F["Systèmes à règles"]</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    A --&gt; G["Recherche, planification, optimisation"]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    A --&gt; H["Systèmes experts et IA symbolique"]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A["Intelligence artificielle"] --&gt; B["Machine Learning"]
+    B --&gt; C["Réseaux de neurones"]
+    C --&gt; D["Deep Learning"]
+    D --&gt; E["Modèles de fondation et IA générative moderne"]
+
+    A --&gt; F["Systèmes à règles"]
+    A --&gt; G["Recherche, planification, optimisation"]
+    A --&gt; H["Systèmes experts et IA symbolique"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Cette représentation évite trois confusions fréquentes :</p>
+<ul>
+<li>toute IA n’utilise pas nécessairement l’apprentissage automatique ;</li>
+<li>tout modèle de machine learning n’est pas un réseau de neurones ;</li>
+<li>toute IA générative moderne repose largement sur le deep learning, mais toute application de deep learning n’est pas générative.</li>
+</ul>
+</section>
+<section id="quest-ce-que-lintelligence-artificielle" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="quest-ce-que-lintelligence-artificielle"><span class="header-section-number">3</span> 1. Qu’est-ce que l’intelligence artificielle ?</h2>
+<section id="un-domaine-pas-un-algorithme-unique" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="un-domaine-pas-un-algorithme-unique"><span class="header-section-number">3.1</span> 1.1 Un domaine, pas un algorithme unique</h3>
+<p>L’intelligence artificielle est un domaine scientifique et technique qui conçoit des systèmes capables de produire, à partir d’entrées et d’objectifs explicites ou implicites, des sorties telles que des prédictions, des recommandations, des contenus ou des décisions susceptibles d’influencer un environnement numérique ou physique.</p>
+<p>Cette formulation est proche de la définition actualisée de l’OCDE, qui insiste sur la capacité d’un système à <strong>inférer</strong> la manière de produire ses sorties. Elle est également cohérente avec le cadre réglementaire européen, dans lequel l’objet d’analyse est le <em>système d’IA</em> et non une idée abstraite d’« intelligence ».</p>
+<p>L’IA comprend plusieurs traditions historiques :</p>
+<ul>
+<li><strong>IA symbolique</strong> : règles logiques, bases de connaissances, moteurs d’inférence ;</li>
+<li><strong>recherche et planification</strong> : exploration d’états possibles pour atteindre un objectif ;</li>
+<li><strong>optimisation</strong> : sélection d’une solution sous contraintes ;</li>
+<li><strong>raisonnement probabiliste</strong> : prise en compte de l’incertitude ;</li>
+<li><strong>machine learning</strong> : apprentissage de relations à partir de données ;</li>
+<li><strong>robotique intelligente</strong> : perception, décision et action dans un environnement ;</li>
+<li><strong>systèmes hybrides</strong> : combinaison de règles, modèles statistiques, apprentissage et contrôle humain.</li>
+</ul>
+</section>
+<section id="exemple-dia-sans-machine-learning" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="exemple-dia-sans-machine-learning"><span class="header-section-number">3.2</span> 1.2 Exemple d’IA sans machine learning</h3>
+<p>Considérons un système de vérification d’éligibilité à un dispositif, reposant sur des règles validées :</p>
+<pre class="text"><code>SI âge &gt;= 18
+ET résidence = "France"
+ET revenu_fiscal &lt;= seuil
+ALORS dossier potentiellement éligible
+SINON dossier non éligible ou à réexaminer</code></pre>
+<p>Ce système automatise une partie d’un raisonnement. Il peut être qualifié d’IA au sens large ou de système expert simple, mais il <strong>n’apprend pas</strong> à partir de données. Une modification du seuil nécessite une modification explicite de la règle.</p>
+<p>Cette approche reste pertinente lorsque :</p>
+<ul>
+<li>les règles sont stables et connues ;</li>
+<li>l’explicabilité doit être immédiate ;</li>
+<li>les données historiques sont rares ou peu fiables ;</li>
+<li>les erreurs doivent être contrôlées par des contraintes strictes ;</li>
+<li>l’environnement réglementaire impose une logique déterministe.</li>
+</ul>
+</section>
+<section id="lia-nest-pas-synonyme-dautonomie-totale" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="lia-nest-pas-synonyme-dautonomie-totale"><span class="header-section-number">3.3</span> 1.3 L’IA n’est pas synonyme d’autonomie totale</h3>
+<p>Un système d’IA peut assister, recommander, classer, alerter ou automatiser. Le degré d’autonomie dépend du contexte. Dans un processus sensible, la meilleure architecture n’est souvent pas « une IA qui décide seule », mais une chaîne dans laquelle :</p>
+<ol type="1">
+<li>le système prépare une information ;</li>
+<li>un professionnel examine la sortie ;</li>
+<li>les cas incertains sont escaladés ;</li>
+<li>la décision est tracée ;</li>
+<li>les résultats sont surveillés dans le temps.</li>
+</ol>
+<p>La question pertinente devient alors : <strong>quelle partie de la tâche peut être automatisée, sous quelles limites et avec quelle responsabilité humaine ?</strong></p>
+</section>
+</section>
+<section id="quest-ce-que-le-machine-learning" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="quest-ce-que-le-machine-learning"><span class="header-section-number">4</span> 2. Qu’est-ce que le machine learning ?</h2>
+<section id="apprendre-une-relation-à-partir-dexemples" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="apprendre-une-relation-à-partir-dexemples"><span class="header-section-number">4.1</span> 2.1 Apprendre une relation à partir d’exemples</h3>
+<p>Le machine learning, ou apprentissage automatique, construit un modèle à partir de données afin d’estimer une relation utile entre des entrées et une sortie, ou de découvrir une structure dans les observations.</p>
+<p>Dans un problème supervisé, on observe un ensemble de données :</p>
+<p><span class="math display">\[
+\mathcal{D}=\{(x_i,y_i)\}_{i=1}^{n},
+\]</span></p>
+<p>où <span class="math inline">\(x_i\)</span> représente les variables décrivant l’observation <span class="math inline">\(i\)</span>, et <span class="math inline">\(y_i\)</span> la cible connue. L’objectif est d’apprendre une fonction <span class="math inline">\(f_\theta\)</span> paramétrée par <span class="math inline">\(\theta\)</span> telle que :</p>
+<p><span class="math display">\[
+\widehat{y}_i=f_\theta(x_i),
+\]</span></p>
+<p>et que cette fonction reste performante sur de nouvelles observations non utilisées pendant l’entraînement.</p>
+<p>Le modèle est généralement obtenu en minimisant une fonction de perte :</p>
+<p><span class="math display">\[
+\widehat{\theta}=\arg\min_{\theta}\frac{1}{n}\sum_{i=1}^{n}L\left(y_i,f_\theta(x_i)\right)+\lambda\Omega(\theta),
+\]</span></p>
+<p>où <span class="math inline">\(L\)</span> mesure l’erreur, <span class="math inline">\(\Omega\)</span> pénalise une complexité excessive et <span class="math inline">\(\lambda\)</span> règle le compromis entre ajustement et régularisation.</p>
+</section>
+<section id="lobjectif-réel-généraliser" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="lobjectif-réel-généraliser"><span class="header-section-number">4.2</span> 2.2 L’objectif réel : généraliser</h3>
+<p>Un modèle capable de mémoriser les données d’entraînement n’est pas nécessairement utile. La finalité est la <strong>généralisation</strong>, c’est-à-dire la capacité à conserver une performance acceptable sur des données nouvelles, issues du contexte réel d’utilisation.</p>
+<p>Cette distinction conduit à séparer les données en plusieurs rôles :</p>
+<ul>
+<li><strong>entraînement</strong> : estimation des paramètres ;</li>
+<li><strong>validation</strong> : choix des hyperparamètres et comparaison des approches ;</li>
+<li><strong>test</strong> : estimation finale sur des données non consultées pendant le développement ;</li>
+<li><strong>validation externe</strong> : évaluation sur un autre site, une autre période ou une autre population ;</li>
+<li><strong>surveillance en production</strong> : contrôle après déploiement.</li>
+</ul>
+</section>
+<section id="les-principaux-paradigmes" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="les-principaux-paradigmes"><span class="header-section-number">4.3</span> 2.3 Les principaux paradigmes</h3>
+<section id="apprentissage-supervisé" class="level4" data-number="4.3.1">
+<h4 data-number="4.3.1" class="anchored" data-anchor-id="apprentissage-supervisé"><span class="header-section-number">4.3.1</span> Apprentissage supervisé</h4>
+<p>Le modèle apprend à prédire une cible connue.</p>
+<ul>
+<li><strong>classification</strong> : fraude ou non-fraude, maladie ou absence de maladie, défaut ou absence de défaut ;</li>
+<li><strong>régression</strong> : coût futur, consommation, durée, concentration, score continu ;</li>
+<li><strong>survie</strong> : délai avant un événement en présence de censure ;</li>
+<li><strong>prévision temporelle</strong> : demande, charge, ventes, production.</li>
+</ul>
+</section>
+<section id="apprentissage-non-supervisé" class="level4" data-number="4.3.2">
+<h4 data-number="4.3.2" class="anchored" data-anchor-id="apprentissage-non-supervisé"><span class="header-section-number">4.3.2</span> Apprentissage non supervisé</h4>
+<p>Aucune cible n’est fournie. Le but est de décrire la structure des données.</p>
+<ul>
+<li>segmentation ou clustering ;</li>
+<li>réduction de dimension ;</li>
+<li>détection d’anomalies ;</li>
+<li>estimation de densité ;</li>
+<li>découverte de profils latents.</li>
+</ul>
+<p>Les résultats doivent être interprétés avec prudence : un groupe mathématiquement distinct n’est pas automatiquement un segment métier pertinent.</p>
+</section>
+<section id="apprentissage-semi-supervisé-et-auto-supervisé" class="level4" data-number="4.3.3">
+<h4 data-number="4.3.3" class="anchored" data-anchor-id="apprentissage-semi-supervisé-et-auto-supervisé"><span class="header-section-number">4.3.3</span> Apprentissage semi-supervisé et auto-supervisé</h4>
+<p>L’apprentissage semi-supervisé combine peu d’exemples étiquetés et beaucoup d’exemples non étiquetés. L’apprentissage auto-supervisé construit une tâche d’apprentissage à partir de la structure interne des données. Cette dernière approche joue un rôle majeur dans les modèles de langage, de vision et multimodaux.</p>
+</section>
+<section id="apprentissage-par-renforcement" class="level4" data-number="4.3.4">
+<h4 data-number="4.3.4" class="anchored" data-anchor-id="apprentissage-par-renforcement"><span class="header-section-number">4.3.4</span> Apprentissage par renforcement</h4>
+<p>Un agent apprend à choisir des actions dans un environnement afin de maximiser une récompense cumulée. Il est adapté aux décisions séquentielles, mais demande une définition soigneuse de l’objectif, car une récompense mal conçue peut conduire à un comportement techniquement optimal et pratiquement indésirable.</p>
+</section>
+</section>
+<section id="exemples-de-modèles-classiques" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="exemples-de-modèles-classiques"><span class="header-section-number">4.4</span> 2.4 Exemples de modèles classiques</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Famille</th>
+<th>Exemples</th>
+<th>Forces</th>
+<th>Limites typiques</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Modèles linéaires</td>
+<td>régression linéaire, logistique, modèles pénalisés</td>
+<td>interprétables, rapides, solides avec peu de données</td>
+<td>relations complexes à spécifier explicitement</td>
+</tr>
+<tr class="even">
+<td>Arbres</td>
+<td>arbre de décision</td>
+<td>règles lisibles, interactions naturelles</td>
+<td>instabilité, surapprentissage</td>
+</tr>
+<tr class="odd">
+<td>Ensembles</td>
+<td>forêt aléatoire, gradient boosting</td>
+<td>performance élevée sur données tabulaires</td>
+<td>interprétation moins directe</td>
+</tr>
+<tr class="even">
+<td>Méthodes à noyau</td>
+<td>SVM</td>
+<td>efficaces dans certains espaces de grande dimension</td>
+<td>coût de calcul et réglage</td>
+</tr>
+<tr class="odd">
+<td>Voisinage</td>
+<td>k plus proches voisins</td>
+<td>simple, local, sans hypothèse forte</td>
+<td>sensible à l’échelle et à la dimension</td>
+</tr>
+<tr class="even">
+<td>Probabilistes</td>
+<td>naïve Bayes, réseaux bayésiens</td>
+<td>gestion explicite de probabilités</td>
+<td>hypothèses parfois restrictives</td>
+</tr>
+<tr class="odd">
+<td>Non supervisés</td>
+<td>k-means, clustering hiérarchique, PCA</td>
+<td>exploration et synthèse</td>
+<td>dépendance au prétraitement et aux choix de distance</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="quest-ce-que-le-deep-learning" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="quest-ce-que-le-deep-learning"><span class="header-section-number">5</span> 3. Qu’est-ce que le deep learning ?</h2>
+<section id="une-famille-de-réseaux-de-neurones-profonds" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="une-famille-de-réseaux-de-neurones-profonds"><span class="header-section-number">5.1</span> 3.1 Une famille de réseaux de neurones profonds</h3>
+<p>Le deep learning, ou apprentissage profond, est un sous-domaine du machine learning utilisant des réseaux de neurones composés de plusieurs couches de transformations. Chaque couche construit une représentation à partir de la précédente.</p>
+<p>Pour une couche simple :</p>
+<p><span class="math display">\[
+h^{(\ell)}=\sigma\left(W^{(\ell)}h^{(\ell-1)}+b^{(\ell)}\right),
+\]</span></p>
+<p>où <span class="math inline">\(W^{(\ell)}\)</span> contient les poids, <span class="math inline">\(b^{(\ell)}\)</span> les biais et <span class="math inline">\(\sigma\)</span> une fonction d’activation non linéaire.</p>
+<p>La profondeur permet au modèle d’apprendre une hiérarchie de représentations. Dans une image, les premières couches peuvent détecter des contrastes ou des orientations, les suivantes des textures ou des formes, puis des structures plus complexes. Dans le langage, le modèle apprend des relations entre unités lexicales, contextes, structures syntaxiques et représentations sémantiques.</p>
+</section>
+<section id="pourquoi-le-deep-learning-a-transformé-certains-domaines" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="pourquoi-le-deep-learning-a-transformé-certains-domaines"><span class="header-section-number">5.2</span> 3.2 Pourquoi le deep learning a transformé certains domaines</h3>
+<p>Le deep learning est particulièrement puissant lorsque les données sont riches, non structurées et difficiles à résumer manuellement :</p>
+<ul>
+<li>images et vidéos ;</li>
+<li>texte libre ;</li>
+<li>parole et signaux audio ;</li>
+<li>séries temporelles complexes ;</li>
+<li>données multimodales ;</li>
+<li>données tridimensionnelles ;</li>
+<li>séquences biologiques.</li>
+</ul>
+<p>Son avantage principal n’est pas simplement « plus de couches ». Il réside dans l’<strong>apprentissage de représentations</strong> adaptées à la tâche, réduisant la dépendance à une extraction manuelle de caractéristiques.</p>
+</section>
+<section id="les-grandes-architectures" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="les-grandes-architectures"><span class="header-section-number">5.3</span> 3.3 Les grandes architectures</h3>
+<section id="réseaux-convolutifs" class="level4" data-number="5.3.1">
+<h4 data-number="5.3.1" class="anchored" data-anchor-id="réseaux-convolutifs"><span class="header-section-number">5.3.1</span> Réseaux convolutifs</h4>
+<p>Les réseaux convolutifs exploitent des motifs locaux et le partage de paramètres. Ils ont joué un rôle majeur en vision par ordinateur, en imagerie médicale, dans l’analyse de textures, de signaux et de structures spatiales.</p>
+</section>
+<section id="réseaux-récurrents" class="level4" data-number="5.3.2">
+<h4 data-number="5.3.2" class="anchored" data-anchor-id="réseaux-récurrents"><span class="header-section-number">5.3.2</span> Réseaux récurrents</h4>
+<p>Les réseaux récurrents, LSTM et GRU ont été conçus pour les séquences. Ils restent utiles dans certaines applications, même si les Transformers occupent désormais une place dominante pour de nombreux problèmes de langage et de séquences longues.</p>
+</section>
+<section id="transformers" class="level4" data-number="5.3.3">
+<h4 data-number="5.3.3" class="anchored" data-anchor-id="transformers"><span class="header-section-number">5.3.3</span> Transformers</h4>
+<p>Les Transformers reposent sur des mécanismes d’attention permettant de pondérer les relations entre éléments d’une séquence. Ils sont à la base d’une grande partie des modèles de langage, des modèles multimodaux et des modèles de fondation contemporains.</p>
+</section>
+<section id="autoencodeurs" class="level4" data-number="5.3.4">
+<h4 data-number="5.3.4" class="anchored" data-anchor-id="autoencodeurs"><span class="header-section-number">5.3.4</span> Autoencodeurs</h4>
+<p>Un autoencodeur apprend à encoder une observation dans un espace latent puis à la reconstruire. Il peut être utilisé pour la réduction de dimension, la détection d’anomalies, le débruitage ou l’apprentissage de représentations.</p>
+</section>
+<section id="modèles-génératifs" class="level4" data-number="5.3.5">
+<h4 data-number="5.3.5" class="anchored" data-anchor-id="modèles-génératifs"><span class="header-section-number">5.3.5</span> Modèles génératifs</h4>
+<p>Les modèles génératifs apprennent la structure d’une distribution afin de produire de nouveaux exemples. Ils comprennent notamment les modèles autorégressifs, les autoencodeurs variationnels, les réseaux antagonistes génératifs et les modèles de diffusion.</p>
+</section>
+</section>
+<section id="ce-que-le-deep-learning-ne-garantit-pas" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="ce-que-le-deep-learning-ne-garantit-pas"><span class="header-section-number">5.4</span> 3.4 Ce que le deep learning ne garantit pas</h3>
+<p>Une architecture profonde ne garantit ni pertinence, ni robustesse, ni absence de biais. Elle peut échouer pour plusieurs raisons :</p>
+<ul>
+<li>données insuffisantes ou mal annotées ;</li>
+<li>fuite d’information entre entraînement et test ;</li>
+<li>changement de population ;</li>
+<li>objectif mal défini ;</li>
+<li>métrique éloignée du besoin réel ;</li>
+<li>corrélations parasites ;</li>
+<li>mauvaise calibration ;</li>
+<li>manque de validation externe ;</li>
+<li>coût de calcul disproportionné ;</li>
+<li>absence de stratégie de surveillance.</li>
+</ul>
+<p>Le deep learning doit être choisi parce qu’il correspond au problème, pas parce qu’il représente la technologie la plus médiatisée.</p>
+</section>
+</section>
+<section id="ia-générative-modèles-de-fondation-et-grands-modèles-de-langage" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="ia-générative-modèles-de-fondation-et-grands-modèles-de-langage"><span class="header-section-number">6</span> 4. IA générative, modèles de fondation et grands modèles de langage</h2>
+<section id="lia-générative-nest-pas-toute-lia" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="lia-générative-nest-pas-toute-lia"><span class="header-section-number">6.1</span> 4.1 L’IA générative n’est pas toute l’IA</h3>
+<p>L’IA générative désigne des systèmes capables de produire du contenu : texte, image, son, vidéo, code, molécules ou autres représentations. Elle constitue une famille d’applications, non un synonyme d’intelligence artificielle.</p>
+<p>Un système de scoring du risque, une détection de défaut industriel et une prévision de demande peuvent relever de l’IA sans générer de contenu. Inversement, un modèle génératif peut produire un texte fluide sans garantir la véracité de chaque affirmation.</p>
+</section>
+<section id="modèle-de-fondation" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="modèle-de-fondation"><span class="header-section-number">6.2</span> 4.2 Modèle de fondation</h3>
+<p>Un modèle de fondation est entraîné à grande échelle sur des données vastes et peut être adapté à plusieurs tâches. Il sert de base à des usages variés par :</p>
+<ul>
+<li>instruction directe ;</li>
+<li>apprentissage en contexte ;</li>
+<li>recherche augmentée par des documents ;</li>
+<li>adaptation légère ;</li>
+<li>fine-tuning ;</li>
+<li>intégration dans un agent ou un workflow.</li>
+</ul>
+</section>
+<section id="grand-modèle-de-langage" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="grand-modèle-de-langage"><span class="header-section-number">6.3</span> 4.3 Grand modèle de langage</h3>
+<p>Un grand modèle de langage apprend généralement à estimer la probabilité du prochain élément d’une séquence conditionnellement au contexte :</p>
+<p><span class="math display">\[
+P(x_1,\ldots,x_T)=\prod_{t=1}^{T}P(x_t\mid x_1,\ldots,x_{t-1}).
+\]</span></p>
+<p>Ce mécanisme permet de produire un langage cohérent, mais il ne constitue pas une base de données de faits certifiés. La génération repose sur des régularités apprises ; elle peut produire une réponse plausible mais fausse.</p>
+</section>
+<section id="rag-fine-tuning-et-prompt-trois-leviers-différents" class="level3" data-number="6.4">
+<h3 data-number="6.4" class="anchored" data-anchor-id="rag-fine-tuning-et-prompt-trois-leviers-différents"><span class="header-section-number">6.4</span> 4.4 RAG, fine-tuning et prompt : trois leviers différents</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Levier</th>
+<th>Finalité principale</th>
+<th>Exemple d’usage</th>
+<th>Point de vigilance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Prompt</td>
+<td>préciser l’instruction et le format</td>
+<td>résumer selon une grille</td>
+<td>ne crée pas une connaissance garantie</td>
+</tr>
+<tr class="even">
+<td>RAG</td>
+<td>fournir des sources au moment de la réponse</td>
+<td>répondre à partir d’une documentation interne</td>
+<td>qualité de la recherche et citations</td>
+</tr>
+<tr class="odd">
+<td>Fine-tuning</td>
+<td>adapter le comportement ou le style</td>
+<td>classification spécialisée, format stable</td>
+<td>coût, données d’entraînement, maintenance</td>
+</tr>
+</tbody>
+</table>
+<p>Le choix dépend du problème. Pour actualiser des connaissances documentaires, la recherche augmentée est souvent plus adaptée qu’un fine-tuning. Pour modifier un comportement régulier, un entraînement spécialisé peut être pertinent. Pour une tâche simple, un prompt structuré peut suffire.</p>
+</section>
+</section>
+<section id="comparaison-opérationnelle" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="comparaison-opérationnelle"><span class="header-section-number">7</span> 5. Comparaison opérationnelle</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Système à règles</th>
+<th>Machine learning classique</th>
+<th>Deep learning</th>
+<th>IA générative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Source principale du comportement</td>
+<td>règles écrites</td>
+<td>relations apprises dans des données</td>
+<td>représentations hiérarchiques apprises</td>
+<td>distribution apprise de contenus</td>
+</tr>
+<tr class="even">
+<td>Données nécessaires</td>
+<td>faibles à modérées</td>
+<td>modérées</td>
+<td>souvent importantes</td>
+<td>souvent très importantes lors du préentraînement</td>
+</tr>
+<tr class="odd">
+<td>Données typiques</td>
+<td>critères structurés</td>
+<td>tableaux, variables structurées</td>
+<td>images, texte, audio, signaux</td>
+<td>texte, images, code, multimodal</td>
+</tr>
+<tr class="even">
+<td>Interprétabilité</td>
+<td>généralement forte</td>
+<td>variable</td>
+<td>souvent limitée</td>
+<td>difficile au niveau interne</td>
+</tr>
+<tr class="odd">
+<td>Coût de calcul</td>
+<td>faible</td>
+<td>faible à moyen</td>
+<td>moyen à élevé</td>
+<td>élevé à très élevé</td>
+</tr>
+<tr class="even">
+<td>Mise à jour</td>
+<td>modification des règles</td>
+<td>réentraînement</td>
+<td>réentraînement ou adaptation</td>
+<td>prompt, RAG, adaptation, fine-tuning</td>
+</tr>
+<tr class="odd">
+<td>Sortie typique</td>
+<td>décision logique</td>
+<td>score, classe, estimation</td>
+<td>score, représentation, détection</td>
+<td>contenu généré</td>
+</tr>
+<tr class="even">
+<td>Risque majeur</td>
+<td>règles incomplètes</td>
+<td>biais, fuite, dérive</td>
+<td>opacité, coût, robustesse</td>
+<td>hallucination, confidentialité, provenance</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="comment-choisir-la-bonne-approche" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="comment-choisir-la-bonne-approche"><span class="header-section-number">8</span> 6. Comment choisir la bonne approche ?</h2>
+<section id="commencer-par-le-problème-pas-par-lalgorithme" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="commencer-par-le-problème-pas-par-lalgorithme"><span class="header-section-number">8.1</span> 6.1 Commencer par le problème, pas par l’algorithme</h3>
+<p>La sélection d’une méthode doit suivre un raisonnement explicite :</p>
+<div class="cell" data-layout-align="default">
+<details class="code-fold">
+<summary>Afficher le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>flowchart TD</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    A["Décision ou processus à améliorer"] --&gt; B{"Règles stables et explicites ?"}</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    B -- Oui --&gt; C["Règles ou système expert"]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    B -- Non --&gt; D{"Historique de données pertinent ?"}</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    D -- Non --&gt; E["Collecte, instrumentation ou expertise humaine"]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    D -- Oui --&gt; F{"Données surtout tabulaires ?"}</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    F -- Oui --&gt; G["Baseline statistique puis ML classique"]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    F -- Non --&gt; H{"Images, texte, audio ou signaux complexes ?"}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    H -- Oui --&gt; I["Deep learning ou modèle préentraîné"]</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    H -- Non --&gt; J["Approche hybride à évaluer"]</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    I --&gt; K{"Production de contenu nécessaire ?"}</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    K -- Oui --&gt; L["Modèle génératif avec garde-fous"]</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    K -- Non --&gt; M["Modèle discriminatif ou représentationnel"]</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A["Décision ou processus à améliorer"] --&gt; B{"Règles stables et explicites ?"}
+    B -- Oui --&gt; C["Règles ou système expert"]
+    B -- Non --&gt; D{"Historique de données pertinent ?"}
+    D -- Non --&gt; E["Collecte, instrumentation ou expertise humaine"]
+    D -- Oui --&gt; F{"Données surtout tabulaires ?"}
+    F -- Oui --&gt; G["Baseline statistique puis ML classique"]
+    F -- Non --&gt; H{"Images, texte, audio ou signaux complexes ?"}
+    H -- Oui --&gt; I["Deep learning ou modèle préentraîné"]
+    H -- Non --&gt; J["Approche hybride à évaluer"]
+    I --&gt; K{"Production de contenu nécessaire ?"}
+    K -- Oui --&gt; L["Modèle génératif avec garde-fous"]
+    K -- Non --&gt; M["Modèle discriminatif ou représentationnel"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="les-douze-questions-de-cadrage" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="les-douze-questions-de-cadrage"><span class="header-section-number">8.2</span> 6.2 Les douze questions de cadrage</h3>
+<p>Avant tout développement, documenter :</p>
+<ol type="1">
+<li><strong>Quelle décision sera améliorée ?</strong></li>
+<li><strong>Qui utilisera la sortie ?</strong></li>
+<li><strong>Quelle erreur est la plus grave ?</strong></li>
+<li><strong>Quelle est la référence actuelle ?</strong></li>
+<li><strong>Quelles données sont disponibles au moment de la décision ?</strong></li>
+<li><strong>La cible est-elle observable et fiable ?</strong></li>
+<li><strong>La population future ressemble-t-elle à la population historique ?</strong></li>
+<li><strong>Quel délai de réponse est acceptable ?</strong></li>
+<li><strong>Quelle explication doit être fournie ?</strong></li>
+<li><strong>Quel niveau d’automatisation est autorisé ?</strong></li>
+<li><strong>Comment la performance sera-t-elle surveillée ?</strong></li>
+<li><strong>Quel mécanisme de repli existe en cas d’échec ?</strong></li>
+</ol>
+</section>
+<section id="construire-une-baseline" class="level3" data-number="8.3">
+<h3 data-number="8.3" class="anchored" data-anchor-id="construire-une-baseline"><span class="header-section-number">8.3</span> 6.3 Construire une baseline</h3>
+<p>Une baseline est une référence simple contre laquelle toute solution complexe doit être comparée. Elle peut être :</p>
+<ul>
+<li>la pratique actuelle ;</li>
+<li>une règle métier ;</li>
+<li>la moyenne historique ;</li>
+<li>une régression simple ;</li>
+<li>une prédiction naïve de série temporelle ;</li>
+<li>un score existant ;</li>
+<li>une décision humaine structurée.</li>
+</ul>
+<p>Une solution plus complexe n’est justifiée que si elle apporte un gain suffisamment important sur les dimensions pertinentes : performance, robustesse, rapidité, coût, équité, explicabilité ou charge opérationnelle.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Principe d’ingénierie">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Principe d’ingénierie
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Les bonnes pratiques de Google en ingénierie du machine learning recommandent notamment de commencer par une infrastructure solide, des métriques claires et des approches simples avant d’augmenter la complexité.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="concevoir-une-étude-de-machine-learning-rigoureuse" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="concevoir-une-étude-de-machine-learning-rigoureuse"><span class="header-section-number">9</span> 7. Concevoir une étude de machine learning rigoureuse</h2>
+<section id="définir-lunité-statistique" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="définir-lunité-statistique"><span class="header-section-number">9.1</span> 7.1 Définir l’unité statistique</h3>
+<p>L’unité statistique est l’entité indépendante sur laquelle porte l’analyse : patient, client, machine, site, transaction, image ou période. Une erreur classique consiste à répartir des observations corrélées entre entraînement et test.</p>
+<p>Exemples :</p>
+<ul>
+<li>plusieurs images d’un même patient ;</li>
+<li>plusieurs transactions d’un même client ;</li>
+<li>plusieurs mesures d’une même machine ;</li>
+<li>plusieurs lignes temporelles d’un même équipement.</li>
+</ul>
+<p>Si les observations d’une même entité apparaissent dans les deux ensembles, le modèle peut reconnaître des caractéristiques propres à l’entité plutôt que généraliser.</p>
+</section>
+<section id="prévenir-la-fuite-dinformation" class="level3" data-number="9.2">
+<h3 data-number="9.2" class="anchored" data-anchor-id="prévenir-la-fuite-dinformation"><span class="header-section-number">9.2</span> 7.2 Prévenir la fuite d’information</h3>
+<p>Une fuite survient lorsque le modèle utilise directement ou indirectement une information indisponible au moment réel de la prédiction.</p>
+<p>Cas typiques :</p>
+<ul>
+<li>variable enregistrée après l’événement ;</li>
+<li>normalisation calculée sur toutes les données avant séparation ;</li>
+<li>sélection de variables utilisant le jeu de test ;</li>
+<li>doublons entre entraînement et test ;</li>
+<li>agrégat intégrant des observations futures ;</li>
+<li>cible encodée dans un identifiant ou un statut administratif.</li>
+</ul>
+<p>La prévention exige que toute transformation apprenne ses paramètres uniquement sur les données d’entraînement.</p>
+</section>
+<section id="choisir-une-stratégie-de-validation-adaptée" class="level3" data-number="9.3">
+<h3 data-number="9.3" class="anchored" data-anchor-id="choisir-une-stratégie-de-validation-adaptée"><span class="header-section-number">9.3</span> 7.3 Choisir une stratégie de validation adaptée</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Contexte</th>
+<th>Stratégie recommandée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>observations indépendantes</td>
+<td>séparation aléatoire stratifiée ou validation croisée</td>
+</tr>
+<tr class="even">
+<td>données regroupées</td>
+<td>séparation par patient, client, site ou machine</td>
+</tr>
+<tr class="odd">
+<td>séries temporelles</td>
+<td>validation chronologique ou fenêtre glissante</td>
+</tr>
+<tr class="even">
+<td>données multi-centres</td>
+<td>validation par centre et validation externe</td>
+</tr>
+<tr class="odd">
+<td>petit échantillon</td>
+<td>validation croisée imbriquée, estimation d’incertitude</td>
+</tr>
+<tr class="even">
+<td>hyperparamètres nombreux</td>
+<td>validation imbriquée pour éviter l’optimisme</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="séparer-développement-et-évaluation-finale" class="level3" data-number="9.4">
+<h3 data-number="9.4" class="anchored" data-anchor-id="séparer-développement-et-évaluation-finale"><span class="header-section-number">9.4</span> 7.4 Séparer développement et évaluation finale</h3>
+<p>Le jeu de test ne doit pas guider les choix successifs. Consulter à répétition ses résultats finit par adapter implicitement le développement au test. Une stratégie saine consiste à :</p>
+<ol type="1">
+<li>figer le protocole ;</li>
+<li>développer sur entraînement et validation ;</li>
+<li>verrouiller le pipeline ;</li>
+<li>évaluer une seule fois sur le test ;</li>
+<li>compléter par une validation externe si l’usage le justifie.</li>
+</ol>
+</section>
+</section>
+<section id="choisir-les-bonnes-métriques" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="choisir-les-bonnes-métriques"><span class="header-section-number">10</span> 8. Choisir les bonnes métriques</h2>
+<section id="classification" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="classification"><span class="header-section-number">10.1</span> 8.1 Classification</h3>
+<p>Pour une classification binaire, la matrice de confusion distingue vrais positifs, faux positifs, vrais négatifs et faux négatifs.</p>
+<p><span class="math display">\[
+\text{Sensibilité}=\frac{VP}{VP+FN}
+\]</span></p>
+<p><span class="math display">\[
+\text{Spécificité}=\frac{VN}{VN+FP}
+\]</span></p>
+<p><span class="math display">\[
+\text{Valeur prédictive positive}=\frac{VP}{VP+FP}
+\]</span></p>
+<p>L’exactitude globale peut être trompeuse lorsque les classes sont déséquilibrées. Un modèle prédisant toujours la classe majoritaire peut afficher une forte exactitude tout en étant inutile.</p>
+<p>L’AUC-ROC mesure la capacité de classement sur l’ensemble des seuils. L’AUC de précision-rappel est souvent plus informative lorsque l’événement positif est rare. Aucune de ces métriques ne choisit à elle seule le seuil opérationnel.</p>
+</section>
+<section id="calibration" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="calibration"><span class="header-section-number">10.2</span> 8.2 Calibration</h3>
+<p>Un modèle est calibré si, parmi les observations auxquelles il attribue un risque de 20 %, environ 20 % présentent effectivement l’événement. La discrimination et la calibration sont complémentaires : un modèle peut bien classer les individus tout en produisant des probabilités trop élevées ou trop faibles.</p>
+<p>Le score de Brier est défini par :</p>
+<p><span class="math display">\[
+\text{Brier}=\frac{1}{n}\sum_{i=1}^{n}(p_i-y_i)^2.
+\]</span></p>
+<p>La calibration doit être examinée graphiquement, quantitativement et dans les sous-groupes pertinents.</p>
+</section>
+<section id="régression" class="level3" data-number="10.3">
+<h3 data-number="10.3" class="anchored" data-anchor-id="régression"><span class="header-section-number">10.3</span> 8.3 Régression</h3>
+<p>Les métriques courantes comprennent :</p>
+<p><span class="math display">\[
+\text{MAE}=\frac{1}{n}\sum_{i=1}^{n}|y_i-\widehat{y}_i|
+\]</span></p>
+<p><span class="math display">\[
+\text{RMSE}=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i-\widehat{y}_i)^2}
+\]</span></p>
+<p>Le MAE est directement interprétable dans l’unité de la cible. Le RMSE pénalise davantage les grandes erreurs. Le choix dépend du coût réel des écarts.</p>
+</section>
+<section id="génération-de-contenu" class="level3" data-number="10.4">
+<h3 data-number="10.4" class="anchored" data-anchor-id="génération-de-contenu"><span class="header-section-number">10.4</span> 8.4 Génération de contenu</h3>
+<p>L’évaluation d’un système génératif ne peut pas se limiter à une seule métrique automatique. Elle doit combiner :</p>
+<ul>
+<li>fidélité aux sources ;</li>
+<li>exactitude factuelle ;</li>
+<li>complétude ;</li>
+<li>pertinence ;</li>
+<li>respect des instructions ;</li>
+<li>sécurité ;</li>
+<li>robustesse à des formulations différentes ;</li>
+<li>évaluation humaine structurée ;</li>
+<li>performance sur des cas difficiles et adversariaux.</li>
+</ul>
+<p>Pour un système RAG, il faut distinguer au minimum :</p>
+<ol type="1">
+<li>la qualité de récupération des documents ;</li>
+<li>la qualité de la réponse conditionnellement aux documents récupérés ;</li>
+<li>la justesse des citations ;</li>
+<li>la capacité à reconnaître l’absence d’information.</li>
+</ol>
+</section>
+</section>
+<section id="interprétabilité-explicabilité-et-causalité" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="interprétabilité-explicabilité-et-causalité"><span class="header-section-number">11</span> 9. Interprétabilité, explicabilité et causalité</h2>
+<section id="trois-notions-différentes" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="trois-notions-différentes"><span class="header-section-number">11.1</span> 9.1 Trois notions différentes</h3>
+<ul>
+<li><strong>Interprétabilité intrinsèque</strong> : le fonctionnement du modèle est directement compréhensible, comme une régression parcimonieuse ou un petit arbre.</li>
+<li><strong>Explication post hoc</strong> : une méthode résume localement ou globalement le comportement d’un modèle complexe.</li>
+<li><strong>Causalité</strong> : analyse de l’effet d’une intervention, qui exige des hypothèses supplémentaires et ne découle pas d’une simple prédiction.</li>
+</ul>
+<p>Une importance élevée d’une variable ne signifie pas que la modifier produira l’effet attendu. Une variable peut être prédictive parce qu’elle reflète un mécanisme, un proxy, un biais de collecte ou une conséquence de l’événement.</p>
+</section>
+<section id="outils-dexplication" class="level3" data-number="11.2">
+<h3 data-number="11.2" class="anchored" data-anchor-id="outils-dexplication"><span class="header-section-number">11.2</span> 9.2 Outils d’explication</h3>
+<p>Les outils comprennent :</p>
+<ul>
+<li>coefficients et intervalles ;</li>
+<li>importance par permutation ;</li>
+<li>dépendance partielle ;</li>
+<li>courbes ICE ;</li>
+<li>valeurs de Shapley ;</li>
+<li>cartes d’activation pour les images ;</li>
+<li>exemples contrefactuels ;</li>
+<li>prototypes et cas similaires.</li>
+</ul>
+<p>Ces méthodes expliquent généralement le <strong>comportement du modèle</strong>, pas nécessairement la réalité causale. Elles doivent être validées, comparées et présentées avec leurs limites.</p>
+</section>
+</section>
+<section id="robustesse-dérive-et-surveillance" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="robustesse-dérive-et-surveillance"><span class="header-section-number">12</span> 10. Robustesse, dérive et surveillance</h2>
+<section id="les-données-changent" class="level3" data-number="12.1">
+<h3 data-number="12.1" class="anchored" data-anchor-id="les-données-changent"><span class="header-section-number">12.1</span> 10.1 Les données changent</h3>
+<p>Un modèle déployé rencontre un environnement différent de son jeu d’entraînement. Plusieurs changements peuvent survenir :</p>
+<ul>
+<li><strong>covariate shift</strong> : distribution des entrées modifiée ;</li>
+<li><strong>label shift</strong> : fréquence de la cible modifiée ;</li>
+<li><strong>concept drift</strong> : relation entre entrées et cible modifiée ;</li>
+<li>changement de protocole de mesure ;</li>
+<li>évolution des comportements ;</li>
+<li>nouvelle population ;</li>
+<li>panne ou remplacement d’un capteur ;</li>
+<li>modification d’un processus métier.</li>
+</ul>
+</section>
+<section id="tableau-de-surveillance-minimal" class="level3" data-number="12.2">
+<h3 data-number="12.2" class="anchored" data-anchor-id="tableau-de-surveillance-minimal"><span class="header-section-number">12.2</span> 10.2 Tableau de surveillance minimal</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Indicateur</th>
+<th>Action possible</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>disponibilité</td>
+<td>taux de requêtes valides</td>
+<td>bascule vers procédure de repli</td>
+</tr>
+<tr class="even">
+<td>données</td>
+<td>valeurs manquantes, distributions</td>
+<td>enquête sur pipeline</td>
+</tr>
+<tr class="odd">
+<td>performance</td>
+<td>métriques avec vérité retardée</td>
+<td>recalibration ou réentraînement</td>
+</tr>
+<tr class="even">
+<td>calibration</td>
+<td>écart prévu-observé</td>
+<td>mise à jour des probabilités</td>
+</tr>
+<tr class="odd">
+<td>équité</td>
+<td>performance par sous-groupe</td>
+<td>analyse et correction ciblée</td>
+</tr>
+<tr class="even">
+<td>usage</td>
+<td>taux d’acceptation et d’override</td>
+<td>formation ou redesign</td>
+</tr>
+<tr class="odd">
+<td>sécurité</td>
+<td>requêtes adversariales, sorties interdites</td>
+<td>filtrage et blocage</td>
+</tr>
+<tr class="even">
+<td>coût</td>
+<td>latence, calcul, consommation</td>
+<td>optimisation ou modèle plus simple</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="prévoir-un-mode-dégradé" class="level3" data-number="12.3">
+<h3 data-number="12.3" class="anchored" data-anchor-id="prévoir-un-mode-dégradé"><span class="header-section-number">12.3</span> 10.3 Prévoir un mode dégradé</h3>
+<p>Un système responsable doit préciser ce qui se passe lorsque :</p>
+<ul>
+<li>les données attendues sont absentes ;</li>
+<li>la confiance est insuffisante ;</li>
+<li>le service est indisponible ;</li>
+<li>une entrée sort du domaine connu ;</li>
+<li>une sortie viole une règle ;</li>
+<li>un utilisateur conteste le résultat.</li>
+</ul>
+<p>Le mode dégradé peut être une règle simple, une revue humaine ou l’arrêt contrôlé de l’automatisation.</p>
+</section>
+</section>
+<section id="biais-équité-et-qualité-des-données" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="biais-équité-et-qualité-des-données"><span class="header-section-number">13</span> 11. Biais, équité et qualité des données</h2>
+<section id="le-biais-ne-vient-pas-seulement-de-lalgorithme" class="level3" data-number="13.1">
+<h3 data-number="13.1" class="anchored" data-anchor-id="le-biais-ne-vient-pas-seulement-de-lalgorithme"><span class="header-section-number">13.1</span> 11.1 Le biais ne vient pas seulement de l’algorithme</h3>
+<p>Un système peut reproduire ou amplifier des inégalités provenant :</p>
+<ul>
+<li>du mode de recrutement des données ;</li>
+<li>de l’accès différentiel au service ;</li>
+<li>d’étiquettes historiques biaisées ;</li>
+<li>d’un sous-diagnostic ;</li>
+<li>de variables proxy ;</li>
+<li>d’une mesure moins fiable dans certains groupes ;</li>
+<li>d’une décision passée utilisée comme vérité terrain ;</li>
+<li>d’un objectif qui privilégie un groupe majoritaire.</li>
+</ul>
+</section>
+<section id="évaluer-par-sous-groupes" class="level3" data-number="13.2">
+<h3 data-number="13.2" class="anchored" data-anchor-id="évaluer-par-sous-groupes"><span class="header-section-number">13.2</span> 11.2 Évaluer par sous-groupes</h3>
+<p>La performance moyenne peut masquer des écarts importants. L’évaluation doit examiner les groupes justifiés par le contexte, sans multiplier mécaniquement des comparaisons instables. Il faut tenir compte des tailles d’échantillon, de l’incertitude et du risque de réidentifier des personnes.</p>
+</section>
+<section id="aucun-indicateur-unique-déquité" class="level3" data-number="13.3">
+<h3 data-number="13.3" class="anchored" data-anchor-id="aucun-indicateur-unique-déquité"><span class="header-section-number">13.3</span> 11.3 Aucun indicateur unique d’équité</h3>
+<p>Des critères d’équité différents peuvent être incompatibles lorsque les taux de base diffèrent. Le choix doit être relié au type de dommage à prévenir, au cadre juridique et à la finalité de la décision. L’équité est donc un problème sociotechnique, pas un simple réglage mathématique.</p>
+</section>
+</section>
+<section id="cas-pratiques-sectoriels" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="cas-pratiques-sectoriels"><span class="header-section-number">14</span> 12. Cas pratiques sectoriels</h2>
+<section id="santé-et-biostatistique" class="level3" data-number="14.1">
+<h3 data-number="14.1" class="anchored" data-anchor-id="santé-et-biostatistique"><span class="header-section-number">14.1</span> 12.1 Santé et biostatistique</h3>
+<p><strong>Problème :</strong> prédire le risque de complication après un traitement.</p>
+<p>Approche recommandée :</p>
+<ol type="1">
+<li>définir la population cible et le moment de prédiction ;</li>
+<li>préciser le critère de jugement ;</li>
+<li>séparer les patients, pas les lignes ;</li>
+<li>comparer à un score clinique ou un modèle statistique de référence ;</li>
+<li>évaluer discrimination, calibration et utilité clinique ;</li>
+<li>réaliser une validation externe ;</li>
+<li>documenter les données manquantes et les sous-groupes ;</li>
+<li>prévoir que le modèle assiste et ne remplace pas le jugement clinique.</li>
+</ol>
+<p>Un deep learning peut être pertinent pour des images, signaux ou données volumétriques. Sur un petit tableau clinique, une régression pénalisée ou un gradient boosting peut être plus fiable, plus simple et plus facile à valider.</p>
+</section>
+<section id="banque-finance-et-assurance" class="level3" data-number="14.2">
+<h3 data-number="14.2" class="anchored" data-anchor-id="banque-finance-et-assurance"><span class="header-section-number">14.2</span> 12.2 Banque, finance et assurance</h3>
+<p><strong>Problème :</strong> estimer un risque de défaut ou détecter une fraude.</p>
+<p>Une architecture peut combiner :</p>
+<ul>
+<li>règles réglementaires et contrôles bloquants ;</li>
+<li>modèle de scoring ;</li>
+<li>détection d’anomalies ;</li>
+<li>revue humaine des cas ambigus ;</li>
+<li>journalisation des décisions ;</li>
+<li>surveillance des performances et des populations.</li>
+</ul>
+<p>Le modèle doit être évalué non seulement sur sa capacité prédictive, mais aussi sur sa stabilité, son explicabilité, ses effets distributifs et son comportement sous changement économique.</p>
+</section>
+<section id="industrie-et-ingénierie" class="level3" data-number="14.3">
+<h3 data-number="14.3" class="anchored" data-anchor-id="industrie-et-ingénierie"><span class="header-section-number">14.3</span> 12.3 Industrie et ingénierie</h3>
+<p><strong>Problème :</strong> maintenance prédictive d’un équipement.</p>
+<p>Les données disponibles peuvent inclure vibration, température, pression, historique de maintenance et conditions d’utilisation. La démarche doit éviter d’utiliser des informations enregistrées après la panne. Une séparation chronologique et par machine est souvent nécessaire.</p>
+<p>Un modèle classique fonctionne bien avec des indicateurs physiques synthétiques. Un réseau profond peut être utile pour des signaux bruts de haute fréquence, à condition de disposer d’un volume suffisant et de cas de défaillance représentatifs.</p>
+</section>
+<section id="recherche-scientifique" class="level3" data-number="14.4">
+<h3 data-number="14.4" class="anchored" data-anchor-id="recherche-scientifique"><span class="header-section-number">14.4</span> 12.4 Recherche scientifique</h3>
+<p><strong>Problème :</strong> accélérer une revue de littérature.</p>
+<p>L’IA générative peut :</p>
+<ul>
+<li>proposer des requêtes ;</li>
+<li>classer des résumés ;</li>
+<li>extraire des informations ;</li>
+<li>construire un tableau de synthèse ;</li>
+<li>aider à reformuler.</li>
+</ul>
+<p>Elle ne doit pas inventer les références, remplacer la lecture critique ni effacer la traçabilité entre une affirmation et sa source. Une procédure robuste conserve les PDF, les critères d’inclusion, les décisions d’exclusion, les citations exactes et une validation humaine.</p>
+</section>
+<section id="enseignement" class="level3" data-number="14.5">
+<h3 data-number="14.5" class="anchored" data-anchor-id="enseignement"><span class="header-section-number">14.5</span> 12.5 Enseignement</h3>
+<p>L’objectif ne doit pas être uniquement d’obtenir une réponse. Il faut préserver l’apprentissage. Un usage pédagogique peut demander à l’outil de :</p>
+<ul>
+<li>générer un exercice adapté ;</li>
+<li>poser des questions socratiques ;</li>
+<li>fournir un indice progressif ;</li>
+<li>expliquer une erreur ;</li>
+<li>comparer deux raisonnements ;</li>
+<li>produire un quiz avec justification.</li>
+</ul>
+<p>L’enseignant doit définir ce qui peut être délégué, ce qui doit être démontré par l’étudiant et comment vérifier l’acquisition réelle des compétences.</p>
+</section>
+</section>
+<section id="exemple-reproductible-comparer-une-baseline-et-un-modèle" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="exemple-reproductible-comparer-une-baseline-et-un-modèle"><span class="header-section-number">15</span> 13. Exemple reproductible : comparer une baseline et un modèle</h2>
+<p>L’exemple ci-dessous illustre une comparaison simple en Python sur un jeu de données de classification. Il ne remplace pas un protocole complet, mais montre les éléments fondamentaux : séparation, pipeline, validation croisée et métriques multiples.</p>
+<div id="cell-exemple-classification" class="cell" data-message="false" data-execution_count="1">
+<details class="code-fold">
+<summary>Afficher le code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_breast_cancer</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.dummy <span class="im">import</span> DummyClassifier</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> (</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    average_precision_score,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    brier_score_loss,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    roc_auc_score,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Chargement du jeu de données</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>X, y <span class="op">=</span> load_breast_cancer(return_X_y<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Séparation entre les données d'entraînement et de test</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    X,</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    y,</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    test_size<span class="op">=</span><span class="fl">0.25</span>,</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    stratify<span class="op">=</span>y,</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">42</span>,</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Modèle de référence</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>baseline <span class="op">=</span> DummyClassifier(strategy<span class="op">=</span><span class="st">"prior"</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>baseline.fit(X_train, y_train)</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Modèle de régression logistique avec standardisation</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> Pipeline(</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    steps<span class="op">=</span>[</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>        (<span class="st">"scaler"</span>, StandardScaler()),</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>        (</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>            <span class="st">"classifier"</span>,</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>            LogisticRegression(</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>                max_iter<span class="op">=</span><span class="dv">2000</span>,</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>                random_state<span class="op">=</span><span class="dv">42</span>,</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>model.fit(X_train, y_train)</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcul des métriques sur le jeu de test</span></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> []</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>estimators <span class="op">=</span> {</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Modèle de référence"</span>: baseline,</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Régression logistique"</span>: model,</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, estimator <span class="kw">in</span> estimators.items():</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>    y_prob <span class="op">=</span> estimator.predict_proba(X_test)[:, <span class="dv">1</span>]</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>    results.append(</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>        {</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Modèle"</span>: name,</span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>            <span class="st">"AUC ROC"</span>: <span class="bu">round</span>(</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>                roc_auc_score(y_test, y_prob),</span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>                <span class="dv">3</span>,</span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>            <span class="st">"AUC PR"</span>: <span class="bu">round</span>(</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>                average_precision_score(y_test, y_prob),</span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>                <span class="dv">3</span>,</span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Score de Brier"</span>: <span class="bu">round</span>(</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>                brier_score_loss(y_test, y_prob),</span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>                <span class="dv">3</span>,</span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>            ),</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>results_df <span class="op">=</span> pd.DataFrame(results)</span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>results_df</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div id="exemple-classification" class="cell-output cell-output-display" data-execution_count="1">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Modèle</th>
+<th data-quarto-table-cell-role="th">AUC ROC</th>
+<th data-quarto-table-cell-role="th">AUC PR</th>
+<th data-quarto-table-cell-role="th">Score de Brier</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Modèle de référence</td>
+<td>0.500</td>
+<td>0.629</td>
+<td>0.233</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Régression logistique</td>
+<td>0.998</td>
+<td>0.999</td>
+<td>0.018</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Points méthodologiques :</p>
+<ul>
+<li>le prétraitement est intégré dans le pipeline ;</li>
+<li>il est ajusté uniquement sur l’entraînement ;</li>
+<li>la baseline est explicitement mesurée ;</li>
+<li>plusieurs métriques sont rapportées ;</li>
+<li>le code reste insuffisant pour une application clinique réelle sans validation externe, analyse de calibration, intervalles d’incertitude et étude d’utilité.</li>
+</ul>
+</section>
+<section id="méthode-syltra-en-neuf-étapes" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="méthode-syltra-en-neuf-étapes"><span class="header-section-number">16</span> 14. Méthode SYLTRA en neuf étapes</h2>
+<section id="étape-1-formuler-la-décision" class="level3" data-number="16.1">
+<h3 data-number="16.1" class="anchored" data-anchor-id="étape-1-formuler-la-décision"><span class="header-section-number">16.1</span> Étape 1 — Formuler la décision</h3>
+<p>Écrire une phrase opérationnelle :</p>
+<blockquote class="blockquote">
+<p>À partir de quelles informations disponibles à quel moment voulons-nous produire quelle sortie pour aider quelle personne à prendre quelle décision ?</p>
+</blockquote>
+</section>
+<section id="étape-2-définir-la-valeur" class="level3" data-number="16.2">
+<h3 data-number="16.2" class="anchored" data-anchor-id="étape-2-définir-la-valeur"><span class="header-section-number">16.2</span> Étape 2 — Définir la valeur</h3>
+<p>Préciser le gain attendu : délai, qualité, coût, sécurité, précision, productivité, accès ou satisfaction. Définir une métrique métier avant une métrique algorithmique.</p>
+</section>
+<section id="étape-3-cartographier-les-données" class="level3" data-number="16.3">
+<h3 data-number="16.3" class="anchored" data-anchor-id="étape-3-cartographier-les-données"><span class="header-section-number">16.3</span> Étape 3 — Cartographier les données</h3>
+<p>Documenter source, propriétaire, droits, période, population, qualité, manquants, fréquence de mise à jour, sensibilité et variables indisponibles en production.</p>
+</section>
+<section id="étape-4-choisir-la-famille-la-plus-simple-crédible" class="level3" data-number="16.4">
+<h3 data-number="16.4" class="anchored" data-anchor-id="étape-4-choisir-la-famille-la-plus-simple-crédible"><span class="header-section-number">16.4</span> Étape 4 — Choisir la famille la plus simple crédible</h3>
+<p>Comparer successivement :</p>
+<ol type="1">
+<li>procédure humaine structurée ;</li>
+<li>règle déterministe ;</li>
+<li>modèle statistique ;</li>
+<li>machine learning classique ;</li>
+<li>deep learning ;</li>
+<li>modèle génératif ou hybride.</li>
+</ol>
+</section>
+<section id="étape-5-construire-un-protocole-avant-les-résultats" class="level3" data-number="16.5">
+<h3 data-number="16.5" class="anchored" data-anchor-id="étape-5-construire-un-protocole-avant-les-résultats"><span class="header-section-number">16.5</span> Étape 5 — Construire un protocole avant les résultats</h3>
+<p>Définir séparation des données, métriques, sous-groupes, analyse d’erreur, seuils et critères d’arrêt. Cette étape limite les ajustements opportunistes.</p>
+</section>
+<section id="étape-6-développer-de-manière-reproductible" class="level3" data-number="16.6">
+<h3 data-number="16.6" class="anchored" data-anchor-id="étape-6-développer-de-manière-reproductible"><span class="header-section-number">16.6</span> Étape 6 — Développer de manière reproductible</h3>
+<p>Versionner le code, les données ou leur empreinte, les paramètres, les environnements, les modèles et les rapports. Utiliser des pipelines pour éviter les transformations manuelles non tracées.</p>
+</section>
+<section id="étape-7-évaluer-au-niveau-du-système" class="level3" data-number="16.7">
+<h3 data-number="16.7" class="anchored" data-anchor-id="étape-7-évaluer-au-niveau-du-système"><span class="header-section-number">16.7</span> Étape 7 — Évaluer au niveau du système</h3>
+<p>Tester le modèle, mais aussi l’interface, les délais, les erreurs de saisie, les comportements humains, les exceptions, la sécurité et les procédures de repli.</p>
+</section>
+<section id="étape-8-déployer-progressivement" class="level3" data-number="16.8">
+<h3 data-number="16.8" class="anchored" data-anchor-id="étape-8-déployer-progressivement"><span class="header-section-number">16.8</span> Étape 8 — Déployer progressivement</h3>
+<p>Commencer par un pilote, un mode silencieux ou une assistance limitée. Comparer le fonctionnement avec et sans outil avant une automatisation plus large.</p>
+</section>
+<section id="étape-9-surveiller-et-réviser" class="level3" data-number="16.9">
+<h3 data-number="16.9" class="anchored" data-anchor-id="étape-9-surveiller-et-réviser"><span class="header-section-number">16.9</span> Étape 9 — Surveiller et réviser</h3>
+<p>Définir responsables, fréquence de revue, seuils d’alerte, conditions de recalibration, réentraînement, suspension et retrait.</p>
+</section>
+</section>
+<section id="gouvernance-et-confiance" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="gouvernance-et-confiance"><span class="header-section-number">17</span> 15. Gouvernance et confiance</h2>
+<p>Le NIST AI Risk Management Framework organise la gestion des risques autour de quatre fonctions : <strong>Govern, Map, Measure, Manage</strong>. Cette logique rappelle qu’un système fiable ne résulte pas uniquement d’une bonne métrique de test. Il faut une gouvernance, une compréhension du contexte, une mesure structurée et des actions de gestion.</p>
+<p>Les caractéristiques fréquemment associées à une IA digne de confiance comprennent :</p>
+<ul>
+<li>validité et fiabilité ;</li>
+<li>sûreté ;</li>
+<li>sécurité et résilience ;</li>
+<li>responsabilité et transparence ;</li>
+<li>explicabilité et interprétabilité ;</li>
+<li>protection de la vie privée ;</li>
+<li>équité avec gestion des biais dommageables.</li>
+</ul>
+<section id="documentation-minimale" class="level3" data-number="17.1">
+<h3 data-number="17.1" class="anchored" data-anchor-id="documentation-minimale"><span class="header-section-number">17.1</span> Documentation minimale</h3>
+<p>Un dossier de système devrait contenir :</p>
+<ul>
+<li>finalité et périmètre ;</li>
+<li>parties prenantes ;</li>
+<li>sources de données ;</li>
+<li>protocole de développement ;</li>
+<li>résultats et incertitudes ;</li>
+<li>limites connues ;</li>
+<li>sous-groupes évalués ;</li>
+<li>procédure d’utilisation ;</li>
+<li>règles d’escalade ;</li>
+<li>journal des versions ;</li>
+<li>plan de surveillance ;</li>
+<li>plan d’incident et de retrait.</li>
+</ul>
+</section>
+<section id="cadre-européen" class="level3" data-number="17.2">
+<h3 data-number="17.2" class="anchored" data-anchor-id="cadre-européen"><span class="header-section-number">17.2</span> Cadre européen</h3>
+<p>Le règlement européen sur l’intelligence artificielle adopte une approche fondée sur le risque et prévoit des obligations variables selon les catégories de systèmes et les rôles des acteurs. Au 2 août 2026, une part importante du règlement devient applicable, tandis que certaines dispositions suivent un calendrier spécifique. Toute organisation concernée doit vérifier le texte officiel, son rôle exact et les obligations applicables à son cas.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Prudence réglementaire">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Avertissement</span>Prudence réglementaire
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Une classification technique — « machine learning », « deep learning » ou « IA générative » — ne suffit pas à déterminer les obligations juridiques. La finalité, le contexte d’utilisation, les personnes affectées, le niveau de risque et le rôle de l’organisation sont déterminants.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="les-erreurs-les-plus-fréquentes" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="les-erreurs-les-plus-fréquentes"><span class="header-section-number">18</span> 16. Les erreurs les plus fréquentes</h2>
+<section id="nous-avons-beaucoup-de-données-donc-il-faut-du-deep-learning" class="level3" data-number="18.1">
+<h3 data-number="18.1" class="anchored" data-anchor-id="nous-avons-beaucoup-de-données-donc-il-faut-du-deep-learning"><span class="header-section-number">18.1</span> « Nous avons beaucoup de données, donc il faut du deep learning »</h3>
+<p>Le volume ne suffit pas. La structure, la qualité, la représentativité, la cible et la valeur métier comptent davantage.</p>
+</section>
+<section id="le-modèle-a-95-dexactitude-donc-il-est-excellent" class="level3" data-number="18.2">
+<h3 data-number="18.2" class="anchored" data-anchor-id="le-modèle-a-95-dexactitude-donc-il-est-excellent"><span class="header-section-number">18.2</span> « Le modèle a 95 % d’exactitude, donc il est excellent »</h3>
+<p>Sans taux de base, matrice de confusion, calibration, intervalle d’incertitude et coût des erreurs, ce chiffre est difficile à interpréter.</p>
+</section>
+<section id="le-modèle-est-objectif-puisquil-est-mathématique" class="level3" data-number="18.3">
+<h3 data-number="18.3" class="anchored" data-anchor-id="le-modèle-est-objectif-puisquil-est-mathématique"><span class="header-section-number">18.3</span> « Le modèle est objectif puisqu’il est mathématique »</h3>
+<p>Les objectifs, données, étiquettes, exclusions, seuils et usages incorporent des choix humains.</p>
+</section>
+<section id="une-explication-shap-prouve-la-causalité" class="level3" data-number="18.4">
+<h3 data-number="18.4" class="anchored" data-anchor-id="une-explication-shap-prouve-la-causalité"><span class="header-section-number">18.4</span> « Une explication SHAP prouve la causalité »</h3>
+<p>Une explication locale décrit l’influence du modèle pour une prédiction donnée. Elle ne prouve pas qu’une intervention sur la variable modifiera le résultat réel.</p>
+</section>
+<section id="lia-générative-connaît-la-réponse" class="level3" data-number="18.5">
+<h3 data-number="18.5" class="anchored" data-anchor-id="lia-générative-connaît-la-réponse"><span class="header-section-number">18.5</span> « L’IA générative connaît la réponse »</h3>
+<p>Elle génère une réponse probable compte tenu de son contexte. Une vérification par source reste nécessaire pour les faits importants.</p>
+</section>
+<section id="le-modèle-sera-stable-après-déploiement" class="level3" data-number="18.6">
+<h3 data-number="18.6" class="anchored" data-anchor-id="le-modèle-sera-stable-après-déploiement"><span class="header-section-number">18.6</span> « Le modèle sera stable après déploiement »</h3>
+<p>Les populations, processus et instruments changent. La surveillance est une composante du système, pas une option.</p>
+</section>
+<section id="plus-complexe-signifie-plus-performant" class="level3" data-number="18.7">
+<h3 data-number="18.7" class="anchored" data-anchor-id="plus-complexe-signifie-plus-performant"><span class="header-section-number">18.7</span> « Plus complexe signifie plus performant »</h3>
+<p>La complexité augmente souvent le coût, le risque et la maintenance. Elle doit produire un gain démontré.</p>
+</section>
+</section>
+<section id="checklist-de-décision" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="checklist-de-décision"><span class="header-section-number">19</span> 17. Checklist de décision</h2>
+<section id="avant-de-dire-nous-avons-besoin-dia" class="level3 checklist-box" data-number="19.1">
+<h3 data-number="19.1" class="anchored" data-anchor-id="avant-de-dire-nous-avons-besoin-dia"><span class="header-section-number">19.1</span> Avant de dire « nous avons besoin d’IA »</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Le problème métier est défini.</label></li>
+<li><label><input type="checkbox">La décision, l’utilisateur et le moment d’usage sont identifiés.</label></li>
+<li><label><input type="checkbox">Une baseline existe.</label></li>
+<li><label><input type="checkbox">Les données disponibles en production sont connues.</label></li>
+<li><label><input type="checkbox">Le coût des faux positifs et faux négatifs est documenté.</label></li>
+<li><label><input type="checkbox">La stratégie de séparation des données évite les fuites.</label></li>
+<li><label><input type="checkbox">Les métriques correspondent au besoin réel.</label></li>
+<li><label><input type="checkbox">La calibration et les sous-groupes seront étudiés.</label></li>
+<li><label><input type="checkbox">Une procédure de validation humaine est prévue.</label></li>
+<li><label><input type="checkbox">Les limites et cas hors domaine sont identifiés.</label></li>
+<li><label><input type="checkbox">Le plan de surveillance est défini.</label></li>
+<li><label><input type="checkbox">La conformité, la sécurité et la confidentialité sont examinées.</label></li>
+</ul>
+</section>
+</section>
+<section id="glossaire-essentiel" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="glossaire-essentiel"><span class="header-section-number">20</span> 18. Glossaire essentiel</h2>
+<p><strong>Algorithme</strong> — Suite de règles ou d’opérations permettant d’effectuer un calcul ou une tâche.</p>
+<p><strong>Modèle</strong> — Représentation paramétrée utilisée pour produire une estimation, une classe, un score, une représentation ou un contenu.</p>
+<p><strong>Paramètre</strong> — Valeur apprise à partir des données, par exemple un coefficient ou un poids neuronal.</p>
+<p><strong>Hyperparamètre</strong> — Valeur choisie pour contrôler l’apprentissage, par exemple la profondeur d’un arbre ou le taux d’apprentissage.</p>
+<p><strong>Variable explicative</strong> — Information fournie en entrée du modèle.</p>
+<p><strong>Cible</strong> — Résultat que le modèle cherche à prédire dans un apprentissage supervisé.</p>
+<p><strong>Entraînement</strong> — Processus d’estimation des paramètres.</p>
+<p><strong>Inférence</strong> — Utilisation du modèle entraîné pour produire une sortie.</p>
+<p><strong>Surapprentissage</strong> — Ajustement excessif aux données d’entraînement au détriment de la généralisation.</p>
+<p><strong>Régularisation</strong> — Technique limitant la complexité ou stabilisant le modèle.</p>
+<p><strong>Embedding</strong> — Représentation numérique dense d’un objet, d’un texte, d’une image ou d’une catégorie.</p>
+<p><strong>Fine-tuning</strong> — Adaptation d’un modèle préentraîné sur des données ou objectifs spécifiques.</p>
+<p><strong>RAG</strong> — Architecture combinant recherche documentaire et génération.</p>
+<p><strong>Dérive</strong> — Changement des données ou de la relation prédictive après déploiement.</p>
+<p><strong>Calibration</strong> — Concordance entre les probabilités prédites et les fréquences observées.</p>
+<p><strong>Hallucination</strong> — Contenu généré plausible mais non fondé ou incorrect.</p>
+</section>
+<section id="ce-quil-faut-retenir" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="ce-quil-faut-retenir"><span class="header-section-number">21</span> 19. Ce qu’il faut retenir</h2>
+<p>L’intelligence artificielle est le champ le plus large. Elle comprend des systèmes à règles, des méthodes de recherche, de planification, d’optimisation et des approches apprenantes.</p>
+<p>Le machine learning apprend des régularités à partir de données. Sa valeur dépend moins de la sophistication du modèle que de la qualité du problème, des données, du protocole d’évaluation et de l’intégration dans le processus réel.</p>
+<p>Le deep learning est une famille de machine learning fondée sur des réseaux de neurones profonds. Il excelle dans de nombreux problèmes de vision, langage, audio et données complexes, mais exige une validation rigoureuse et des ressources adaptées.</p>
+<p>L’IA générative produit du contenu. Elle est puissante pour assister la rédaction, la synthèse, la recherche, le code et la création, mais elle doit être encadrée par des sources, des contrôles, des règles de confidentialité et une responsabilité humaine.</p>
+<p>La meilleure solution n’est pas la plus impressionnante. C’est celle qui :</p>
+<ul>
+<li>résout un problème réel ;</li>
+<li>améliore une décision mesurable ;</li>
+<li>reste robuste sur de nouvelles données ;</li>
+<li>expose clairement ses limites ;</li>
+<li>respecte les personnes concernées ;</li>
+<li>peut être surveillée, corrigée et arrêtée.</li>
+</ul>
+<div class="discussion-box">
+<p><strong>Question à la communauté :</strong> dans votre domaine, quel problème est actuellement présenté comme un « projet d’IA » alors qu’une règle, une meilleure collecte de données ou un modèle plus simple pourrait déjà produire l’essentiel de la valeur ?</p>
+</div>
+</section>
+<section id="références-et-ressources-recommandées" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="références-et-ressources-recommandées"><span class="header-section-number">22</span> 20. Références et ressources recommandées</h2>
+<section id="fondations-scientifiques" class="level3" data-number="22.1">
+<h3 data-number="22.1" class="anchored" data-anchor-id="fondations-scientifiques"><span class="header-section-number">22.1</span> Fondations scientifiques</h3>
+<ul>
+<li>Turing, A. M. (1950). <em>Computing Machinery and Intelligence</em>. Mind, 59(236), 433–460. <a href="https://doi.org/10.1093/mind/LIX.236.433" class="uri">https://doi.org/10.1093/mind/LIX.236.433</a></li>
+<li>Samuel, A. L. (1959). <em>Some Studies in Machine Learning Using the Game of Checkers</em>. IBM Journal of Research and Development, 3(3), 210–229. <a href="https://doi.org/10.1147/rd.33.0210" class="uri">https://doi.org/10.1147/rd.33.0210</a></li>
+<li>Mitchell, T. M. (1997). <em>Machine Learning</em>. McGraw-Hill.</li>
+<li>Hastie, T., Tibshirani, R., &amp; Friedman, J. (2009). <em>The Elements of Statistical Learning</em>. Springer. <a href="https://doi.org/10.1007/978-0-387-84858-7" class="uri">https://doi.org/10.1007/978-0-387-84858-7</a></li>
+<li>Bishop, C. M. (2006). <em>Pattern Recognition and Machine Learning</em>. Springer.</li>
+<li>Breiman, L. (2001). <em>Statistical Modeling: The Two Cultures</em>. Statistical Science, 16(3), 199–231. <a href="https://doi.org/10.1214/ss/1009213726" class="uri">https://doi.org/10.1214/ss/1009213726</a></li>
+<li>LeCun, Y., Bengio, Y., &amp; Hinton, G. (2015). <em>Deep Learning</em>. Nature, 521, 436–444. <a href="https://doi.org/10.1038/nature14539" class="uri">https://doi.org/10.1038/nature14539</a></li>
+<li>Goodfellow, I., Bengio, Y., &amp; Courville, A. (2016). <em>Deep Learning</em>. MIT Press. <a href="https://www.deeplearningbook.org/" class="uri">https://www.deeplearningbook.org/</a></li>
+<li>Vaswani, A. et al.&nbsp;(2017). <em>Attention Is All You Need</em>. Advances in Neural Information Processing Systems. <a href="https://doi.org/10.48550/arXiv.1706.03762" class="uri">https://doi.org/10.48550/arXiv.1706.03762</a></li>
+</ul>
+</section>
+<section id="évaluation-confiance-et-gouvernance" class="level3" data-number="22.2">
+<h3 data-number="22.2" class="anchored" data-anchor-id="évaluation-confiance-et-gouvernance"><span class="header-section-number">22.2</span> Évaluation, confiance et gouvernance</h3>
+<ul>
+<li>NIST (2023). <em>Artificial Intelligence Risk Management Framework 1.0</em>. <a href="https://doi.org/10.6028/NIST.AI.100-1" class="uri">https://doi.org/10.6028/NIST.AI.100-1</a></li>
+<li>OECD (2024). <em>Explanatory Memorandum on the Updated OECD Definition of an AI System</em>. <a href="https://oecd.ai/en/ai-publications/explanatory-memorandum-on-the-updated-oecd-definition-of-an-ai-system" class="uri">https://oecd.ai/en/ai-publications/explanatory-memorandum-on-the-updated-oecd-definition-of-an-ai-system</a></li>
+<li>Union européenne (2024). <em>Règlement (UE) 2024/1689 sur l’intelligence artificielle</em>. <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" class="uri">https://eur-lex.europa.eu/eli/reg/2024/1689/oj</a></li>
+<li>Google for Developers. <em>Rules of Machine Learning: Best Practices for ML Engineering</em>. <a href="https://developers.google.com/machine-learning/guides/rules-of-ml?hl=fr" class="uri">https://developers.google.com/machine-learning/guides/rules-of-ml?hl=fr</a></li>
+<li>Mitchell, M. et al.&nbsp;(2019). <em>Model Cards for Model Reporting</em>. FAT* 2019. <a href="https://doi.org/10.1145/3287560.3287596" class="uri">https://doi.org/10.1145/3287560.3287596</a></li>
+<li>Gebru, T. et al.&nbsp;(2021). <em>Datasheets for Datasets</em>. Communications of the ACM, 64(12), 86–92. <a href="https://doi.org/10.1145/3458723" class="uri">https://doi.org/10.1145/3458723</a></li>
+</ul>
+</section>
+<section id="pour-approfondir-la-méthodologie" class="level3" data-number="22.3">
+<h3 data-number="22.3" class="anchored" data-anchor-id="pour-approfondir-la-méthodologie"><span class="header-section-number">22.3</span> Pour approfondir la méthodologie</h3>
+<ul>
+<li>scikit-learn. <em>User Guide</em>. <a href="https://scikit-learn.org/stable/user_guide.html" class="uri">https://scikit-learn.org/stable/user_guide.html</a></li>
+<li>TensorFlow. <em>Tutorials</em>. <a href="https://www.tensorflow.org/tutorials" class="uri">https://www.tensorflow.org/tutorials</a></li>
+<li>PyTorch. <em>Tutorials</em>. <a href="https://pytorch.org/tutorials/" class="uri">https://pytorch.org/tutorials/</a></li>
+<li>Google Research. <a href="https://research.google/blog/" class="uri">https://research.google/blog/</a></li>
+<li>Hugging Face Papers. <a href="https://huggingface.co/papers" class="uri">https://huggingface.co/papers</a></li>
+</ul>
+</section>
+</section>
+<section id="besoin-dun-accompagnement" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="besoin-dun-accompagnement"><span class="header-section-number">23</span> Besoin d’un accompagnement ?</h2>
+<p>SYLTRA Consulting accompagne les entreprises, laboratoires, institutions et établissements de formation dans le cadrage de projets d’IA, la Data Science, la biostatistique, l’automatisation, l’évaluation de modèles, la formation et la mise en place de pratiques responsables.</p>
+<p><a href="../contact.html" class="btn btn-primary">Nous contacter</a></p>
+<div class="post-tags">
+<p>#IntelligenceArtificielle #MachineLearning #DeepLearning #IAGénérative #DataScience #MLOps #GouvernanceIA #Biostatistique #SYLTRAConsulting</p>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('a[href^="http"]').forEach(a=>{if(!a.href.includes(location.hostname)){a.rel="noopener noreferrer";a.target="_blank";}});});</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/blog\.syltra-consulting\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026–2027 SYLTRA Consulting</p>
+</div>   
+    <div class="nav-footer-center">
+<p>IA utile • Data Science • Biostatistique • Recherche</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../contact.html">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
